@@ -44,12 +44,46 @@ header h1 {
   flex-direction: column;
 }
 
+.layers,
 .filters {
   padding: 1rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.layers h2,
+.filters h2 {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #333;
+}
+
+#layer-toggles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+#layer-toggles li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+#layer-toggles .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
 }
 
 .filters label {

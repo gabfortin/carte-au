@@ -1,0 +1,22 @@
+{
+  "equipements": [
+    {
+      "id": "exemple-piscine-municipale",
+      "name": "Piscine municipale Exemple",
+      "category": "piscine",
+      "address": "321 Rue Exemple, Montréal, QC",
+      "lat": 45.5280,
+      "lng": -73.5830,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Lève-personne disponible, vestiaires adaptés."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2024-01-01",
+        "reviewText": "Exemple à remplacer par une vraie donnée.",
+        "reviewUrl": null
+      }
+    }
+  ]
+}

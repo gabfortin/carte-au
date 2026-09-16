@@ -1,0 +1,19 @@
+{
+  "stationnements": [
+    {
+      "id": "exemple-stationnement-accessible",
+      "description": "Stationnement réservé, coin Exemple / Test",
+      "type": "sur-rue",
+      "address": "Rue Exemple, Montréal, QC",
+      "lat": 45.5220,
+      "lng": -73.5870,
+      "notes": "2 places réservées, signalisation visible.",
+      "source": {
+        "reviewer": null,
+        "date": "2024-01-01",
+        "reviewText": "Exemple à remplacer par une vraie donnée.",
+        "reviewUrl": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,2686 @@
+{
+  "source": "Ville de Montréal - données ouvertes (feux-malvoyants)",
+  "sourceUrl": "https://donnees.montreal.ca/dataset/feux-malvoyants",
+  "feuxSonores": [
+    {
+      "id": "feu-145",
+      "intersection": "Côte-des-Neiges / Lacombe",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4968188996715,
+      "lng": -73.6233789454
+    },
+    {
+      "id": "feu-146",
+      "intersection": "Côte-des-Neiges / La Peltrie",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4998921337895,
+      "lng": -73.6300333269239
+    },
+    {
+      "id": "feu-148",
+      "intersection": "Appleton / Côte-des-Neiges/Plamondon",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.50209201706,
+      "lng": -73.6349213972502
+    },
+    {
+      "id": "feu-150",
+      "intersection": "Côte-des-Neiges / Ridgewood",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.495789755723,
+      "lng": -73.610298161626
+    },
+    {
+      "id": "feu-155",
+      "intersection": "Côte-Sainte-Catherine / Hôpital Sainte-Justine",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.5026219410106,
+      "lng": -73.6238740721975
+    },
+    {
+      "id": "feu-159",
+      "intersection": "Côte-Sainte-Catherine / Lemieux",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4906917149962,
+      "lng": -73.634606110926
+    },
+    {
+      "id": "feu-163",
+      "intersection": "Darlington / Van Horne",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.5078654982529,
+      "lng": -73.6255529016949
+    },
+    {
+      "id": "feu-171",
+      "intersection": "Edouard-Montpetit / Louis-Colin",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.5032616434441,
+      "lng": -73.6188563910646
+    },
+    {
+      "id": "feu-172",
+      "intersection": "Edouard-Montpetit / Stirling",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.507292707231,
+      "lng": -73.6152090586909
+    },
+    {
+      "id": "feu-175",
+      "intersection": "Jean-Talon / Parc",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5301288338914,
+      "lng": -73.6223427921341
+    },
+    {
+      "id": "feu-202",
+      "intersection": "Drake / Jolicoeur",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4570512728373,
+      "lng": -73.5822319076342
+    },
+    {
+      "id": "feu-203",
+      "intersection": "Eadie / Église",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4637771730746,
+      "lng": -73.5899564086215
+    },
+    {
+      "id": "feu-205",
+      "intersection": "Église / Laurendeau",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4636875708794,
+      "lng": -73.587857659696
+    },
+    {
+      "id": "feu-210",
+      "intersection": "Jolicoeur / Laurendeau",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4572538262663,
+      "lng": -73.5884389846749
+    },
+    {
+      "id": "feu-211",
+      "intersection": "Jolicoeur / La Vérendrye",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4570084299314,
+      "lng": -73.5810815724396
+    },
+    {
+      "id": "feu-218",
+      "intersection": "Atwater / Delisle",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4824418840274,
+      "lng": -73.5787115533183
+    },
+    {
+      "id": "feu-222",
+      "intersection": "Atwater / Duvernay",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.480621258926,
+      "lng": -73.5772909678107
+    },
+    {
+      "id": "feu-224",
+      "intersection": "Côte-Saint-Paul / Notre-Dame",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4693267549135,
+      "lng": -73.5933235686462
+    },
+    {
+      "id": "feu-227",
+      "intersection": "Couvent / Saint-Antoine",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4796030276084,
+      "lng": -73.587708084896
+    },
+    {
+      "id": "feu-248",
+      "intersection": "Notre-Dame / Vinet",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4833977755762,
+      "lng": -73.5744386196945
+    },
+    {
+      "id": "feu-9",
+      "intersection": "Coronation / Côte-Saint-Luc",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4659875649186,
+      "lng": -73.6533891982465
+    },
+    {
+      "id": "feu-13",
+      "intersection": "Côte-Saint-Luc / Marcil/Somerled",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.478426447164,
+      "lng": -73.6287578902845
+    },
+    {
+      "id": "feu-35",
+      "intersection": "Cavendish / Saint-Jacques",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.461489327585,
+      "lng": -73.6242106724235
+    },
+    {
+      "id": "feu-36",
+      "intersection": "Cavendish / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4637247054954,
+      "lng": -73.6289698271733
+    },
+    {
+      "id": "feu-37",
+      "intersection": "Coronation / Monkland/Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4596716107491,
+      "lng": -73.6369264443297
+    },
+    {
+      "id": "feu-38",
+      "intersection": "Côte-Saint-Antoine / Décarie",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4763078297561,
+      "lng": -73.6132639593076
+    },
+    {
+      "id": "feu-43",
+      "intersection": "Décarie / Monkland inter. Est",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4791405679406,
+      "lng": -73.6195751819968
+    },
+    {
+      "id": "feu-46",
+      "intersection": "Décarie / Saint-Jacques",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4710381405285,
+      "lng": -73.6013591154498
+    },
+    {
+      "id": "feu-47",
+      "intersection": "Décarie / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4743110154274,
+      "lng": -73.6088290126234
+    },
+    {
+      "id": "feu-48",
+      "intersection": "Elmhurst / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4550215367045,
+      "lng": -73.6414303798323
+    },
+    {
+      "id": "feu-130",
+      "intersection": "Barclay / Côte-des-Neiges",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.5024526793922,
+      "lng": -73.6357373395456
+    },
+    {
+      "id": "feu-132",
+      "intersection": "Hutchison / Ogilvy",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.530201912328,
+      "lng": -73.6245945282814
+    },
+    {
+      "id": "feu-137",
+      "intersection": "Bedford / Côte-des-Neiges",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.5033533924182,
+      "lng": -73.6377319001545
+    },
+    {
+      "id": "feu-138",
+      "intersection": "Gosford / Notre-Dame / Saint-Claude",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5090880307115,
+      "lng": -73.5533417463755
+    },
+    {
+      "id": "feu-144",
+      "intersection": "Côte-des-Neiges / Jean-Brillant",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.496087284252,
+      "lng": -73.6217408699064
+    },
+    {
+      "id": "feu-49",
+      "intersection": "Elmhurst / Saint-Jacques",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4533895848421,
+      "lng": -73.6372256708794
+    },
+    {
+      "id": "feu-50",
+      "intersection": "Girouard / Monkland",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4768692523347,
+      "lng": -73.6216740400046
+    },
+    {
+      "id": "feu-53",
+      "intersection": "Girouard / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4725333610851,
+      "lng": -73.61198114272
+    },
+    {
+      "id": "feu-56",
+      "intersection": "Grand Boulevard / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4666504602373,
+      "lng": -73.6233947689513
+    },
+    {
+      "id": "feu-57",
+      "intersection": "Madison / Saint-Jacques",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4630882532804,
+      "lng": -73.6186049284568
+    },
+    {
+      "id": "feu-58",
+      "intersection": "Maisonneuve / Marlowe",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4738728143568,
+      "lng": -73.6045243762704
+    },
+    {
+      "id": "feu-59",
+      "intersection": "Maisonneuve / Vendôme",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4744258117303,
+      "lng": -73.603887583042
+    },
+    {
+      "id": "feu-67",
+      "intersection": "Rosedale / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4611134858029,
+      "lng": -73.63391249377
+    },
+    {
+      "id": "feu-70",
+      "intersection": "Sherbrooke / Vendôme",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4758598658494,
+      "lng": -73.607022676645
+    },
+    {
+      "id": "feu-71",
+      "intersection": "Sherbrooke / 7141 Ouest (Univ. Concordia)",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4576841843834,
+      "lng": -73.6390046231843
+    },
+    {
+      "id": "feu-72",
+      "intersection": "Sherbrooke / West Broadway",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4565341608335,
+      "lng": -73.6402168285937
+    },
+    {
+      "id": "feu-89",
+      "intersection": "Côte-Saint-Luc / 5100",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4825184421971,
+      "lng": -73.6205737002371
+    },
+    {
+      "id": "feu-92",
+      "intersection": "Côte-Saint-Luc / Earnscliffe",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4791076141292,
+      "lng": -73.6246439834236
+    },
+    {
+      "id": "feu-427",
+      "intersection": "René-Lévesque / Union",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5025186717529,
+      "lng": -73.5667761438632
+    },
+    {
+      "id": "feu-436",
+      "intersection": "Jean-Paul-Riopel pl. / Saint-Antoine / Saint-Pierre",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5031950420434,
+      "lng": -73.5604098792284
+    },
+    {
+      "id": "feu-437",
+      "intersection": "Bleury / Jean-Paul-Riopel / Viger",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5038263975492,
+      "lng": -73.5617585365899
+    },
+    {
+      "id": "feu-439",
+      "intersection": "Hôtel-de-Ville / René-Lévesque",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5107258211742,
+      "lng": -73.5600125489637
+    },
+    {
+      "id": "feu-441",
+      "intersection": "René-Lévesque / Saint-Denis",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5126991794629,
+      "lng": -73.5582107851005
+    },
+    {
+      "id": "feu-452",
+      "intersection": "Jacques-Cartier (pl) / Notre-Dame",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5082455743788,
+      "lng": -73.5540154231663
+    },
+    {
+      "id": "feu-461",
+      "intersection": "Place d'Armes / Saint-Urbain / Saint-Antoine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5057067151908,
+      "lng": -73.5582698095488
+    },
+    {
+      "id": "feu-467",
+      "intersection": "Saint-Urbain / Viger",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5064129262674,
+      "lng": -73.5597912434192
+    },
+    {
+      "id": "feu-472",
+      "intersection": "Atateken / Ontario",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5201609389429,
+      "lng": -73.5629537499214
+    },
+    {
+      "id": "feu-475",
+      "intersection": "Atateken / Sherbrooke",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5213652670477,
+      "lng": -73.5655613297855
+    },
+    {
+      "id": "feu-477",
+      "intersection": "Berri / Cherrier",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5190793199842,
+      "lng": -73.5692471005525
+    },
+    {
+      "id": "feu-480",
+      "intersection": "Berri / Roy",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5202278355114,
+      "lng": -73.5716549682452
+    },
+    {
+      "id": "feu-481",
+      "intersection": "Berri / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Temporaire",
+      "lat": 45.5146421245664,
+      "lng": -73.5596696103735
+    },
+    {
+      "id": "feu-482",
+      "intersection": "Berri / Sherbrooke",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5180005071175,
+      "lng": -73.5669732432016
+    },
+    {
+      "id": "feu-486",
+      "intersection": "Cherrier / Saint-Hubert",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5198517810898,
+      "lng": -73.5685049101704
+    },
+    {
+      "id": "feu-492",
+      "intersection": "Maisonneuve / Saint-André",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5170306856976,
+      "lng": -73.5595217380355
+    },
+    {
+      "id": "feu-501",
+      "intersection": "Rigaud / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.517470851315,
+      "lng": -73.568694095212
+    },
+    {
+      "id": "feu-518",
+      "intersection": "Bernard / Saint-Laurent",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5273559317752,
+      "lng": -73.6022519043228
+    },
+    {
+      "id": "feu-519",
+      "intersection": "Bernard / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5261561988017,
+      "lng": -73.6032669228503
+    },
+    {
+      "id": "feu-520",
+      "intersection": "Bullion / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5239135163034,
+      "lng": -73.5899724485931
+    },
+    {
+      "id": "feu-526",
+      "intersection": "Duluth / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5157631285835,
+      "lng": -73.5804839850507
+    },
+    {
+      "id": "feu-529",
+      "intersection": "Fairmount / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5226782355354,
+      "lng": -73.5955985694317
+    },
+    {
+      "id": "feu-254",
+      "intersection": "Saint-Ferdinand / Saint-Jacques",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4771587814833,
+      "lng": -73.5871094872383
+    },
+    {
+      "id": "feu-265",
+      "intersection": "Saint-Patrick / Seigneurs",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4842630257994,
+      "lng": -73.5649500204341
+    },
+    {
+      "id": "feu-269",
+      "intersection": "Côte-des-Neiges / Docteur-Penfield (int. n-o)",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.4950682697632,
+      "lng": -73.5896183803166
+    },
+    {
+      "id": "feu-270",
+      "intersection": "Côte-des-Neiges / Docteur-Penfield (int. n-e)",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.4952661139966,
+      "lng": -73.5897731272783
+    },
+    {
+      "id": "feu-274",
+      "intersection": "Côte-des-Neiges / The Boulevard",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.495366139325,
+      "lng": -73.5961118761856
+    },
+    {
+      "id": "feu-275",
+      "intersection": "McDougall / The Boulevard",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.4949129957865,
+      "lng": -73.596442782696
+    },
+    {
+      "id": "feu-281",
+      "intersection": "Pins / University",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5082062281636,
+      "lng": -73.5801176811517
+    },
+    {
+      "id": "feu-290",
+      "intersection": "Aylmer / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.504288724778,
+      "lng": -73.5687275465742
+    },
+    {
+      "id": "feu-305",
+      "intersection": "Crescent / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.4971889649658,
+      "lng": -73.575708750454
+    },
+    {
+      "id": "feu-325",
+      "intersection": "Jeanne-Mance / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Temporaire",
+      "lat": 45.5071742588415,
+      "lng": -73.5661831544329
+    },
+    {
+      "id": "feu-342",
+      "intersection": "Mansfield / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5013500850857,
+      "lng": -73.5716056303733
+    },
+    {
+      "id": "feu-344",
+      "intersection": "McGill College / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5019156752317,
+      "lng": -73.5710537647668
+    },
+    {
+      "id": "feu-345",
+      "intersection": "McGill College / Sherbrooke",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5036964258062,
+      "lng": -73.5747248449685
+    },
+    {
+      "id": "feu-360",
+      "intersection": "Saint-Alexandre / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5053736403394,
+      "lng": -73.567744796705
+    },
+    {
+      "id": "feu-361",
+      "intersection": "Sainte-Catherine / Saint-Laurent",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5098706654081,
+      "lng": -73.5638225691787
+    },
+    {
+      "id": "feu-535",
+      "intersection": "Laurier / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5218675731607,
+      "lng": -73.5938691368469
+    },
+    {
+      "id": "feu-537",
+      "intersection": "Marie-Anne / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5178765532365,
+      "lng": -73.585156944929
+    },
+    {
+      "id": "feu-540",
+      "intersection": "Mont-Royal / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5189029544592,
+      "lng": -73.5874581551286
+    },
+    {
+      "id": "feu-547",
+      "intersection": "Pins / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5138089308137,
+      "lng": -73.5761448491117
+    },
+    {
+      "id": "feu-548",
+      "intersection": "Prince-Arthur / Saint-Laurent",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5138900040072,
+      "lng": -73.5725682872549
+    },
+    {
+      "id": "feu-549",
+      "intersection": "Prince-Arthur / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5126677844226,
+      "lng": -73.5736244935464
+    },
+    {
+      "id": "feu-551",
+      "intersection": "Rachel / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5168294644011,
+      "lng": -73.5828043333641
+    },
+    {
+      "id": "feu-552",
+      "intersection": "Saint-Cuthbert / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5147602057566,
+      "lng": -73.578289897214
+    },
+    {
+      "id": "feu-554",
+      "intersection": "Saint-Joseph / Saint-Urbain",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5211784850412,
+      "lng": -73.5924173812071
+    },
+    {
+      "id": "feu-558",
+      "intersection": "Saint-Urbain / Saint-Viateur",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5246291625063,
+      "lng": -73.5999791622942
+    },
+    {
+      "id": "feu-559",
+      "intersection": "Saint-Urbain / Villeneuve",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5202638815506,
+      "lng": -73.5904517304715
+    },
+    {
+      "id": "feu-561",
+      "intersection": "Berri / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5273965586738,
+      "lng": -73.5868536995426
+    },
+    {
+      "id": "feu-563",
+      "intersection": "Boucher / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5279857568138,
+      "lng": -73.5917383737114
+    },
+    {
+      "id": "feu-565",
+      "intersection": "Brébeuf / Laurier",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5324079617001,
+      "lng": -73.5847595287981
+    },
+    {
+      "id": "feu-572",
+      "intersection": "Christophe-Colomb / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5302523511301,
+      "lng": -73.5841662967182
+    },
+    {
+      "id": "feu-573",
+      "intersection": "Duluth / Parc-La Fontaine",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5245691179932,
+      "lng": -73.57236864193
+    },
+    {
+      "id": "feu-574",
+      "intersection": "Duluth / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.520740936876,
+      "lng": -73.5758720106366
+    },
+    {
+      "id": "feu-577",
+      "intersection": "Garnier / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5331467695415,
+      "lng": -73.5814507536966
+    },
+    {
+      "id": "feu-580",
+      "intersection": "Villeneuve / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5253417703727,
+      "lng": -73.5859503859363
+    },
+    {
+      "id": "feu-584",
+      "intersection": "Calixa-Lavallée / Lanaudière/Rachel",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5279170384354,
+      "lng": -73.5719974593996
+    },
+    {
+      "id": "feu-593",
+      "intersection": "Laurier / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.526950526801,
+      "lng": -73.5894821481123
+    },
+    {
+      "id": "feu-594",
+      "intersection": "Laurier / Saint-Hubert",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5289629910656,
+      "lng": -73.5877875319443
+    },
+    {
+      "id": "feu-595",
+      "intersection": "Marie-Anne / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.522894976164,
+      "lng": -73.5805733152334
+    },
+    {
+      "id": "feu-599",
+      "intersection": "Mont-Royal / Saint-Hubert",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Temporaire",
+      "lat": 45.5258531818945,
+      "lng": -73.5812328329621
+    },
+    {
+      "id": "feu-601",
+      "intersection": "Mont-Royal / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Temporaire",
+      "lat": 45.5239634950087,
+      "lng": -73.5829190651381
+    },
+    {
+      "id": "feu-602",
+      "intersection": "Rachel / Saint-Denis",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5218117195336,
+      "lng": -73.5781808723909
+    },
+    {
+      "id": "feu-603",
+      "intersection": "Saint-Jacques / Wilson",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Temporaire",
+      "lat": 45.4669361199784,
+      "lng": -73.6088203322744
+    },
+    {
+      "id": "feu-606",
+      "intersection": "Saint-Denis / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5262331588693,
+      "lng": -73.5878975803137
+    },
+    {
+      "id": "feu-612",
+      "intersection": "Carignan / Rosemont",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5838643148275,
+      "lng": -73.5564265878912
+    },
+    {
+      "id": "feu-618",
+      "intersection": "Dorion / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5236430875052,
+      "lng": -73.5514099953588
+    },
+    {
+      "id": "feu-629",
+      "intersection": "Lorimier / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5248239273178,
+      "lng": -73.5503636400884
+    },
+    {
+      "id": "feu-644",
+      "intersection": "Bercy / Ontario",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5346902722955,
+      "lng": -73.5514352966541
+    },
+    {
+      "id": "feu-648",
+      "intersection": "Frontenac / Ontario",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5330115032965,
+      "lng": -73.5526487913328
+    },
+    {
+      "id": "feu-659",
+      "intersection": "Havre / Ontario",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5335291188647,
+      "lng": -73.5522139692591
+    },
+    {
+      "id": "feu-672",
+      "intersection": "Ontario / Parthenais",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5294194820803,
+      "lng": -73.5560726143567
+    },
+    {
+      "id": "feu-681",
+      "intersection": "Bordeaux / Rachel",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5321620390709,
+      "lng": -73.5679541334753
+    },
+    {
+      "id": "feu-685",
+      "intersection": "Champlain / Émile-Duployé/Sherbrooke",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5270218337862,
+      "lng": -73.5642246260978
+    },
+    {
+      "id": "feu-686",
+      "intersection": "Christophe-Colomb / Saint-Grégoire",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5325892729483,
+      "lng": -73.5902419493147
+    },
+    {
+      "id": "feu-689",
+      "intersection": "Fullum / Saint-Joseph",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5397819338609,
+      "lng": -73.575082143054
+    },
+    {
+      "id": "feu-693",
+      "intersection": "Gilford / Papineau",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5345231411153,
+      "lng": -73.5780390266325
+    },
+    {
+      "id": "feu-696",
+      "intersection": "Laurier / Papineau inter. Nord",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5360397295733,
+      "lng": -73.5813389190812
+    },
+    {
+      "id": "feu-366",
+      "intersection": "Sainte-Catherine / Union",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5037734253112,
+      "lng": -73.5692266698612
+    },
+    {
+      "id": "feu-367",
+      "intersection": "Robert-Bourassa / Sainte-Catherine",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5031767459236,
+      "lng": -73.5698074665613
+    },
+    {
+      "id": "feu-392",
+      "intersection": "Saint-Jacques / Square Victoria Est",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5012674904077,
+      "lng": -73.5603542659302
+    },
+    {
+      "id": "feu-408",
+      "intersection": "Gouin / 9165 Ouest",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5152056670303,
+      "lng": -73.7463775215848
+    },
+    {
+      "id": "feu-870",
+      "intersection": "Saint-Joseph / Saint-Michel",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5495202641704,
+      "lng": -73.5682495545176
+    },
+    {
+      "id": "feu-879",
+      "intersection": "9 e Avenue / Jarry",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5626513386458,
+      "lng": -73.6105800853382
+    },
+    {
+      "id": "feu-887",
+      "intersection": "Legendre / Saint-Michel",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5716716953676,
+      "lng": -73.6274446289238
+    },
+    {
+      "id": "feu-889",
+      "intersection": "Robert / Saint-Michel inter. Nord",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5677398914098,
+      "lng": -73.6185257143919
+    },
+    {
+      "id": "feu-893",
+      "intersection": "26 e Avenue / Bélanger",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Temporaire",
+      "lat": 45.5672977654529,
+      "lng": -73.5852918908024
+    },
+    {
+      "id": "feu-894",
+      "intersection": "39 e Rue / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5777659600106,
+      "lng": -73.616804071759
+    },
+    {
+      "id": "feu-896",
+      "intersection": "47 e Rue / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5801244735018,
+      "lng": -73.6221406715281
+    },
+    {
+      "id": "feu-898",
+      "intersection": "Bélanger / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5649594245806,
+      "lng": -73.5873267435076
+    },
+    {
+      "id": "feu-903",
+      "intersection": "Hérelle / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5727013670552,
+      "lng": -73.6053260003606
+    },
+    {
+      "id": "feu-904",
+      "intersection": "Jarry / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5715155663781,
+      "lng": -73.6026241537882
+    },
+    {
+      "id": "feu-906",
+      "intersection": "Jean-Talon / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5665414621377,
+      "lng": -73.5913644882919
+    },
+    {
+      "id": "feu-907",
+      "intersection": "Pie-IX / Robert",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.575078898737,
+      "lng": -73.610707092164
+    },
+    {
+      "id": "feu-908",
+      "intersection": "Pie-IX / Villeray",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5689870228617,
+      "lng": -73.5968908202897
+    },
+    {
+      "id": "feu-916",
+      "intersection": "Boucherville / Curatteau (pl) inter. Est",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5942003692403,
+      "lng": -73.5402242643951
+    },
+    {
+      "id": "feu-917",
+      "intersection": "Boucherville / Curatteau (pl) inter. Ouest",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5935110086592,
+      "lng": -73.5404842153641
+    },
+    {
+      "id": "feu-922",
+      "intersection": "Fletcher / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.610871877947,
+      "lng": -73.5265972791142
+    },
+    {
+      "id": "feu-923",
+      "intersection": "Granby / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5812394727527,
+      "lng": -73.5440253805905
+    },
+    {
+      "id": "feu-924",
+      "intersection": "Groseillers / Radisson/Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.588865611955,
+      "lng": -73.5395265292143
+    },
+    {
+      "id": "feu-928",
+      "intersection": "Honoré-Beaugrand / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5964883378929,
+      "lng": -73.5350275793567
+    },
+    {
+      "id": "feu-929",
+      "intersection": "Lacordaire / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5747283406244,
+      "lng": -73.548127238714
+    },
+    {
+      "id": "feu-933",
+      "intersection": "Ormeaux / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.6045615297734,
+      "lng": -73.5301825007151
+    },
+    {
+      "id": "feu-936",
+      "intersection": "Sherbrooke / Taillon",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.6088794045455,
+      "lng": -73.5276754728019
+    },
+    {
+      "id": "feu-939",
+      "intersection": "Assomption / Hochelaga",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5667454981965,
+      "lng": -73.5397074694523
+    },
+    {
+      "id": "feu-942",
+      "intersection": "Cadillac / Hochelaga",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5732497062257,
+      "lng": -73.5358044102284
+    },
+    {
+      "id": "feu-947",
+      "intersection": "Fletcher / Hochelaga",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.6089905966773,
+      "lng": -73.5158523548513
+    },
+    {
+      "id": "feu-791",
+      "intersection": "Charlemagne / Sherbrooke",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5531052850108,
+      "lng": -73.5547058266392
+    },
+    {
+      "id": "feu-793",
+      "intersection": "Davidson / Sherbrooke",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.545954145752,
+      "lng": -73.5560263895457
+    },
+    {
+      "id": "feu-796",
+      "intersection": "Moreau / Sherbrooke",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5424348268306,
+      "lng": -73.5578937755997
+    },
+    {
+      "id": "feu-797",
+      "intersection": "Pie-IX / Pierre-de-Coubertin",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5536640140556,
+      "lng": -73.5516938286307
+    },
+    {
+      "id": "feu-803",
+      "intersection": "Sherbrooke / Jardin Botanique",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5564055538336,
+      "lng": -73.5543507321994
+    },
+    {
+      "id": "feu-805",
+      "intersection": "Sherbrooke / Viau",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5653413214463,
+      "lng": -73.5544242762673
+    },
+    {
+      "id": "feu-808",
+      "intersection": "5 e Avenue / Masson",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5475312293336,
+      "lng": -73.5752507428725
+    },
+    {
+      "id": "feu-809",
+      "intersection": "5 e Avenue / Rosemont",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5498966839698,
+      "lng": -73.5832750630364
+    },
+    {
+      "id": "feu-811",
+      "intersection": "8 e Avenue / Masson",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5491936566432,
+      "lng": -73.5742214195456
+    },
+    {
+      "id": "feu-816",
+      "intersection": "Chabot / Crémazie Ouest",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5556443654792,
+      "lng": -73.6196098833658
+    },
+    {
+      "id": "feu-827",
+      "intersection": "26 e Avenue / Beaubien",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5649252108034,
+      "lng": -73.577686530857
+    },
+    {
+      "id": "feu-829",
+      "intersection": "28 e Avenue / Rosemont",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5642070254616,
+      "lng": -73.570742439878
+    },
+    {
+      "id": "feu-831",
+      "intersection": "31 e Avenue / Saint-Zotique",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.568921387377,
+      "lng": -73.5789978905911
+    },
+    {
+      "id": "feu-834",
+      "intersection": "30 e Avenue / Bélanger",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.569535292075,
+      "lng": -73.5833376579988
+    },
+    {
+      "id": "feu-842",
+      "intersection": "Beaubien / Pie-IX",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5625877933295,
+      "lng": -73.5796933814802
+    },
+    {
+      "id": "feu-845",
+      "intersection": "Bélair / Saint-Michel",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5577763471644,
+      "lng": -73.5953143518017
+    },
+    {
+      "id": "feu-846",
+      "intersection": "Bélanger / Saint-Michel",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.557359332613,
+      "lng": -73.5939672800635
+    },
+    {
+      "id": "feu-856",
+      "intersection": "Dandurand / Pie-IX",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5599171504582,
+      "lng": -73.57118957599
+    },
+    {
+      "id": "feu-860",
+      "intersection": "Laurier / Pie-IX",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5581104112366,
+      "lng": -73.5656032092927
+    },
+    {
+      "id": "feu-864",
+      "intersection": "Mont-Royal / Pie-IX",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5559685377869,
+      "lng": -73.5588940390978
+    },
+    {
+      "id": "feu-865",
+      "intersection": "Pie-IX / Rosemont",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.56077019616,
+      "lng": -73.5738390808924
+    },
+    {
+      "id": "feu-975",
+      "intersection": "Hector / Notre-Dame",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.6099093236635,
+      "lng": -73.5108950283661
+    },
+    {
+      "id": "feu-977",
+      "intersection": "Lebrun / Notre-Dame",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5966390156345,
+      "lng": -73.5118769960601
+    },
+    {
+      "id": "feu-985",
+      "intersection": "Notre-Dame / Saint-Donat",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5947966953723,
+      "lng": -73.5113726916924
+    },
+    {
+      "id": "feu-1017",
+      "intersection": "Holt / Iberville",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5451802189312,
+      "lng": -73.5832155555586
+    },
+    {
+      "id": "feu-1027",
+      "intersection": "Jarry / Lorimier",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5555544311283,
+      "lng": -73.6169289315764
+    },
+    {
+      "id": "feu-1045",
+      "intersection": "Beaubien / Normanville",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5392765594844,
+      "lng": -73.6002184840227
+    },
+    {
+      "id": "feu-1046",
+      "intersection": "Beaubien / Saint-Denis",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5339785125555,
+      "lng": -73.6050071593887
+    },
+    {
+      "id": "feu-1052",
+      "intersection": "Bélanger / Saint-Denis",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.537142238805,
+      "lng": -73.6119393984942
+    },
+    {
+      "id": "feu-1056",
+      "intersection": "Bellechasse / Saint-Denis",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5325741469707,
+      "lng": -73.6018836897192
+    },
+    {
+      "id": "feu-1058",
+      "intersection": "Berri / Jarry",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5431953180616,
+      "lng": -73.6288364424089
+    },
+    {
+      "id": "feu-729",
+      "intersection": "Davidson / Hochelaga",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5449209839708,
+      "lng": -73.5525741322308
+    },
+    {
+      "id": "feu-731",
+      "intersection": "29 e Avenue / Beaubien",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5665933885183,
+      "lng": -73.5761975045933
+    },
+    {
+      "id": "feu-758",
+      "intersection": "Bourbonnière / Ontario",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5479744645031,
+      "lng": -73.542980929232
+    },
+    {
+      "id": "feu-1220",
+      "intersection": "Gouin / Grenet",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5322616014479,
+      "lng": -73.72020034137
+    },
+    {
+      "id": "feu-1222",
+      "intersection": "Gouin / Hôpital du Sacré-Coeur",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5340687220711,
+      "lng": -73.7163042193543
+    },
+    {
+      "id": "feu-1226",
+      "intersection": "Gouin / O'Brien",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5364763229573,
+      "lng": -73.7135573209282
+    },
+    {
+      "id": "feu-1236",
+      "intersection": "Meulles / Salaberry",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5291339873156,
+      "lng": -73.7109935948463
+    },
+    {
+      "id": "feu-1238",
+      "intersection": "Saint-Jacques / 6645 Saint-Jacques (Provigo)",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Temporaire",
+      "lat": 45.4606555010286,
+      "lng": -73.6257965986541
+    },
+    {
+      "id": "feu-1251",
+      "intersection": "Bois-de-Boulogne / Henri-Bourassa",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5379433413365,
+      "lng": -73.6785987983648
+    },
+    {
+      "id": "feu-1252",
+      "intersection": "Bois-de-Boulogne / Saint-Réal / Salaberry",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5427862515565,
+      "lng": -73.6942870079472
+    },
+    {
+      "id": "feu-1256",
+      "intersection": "James-Morrice / Salaberry",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5382920215997,
+      "lng": -73.6988637401145
+    },
+    {
+      "id": "feu-1259",
+      "intersection": "1 e Avenue / Masson",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5453077466158,
+      "lng": -73.5765591121594
+    },
+    {
+      "id": "feu-1266",
+      "intersection": "Berri / Henri-Bourassa",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5544794101853,
+      "lng": -73.6686538396078
+    },
+    {
+      "id": "feu-1270",
+      "intersection": "Georges-Baril / Henri-Bourassa",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5603753888559,
+      "lng": -73.6657381974156
+    },
+    {
+      "id": "feu-1271",
+      "intersection": "Gouin / Hôpital de la Merci",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5471686701321,
+      "lng": -73.6866456622304
+    },
+    {
+      "id": "feu-1278",
+      "intersection": "Henri-Bourassa / Lajeunesse",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5552203049974,
+      "lng": -73.6682098498781
+    },
+    {
+      "id": "feu-1281",
+      "intersection": "Henri-Bourassa / Millen",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5567100119939,
+      "lng": -73.6675663392319
+    },
+    {
+      "id": "feu-1283",
+      "intersection": "Henri-Bourassa / Saint-Hubert",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5583482532424,
+      "lng": -73.6671481239043
+    },
+    {
+      "id": "feu-1291",
+      "intersection": "Jacques-Casault / Papineau",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5553306938599,
+      "lng": -73.6239468821444
+    },
+    {
+      "id": "feu-1311",
+      "intersection": "Robert-Chevalier / Sherbrooke",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6555224198381,
+      "lng": -73.5098040790366
+    },
+    {
+      "id": "feu-1312",
+      "intersection": "32 e Avenue / Sherbrooke Est",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.658438183524,
+      "lng": -73.508806599425
+    },
+    {
+      "id": "feu-1314",
+      "intersection": "La Rousselière / Sherbrooke",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6693667623435,
+      "lng": -73.5050712950978
+    },
+    {
+      "id": "feu-1079",
+      "intersection": "Foucher / Jarry",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5448624887067,
+      "lng": -73.6276676784174
+    },
+    {
+      "id": "feu-1087",
+      "intersection": "Jarry / Normanville",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5492900087395,
+      "lng": -73.6227812480958
+    },
+    {
+      "id": "feu-1088",
+      "intersection": "Jarry / Rousselot",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5508839040745,
+      "lng": -73.6210966767243
+    },
+    {
+      "id": "feu-1089",
+      "intersection": "Jarry / Saint-Denis",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.542587526331,
+      "lng": -73.6291923154411
+    },
+    {
+      "id": "feu-1092",
+      "intersection": "Jean-Talon / Saint-Denis",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5382987224739,
+      "lng": -73.6144333944027
+    },
+    {
+      "id": "feu-1103",
+      "intersection": "Rosemont / Saint-Vallier",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5317833405802,
+      "lng": -73.5977874174486
+    },
+    {
+      "id": "feu-1104",
+      "intersection": "Saint-Denis / Saint-Zotique",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5355814627341,
+      "lng": -73.6084774475557
+    },
+    {
+      "id": "feu-1108",
+      "intersection": "Acadie / Beaumont",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5234126147588,
+      "lng": -73.6232350593478
+    },
+    {
+      "id": "feu-1111",
+      "intersection": "Acadie / Liège",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.529510504308,
+      "lng": -73.6440038771782
+    },
+    {
+      "id": "feu-1117",
+      "intersection": "Hutchison / Jean-Talon",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5296640805026,
+      "lng": -73.6226806339043
+    },
+    {
+      "id": "feu-1119",
+      "intersection": "Bélanger / Fabre",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5451692167066,
+      "lng": -73.6046400821765
+    },
+    {
+      "id": "feu-1134",
+      "intersection": "Faillon / Saint-Laurent",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5362670987333,
+      "lng": -73.6222987173317
+    },
+    {
+      "id": "feu-1147",
+      "intersection": "Émile-Journault / Papineau",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5596848857352,
+      "lng": -73.6336200462732
+    },
+    {
+      "id": "feu-1153",
+      "intersection": "Fort-Lorette / Henri-Bourassa",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5676756516598,
+      "lng": -73.6597764335552
+    },
+    {
+      "id": "feu-1327",
+      "intersection": "3 e Avenue / Notre-Dame",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6350629338606,
+      "lng": -73.4927024142666
+    },
+    {
+      "id": "feu-1329",
+      "intersection": "16 e Avenue / Notre-Dame",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Temporaire",
+      "lat": 45.6434280709891,
+      "lng": -73.489778385638
+    },
+    {
+      "id": "feu-1336",
+      "intersection": "Notre-Dame / 13926 Est (C.L.S.C.)",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6664130609485,
+      "lng": -73.4943880685984
+    },
+    {
+      "id": "feu-1344",
+      "intersection": "Biencourt / Monk",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4587862594383,
+      "lng": -73.5961169802149
+    },
+    {
+      "id": "feu-1352",
+      "intersection": "Monk / Raudot",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4482869246949,
+      "lng": -73.592176516723
+    },
+    {
+      "id": "feu-1365",
+      "intersection": "1 e Avenue / Rosemont",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5478527256258,
+      "lng": -73.5850572757161
+    },
+    {
+      "id": "feu-1370",
+      "intersection": "Berri / Mont-Royal",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5249764805156,
+      "lng": -73.5820090974602
+    },
+    {
+      "id": "feu-1371",
+      "intersection": "Gouin / Poutrincourt",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5415956808995,
+      "lng": -73.7065580918372
+    },
+    {
+      "id": "feu-1375",
+      "intersection": "Armand-Bombardier / Maurice-Duplessis",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6314743115118,
+      "lng": -73.5894891939687
+    },
+    {
+      "id": "feu-1376",
+      "intersection": "Armand-Bombardier / Perras",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6384618756532,
+      "lng": -73.5969446361645
+    },
+    {
+      "id": "feu-1377",
+      "intersection": "Marcil / Monkland",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4756721735663,
+      "lng": -73.6227365680988
+    },
+    {
+      "id": "feu-1379",
+      "intersection": "27 e Avenue / Maurice-Duplessis",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6342916042659,
+      "lng": -73.5857821497997
+    },
+    {
+      "id": "feu-1391",
+      "intersection": "Place d'Armes / Saint-Jacques Est",
+      "arrondissement": "Ville-Marie",
+      "statut": "Temporaire",
+      "lat": 45.5051856665966,
+      "lng": -73.5574599872069
+    },
+    {
+      "id": "feu-1394",
+      "intersection": "Garnier / Jean-Talon",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5461406286725,
+      "lng": -73.6086848297959
+    },
+    {
+      "id": "feu-1407",
+      "intersection": "La Rousselière / Notre-Dame",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6675607497182,
+      "lng": -73.4943691328714
+    },
+    {
+      "id": "feu-1412",
+      "intersection": "Mont-Royal / Parthenais",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5364105488527,
+      "lng": -73.5712608568687
+    },
+    {
+      "id": "feu-1438",
+      "intersection": "6 e Avenue / Saint-Zotique",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5534150195399,
+      "lng": -73.5925174135628
+    },
+    {
+      "id": "feu-1440",
+      "intersection": "Hôtel-de-Ville / Mont-Royal",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Temporaire",
+      "lat": 45.5220671334921,
+      "lng": -73.5845861140077
+    },
+    {
+      "id": "feu-1458",
+      "intersection": "Chambord / Fleury",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5597412487901,
+      "lng": -73.6581888119092
+    },
+    {
+      "id": "feu-1462",
+      "intersection": "Notre-Dame / Place d'Armes/Saint-Sulpice",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5049266939566,
+      "lng": -73.5566450423456
+    },
+    {
+      "id": "feu-1169",
+      "intersection": "39 e Avenue / Beaubien",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5723825737906,
+      "lng": -73.5711533948547
+    },
+    {
+      "id": "feu-1180",
+      "intersection": "Christophe-Colomb / Émile-Journault",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5553782765631,
+      "lng": -73.6374326363802
+    },
+    {
+      "id": "feu-1189",
+      "intersection": "Émile-Journault / Saint-Hubert",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5505809059556,
+      "lng": -73.6402044075484
+    },
+    {
+      "id": "feu-1191",
+      "intersection": "Fleury / Hamel",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5625476873454,
+      "lng": -73.6565422688877
+    },
+    {
+      "id": "feu-1198",
+      "intersection": "Legendre / Saint-Hubert",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.551474623477,
+      "lng": -73.6433502917945
+    },
+    {
+      "id": "feu-1685",
+      "intersection": "Côte-des-Neiges / Côte-Sainte-Catherine",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.498649426452,
+      "lng": -73.6274591860584
+    },
+    {
+      "id": "feu-1696",
+      "intersection": "Beaver Hall / Belmont",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5024020594708,
+      "lng": -73.5649609185695
+    },
+    {
+      "id": "feu-1706",
+      "intersection": "Christophe-Colomb / Mistral",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5491827344213,
+      "lng": -73.6270847624486
+    },
+    {
+      "id": "feu-1708",
+      "intersection": "Chabot / Crémazie Est",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5551410800202,
+      "lng": -73.6196173972867
+    },
+    {
+      "id": "feu-1710",
+      "intersection": "Gouin / 6750 Est",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.6272239574085,
+      "lng": -73.6219191523394
+    },
+    {
+      "id": "feu-1730",
+      "intersection": "Galeries d'Anjou / Sortie Centre-d'achats / Halles",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5980389132537,
+      "lng": -73.5657184208154
+    },
+    {
+      "id": "feu-1739",
+      "intersection": "L-H-Lafontaine (dir.Nord) / Yves-Prévost",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5975489977234,
+      "lng": -73.5491745305559
+    },
+    {
+      "id": "feu-2008",
+      "intersection": "Bennett / Hochelaga",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5571577885722,
+      "lng": -73.5452135666971
+    },
+    {
+      "id": "feu-1523",
+      "intersection": "Monkland / Oxford",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.475076666479,
+      "lng": -73.6232769924951
+    },
+    {
+      "id": "feu-1545",
+      "intersection": "Irwin / Trinitaires",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4471215174152,
+      "lng": -73.6044804493892
+    },
+    {
+      "id": "feu-1546",
+      "intersection": "Lacroix / Trinitaires",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4465583303954,
+      "lng": -73.6013608265226
+    },
+    {
+      "id": "feu-1547",
+      "intersection": "Decelles / Swail",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4971326993135,
+      "lng": -73.6185205835321
+    },
+    {
+      "id": "feu-1557",
+      "intersection": "Parc / Rachel face monument",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Permanent",
+      "lat": 45.5146974989376,
+      "lng": -73.5848266665295
+    },
+    {
+      "id": "feu-1570",
+      "intersection": "Sherbrooke / Valois",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5505663519892,
+      "lng": -73.5549551557043
+    },
+    {
+      "id": "feu-1591",
+      "intersection": "Acadie / Arthur-Lismer",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5353247957248,
+      "lng": -73.6686189412514
+    },
+    {
+      "id": "feu-1603",
+      "intersection": "Acadie / Place de l'Acadie",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5337466314256,
+      "lng": -73.679019009084
+    },
+    {
+      "id": "feu-1618",
+      "intersection": "Charon / Wellington",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4792410903739,
+      "lng": -73.5588048748454
+    },
+    {
+      "id": "feu-1640",
+      "intersection": "Jean-Talon / 4290 Est (Métro)",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.567950326659,
+      "lng": -73.5900833122248
+    },
+    {
+      "id": "feu-1647",
+      "intersection": "Amos / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5943529517855,
+      "lng": -73.6409999349275
+    },
+    {
+      "id": "feu-1650",
+      "intersection": "Jean-Talon / 6800 Est (Bureau en Gros)",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.594732674198,
+      "lng": -73.5726993910581
+    },
+    {
+      "id": "feu-2151",
+      "intersection": "Hochelaga / Joliette",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.5468191658751,
+      "lng": -73.5514180291262
+    },
+    {
+      "id": "feu-2363",
+      "intersection": "Côte-des-Neiges / Swail",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4953850992654,
+      "lng": -73.6201777874998
+    },
+    {
+      "id": "feu-2371",
+      "intersection": "Assomption / Sapins des",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5734255895135,
+      "lng": -73.5599356516405
+    },
+    {
+      "id": "feu-3026",
+      "intersection": "56 e Rue / Pie-IX",
+      "arrondissement": "Villeray - Saint-Michel - Parc-Extension",
+      "statut": "Permanent",
+      "lat": 45.5825060931484,
+      "lng": -73.6275446180343
+    },
+    {
+      "id": "feu-3097",
+      "intersection": "Belgrave / Saint-Jacques",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4655737666438,
+      "lng": -73.6122792892753
+    },
+    {
+      "id": "feu-3803",
+      "intersection": "Mont-Royal / Resther",
+      "arrondissement": "Plateau Mont-Royal",
+      "statut": "Temporaire",
+      "lat": 45.5255528022621,
+      "lng": -73.5815040517918
+    },
+    {
+      "id": "feu-1493",
+      "intersection": "Davidson / Rachel/Saint-Michel",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5470186220585,
+      "lng": -73.5596401814542
+    },
+    {
+      "id": "feu-1510",
+      "intersection": "Atwater / Lionel-Groulx",
+      "arrondissement": "Sud-Ouest",
+      "statut": "Permanent",
+      "lat": 45.4830455024727,
+      "lng": -73.5790805739662
+    },
+    {
+      "id": "feu-1518",
+      "intersection": "Rosemont / 5689 (Hôp. Maisonneuve-R.)",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5770263552182,
+      "lng": -73.5610243370875
+    },
+    {
+      "id": "feu-9016",
+      "intersection": "Jean-Talon / Provencher",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5710860401764,
+      "lng": -73.5874492841538
+    },
+    {
+      "id": "feu-9028",
+      "intersection": "Galeries d'Anjou / Jean-Talon",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5991548641162,
+      "lng": -73.5689286776904
+    },
+    {
+      "id": "feu-9137",
+      "intersection": "Bombardier / Langelier",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5998351470722,
+      "lng": -73.5937774464023
+    },
+    {
+      "id": "feu-9452",
+      "intersection": "Amiens d' / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5891588509122,
+      "lng": -73.6355087735009
+    },
+    {
+      "id": "feu-9454",
+      "intersection": "Castille de / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5909662447001,
+      "lng": -73.6374173885193
+    },
+    {
+      "id": "feu-10100",
+      "intersection": "Place d'Accueil / Saint-Antoine",
+      "arrondissement": "Lachine",
+      "statut": "Permanent",
+      "lat": 45.4397795948285,
+      "lng": -73.6903532076275
+    },
+    {
+      "id": "feu-11283",
+      "intersection": "Bégin / Côte-Vertu",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.4923469085372,
+      "lng": -73.7103120336346
+    },
+    {
+      "id": "feu-11682",
+      "intersection": "Bombardier / Galeries d'Anjou",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.606694308836,
+      "lng": -73.5864843853365
+    },
+    {
+      "id": "feu-5006",
+      "intersection": "Bellechasse / Saint-Laurent",
+      "arrondissement": "Rosemont - Petite-Patrie",
+      "statut": "Permanent",
+      "lat": 45.5288322065049,
+      "lng": -73.6053528241682
+    },
+    {
+      "id": "feu-5843",
+      "intersection": "Fleury / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.586348080753,
+      "lng": -73.6325321024711
+    },
+    {
+      "id": "feu-6207",
+      "intersection": "Forest / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5873852735546,
+      "lng": -73.6336332464498
+    },
+    {
+      "id": "feu-6379",
+      "intersection": "Contrecoeur / Sherbrooke",
+      "arrondissement": "Mercier - Hochelaga - Maisonneuve",
+      "statut": "Permanent",
+      "lat": 45.6118338901984,
+      "lng": -73.5260729527798
+    },
+    {
+      "id": "feu-7039",
+      "intersection": "Gouin / Langelier",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.6257942631233,
+      "lng": -73.6239890363084
+    },
+    {
+      "id": "feu-7084",
+      "intersection": "Côte-Sainte-Catherine / Laurier",
+      "arrondissement": "Outremont",
+      "statut": "Permanent",
+      "lat": 45.5160177252804,
+      "lng": -73.5991548813412
+    },
+    {
+      "id": "feu-7148",
+      "intersection": "Côte-Sainte-Catherine / Stuart",
+      "arrondissement": "Outremont",
+      "statut": "Permanent",
+      "lat": 45.5153144794202,
+      "lng": -73.6061612312266
+    },
+    {
+      "id": "feu-7195",
+      "intersection": "Beaubien / Galeries d'Anjou",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5951281729735,
+      "lng": -73.5563785305306
+    },
+    {
+      "id": "feu-7206",
+      "intersection": "Patricia / Sherbrooke",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4552658761308,
+      "lng": -73.6412461598815
+    },
+    {
+      "id": "feu-7782",
+      "intersection": "Beaubien / Roseraies des",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5966791851646,
+      "lng": -73.5550489018335
+    },
+    {
+      "id": "feu-7825",
+      "intersection": "Bélanger / Galeries d'Anjou",
+      "arrondissement": "Anjou",
+      "statut": "Permanent",
+      "lat": 45.5972029006533,
+      "lng": -73.563183037142
+    },
+    {
+      "id": "feu-7828",
+      "intersection": "Bélanger / Valdombre",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5843383336179,
+      "lng": -73.571238979376
+    },
+    {
+      "id": "feu-8190",
+      "intersection": "Côte-Sainte-Catherine / Vincent-d'Indy",
+      "arrondissement": "Outremont",
+      "statut": "Permanent",
+      "lat": 45.5117371307891,
+      "lng": -73.6154894804881
+    },
+    {
+      "id": "feu-8263",
+      "intersection": "Décarie / Saint-Louis",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.5079681533015,
+      "lng": -73.6725353306529
+    },
+    {
+      "id": "feu-8553",
+      "intersection": "Galt / LaSalle",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4617377425463,
+      "lng": -73.5629670058136
+    },
+    {
+      "id": "feu-8604",
+      "intersection": "Gouin / Saint-Michel",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5847760908876,
+      "lng": -73.6517205639876
+    },
+    {
+      "id": "feu-8616",
+      "intersection": "Audoin / Gouin",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Temporaire",
+      "lat": 45.5875527850721,
+      "lng": -73.6517416609827
+    },
+    {
+      "id": "feu-12651",
+      "intersection": "4 e Avenue / 5 e Avenue / Champlain",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.457148009147,
+      "lng": -73.5796118936278
+    },
+    {
+      "id": "feu-13146",
+      "intersection": "Collège / Sainte-Croix",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.5115529562045,
+      "lng": -73.6723871664054
+    },
+    {
+      "id": "feu-13284",
+      "intersection": "Côte-Vertu / Grimard",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.527394191926,
+      "lng": -73.6697989215645
+    },
+    {
+      "id": "feu-13285",
+      "intersection": "Côte-Vertu / Hocquart",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.5007936464254,
+      "lng": -73.6996588448013
+    },
+    {
+      "id": "feu-13291",
+      "intersection": "Côte-Vertu / Montpellier",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.521042658042,
+      "lng": -73.6738854650603
+    },
+    {
+      "id": "feu-13332",
+      "intersection": "Couture / Lacordaire",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5965985384865,
+      "lng": -73.6087025445717
+    },
+    {
+      "id": "feu-13523",
+      "intersection": "David-Boyer / Dollard",
+      "arrondissement": "LaSalle",
+      "statut": "Permanent",
+      "lat": 45.4278790417013,
+      "lng": -73.6292332964447
+    },
+    {
+      "id": "feu-14226",
+      "intersection": "Église de l' / LaSalle",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4626283138966,
+      "lng": -73.5634722941855
+    },
+    {
+      "id": "feu-15079",
+      "intersection": "Guy-Bouchard / Newman",
+      "arrondissement": "LaSalle",
+      "statut": "Permanent",
+      "lat": 45.4459346286706,
+      "lng": -73.6119942053879
+    },
+    {
+      "id": "feu-15140",
+      "intersection": "Harry-Worth / Saint-Jean",
+      "arrondissement": "Pierrefonds - Roxboro",
+      "statut": "Permanent",
+      "lat": 45.4889517726954,
+      "lng": -73.8501363885115
+    },
+    {
+      "id": "feu-15202",
+      "intersection": "Henri-Duhamel / LaSalle",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4723088016836,
+      "lng": -73.5695142091774
+    },
+    {
+      "id": "feu-15205",
+      "intersection": "Henri-Duhamel / Verdun",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4722944454202,
+      "lng": -73.5705257972395
+    },
+    {
+      "id": "feu-15744",
+      "intersection": "Lacordaire / Paimpol",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5817223145395,
+      "lng": -73.5858280101974
+    },
+    {
+      "id": "feu-15920",
+      "intersection": "LaSalle / Stephens",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4437638246158,
+      "lng": -73.576695676941
+    },
+    {
+      "id": "feu-16115",
+      "intersection": "Lise / Newman",
+      "arrondissement": "LaSalle",
+      "statut": "Permanent",
+      "lat": 45.4333480954531,
+      "lng": -73.6288000224181
+    },
+    {
+      "id": "feu-16776",
+      "intersection": "Ouellette / Saint-Jacques",
+      "arrondissement": "Lachine",
+      "statut": "Permanent",
+      "lat": 45.4456345130946,
+      "lng": -73.6449680526907
+    },
+    {
+      "id": "feu-17249",
+      "intersection": "32 e Avenue / Saint-Antoine",
+      "arrondissement": "Lachine",
+      "statut": "Permanent",
+      "lat": 45.4397450131259,
+      "lng": -73.6923516391288
+    },
+    {
+      "id": "feu-17650",
+      "intersection": "28 e Avenue / Victoria",
+      "arrondissement": "Lachine",
+      "statut": "Permanent",
+      "lat": 45.4361516810401,
+      "lng": -73.6885476476793
+    },
+    {
+      "id": "feu-8830",
+      "intersection": "Henri-Bourassa / Saint-Michel",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5839207838811,
+      "lng": -73.6503255092711
+    },
+    {
+      "id": "feu-8831",
+      "intersection": "Henri-Bourassa / Séguin",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5713565109316,
+      "lng": -73.6579031706932
+    },
+    {
+      "id": "feu-8845",
+      "intersection": "Désy / Henri-Bourassa",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.6075494036701,
+      "lng": -73.6173674646375
+    },
+    {
+      "id": "feu-8848",
+      "intersection": "Dutrisac / Henri-bourassa",
+      "arrondissement": "Saint-Laurent",
+      "statut": "Permanent",
+      "lat": 45.5282483203131,
+      "lng": -73.6928241705093
+    },
+    {
+      "id": "feu-8852",
+      "intersection": "Garon / Henri-Bourassa",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5979157221941,
+      "lng": -73.6408365825362
+    },
+    {
+      "id": "feu-8883",
+      "intersection": "Henri-Bourassa / Récollets des",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5940653179931,
+      "lng": -73.6439965227812
+    },
+    {
+      "id": "feu-8891",
+      "intersection": "Henri-Bourassa / Salk",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.6044167646572,
+      "lng": -73.6267008438569
+    },
+    {
+      "id": "feu-8971",
+      "intersection": "Jarry / Nice",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.575915622375,
+      "lng": -73.5988125908198
+    },
+    {
+      "id": "feu-8979",
+      "intersection": "Jarry / Viau",
+      "arrondissement": "Saint-Léonard",
+      "statut": "Permanent",
+      "lat": 45.5776068796515,
+      "lng": -73.5973010486554
+    },
+    {
+      "id": "feu-17910",
+      "intersection": "Henri-Bourassa / Pie-IX",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.595836629018,
+      "lng": -73.6425627869127
+    },
+    {
+      "id": "feu-17911",
+      "intersection": "Henri-Bourassa / Bretelle d'accès pont Pie IX / Hébert",
+      "arrondissement": "Montréal-Nord",
+      "statut": "Permanent",
+      "lat": 45.5968823628981,
+      "lng": -73.6415873035195
+    },
+    {
+      "id": "feu-17926",
+      "intersection": "Marie-Victorin accès Est / Maurice-Duplessis",
+      "arrondissement": "Rivières-des-Prairies - Pointe-aux-Trembles",
+      "statut": "Permanent",
+      "lat": 45.6209982579401,
+      "lng": -73.6073924352093
+    },
+    {
+      "id": "feu-17936",
+      "intersection": "Décarie / Accès sud CUSM",
+      "arrondissement": "Côte-des-Neiges - Notre-Dame-de-Grâce",
+      "statut": "Permanent",
+      "lat": 45.4716789609714,
+      "lng": -73.6030258347934
+    },
+    {
+      "id": "feu-17939",
+      "intersection": "Berri / 1640 sortie BUS Ilot Voyageur",
+      "arrondissement": "Ville-Marie",
+      "statut": "Permanent",
+      "lat": 45.5162635933787,
+      "lng": -73.5631345495659
+    },
+    {
+      "id": "feu-18034",
+      "intersection": "Lachapelle / Laurentien",
+      "arrondissement": "Ahuntsic - Cartierville",
+      "statut": "Permanent",
+      "lat": 45.5315252676639,
+      "lng": -73.7263216612666
+    },
+    {
+      "id": "feu-18087",
+      "intersection": "LaSalle / Face au 5685",
+      "arrondissement": "Verdun",
+      "statut": "Permanent",
+      "lat": 45.4503407543994,
+      "lng": -73.5682083283257
+    }
+  ]
+}
