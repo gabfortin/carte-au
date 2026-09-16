@@ -21,29 +21,83 @@ const CATEGORY_LABELS = {
   autre: "Autre",
 };
 
+const ENTREE_LABELS = {
+  "plain-pied": "Plain-pied",
+  rampe: "Rampe",
+  marche: "Marche(s)",
+  inconnu: "Inconnu",
+};
+
+const LOGEMENT_TYPE_LABELS = {
+  locatif: "Locatif",
+  condo: "Condo",
+  residence: "Résidence",
+};
+
+const STATIONNEMENT_TYPE_LABELS = {
+  "sur-rue": "Sur rue",
+  "hors-rue": "Hors rue",
+};
+
+const EQUIPEMENT_CATEGORY_LABELS = {
+  piscine: "Piscine",
+  bibliotheque: "Bibliothèque",
+  parc: "Parc",
+  arena: "Aréna",
+  autre: "Autre",
+};
+
 function levelClass(level) {
   return LEVEL_LABELS[level] ? level : "inconnu";
 }
 
+function boolLabel(value) {
+  if (value === true) return "Oui";
+  if (value === false) return "Non";
+  return null;
+}
+
+function field(label, value) {
+  if (value === undefined || value === null || value === "") return "";
+  return `<div class="popup-field"><span class="popup-field-label">${label}</span>${value}</div>`;
+}
+
+function reviewBlock(text, reviewer) {
+  if (!text) return "";
+  return `<div class="review">"${text}"${reviewer ? ` — ${reviewer}` : ""}</div>`;
+}
+
 function commercePopup(c) {
   const level = levelClass(c.accessibility?.level);
-  const review = c.source?.reviewText;
+  const a = c.accessibility || {};
   return `
     <div class="popup-content">
       <h3>${c.name}</h3>
-      <div>${c.address}</div>
+      <div class="popup-address">${c.address}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
-      ${review ? `<div class="review">"${review}" — ${c.source.reviewer}</div>` : ""}
+      ${field("Catégorie", CATEGORY_LABELS[c.category] || c.category)}
+      ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
+      ${field("Toilettes accessibles", boolLabel(a.toilettes))}
+      ${field("Stationnement", boolLabel(a.stationnement))}
+      ${field("Notes", a.notes)}
+      ${reviewBlock(c.source?.reviewText, c.source?.reviewer)}
     </div>
   `;
 }
 
 function logementPopup(l) {
+  const level = levelClass(l.accessibility?.level);
+  const a = l.accessibility || {};
   return `
     <div class="popup-content">
       <h3>${l.name}</h3>
-      <div>${l.address}</div>
-      ${l.accessibility?.notes ? `<div class="review">${l.accessibility.notes}</div>` : ""}
+      <div class="popup-address">${l.address}</div>
+      <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      ${field("Type", LOGEMENT_TYPE_LABELS[l.type] || l.type)}
+      ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
+      ${field("Ascenseur", boolLabel(a.ascenseur))}
+      ${field("Notes", a.notes)}
+      ${reviewBlock(l.source?.reviewText, l.source?.reviewer)}
     </div>
   `;
 }
@@ -52,18 +106,25 @@ function stationnementPopup(s) {
   return `
     <div class="popup-content">
       <h3>${s.description}</h3>
-      ${s.address ? `<div>${s.address}</div>` : ""}
-      ${s.notes ? `<div class="review">${s.notes}</div>` : ""}
+      ${s.address ? `<div class="popup-address">${s.address}</div>` : ""}
+      ${field("Type", STATIONNEMENT_TYPE_LABELS[s.type] || s.type)}
+      ${field("Notes", s.notes)}
+      ${reviewBlock(s.source?.reviewText, s.source?.reviewer)}
     </div>
   `;
 }
 
 function equipementPopup(e) {
+  const level = levelClass(e.accessibility?.level);
+  const a = e.accessibility || {};
   return `
     <div class="popup-content">
       <h3>${e.name}</h3>
-      <div>${e.address}</div>
-      ${e.accessibility?.notes ? `<div class="review">${e.accessibility.notes}</div>` : ""}
+      <div class="popup-address">${e.address}</div>
+      <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      ${field("Catégorie", EQUIPEMENT_CATEGORY_LABELS[e.category] || e.category)}
+      ${field("Notes", a.notes)}
+      ${reviewBlock(e.source?.reviewText, e.source?.reviewer)}
     </div>
   `;
 }
@@ -72,8 +133,8 @@ function feuSonorePopup(f) {
   return `
     <div class="popup-content">
       <h3>${f.intersection}</h3>
-      ${f.arrondissement ? `<div>${f.arrondissement}</div>` : ""}
-      ${f.statut ? `<div class="review">Statut : ${f.statut}</div>` : ""}
+      ${field("Arrondissement", f.arrondissement)}
+      ${field("Type", f.statut)}
     </div>
   `;
 }
