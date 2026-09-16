@@ -1,45 +1,30 @@
 {
   "commerces": [
     {
-      "id": "exemple-cafe-accessible",
-      "name": "Café Exemple",
-      "category": "cafe",
-      "address": "123 Rue Exemple, Montréal, QC",
-      "lat": 45.5247742,
-      "lng": -73.5855742,
+      "id": "marche-floh",
+      "name": "Marché Floh",
+      "category": "friperie",
+      "address": "4301 Rue Saint-Denis, Montréal, QC H2J 2K9",
+      "lat": 45.5226488,
+      "lng": -73.5796121,
       "accessibility": {
         "level": "accessible",
         "entree": "plain-pied",
-        "toilettes": true,
-        "stationnement": false,
-        "notes": "Entrée de plain-pied, portes larges, toilette accessible au rez-de-chaussée."
-      },
-      "source": {
-        "reviewer": "Promo-Accès",
-        "date": "2024-01-01",
-        "reviewText": "Ceci est un exemple d'avis à remplacer par un vrai avis de Promo-Accès.",
-        "reviewUrl": null
-      }
-    },
-    {
-      "id": "exemple-commerce-partiel",
-      "name": "Boutique Exemple",
-      "category": "commerce",
-      "address": "456 Avenue Exemple, Montréal, QC",
-      "lat": 45.5205,
-      "lng": -73.5810,
-      "accessibility": {
-        "level": "partiellement",
-        "entree": "rampe",
         "toilettes": false,
         "stationnement": null,
-        "notes": "Rampe d'accès présente mais espace intérieur restreint pour circuler en fauteuil."
+        "animauxAssistance": true,
+        "mainsCourantes": true,
+        "etages": 3,
+        "ascenseur": true,
+        "salleEssayage": false,
+        "terminalPaiement": "Bouton, amovible",
+        "notes": "Le monte-charge dessert les 3 étages mais était en panne lors de la visite. Il est recommandé de contacter l'établissement à l'avance pour confirmer son fonctionnement."
       },
       "source": {
         "reviewer": "Promo-Accès",
-        "date": "2024-02-15",
-        "reviewText": "Ceci est un deuxième exemple, à remplacer.",
-        "reviewUrl": null
+        "date": "2025-07",
+        "reviewText": "Nous avons visité ce commerce à l'été 2025. L'entrée est de plain-pied, sans marche. Les animaux d'assistance sont acceptés. Des mains courantes sont présentes dans les escaliers. Le commerce s'étend sur trois étages, censés être accessibles grâce à un monte-charge. Toutefois, celui-ci était en panne lors de notre visite. La salle d'essayage n'est pas accessible. Le terminal de paiement est à bouton et amovible. Pas de toilettes pour la clientèle.",
+        "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
       }
     }
   ]

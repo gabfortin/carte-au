@@ -30,11 +30,13 @@ Chaque couche a son fichier dans `data/`. Voir un exemple existant dans chaque f
 
 ### Commerces (`data/commerces.json`)
 
+Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` (ou l'omettre) si l'avis ne mentionne pas l'info.
+
 ```json
 {
   "id": "identifiant-unique",
   "name": "Nom du commerce",
-  "category": "cafe | restaurant | commerce | sante | culture | autre",
+  "category": "cafe | restaurant | commerce | friperie | sante | culture | autre",
   "address": "Adresse complète",
   "lat": 45.0,
   "lng": -73.0,
@@ -43,11 +45,17 @@ Chaque couche a son fichier dans `data/`. Voir un exemple existant dans chaque f
     "entree": "plain-pied | rampe | marche | inconnu",
     "toilettes": true,
     "stationnement": false,
-    "notes": "Détails libres sur l'accessibilité"
+    "animauxAssistance": true,
+    "mainsCourantes": true,
+    "etages": 1,
+    "ascenseur": true,
+    "salleEssayage": null,
+    "terminalPaiement": "Bouton, amovible",
+    "notes": "Détails libres sur l'accessibilité (ex: équipement en panne au moment de la visite)"
   },
   "source": {
     "reviewer": "Promo-Accès",
-    "date": "AAAA-MM-JJ",
+    "date": "AAAA-MM ou AAAA-MM-JJ",
     "reviewText": "Extrait de l'avis original",
     "reviewUrl": null
   }

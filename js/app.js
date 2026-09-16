@@ -16,6 +16,7 @@ const CATEGORY_LABELS = {
   cafe: "Café",
   restaurant: "Restaurant",
   commerce: "Commerce",
+  friperie: "Friperie",
   sante: "Santé",
   culture: "Culture",
   autre: "Autre",
@@ -77,6 +78,12 @@ function commercePopup(c) {
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", CATEGORY_LABELS[c.category] || c.category)}
       ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
+      ${field("Animaux d'assistance", boolLabel(a.animauxAssistance))}
+      ${field("Mains courantes", boolLabel(a.mainsCourantes))}
+      ${field("Étages", a.etages)}
+      ${field("Ascenseur / monte-charge", boolLabel(a.ascenseur))}
+      ${field("Salle d'essayage accessible", boolLabel(a.salleEssayage))}
+      ${field("Terminal de paiement", a.terminalPaiement)}
       ${field("Toilettes accessibles", boolLabel(a.toilettes))}
       ${field("Stationnement", boolLabel(a.stationnement))}
       ${field("Notes", a.notes)}
