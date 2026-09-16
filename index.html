@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte des commerces accessibles</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Carte des commerces accessibles</h1>
+    <p class="subtitle">Données d'accessibilité compilées à partir des avis de <strong>Promo-Accès</strong> sur Google Maps.</p>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar">
+      <div class="filters">
+        <label for="filter-level">Niveau d'accessibilité</label>
+        <select id="filter-level">
+          <option value="all">Tous</option>
+          <option value="accessible">Accessible</option>
+          <option value="partiellement">Partiellement accessible</option>
+          <option value="non-accessible">Non accessible</option>
+        </select>
+
+        <label for="filter-category">Catégorie</label>
+        <select id="filter-category">
+          <option value="all">Toutes</option>
+        </select>
+
+        <input type="search" id="search" placeholder="Rechercher un commerce..." />
+      </div>
+      <ul id="commerce-list"></ul>
+    </aside>
+
+    <main id="map"></main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

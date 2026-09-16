@@ -1,0 +1,127 @@
+:root {
+  --color-accessible: #2e7d32;
+  --color-partial: #f9a825;
+  --color-none: #c62828;
+  --color-unknown: #757575;
+  --border: #e0e0e0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 72px);
+}
+
+#sidebar {
+  width: 320px;
+  min-width: 280px;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.filters select,
+.filters input {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#commerce-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+#commerce-list li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+#commerce-list li:hover {
+  background: #f5f5f5;
+}
+
+#commerce-list .name {
+  font-weight: 600;
+  display: block;
+}
+
+#commerce-list .address {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  color: #fff;
+  margin-top: 0.25rem;
+}
+
+.badge.accessible { background: var(--color-accessible); }
+.badge.partiellement { background: var(--color-partial); color: #1a1a1a; }
+.badge.non-accessible { background: var(--color-none); }
+.badge.inconnu { background: var(--color-unknown); }
+
+#map {
+  flex: 1;
+}
+
+.popup-content h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.popup-content .review {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #444;
+}

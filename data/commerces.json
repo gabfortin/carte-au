@@ -1,0 +1,46 @@
+{
+  "commerces": [
+    {
+      "id": "exemple-cafe-accessible",
+      "name": "Café Exemple",
+      "category": "cafe",
+      "address": "123 Rue Exemple, Montréal, QC",
+      "lat": 45.5247742,
+      "lng": -73.5855742,
+      "accessibility": {
+        "level": "accessible",
+        "entree": "plain-pied",
+        "toilettes": true,
+        "stationnement": false,
+        "notes": "Entrée de plain-pied, portes larges, toilette accessible au rez-de-chaussée."
+      },
+      "source": {
+        "reviewer": "Promo-Accès",
+        "date": "2024-01-01",
+        "reviewText": "Ceci est un exemple d'avis à remplacer par un vrai avis de Promo-Accès.",
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "exemple-commerce-partiel",
+      "name": "Boutique Exemple",
+      "category": "commerce",
+      "address": "456 Avenue Exemple, Montréal, QC",
+      "lat": 45.5205,
+      "lng": -73.5810,
+      "accessibility": {
+        "level": "partiellement",
+        "entree": "rampe",
+        "toilettes": false,
+        "stationnement": null,
+        "notes": "Rampe d'accès présente mais espace intérieur restreint pour circuler en fauteuil."
+      },
+      "source": {
+        "reviewer": "Promo-Accès",
+        "date": "2024-02-15",
+        "reviewText": "Ceci est un deuxième exemple, à remplacer.",
+        "reviewUrl": null
+      }
+    }
+  ]
+}
