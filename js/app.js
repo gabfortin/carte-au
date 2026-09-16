@@ -241,7 +241,7 @@ function renderLayerMarkers(config, items) {
       weight: 2,
       fillColor: config.getColor(item),
       fillOpacity: 0.9,
-    }).bindPopup(config.getPopup(item));
+    }).bindPopup(config.getPopup(item), { maxWidth: 420, minWidth: 340 });
     marker.addTo(group);
     if (config.key === "commerces") markersById.set(item.id, marker);
   });
