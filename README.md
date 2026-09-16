@@ -62,7 +62,7 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
     "reviewer": "Promo-Accès",
     "date": "AAAA-MM ou AAAA-MM-JJ",
     "reviewText": "Extrait de l'avis original",
-    "reviewUrl": null
+    "reviewUrl": "Lien direct vers l'avis (ex: https://maps.app.goo.gl/...), pas le lien générique du profil"
   }
 }
 ```

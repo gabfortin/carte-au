@@ -69,9 +69,10 @@ function field(label, value) {
   return `<div class="popup-field"><span class="popup-field-label">${label}</span>${value}</div>`;
 }
 
-function reviewBlock(text, reviewer) {
+function reviewBlock(text, reviewer, url) {
   if (!text) return "";
-  return `<div class="review">"${text}"${reviewer ? ` — ${reviewer}` : ""}</div>`;
+  const link = url ? ` <a href="${url}" target="_blank" rel="noopener">Voir l'avis sur Google Maps</a>` : "";
+  return `<div class="review">"${text}"${reviewer ? ` — ${reviewer}` : ""}${link}</div>`;
 }
 
 function commercePopup(c) {
@@ -98,7 +99,7 @@ function commercePopup(c) {
       ${field("Toilettes accessibles", boolLabel(a.toilettes))}
       ${field("Stationnement", boolLabel(a.stationnement))}
       ${field("Notes", a.notes)}
-      ${reviewBlock(c.source?.reviewText, c.source?.reviewer)}
+      ${reviewBlock(c.source?.reviewText, c.source?.reviewer, c.source?.reviewUrl)}
     </div>
   `;
 }
@@ -115,7 +116,7 @@ function logementPopup(l) {
       ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
       ${field("Ascenseur", boolLabel(a.ascenseur))}
       ${field("Notes", a.notes)}
-      ${reviewBlock(l.source?.reviewText, l.source?.reviewer)}
+      ${reviewBlock(l.source?.reviewText, l.source?.reviewer, l.source?.reviewUrl)}
     </div>
   `;
 }
@@ -127,7 +128,7 @@ function stationnementPopup(s) {
       ${s.address ? `<div class="popup-address">${s.address}</div>` : ""}
       ${field("Type", STATIONNEMENT_TYPE_LABELS[s.type] || s.type)}
       ${field("Notes", s.notes)}
-      ${reviewBlock(s.source?.reviewText, s.source?.reviewer)}
+      ${reviewBlock(s.source?.reviewText, s.source?.reviewer, s.source?.reviewUrl)}
     </div>
   `;
 }
@@ -142,7 +143,7 @@ function equipementPopup(e) {
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", EQUIPEMENT_CATEGORY_LABELS[e.category] || e.category)}
       ${field("Notes", a.notes)}
-      ${reviewBlock(e.source?.reviewText, e.source?.reviewer)}
+      ${reviewBlock(e.source?.reviewText, e.source?.reviewer, e.source?.reviewUrl)}
     </div>
   `;
 }

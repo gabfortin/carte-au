@@ -181,3 +181,11 @@ header h1 {
   font-style: italic;
   color: #444;
 }
+
+.popup-content .review a {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: #1a73e8;
+}
