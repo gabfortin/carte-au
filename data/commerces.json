@@ -54,6 +54,68 @@
         "reviewText": "Nous avons visité ce commerce à l'été 2025. L'entrée comprend un vaste vestibule avec six portes vitrées, facilitant la circulation. Les animaux d'assistance sont acceptés. Nous n'avons pas pu visiter l'intérieur du théâtre étant en rénovation au moment de notre passage. Une retransmission audio en direct est offerte pour les personnes malentendantes. Toilettes non vérifiées lors de notre visite.",
         "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
       }
+    },
+    {
+      "id": "bar-lbarouf",
+      "name": "Bar L'Barouf",
+      "category": "bar",
+      "address": "4171 Rue Saint-Denis, Montréal, QC H2W 2M7",
+      "lat": 45.5217838,
+      "lng": -73.5778032,
+      "accessibility": {
+        "level": "accessible",
+        "entree": "plain-pied",
+        "toilettes": false,
+        "stationnement": null,
+        "animauxAssistance": true,
+        "mainsCourantes": null,
+        "etages": null,
+        "ascenseur": null,
+        "salleEssayage": null,
+        "mobilierAmovible": true,
+        "terrasseAccessible": true,
+        "terminalPaiement": "Tactile, amovible",
+        "assistanceAuditive": null,
+        "notes": "Allées étroites entre les tables, ce qui peut limiter la circulation en fauteuil roulant. Toilettes situées au sous-sol sans ascenseur, donc non accessibles."
+      },
+      "source": {
+        "reviewer": "Promo-Accès",
+        "date": "2025-07",
+        "reviewText": "Nous avons visité ce commerce à l'été 2025. Entrée de plain-pied, sans marche. Les animaux d'assistance sont acceptés. Les tables et chaises sont amovibles, mais les allées sont étroites, ce qui peut limiter la circulation en fauteuil roulant. Le terminal de paiement est tactile et amovible. La terrasse est accessible et également équipée de tables et chaises amovibles. Toilettes situées au sous-sol sans ascenseur, donc non accessibles.",
+        "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
+      }
+    },
+    {
+      "id": "lexpress",
+      "name": "L'Express",
+      "category": "restaurant",
+      "address": "3927 Rue Saint-Denis, Montréal, QC H2W 2M4",
+      "lat": 45.5203104,
+      "lng": -73.5743828,
+      "accessibility": {
+        "level": "accessible",
+        "entree": "plain-pied",
+        "porteAutomatique": true,
+        "toilettes": "non-verifie",
+        "stationnement": null,
+        "animauxAssistance": true,
+        "mainsCourantes": null,
+        "etages": null,
+        "ascenseur": null,
+        "salleEssayage": null,
+        "mobilierAmovible": null,
+        "terrasseAccessible": null,
+        "terminalPaiement": "Tactile, amovible",
+        "menuNumerique": true,
+        "assistanceAuditive": null,
+        "notes": "Circulation en fauteuil roulant difficile à l'entrée et allées entre les tables très étroites. Il est recommandé de réserver à l'avance et de demander une table près de l'entrée."
+      },
+      "source": {
+        "reviewer": "Promo-Accès",
+        "date": "2025-07",
+        "reviewText": "Nous avons visité ce commerce à l'été 2025. Entrée de plain-pied, sans marche, avec porte automatique. Les animaux d'assistance sont acceptés. La circulation en fauteuil roulant est difficile à l'entrée et les allées entre les tables sont très étroites. Il est recommandé de réserver à l'avance et de demander une table près de l'entrée. Le terminal de paiement est tactile et amovible. Un menu numérique est disponible. Toilettes non vérifiées lors de notre visite.",
+        "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
+      }
     }
   ]
 }

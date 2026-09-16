@@ -36,13 +36,14 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
 {
   "id": "identifiant-unique",
   "name": "Nom du commerce",
-  "category": "cafe | restaurant | commerce | friperie | sante | culture | autre",
+  "category": "cafe | bar | restaurant | commerce | friperie | sante | culture | autre",
   "address": "Adresse complète",
   "lat": 45.0,
   "lng": -73.0,
   "accessibility": {
     "level": "accessible | partiellement | non-accessible | inconnu",
     "entree": "plain-pied | rampe | marche | inconnu",
+    "porteAutomatique": true,
     "toilettes": true,
     "stationnement": false,
     "animauxAssistance": true,
@@ -50,7 +51,10 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
     "etages": 1,
     "ascenseur": true,
     "salleEssayage": null,
+    "mobilierAmovible": true,
+    "terrasseAccessible": true,
     "terminalPaiement": "Bouton, amovible",
+    "menuNumerique": true,
     "assistanceAuditive": true,
     "notes": "Détails libres sur l'accessibilité (ex: équipement en panne au moment de la visite)"
   },

@@ -14,6 +14,7 @@ const LEVEL_COLORS = {
 
 const CATEGORY_LABELS = {
   cafe: "Café",
+  bar: "Bar",
   restaurant: "Restaurant",
   commerce: "Commerce",
   friperie: "Friperie",
@@ -83,12 +84,16 @@ function commercePopup(c) {
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", CATEGORY_LABELS[c.category] || c.category)}
       ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
+      ${field("Porte automatique", boolLabel(a.porteAutomatique))}
       ${field("Animaux d'assistance", boolLabel(a.animauxAssistance))}
       ${field("Mains courantes", boolLabel(a.mainsCourantes))}
       ${field("Étages", a.etages)}
       ${field("Ascenseur / monte-charge", boolLabel(a.ascenseur))}
       ${field("Salle d'essayage accessible", boolLabel(a.salleEssayage))}
+      ${field("Mobilier amovible", boolLabel(a.mobilierAmovible))}
+      ${field("Terrasse accessible", boolLabel(a.terrasseAccessible))}
       ${field("Terminal de paiement", a.terminalPaiement)}
+      ${field("Menu numérique", boolLabel(a.menuNumerique))}
       ${field("Assistance auditive", boolLabel(a.assistanceAuditive))}
       ${field("Toilettes accessibles", boolLabel(a.toilettes))}
       ${field("Stationnement", boolLabel(a.stationnement))}
