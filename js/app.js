@@ -52,9 +52,14 @@ function levelClass(level) {
   return LEVEL_LABELS[level] ? level : "inconnu";
 }
 
+const BOOL_STRING_LABELS = {
+  "non-verifie": "Non vérifié lors de la visite",
+};
+
 function boolLabel(value) {
   if (value === true) return "Oui";
   if (value === false) return "Non";
+  if (typeof value === "string" && value) return BOOL_STRING_LABELS[value] || value;
   return null;
 }
 
@@ -84,6 +89,7 @@ function commercePopup(c) {
       ${field("Ascenseur / monte-charge", boolLabel(a.ascenseur))}
       ${field("Salle d'essayage accessible", boolLabel(a.salleEssayage))}
       ${field("Terminal de paiement", a.terminalPaiement)}
+      ${field("Assistance auditive", boolLabel(a.assistanceAuditive))}
       ${field("Toilettes accessibles", boolLabel(a.toilettes))}
       ${field("Stationnement", boolLabel(a.stationnement))}
       ${field("Notes", a.notes)}

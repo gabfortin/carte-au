@@ -30,7 +30,7 @@ Chaque couche a son fichier dans `data/`. Voir un exemple existant dans chaque f
 
 ### Commerces (`data/commerces.json`)
 
-Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` (ou l'omettre) si l'avis ne mentionne pas l'info.
+Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` (ou l'omettre) si l'avis ne mentionne pas l'info. Les champs booléens (`toilettes`, `animauxAssistance`, `mainsCourantes`, `ascenseur`, `salleEssayage`, `assistanceAuditive`) acceptent aussi la valeur `"non-verifie"` quand l'avis précise que le point n'a pas pu être vérifié lors de la visite.
 
 ```json
 {
@@ -51,6 +51,7 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
     "ascenseur": true,
     "salleEssayage": null,
     "terminalPaiement": "Bouton, amovible",
+    "assistanceAuditive": true,
     "notes": "Détails libres sur l'accessibilité (ex: équipement en panne au moment de la visite)"
   },
   "source": {

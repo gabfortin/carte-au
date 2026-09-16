@@ -26,6 +26,34 @@
         "reviewText": "Nous avons visité ce commerce à l'été 2025. L'entrée est de plain-pied, sans marche. Les animaux d'assistance sont acceptés. Des mains courantes sont présentes dans les escaliers. Le commerce s'étend sur trois étages, censés être accessibles grâce à un monte-charge. Toutefois, celui-ci était en panne lors de notre visite. La salle d'essayage n'est pas accessible. Le terminal de paiement est à bouton et amovible. Pas de toilettes pour la clientèle.",
         "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
       }
+    },
+    {
+      "id": "theatre-rideau-vert",
+      "name": "Théâtre du Rideau Vert",
+      "category": "culture",
+      "address": "4664 Rue Saint-Denis, Montréal, QC H2J 2L4",
+      "lat": 45.5248454,
+      "lng": -73.5852122,
+      "accessibility": {
+        "level": "accessible",
+        "entree": null,
+        "toilettes": "non-verifie",
+        "stationnement": null,
+        "animauxAssistance": true,
+        "mainsCourantes": null,
+        "etages": null,
+        "ascenseur": null,
+        "salleEssayage": null,
+        "terminalPaiement": null,
+        "assistanceAuditive": true,
+        "notes": "Vaste vestibule avec six portes vitrées facilitant la circulation. Intérieur du théâtre non visité (en rénovation au moment du passage). Retransmission audio en direct offerte pour les personnes malentendantes."
+      },
+      "source": {
+        "reviewer": "Promo-Accès",
+        "date": "2025-07",
+        "reviewText": "Nous avons visité ce commerce à l'été 2025. L'entrée comprend un vaste vestibule avec six portes vitrées, facilitant la circulation. Les animaux d'assistance sont acceptés. Nous n'avons pas pu visiter l'intérieur du théâtre étant en rénovation au moment de notre passage. Une retransmission audio en direct est offerte pour les personnes malentendantes. Toilettes non vérifiées lors de notre visite.",
+        "reviewUrl": "https://www.google.com/maps/contrib/100918280676331873494"
+      }
     }
   ]
 }
