@@ -4,43 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carte accessibilité universelle Plateau-Mont-Royal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Carte accessibilité universelle Plateau-Mont-Royal</h1>
-    <p class="subtitle">Données d'accessibilité compilées à partir des avis de <strong>Promo-Accès</strong> sur Google Maps, de l'<strong>arrondissement du Plateau-Mont-Royal</strong> et des <strong>données ouvertes de la Ville de Montréal</strong>.</p>
+  <header class="site-header">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Afficher les couches et filtres" aria-expanded="true" aria-controls="sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M7 12h10M10 18h4"/>
+      </svg>
+    </button>
+
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="4.6" r="2" fill="#fff"/>
+          <path d="M5.5 8.6 12 9.8l6.5-1.2M12 9.8v4.4m0 0-3 5.4m3-5.4 3 5.4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1 class="brand-word">Carte accessibilité universelle</h1>
+        <div class="brand-sub">Plateau-Mont-Royal · avis de <strong>Promo-Accès</strong>, données de l'<strong>arrondissement</strong> et de la <strong>Ville de Montréal</strong></div>
+        <div class="brand-sub-mobile">Plateau-Mont-Royal</div>
+      </div>
+    </div>
+
+    <button class="about-btn" id="about-btn" aria-label="À propos de ce projet" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="7.6" r="1.4" fill="currentColor"/>
+        <path d="M12 11v6.2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="header-stats">
+      <div class="stat-pill"><strong id="stat-commerces">–</strong><span>commerces</span></div>
+      <div class="stat-pill"><strong id="stat-feux">–</strong><span>feux sonores</span></div>
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <div class="header-search">
+      <input type="search" id="search" placeholder="Rechercher un commerce…" aria-label="Rechercher un commerce" />
+    </div>
   </header>
 
-  <div class="layout">
-    <aside id="sidebar">
-      <div class="layers">
+  <aside class="sidebar" id="sidebar" aria-label="Couches et filtres">
+    <div class="sidebar-section">
+      <div class="sidebar-header">
         <h2>Couches</h2>
-        <ul id="layer-toggles"></ul>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Fermer">✕</button>
       </div>
+      <ul id="layer-toggles"></ul>
+    </div>
 
-      <div class="filters">
-        <h2>Commerces</h2>
-        <label for="filter-level">Niveau d'accessibilité</label>
-        <select id="filter-level">
-          <option value="all">Tous</option>
-          <option value="accessible">Accessible</option>
-          <option value="partiellement">Partiellement accessible</option>
-          <option value="non-accessible">Non accessible</option>
-        </select>
+    <div class="sidebar-section filters">
+      <h2>Commerces</h2>
+      <label for="filter-level">Niveau d'accessibilité</label>
+      <select id="filter-level">
+        <option value="all">Tous</option>
+        <option value="accessible">Accessible</option>
+        <option value="partiellement">Partiellement accessible</option>
+        <option value="non-accessible">Non accessible</option>
+      </select>
 
-        <label for="filter-category">Catégorie</label>
-        <select id="filter-category">
-          <option value="all">Toutes</option>
-        </select>
+      <label for="filter-category">Catégorie</label>
+      <select id="filter-category">
+        <option value="all">Toutes</option>
+      </select>
+    </div>
 
-        <input type="search" id="search" placeholder="Rechercher un commerce..." />
+    <ul id="commerce-list"></ul>
+  </aside>
+
+  <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+  <main id="map" aria-label="Carte interactive de l'accessibilité"></main>
+
+  <div class="about-overlay" id="about-overlay">
+    <div class="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+      <button class="about-modal-close" id="about-modal-close" aria-label="Fermer">✕</button>
+
+      <h2 id="about-modal-title">À propos de ce projet</h2>
+      <p class="about-modal-desc">
+        La <strong>Carte accessibilité universelle</strong> rassemble sur une
+        seule carte l'information sur l'accessibilité au Plateau-Mont-Royal :
+        commerces, logements, stationnements et équipements accessibles, ainsi
+        que les feux sonores aux intersections.
+      </p>
+      <p class="about-modal-desc">
+        Les données proviennent des avis de <strong>Promo-Accès</strong> sur
+        Google Maps, de l'<strong>arrondissement du Plateau-Mont-Royal</strong>
+        et des <strong>données ouvertes de la Ville de Montréal</strong>.
+      </p>
+
+      <div class="about-people">
+        <a class="about-person" href="https://gabfortin.com" target="_blank" rel="noopener noreferrer">
+          <img src="img/Gab.jpg" alt="Gabriel Fortin">
+          <div class="about-person-info">
+            <div class="about-person-name">Gabriel Fortin</div>
+            <div class="about-person-role">Conseiller d'arrondissement - Plateau-Mont-Royal. Conception et développement du site.</div>
+          </div>
+        </a>
+        <div class="about-person">
+          <img src="img/Laurence.jpeg" alt="Laurence Parent">
+          <div class="about-person-info">
+            <div class="about-person-name">Laurence Parent</div>
+          </div>
+        </div>
+        <div class="about-person">
+          <img src="img/Julien.jpeg" alt="Julien Deschênes">
+          <div class="about-person-info">
+            <div class="about-person-name">Julien Deschênes</div>
+          </div>
+        </div>
       </div>
-      <ul id="commerce-list"></ul>
-    </aside>
-
-    <main id="map"></main>
+    </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

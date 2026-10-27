@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Importe le jeu de données ouvertes de Montréal "Feux de circulation -
-Signaux sonores pour malvoyants" et le convertit au format utilisé par
+Signaux sonores" et le convertit au format utilisé par
 l'app (data/feux-sonores.json).
 
 Source: https://donnees.montreal.ca/dataset/feux-malvoyants
@@ -44,7 +44,7 @@ def convert(geojson: dict) -> dict:
             }
         )
     return {
-        "source": "Ville de Montréal - données ouvertes (feux-malvoyants)",
+        "source": "Ville de Montréal - données ouvertes (feux sonores)",
         "sourceUrl": "https://donnees.montreal.ca/dataset/feux-malvoyants",
         "feuxSonores": feux,
     }

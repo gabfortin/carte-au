@@ -6,7 +6,7 @@ Carte interactive répertoriant, par couches activables/désactivables :
 - **Logements accessibles** — saisie manuelle
 - **Stationnements accessibles** — saisie manuelle (aucun jeu de données ouvertes dédié trouvé à Montréal à ce jour)
 - **Équipements accessibles** (piscines municipales, etc.) — saisie manuelle
-- **Feux sonores pour malvoyants** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
+- **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
 
 ## Stack
 
