@@ -5,9 +5,15 @@ Carte interactive répertoriant, par couches activables/désactivables :
 - **Commerces accessibles** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps
 - **Logements accessibles** — saisie manuelle + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99) qui comptent des unités adaptées (positions tirées du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
 - **Stationnements accessibles** — saisie manuelle + places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0) + panneaux « réservé handicapés » de la [signalisation de stationnement de la Ville](https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant) (très incomplète pour le Plateau à ce jour). Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
-- **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données
-- **Équipements accessibles** (piscines municipales, etc.) — saisie manuelle
+- **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
+- **Équipements accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
+
+## Recherche et filtres
+
+La recherche (nom ou adresse) et les filtres par niveau d'accessibilité et par catégorie s'appliquent uniquement aux commerces, et la liste du panneau latéral n'affiche qu'eux. Ces contrôles sont masqués quand la couche Commerces est désactivée.
+
+Quand on commence une recherche, les autres couches sont désactivées pour ne garder que les commerces sur la carte. On peut les réactiver à la main pendant la recherche.
 
 ## Stack
 
@@ -15,10 +21,11 @@ Carte interactive répertoriant, par couches activables/désactivables :
 - [Leaflet](https://leafletjs.com/) + tuiles OpenStreetMap (pas de clé API requise)
 - Données statiques dans `data/*.json`, une couche = un fichier
 - Hébergement : GitHub Pages
+- Statistiques de visite : [GoatCounter](https://www.goatcounter.com/) (sans cookies), décrit dans [confidentialite.html](confidentialite.html)
 
 ## Développer en local
 
-Le fetch de `data/commerces.json` ne fonctionne pas en ouvrant `index.html` directement (`file://`). Lancer un petit serveur local :
+Le chargement des fichiers `data/*.json` ne fonctionne pas en ouvrant `index.html` directement (`file://`). Lancer un petit serveur local :
 
 ```bash
 python3 -m http.server 8000
@@ -98,18 +105,36 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
 }
 ```
 
+### Débarcadères (`data/debarcaderes.json`)
+
+```json
+{
+  "id": "identifiant-unique",
+  "description": "Description courte",
+  "address": "Adresse ou intersection (ou null)",
+  "lat": 45.0,
+  "lng": -73.0,
+  "notes": "Détails libres (ou null)",
+  "source": null
+}
+```
+
+Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à ajouter.
+
 ### Équipements (`data/equipements.json`)
+
+`source.url` pointe vers la fiche de l'équipement sur montreal.ca et s'affiche comme lien « Source » dans le popup.
 
 ```json
 {
   "id": "identifiant-unique",
   "name": "Nom de l'équipement",
-  "category": "piscine | bibliotheque | parc | arena | autre",
+  "category": "piscine | bibliotheque | parc | arena | centre-sportif | autre",
   "address": "Adresse complète",
   "lat": 45.0,
   "lng": -73.0,
   "accessibility": { "level": "accessible", "notes": "..." },
-  "source": { "reviewer": null, "date": "AAAA-MM-JJ", "reviewText": "...", "reviewUrl": null }
+  "source": { "name": "Ville de Montréal", "url": "https://montreal.ca/lieux/...", "date": "AAAA-MM-JJ" }
 }
 ```
 

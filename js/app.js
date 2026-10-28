@@ -163,10 +163,17 @@ function debarcaderePopup(d) {
       <h3>${d.description}</h3>
       ${d.address ? `<div class="popup-address">${d.address}</div>` : ""}
       ${field("Notes", d.notes)}
+      ${streetViewField(d.lat, d.lng)}
       ${sourceField(d.source)}
       ${reviewBlock(d.source?.reviewText, d.source?.reviewer, d.source?.reviewUrl)}
     </div>
   `;
+}
+
+function streetViewField(lat, lng) {
+  if (lat == null || lng == null) return "";
+  const url = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}`;
+  return field("Street View", `<a href="${url}" target="_blank" rel="noopener">Voir sur Google Maps</a>`);
 }
 
 function equipementPopup(e) {
@@ -416,6 +423,21 @@ levelFilter.addEventListener("change", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 searchInput.addEventListener("input", applyFilters);
 
+// Au début d'une recherche, on désactive les autres couches pour ne garder que
+// les commerces à l'écran. L'utilisateur peut les réactiver pendant la recherche.
+let searchWasEmpty = true;
+searchInput.addEventListener("input", () => {
+  const isEmpty = !searchInput.value.trim();
+  if (searchWasEmpty && !isEmpty) {
+    layerTogglesEl.querySelectorAll("input").forEach((input) => {
+      if (input.dataset.layer === "commerces" || !input.checked) return;
+      input.checked = false;
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  }
+  searchWasEmpty = isEmpty;
+});
+
 // La recherche, les filtres et la liste ne concernent que les commerces :
 // on les masque quand cette couche est désactivée.
 function setCommercesUiVisible(visible) {
@@ -431,7 +453,7 @@ function buildLayerToggles() {
     const [light, dark] = config.color;
     li.innerHTML = `
       <label>
-        <input type="checkbox" ${config.defaultVisible ? "checked" : ""} />
+        <input type="checkbox" data-layer="${config.key}" ${config.defaultVisible ? "checked" : ""} />
         <span class="swatch" style="background:linear-gradient(140deg, ${light}, ${dark})">${config.icon}</span>
         <span class="layer-label">${config.label}</span>
         <span class="layer-count" id="layer-count-${config.key}">–</span>
