@@ -104,6 +104,8 @@ function boolLabel(value) {
   return null;
 }
 
+const NEW_TAB = `<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span>`;
+
 function field(label, value) {
   if (value === undefined || value === null || value === "") return "";
   return `<div class="popup-field"><span class="popup-field-label">${label}</span>${value}</div>`;
@@ -111,14 +113,14 @@ function field(label, value) {
 
 function sourceField(source) {
   if (!source?.url) return "";
-  return field("Source", `<a href="${source.url}" target="_blank" rel="noopener">${source.name || "Voir la fiche"}</a>`);
+  return field("Source", `<a href="${source.url}" target="_blank" rel="noopener">${source.name || "Voir la fiche"}${NEW_TAB}</a>`);
 }
 
 function reviewBlock(text, reviewer, url) {
   if (!text) return "";
-  const link = url ? ` <a href="${url}" target="_blank" rel="noopener">Voir l'avis sur Google Maps</a>` : "";
+  const link = url ? ` <a href="${url}" target="_blank" rel="noopener">Voir l'avis sur Google Maps${NEW_TAB}</a>` : "";
   const reviewerLabel = reviewer === "Promo-Accès"
-    ? `<a class="review-source-link" href="https://promo-acces.com" target="_blank" rel="noopener">${reviewer}</a>`
+    ? `<a class="review-source-link" href="https://promo-acces.com" target="_blank" rel="noopener">${reviewer}${NEW_TAB}</a>`
     : reviewer;
   return `<div class="review">"${text}"${reviewer ? ` — ${reviewerLabel}` : ""}${link}</div>`;
 }
@@ -229,7 +231,7 @@ function debarcaderePopup(d) {
 function streetViewField(lat, lng) {
   if (lat == null || lng == null) return "";
   const url = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}`;
-  return field("Street View", `<a href="${url}" target="_blank" rel="noopener">Voir sur Google Maps</a>`);
+  return field("Street View", `<a href="${url}" target="_blank" rel="noopener">Voir sur Google Maps${NEW_TAB}</a>`);
 }
 
 function batimentPopup(e) {
@@ -397,7 +399,7 @@ const LAYER_CONFIG = [
 
 const map = L.map("map", { zoomControl: false, attributionControl: false }).setView([45.5247742, -73.5855742], 14);
 
-L.control.zoom({ position: "bottomright" }).addTo(map);
+L.control.zoom({ position: "bottomright", zoomInTitle: "Zoom avant", zoomOutTitle: "Zoom arrière" }).addTo(map);
 L.control.attribution({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -438,7 +440,34 @@ function keepPopupInView(popup) {
   if (dx || dy) map.panBy([dx, dy]);
 }
 
-map.on("popupopen", (e) => requestAnimationFrame(() => keepPopupInView(e.popup)));
+// Ouverte au clavier (ou depuis la recherche), la fiche reçoit le focus pour être lue par
+// les lecteurs d'écran; à la fermeture, le focus revient sur le marqueur.
+let focusPopupOnOpen = false;
+
+map.on("popupopen", (e) => {
+  const el = e.popup.getElement();
+  const closeBtn = el.querySelector(".leaflet-popup-close-button");
+  closeBtn?.setAttribute("aria-label", "Fermer la fiche");
+  const content = el.querySelector(".popup-content");
+  content?.setAttribute("tabindex", "-1");
+  el.setAttribute("role", "dialog");
+  const title = content?.querySelector("h3");
+  if (title) {
+    title.id ||= `popup-title-${L.stamp(e.popup)}`;
+    el.setAttribute("aria-labelledby", title.id);
+  }
+  const markerEl = e.popup._source?.getElement?.();
+  if (focusPopupOnOpen || (markerEl && markerEl === document.activeElement)) content?.focus({ preventScroll: true });
+  focusPopupOnOpen = false;
+  requestAnimationFrame(() => keepPopupInView(e.popup));
+});
+
+map.on("popupclose", (e) => {
+  const markerEl = e.popup._source?.getElement?.();
+  const active = document.activeElement;
+  const focusWasInPopup = !active || active === document.body || e.popup.getElement()?.contains(active);
+  if (markerEl && focusWasInPopup) markerEl.focus({ preventScroll: true });
+});
 
 function markerIcon(config, badgeColor) {
   const [light, dark] = config.color;
@@ -495,19 +524,35 @@ function renderLayerMarkers(config, items) {
     if (typeof item.lat !== "number" || typeof item.lng !== "number") return;
     const badgeColor = config.getBadge?.(item);
     const marker = L.marker([item.lat, item.lng], { icon: markerIcon(config, badgeColor) }).bindPopup(config.getPopup(item), popupOptions());
+    // Le marqueur est un bouton (Leaflet) sans texte : on lui donne un nom qui inclut
+    // la catégorie et le niveau d'accessibilité, sinon indiqué seulement par la couleur.
+    const markerLabel = markerName(config, item);
+    marker.on("add", () => marker.getElement()?.setAttribute("aria-label", markerLabel));
     marker.addTo(group);
     if (config.key === "commerces") markersById.set(item.id, marker);
   });
 }
 
+function markerName(config, item) {
+  const name = item.name || item.description || item.intersection || "Lieu";
+  const parts = [name, config.label];
+  if (config.getBadge) parts.push(LEVEL_LABELS[levelClass(item.accessibility?.level)]);
+  return parts.join(" — ");
+}
+
 const MAX_SEARCH_RESULTS = 20;
+
+const searchStatusEl = document.getElementById("search-status");
 
 function selectCommerce(c) {
   hideSearchResults();
   searchInput.value = c.name;
-  searchInput.blur();
   map.setView([c.lat, c.lng], 17, { animate: false });
-  markersById.get(c.id)?.openPopup();
+  const marker = markersById.get(c.id);
+  if (marker) {
+    focusPopupOnOpen = true;
+    marker.openPopup();
+  }
 }
 
 function renderSearchResults(commerces) {
@@ -515,21 +560,64 @@ function renderSearchResults(commerces) {
 
   if (!commerces.length) {
     searchResultsEl.innerHTML = `<li class="search-empty">Aucun commerce trouvé.</li>`;
+    searchStatusEl.textContent = "Aucun commerce trouvé.";
     return;
   }
 
-  commerces.slice(0, MAX_SEARCH_RESULTS).forEach((c) => {
+  const shown = commerces.slice(0, MAX_SEARCH_RESULTS);
+  searchStatusEl.textContent =
+    commerces.length === 1
+      ? "1 commerce trouvé. Utilisez la flèche du bas pour parcourir les résultats."
+      : `${commerces.length} commerces trouvés${commerces.length > shown.length ? `, ${shown.length} affichés` : ""}. Utilisez la flèche du bas pour parcourir les résultats.`;
+
+  shown.forEach((c) => {
     const level = levelClass(c.accessibility?.level);
     const li = document.createElement("li");
     li.innerHTML = `
-      <span class="name">${c.name}</span>
-      <span class="address">${c.address}</span>
-      <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      <button type="button">
+        <span class="name">${c.name}</span>
+        <span class="address">${c.address}</span>
+        <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      </button>
     `;
-    li.addEventListener("click", () => selectCommerce(c));
+    li.querySelector("button").addEventListener("click", () => selectCommerce(c));
     searchResultsEl.appendChild(li);
   });
 }
+
+// Flèches haut/bas pour passer du champ aux résultats et d'un résultat à l'autre.
+function searchResultButtons() {
+  return [...searchResultsEl.querySelectorAll("button")];
+}
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown" && !searchResultsEl.hidden) {
+    e.preventDefault();
+    searchResultButtons()[0]?.focus();
+  }
+});
+
+searchResultsEl.addEventListener("keydown", (e) => {
+  const buttons = searchResultButtons();
+  const index = buttons.indexOf(document.activeElement);
+  if (index === -1) return;
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    buttons[Math.min(index + 1, buttons.length - 1)].focus();
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    (index === 0 ? searchInput : buttons[index - 1]).focus();
+  } else if (e.key === "Escape") {
+    hideSearchResults();
+    searchInput.focus();
+  }
+});
+
+// Les résultats se ferment quand on tabule hors de la zone de recherche (le clic
+// ailleurs est géré plus bas; relatedTarget est vide lors d'un clic dans Safari).
+document.querySelector(".header-search").addEventListener("focusout", (e) => {
+  if (e.relatedTarget && !e.currentTarget.contains(e.relatedTarget)) hideSearchResults();
+});
 
 function showSearchResults() {
   searchResultsEl.hidden = false;
@@ -559,6 +647,7 @@ function applySearch() {
     showSearchResults();
   } else {
     hideSearchResults();
+    searchStatusEl.textContent = "";
   }
 }
 
@@ -571,10 +660,10 @@ document.addEventListener("click", (e) => {
   if (!e.target.closest(".header-search")) hideSearchResults();
 });
 
-document.addEventListener("keydown", (e) => {
+searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !searchResultsEl.hidden) {
+    e.preventDefault();
     hideSearchResults();
-    searchInput.blur();
   }
 });
 
@@ -625,7 +714,7 @@ function buildLayerToggles() {
         <input type="checkbox" data-layer="${config.key}" ${config.defaultVisible ? "checked" : ""} />
         <span class="swatch" style="background:linear-gradient(140deg, ${light}, ${dark})">${config.icon}</span>
         <span class="layer-label">${config.label}</span>
-        <span class="layer-count" id="layer-count-${config.key}">–</span>
+        <span class="layer-count"><span id="layer-count-${config.key}">–</span><span class="sr-only"> lieux</span></span>
       </label>
     `;
     li.querySelector("input").addEventListener("change", (e) => {
@@ -680,6 +769,13 @@ function isSidebarOpen() {
   return isMobile() ? sidebarEl.classList.contains("open") : !document.body.classList.contains("sidebar-collapsed");
 }
 
+// Panneau fermé : retiré de l'ordre de tabulation et des lecteurs d'écran (inert).
+function syncSidebarState() {
+  const open = isSidebarOpen();
+  sidebarEl.inert = !open;
+  sidebarToggle.setAttribute("aria-expanded", String(open));
+}
+
 function openSidebar() {
   if (isMobile()) {
     sidebarEl.classList.add("open");
@@ -687,35 +783,61 @@ function openSidebar() {
   } else {
     document.body.classList.remove("sidebar-collapsed");
   }
-  sidebarToggle.setAttribute("aria-expanded", "true");
+  syncSidebarState();
+  // Sur téléphone, le panneau recouvre la carte : on y place le focus.
+  if (isMobile()) layerTogglesEl.querySelector("input")?.focus();
 }
 
 function closeSidebar() {
+  const hadFocus = sidebarEl.contains(document.activeElement);
   if (isMobile()) {
     sidebarEl.classList.remove("open");
     sidebarScrim.classList.remove("open");
   } else {
     document.body.classList.add("sidebar-collapsed");
   }
-  sidebarToggle.setAttribute("aria-expanded", "false");
+  syncSidebarState();
+  if (hadFocus) sidebarToggle.focus();
 }
 
 sidebarToggle.addEventListener("click", () => (isSidebarOpen() ? closeSidebar() : openSidebar()));
 document.getElementById("sidebar-close").addEventListener("click", closeSidebar);
 sidebarScrim.addEventListener("click", closeSidebar);
-sidebarToggle.setAttribute("aria-expanded", String(isSidebarOpen()));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isMobile() && isSidebarOpen()) closeSidebar();
+});
+window.matchMedia("(max-width: 760px)").addEventListener("change", syncSidebarState);
+syncSidebarState();
+
+// Le lien d'évitement « Passer aux catégories » ouvre le panneau s'il est fermé.
+document.querySelector('.skip-link[href="#sidebar"]').addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!isSidebarOpen()) openSidebar();
+  layerTogglesEl.querySelector("input")?.focus();
+});
 
 const aboutOverlay = document.getElementById("about-overlay");
 
+const aboutBtn = document.getElementById("about-btn");
+// Pendant que la fenêtre est ouverte, le reste de la page est inerte : le focus y reste.
+const backgroundEls = [".skip-link", ".site-header", "#sidebar", "#map"].flatMap((sel) => [...document.querySelectorAll(sel)]);
+
 function openAbout() {
   aboutOverlay.classList.add("open");
+  aboutOverlay.inert = false;
+  backgroundEls.forEach((el) => (el.inert = true));
+  document.getElementById("about-modal-close").focus();
 }
 
 function closeAbout() {
   aboutOverlay.classList.remove("open");
+  aboutOverlay.inert = true;
+  backgroundEls.forEach((el) => (el.inert = false));
+  syncSidebarState();
+  aboutBtn.focus();
 }
 
-document.getElementById("about-btn").addEventListener("click", openAbout);
+aboutBtn.addEventListener("click", openAbout);
 document.getElementById("about-modal-close").addEventListener("click", closeAbout);
 aboutOverlay.addEventListener("click", (e) => {
   if (e.target === aboutOverlay) closeAbout();

@@ -14,16 +14,19 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#map">Passer à la carte</a>
+  <a class="skip-link" href="#sidebar">Passer aux catégories</a>
+
   <header class="site-header">
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Afficher les catégories" aria-expanded="true" aria-controls="sidebar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Catégories" aria-expanded="true" aria-controls="sidebar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M4 6h16M7 12h10M10 18h4"/>
       </svg>
     </button>
 
     <div class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="4.6" r="2" fill="#fff"/>
           <path d="M5.5 8.6 12 9.8l6.5-1.2M12 9.8v4.4m0 0-3 5.4m3-5.4 3 5.4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -31,12 +34,12 @@
       <div class="brand-text">
         <h1 class="brand-word">Carte accessibilité universelle</h1>
         <div class="brand-sub">Plateau-Mont-Royal · avis de <strong>Promo-Accès</strong>, données de l'<strong>arrondissement</strong> et de la <strong>Ville de Montréal</strong></div>
-        <div class="brand-sub-mobile">Plateau-Mont-Royal</div>
+        <div class="brand-sub-mobile" aria-hidden="true">Plateau-Mont-Royal</div>
       </div>
     </div>
 
-    <button class="about-btn" id="about-btn" aria-label="À propos de ce projet" aria-haspopup="dialog">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button type="button" class="about-btn" id="about-btn" aria-label="À propos de ce projet" aria-haspopup="dialog" aria-controls="about-overlay">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="7.6" r="1.4" fill="currentColor"/>
         <path d="M12 11v6.2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
       </svg>
@@ -44,30 +47,32 @@
 
     <div class="header-spacer"></div>
 
-    <div class="header-search">
-      <input type="search" id="search" placeholder="Rechercher un commerce…" aria-label="Rechercher un commerce" autocomplete="off" />
-      <ul class="search-results" id="search-results" hidden></ul>
+    <div class="header-search" role="search">
+      <label class="sr-only" for="search">Rechercher un commerce par nom, adresse ou catégorie</label>
+      <input type="search" id="search" placeholder="Rechercher un commerce…" autocomplete="off" aria-controls="search-results" aria-describedby="search-status" />
+      <ul class="search-results" id="search-results" aria-label="Résultats de la recherche" hidden></ul>
+      <p class="sr-only" id="search-status" role="status"></p>
     </div>
   </header>
 
   <aside class="sidebar" id="sidebar" aria-label="Catégories">
     <div class="sidebar-section">
       <div class="sidebar-header">
-        <h2>Catégories</h2>
-        <button class="sidebar-close" id="sidebar-close" aria-label="Fermer">✕</button>
+        <h2 id="layers-title">Catégories</h2>
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Fermer les catégories"><span aria-hidden="true">✕</span></button>
       </div>
-      <ul id="layer-toggles"></ul>
+      <ul id="layer-toggles" role="group" aria-labelledby="layers-title"></ul>
       <button type="button" class="layers-clear" id="layers-clear">Tout désélectionner</button>
     </div>
   </aside>
 
-  <div class="sidebar-scrim" id="sidebar-scrim"></div>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
 
-  <main id="map" aria-label="Carte interactive de l'accessibilité"></main>
+  <main id="map" aria-label="Carte interactive de l'accessibilité. Utilisez les flèches pour déplacer la carte, + et - pour zoomer, et Tab pour parcourir les lieux."></main>
 
-  <div class="about-overlay" id="about-overlay">
+  <div class="about-overlay" id="about-overlay" inert>
     <div class="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
-      <button class="about-modal-close" id="about-modal-close" aria-label="Fermer">✕</button>
+      <button type="button" class="about-modal-close" id="about-modal-close" aria-label="Fermer la fenêtre À propos"><span aria-hidden="true">✕</span></button>
 
       <h2 id="about-modal-title">À propos de ce projet</h2>
       <p class="about-modal-desc">
@@ -87,21 +92,21 @@
 
       <div class="about-people">
         <a class="about-person" href="https://gabfortin.com" target="_blank" rel="noopener noreferrer">
-          <img src="img/Gab.jpg" alt="Gabriel Fortin">
+          <img src="img/Gab.jpg" alt="">
           <div class="about-person-info">
             <div class="about-person-name">Gabriel Fortin</div>
-            <div class="about-person-role">Conseiller d'arrondissement - Plateau-Mont-Royal. Conception et développement du site.</div>
+            <div class="about-person-role">Conseiller d'arrondissement - Plateau-Mont-Royal. Conception et développement du site.<span class="sr-only"> (site de Gabriel Fortin, s'ouvre dans un nouvel onglet)</span></div>
           </div>
         </a>
         <div class="about-person">
-          <img src="img/Laurence.jpeg" alt="Laurence Parent">
+          <img src="img/Laurence.jpeg" alt="">
           <div class="about-person-info">
             <div class="about-person-name">Laurence Parent</div>
             <div class="about-person-role">Conseillère d'arrondissement - District De Lorimier. Porteuse du dossier de l'accessibilité universelle au Plateau-Mont-Royal.</div>
           </div>
         </div>
         <div class="about-person">
-          <img src="img/Julien.jpeg" alt="Julien Deschênes">
+          <img src="img/Julien.jpeg" alt="">
           <div class="about-person-info">
             <div class="about-person-name">Julien Deschênes</div>
             <div class="about-person-role">Soutien aux élu·es, dossier d'accessibilité universelle</div>
