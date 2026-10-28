@@ -12,9 +12,9 @@ Carte interactive répertoriant, par couches activables/désactivables :
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
 - **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet).
 
-## Recherche et filtres
+## Recherche
 
-La recherche (nom ou adresse) et les filtres par niveau d'accessibilité et par catégorie s'appliquent uniquement aux commerces, et la liste du panneau latéral n'affiche qu'eux. Ces contrôles sont masqués quand la couche Commerces est désactivée.
+La barre de recherche (nom ou adresse) ne porte que sur les commerces : elle affiche les résultats correspondants dans un dropdown sous la barre, et filtre les marqueurs commerces affichés sur la carte. Cliquer un résultat centre la carte sur le commerce et ouvre son popup. Cette barre est masquée quand la couche Commerces est désactivée.
 
 Quand on commence une recherche, les autres couches sont désactivées pour ne garder que les commerces sur la carte. On peut les réactiver à la main pendant la recherche.
 

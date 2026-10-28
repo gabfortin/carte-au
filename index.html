@@ -15,7 +15,7 @@
 </head>
 <body>
   <header class="site-header">
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Afficher les catégories et filtres" aria-expanded="true" aria-controls="sidebar">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Afficher les catégories" aria-expanded="true" aria-controls="sidebar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M4 6h16M7 12h10M10 18h4"/>
       </svg>
@@ -45,11 +45,12 @@
     <div class="header-spacer"></div>
 
     <div class="header-search">
-      <input type="search" id="search" placeholder="Rechercher un commerce…" aria-label="Rechercher un commerce" />
+      <input type="search" id="search" placeholder="Rechercher un commerce…" aria-label="Rechercher un commerce" autocomplete="off" />
+      <ul class="search-results" id="search-results" hidden></ul>
     </div>
   </header>
 
-  <aside class="sidebar" id="sidebar" aria-label="Catégories et filtres">
+  <aside class="sidebar" id="sidebar" aria-label="Catégories">
     <div class="sidebar-section">
       <div class="sidebar-header">
         <h2>Catégories</h2>
@@ -58,24 +59,6 @@
       <ul id="layer-toggles"></ul>
       <button type="button" class="layers-clear" id="layers-clear">Tout désélectionner</button>
     </div>
-
-    <div class="sidebar-section filters">
-      <h2>Commerces</h2>
-      <label for="filter-level">Niveau d'accessibilité</label>
-      <select id="filter-level">
-        <option value="all">Tous</option>
-        <option value="accessible">Accessible</option>
-        <option value="partiellement">Partiellement accessible</option>
-        <option value="non-accessible">Non accessible</option>
-      </select>
-
-      <label for="filter-category">Catégorie</label>
-      <select id="filter-category">
-        <option value="all">Toutes</option>
-      </select>
-    </div>
-
-    <ul id="commerce-list"></ul>
   </aside>
 
   <div class="sidebar-scrim" id="sidebar-scrim"></div>

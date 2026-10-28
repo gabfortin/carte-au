@@ -449,13 +449,11 @@ function markerIcon(config, badgeColor) {
 }
 
 const layerGroups = new Map(LAYER_CONFIG.map((c) => [c.key, L.layerGroup()]));
-const markersById = new Map(); // commerces only, pour le lien liste <-> carte
+const markersById = new Map(); // commerces only, pour le lien résultats de recherche <-> carte
 let allCommerces = [];
 
-const listEl = document.getElementById("commerce-list");
-const levelFilter = document.getElementById("filter-level");
-const categoryFilter = document.getElementById("filter-category");
 const searchInput = document.getElementById("search");
+const searchResultsEl = document.getElementById("search-results");
 const layerTogglesEl = document.getElementById("layer-toggles");
 
 // Sur téléphone, la popup prend la largeur de l'écran moins les marges, et défile
@@ -484,9 +482,25 @@ function renderLayerMarkers(config, items) {
   });
 }
 
-function renderList(commerces) {
-  listEl.innerHTML = "";
-  commerces.forEach((c) => {
+const MAX_SEARCH_RESULTS = 20;
+
+function selectCommerce(c) {
+  hideSearchResults();
+  searchInput.value = c.name;
+  searchInput.blur();
+  map.setView([c.lat, c.lng], 17, { animate: false });
+  markersById.get(c.id)?.openPopup();
+}
+
+function renderSearchResults(commerces) {
+  searchResultsEl.innerHTML = "";
+
+  if (!commerces.length) {
+    searchResultsEl.innerHTML = `<li class="search-empty">Aucun commerce trouvé.</li>`;
+    return;
+  }
+
+  commerces.slice(0, MAX_SEARCH_RESULTS).forEach((c) => {
     const level = levelClass(c.accessibility?.level);
     const li = document.createElement("li");
     li.innerHTML = `
@@ -494,62 +508,89 @@ function renderList(commerces) {
       <span class="address">${c.address}</span>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
     `;
-    li.addEventListener("click", () => {
-      if (isMobile()) closeSidebar();
-      map.setView([c.lat, c.lng], 17, { animate: false });
-      markersById.get(c.id)?.openPopup();
-    });
-    listEl.appendChild(li);
+    li.addEventListener("click", () => selectCommerce(c));
+    searchResultsEl.appendChild(li);
   });
 }
 
-function populateCategoryFilter(commerces) {
-  const categories = [...new Set(commerces.map((c) => c.category).filter(Boolean))];
-  categories.forEach((cat) => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = CATEGORY_LABELS[cat] || cat;
-    categoryFilter.appendChild(opt);
-  });
+function showSearchResults() {
+  searchResultsEl.hidden = false;
 }
 
-function applyFilters() {
-  const level = levelFilter.value;
-  const category = categoryFilter.value;
+function hideSearchResults() {
+  searchResultsEl.hidden = true;
+}
+
+function applySearch() {
   const query = searchInput.value.trim().toLowerCase();
 
   const filtered = allCommerces.filter((c) => {
-    const matchesLevel = level === "all" || c.accessibility?.level === level;
-    const matchesCategory = category === "all" || c.category === category;
-    const matchesQuery = !query || c.name.toLowerCase().includes(query) || c.address.toLowerCase().includes(query);
-    return matchesLevel && matchesCategory && matchesQuery;
+    const categoryLabel = CATEGORY_LABELS[c.category] || c.category || "";
+    return (
+      !query ||
+      c.name.toLowerCase().includes(query) ||
+      c.address.toLowerCase().includes(query) ||
+      categoryLabel.toLowerCase().includes(query)
+    );
   });
 
   renderLayerMarkers(LAYER_CONFIG[0], filtered);
-  renderList(filtered);
+
+  if (query) {
+    renderSearchResults(filtered);
+    showSearchResults();
+  } else {
+    hideSearchResults();
+  }
 }
 
-levelFilter.addEventListener("change", applyFilters);
-categoryFilter.addEventListener("change", applyFilters);
-searchInput.addEventListener("input", applyFilters);
+searchInput.addEventListener("input", applySearch);
+searchInput.addEventListener("focus", () => {
+  if (searchInput.value.trim()) showSearchResults();
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".header-search")) hideSearchResults();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !searchResultsEl.hidden) {
+    hideSearchResults();
+    searchInput.blur();
+  }
+});
 
 // Au début d'une recherche, on désactive les autres couches pour ne garder que
-// les commerces à l'écran. L'utilisateur peut les réactiver pendant la recherche.
+// les commerces à l'écran, en notant celles qui étaient actives pour les
+// resélectionner quand la recherche se termine (champ vidé).
 let searchWasEmpty = true;
+let layersBeforeSearch = [];
 searchInput.addEventListener("input", () => {
   const isEmpty = !searchInput.value.trim();
+
   if (searchWasEmpty && !isEmpty) {
+    layersBeforeSearch = [...layerTogglesEl.querySelectorAll("input")]
+      .filter((input) => input.dataset.layer !== "commerces" && input.checked)
+      .map((input) => input.dataset.layer);
     layerTogglesEl.querySelectorAll("input").forEach((input) => {
       if (input.dataset.layer === "commerces" || !input.checked) return;
       input.checked = false;
       input.dispatchEvent(new Event("change", { bubbles: true }));
     });
+  } else if (!searchWasEmpty && isEmpty) {
+    layerTogglesEl.querySelectorAll("input").forEach((input) => {
+      if (input.dataset.layer === "commerces") return;
+      const shouldBeChecked = layersBeforeSearch.includes(input.dataset.layer);
+      if (input.checked === shouldBeChecked) return;
+      input.checked = shouldBeChecked;
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    });
   }
+
   searchWasEmpty = isEmpty;
 });
 
-// La recherche, les filtres et la liste ne concernent que les commerces :
-// on les masque quand cette couche est désactivée.
+// La recherche ne concerne que les commerces : on la masque quand cette couche est désactivée.
 function setCommercesUiVisible(visible) {
   document.documentElement.classList.toggle("commerces-hidden", !visible);
 }
@@ -673,17 +714,12 @@ LAYER_CONFIG.forEach((config) => {
       document.getElementById(`layer-count-${config.key}`).textContent = items.length;
       if (config.key === "commerces") {
         allCommerces = items;
-        populateCategoryFilter(allCommerces);
         renderLayerMarkers(config, allCommerces);
-        renderList(allCommerces);
       } else {
         renderLayerMarkers(config, items);
       }
     })
     .catch((err) => {
       console.error(`Erreur de chargement (${files.join(", ")}):`, err);
-      if (config.key === "commerces") {
-        listEl.innerHTML = "<li>Erreur de chargement des données.</li>";
-      }
     });
 });
