@@ -396,6 +396,26 @@ h1, h2, h3, .brand-word {
   opacity: 0.4;
 }
 
+.layers-clear {
+  display: block;
+  margin: 8px auto 0;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--ink-500);
+  font: inherit;
+  font-size: 0.76rem;
+  cursor: pointer;
+  transition: background 0.18s var(--ease), color 0.18s var(--ease);
+}
+
+.layers-clear:hover { background: rgba(255, 255, 255, 0.85); color: var(--ink-700); }
+
+.commerces-hidden .header-search,
+.commerces-hidden .filters,
+.commerces-hidden #commerce-list { display: none; }
+
 .filters { padding-left: 18px; padding-right: 18px; }
 .filters h2 { margin-left: 0; margin-right: 0; }
 
@@ -801,6 +821,8 @@ a.about-person:hover { background: rgba(255, 255, 255, 0.5); transform: translat
 
 @media (max-width: 760px) {
   :root { --gap: 10px; --header-h: 104px; }
+  /* Sans la recherche, l'en-tête mobile tient sur une seule rangée. */
+  html.commerces-hidden { --header-h: 62px; }
 
   .site-header {
     height: auto;

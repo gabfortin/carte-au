@@ -416,6 +416,12 @@ levelFilter.addEventListener("change", applyFilters);
 categoryFilter.addEventListener("change", applyFilters);
 searchInput.addEventListener("input", applyFilters);
 
+// La recherche, les filtres et la liste ne concernent que les commerces :
+// on les masque quand cette couche est désactivée.
+function setCommercesUiVisible(visible) {
+  document.documentElement.classList.toggle("commerces-hidden", !visible);
+}
+
 function buildLayerToggles() {
   LAYER_CONFIG.forEach((config) => {
     const group = layerGroups.get(config.key);
@@ -437,12 +443,39 @@ function buildLayerToggles() {
       } else {
         map.removeLayer(group);
       }
+      if (config.key === "commerces") setCommercesUiVisible(e.target.checked);
     });
+    if (config.key === "commerces") setCommercesUiVisible(config.defaultVisible);
     layerTogglesEl.appendChild(li);
   });
 }
 
 buildLayerToggles();
+
+// Bascule entre « Tout désélectionner » (au moins une couche active) et
+// « Tout sélectionner » (aucune couche active).
+const layersClearBtn = document.getElementById("layers-clear");
+
+function anyLayerChecked() {
+  return layerTogglesEl.querySelector("input:checked") !== null;
+}
+
+function updateLayersClearLabel() {
+  layersClearBtn.textContent = anyLayerChecked() ? "Tout désélectionner" : "Tout sélectionner";
+}
+
+layersClearBtn.addEventListener("click", () => {
+  const check = !anyLayerChecked();
+  layerTogglesEl.querySelectorAll("input").forEach((input) => {
+    if (input.checked === check) return;
+    input.checked = check;
+    input.dispatchEvent(new Event("change"));
+  });
+  updateLayersClearLabel();
+});
+
+layerTogglesEl.addEventListener("change", updateLayersClearLabel);
+updateLayersClearLabel();
 
 const sidebarEl = document.getElementById("sidebar");
 const sidebarScrim = document.getElementById("sidebar-scrim");
