@@ -294,6 +294,102 @@ function feuSonorePopup(f) {
   `;
 }
 
+function externalLink(url, text) {
+  return `<a href="${url}" target="_blank" rel="noopener">${text}${NEW_TAB}</a>`;
+}
+
+const ISSUE_URL = "https://github.com/gabfortin/carte-au/issues/new?template=";
+
+// Texte du panneau ⓘ de chaque catégorie : ce qu'elle montre, les données de
+// chaque fiche et d'où elles viennent. Garder à jour avec le README.
+const LAYER_INFO = {
+  commerces: {
+    about: "Commerces, cafés, restaurants, bars et lieux culturels dont l'accessibilité a été évaluée lors d'une visite sur place.",
+    data: [
+      "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
+      "Entrée (plain-pied, rampe ou marches), porte automatique, ascenseur, mains courantes",
+      "Toilettes, terrasse, salle d'essayage, terminal de paiement, menu numérique, assistance auditive",
+      "Extrait de l'avis et photos, lorsque disponibles",
+    ],
+    process: `Chaque fiche reprend un avis d'accessibilité publié par ${externalLink("https://www.google.com/maps/contrib/100918280676331873494", "Promo-Accès sur Google Maps")}. L'avis est retranscrit à la main; un point qu'il ne mentionne pas est laissé vide.`,
+    template: "ajouter-commerce.yml",
+  },
+  logements: {
+    about: "Immeubles qui comptent des logements adaptés aux personnes à mobilité réduite.",
+    data: [
+      "Nombre d'unités adaptées et nombre total de logements",
+      "Taille des logements, clientèle visée, ascenseur",
+      "Conditions d'admissibilité, pour les HLM",
+    ],
+    process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées; leur position vient du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
+  },
+  "batiments-municipaux": {
+    about: "Piscines, arénas, bibliothèques, centres sportifs et autres bâtiments de la Ville et de l'arrondissement.",
+    data: [
+      "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
+      "Aménagements : rampe, entrée accessible, stationnement, toilettes",
+      "Section distincte sur la toilette, lorsque l'information vient d'une autre source",
+      "Lien vers la fiche du lieu",
+    ],
+    process: `Saisie à la main à partir des fiches des lieux sur ${externalLink("https://montreal.ca/lieux", "montreal.ca")}.`,
+    template: "ajouter-batiment-municipal.yml",
+  },
+  toilettes: {
+    about: "Toilettes accessibles au public dans les parcs, bibliothèques, piscines, édifices municipaux et commerces.",
+    data: [
+      "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
+      "Aménagements observés : entrée, seuils, barres d'appui, table à langer",
+      "Horaire ou fermeture saisonnière",
+    ],
+    process: "Saisie à la main à partir d'observations faites sur place. Les notes décrivent l'état au moment de la visite (par exemple, un ascenseur en panne).",
+    template: "ajouter-toilette.yml",
+  },
+  stationnements: {
+    about: "Places de stationnement gratuites réservées aux détenteurs d'une vignette pour personnes handicapées, sur rue ou hors rue.",
+    data: ["Emplacement et type (sur rue ou hors rue)", "Notes et photos, lorsque disponibles"],
+    process: "Saisie à la main seulement. Les places réservées gratuites des rues résidentielles ne figurent dans aucun jeu de données ouvertes : la liste n'est pas complète.",
+    template: "ajouter-stationnement.yml",
+  },
+  "stationnements-payants": {
+    about: "Places tarifées réservées aux détenteurs d'une vignette pour personnes handicapées.",
+    data: ["Emplacement", "Tarif horaire", "Panneau de signalisation associé, s'il y a lieu"],
+    process: `Import automatisé des ${externalLink("https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles", "données ouvertes de l'Agence de mobilité durable")} (licence CC-BY 4.0), en gardant les places situées dans les limites du Plateau. Un panneau « réservé handicapés » de la Ville à moins de 15 m d'une place y est jumelé.`,
+  },
+  debarcaderes: {
+    about: "Zones d'arrêt réservées pour faire monter ou descendre une personne handicapée.",
+    data: ["Emplacement et description", "Lien Street View pour voir l'aménagement sur place"],
+    process: `Saisie à la main, complétée par les panneaux « débarcadère réservé handicapés » du jeu ${externalLink("https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant", "Signalisation (stationnement sur rue)")} de la Ville, importés automatiquement.`,
+    template: "ajouter-debarcadere.yml",
+  },
+  "feux-sonores": {
+    about: "Intersections dont les feux pour piétons émettent un signal sonore, pour les personnes aveugles ou malvoyantes.",
+    data: ["Intersection et arrondissement", "Type d'installation (permanente ou temporaire)"],
+    process: `Import automatisé des ${externalLink("https://donnees.montreal.ca/dataset/feux-malvoyants", "données ouvertes de la Ville de Montréal")}. Le jeu couvre toute la ville : les feux des arrondissements voisins sont aussi affichés.`,
+  },
+  "gains-ccu": {
+    about: "Améliorations de l'accessibilité obtenues lors de l'étude de projets immobiliers par le comité consultatif d'urbanisme (CCU) de l'arrondissement, par exemple une proportion de logements adaptables ou une rampe d'accès.",
+    data: ["Description et type de gain", "Projet ou adresse concernés, date", "Lien vers la résolution du CCU, lorsque disponible"],
+    process: "Saisie à la main au fil des séances du CCU. Le nom de cette catégorie est provisoire.",
+    template: "ajouter-gain-ccu.yml",
+  },
+};
+
+function layerInfoHtml(config) {
+  const info = LAYER_INFO[config.key];
+  const contribute = info.template
+    ? `<p class="layer-info-contribute">Vous connaissez un lieu à ajouter? ${externalLink(ISSUE_URL + info.template, "Proposer un ajout sur GitHub")} (compte requis).</p>`
+    : "";
+  return `
+    <h3 id="layer-info-title">${config.label}</h3>
+    <p>${info.about}</p>
+    <h4>Données affichées</h4>
+    <ul>${info.data.map((d) => `<li>${d}</li>`).join("")}</ul>
+    <h4>Provenance et traitement</h4>
+    <p>${info.process}</p>
+    ${contribute}
+  `;
+}
+
 const LAYER_CONFIG = [
   {
     key: "commerces",
@@ -716,7 +812,15 @@ function buildLayerToggles() {
         <span class="layer-label">${config.label}</span>
         <span class="layer-count"><span id="layer-count-${config.key}">–</span><span class="sr-only"> lieux</span></span>
       </label>
+      <button type="button" class="layer-info-btn" data-layer-info="${config.key}" aria-label="Information sur la catégorie ${config.label}" aria-haspopup="dialog" aria-expanded="false" aria-controls="layer-info">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="7.8" r="1.2" fill="currentColor"/>
+          <path d="M12 11v5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     `;
+    li.querySelector(".layer-info-btn").addEventListener("click", (e) => toggleLayerInfo(config, e.currentTarget));
     li.querySelector("input").addEventListener("change", (e) => {
       if (e.target.checked) {
         group.addTo(map);
@@ -729,6 +833,93 @@ function buildLayerToggles() {
     layerTogglesEl.appendChild(li);
   });
 }
+
+// Panneau ⓘ : non modal, il reçoit le focus à l'ouverture et le rend au bouton à la
+// fermeture (Échap, ✕, clic ailleurs). Tab au-delà du panneau reprend dans la liste.
+const layerInfoEl = document.getElementById("layer-info");
+const layerInfoBody = document.getElementById("layer-info-body");
+const layerInfoClose = document.getElementById("layer-info-close");
+let layerInfoTrigger = null;
+
+function positionLayerInfo() {
+  if (!layerInfoTrigger) return;
+  const gap = 12;
+  const btn = layerInfoTrigger.getBoundingClientRect();
+  const sidebarRight = document.getElementById("sidebar").getBoundingClientRect().right;
+  const { offsetWidth: w, offsetHeight: h } = layerInfoEl;
+  let left;
+  let top;
+  if (sidebarRight + gap + w <= window.innerWidth - gap) {
+    // À droite du panneau latéral, aligné sur la catégorie.
+    left = sidebarRight + gap;
+    top = btn.top - 14;
+  } else {
+    // Pas la place (téléphone) : sous la catégorie, ou au-dessus si l'écran est trop court.
+    left = btn.right - w;
+    top = btn.bottom + 6 + h <= window.innerHeight - gap ? btn.bottom + 6 : btn.top - 6 - h;
+  }
+  layerInfoEl.style.left = `${Math.max(gap, Math.min(left, window.innerWidth - w - gap))}px`;
+  layerInfoEl.style.top = `${Math.max(gap, Math.min(top, window.innerHeight - h - gap))}px`;
+}
+
+function openLayerInfo(config, trigger) {
+  if (layerInfoTrigger) layerInfoTrigger.setAttribute("aria-expanded", "false");
+  layerInfoTrigger = trigger;
+  layerInfoBody.innerHTML = layerInfoHtml(config);
+  layerInfoClose.setAttribute("aria-label", `Fermer l'information sur ${config.label}`);
+  layerInfoEl.hidden = false;
+  trigger.setAttribute("aria-expanded", "true");
+  positionLayerInfo();
+  layerInfoEl.scrollTop = 0;
+  layerInfoEl.focus();
+}
+
+function closeLayerInfo({ restoreFocus = true } = {}) {
+  if (!layerInfoTrigger) return;
+  const trigger = layerInfoTrigger;
+  layerInfoTrigger = null;
+  layerInfoEl.hidden = true;
+  trigger.setAttribute("aria-expanded", "false");
+  if (restoreFocus) trigger.focus();
+}
+
+function toggleLayerInfo(config, trigger) {
+  if (layerInfoTrigger === trigger) closeLayerInfo();
+  else openLayerInfo(config, trigger);
+}
+
+layerInfoClose.addEventListener("click", () => closeLayerInfo());
+
+layerInfoEl.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    e.stopPropagation(); // ne pas fermer aussi le panneau latéral sur téléphone
+    closeLayerInfo();
+    return;
+  }
+  if (e.key !== "Tab") return;
+  const focusables = [...layerInfoEl.querySelectorAll("button, a[href]")];
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  if (e.shiftKey && (document.activeElement === first || document.activeElement === layerInfoEl)) {
+    e.preventDefault();
+    closeLayerInfo();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    const controls = [...document.getElementById("sidebar").querySelectorAll("input, button:not(.sidebar-close)")];
+    const next = controls[controls.indexOf(layerInfoTrigger) + 1];
+    closeLayerInfo({ restoreFocus: !next });
+    next?.focus();
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (layerInfoTrigger && !layerInfoEl.contains(e.target) && !e.target.closest(".layer-info-btn")) {
+    closeLayerInfo({ restoreFocus: false });
+  }
+});
+
+window.addEventListener("resize", positionLayerInfo);
+document.getElementById("sidebar").addEventListener("scroll", positionLayerInfo);
 
 buildLayerToggles();
 
@@ -789,7 +980,8 @@ function openSidebar() {
 }
 
 function closeSidebar() {
-  const hadFocus = sidebarEl.contains(document.activeElement);
+  const hadFocus = sidebarEl.contains(document.activeElement) || layerInfoEl.contains(document.activeElement);
+  closeLayerInfo({ restoreFocus: false });
   if (isMobile()) {
     sidebarEl.classList.remove("open");
     sidebarScrim.classList.remove("open");
@@ -823,6 +1015,7 @@ const aboutBtn = document.getElementById("about-btn");
 const backgroundEls = [".skip-link", ".site-header", "#sidebar", "#map"].flatMap((sel) => [...document.querySelectorAll(sel)]);
 
 function openAbout() {
+  closeLayerInfo({ restoreFocus: false });
   aboutOverlay.classList.add("open");
   aboutOverlay.inert = false;
   backgroundEls.forEach((el) => (el.inert = true));
