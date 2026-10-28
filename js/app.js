@@ -22,8 +22,9 @@ const ICONS = {
   commerce: svgIcon('<path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/>'),
   logement: svgIcon('<path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/>'),
   stationnement: svgIcon('<path d="M8 20V4h5.5a4.5 4.5 0 0 1 0 9H8"/>'),
+  stationnementPayant: svgIcon('<path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>'),
   debarcadere: svgIcon('<circle cx="11" cy="4" r="1.8" fill="#fff" stroke="none"/><path d="M11 7.5v6h5l2.5 5"/><path d="M11 10h4.5"/><path d="M8 11a5.5 5.5 0 1 0 7.5 6.5"/>'),
-  equipement: svgIcon('<path d="M3 9.5 12 4l9 5.5"/><path d="M5 20h14"/><path d="M6.5 11v6M10 11v6M14 11v6M17.5 11v6"/>'),
+  batiment: svgIcon('<path d="M3 9.5 12 4l9 5.5"/><path d="M5 20h14"/><path d="M6.5 11v6M10 11v6M14 11v6M17.5 11v6"/>'),
   feu: svgIcon('<path d="M4 9.5h3l5-4v13l-5-4H4z" fill="#fff"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/>'),
 };
 
@@ -57,7 +58,7 @@ const STATIONNEMENT_TYPE_LABELS = {
   "hors-rue": "Hors rue",
 };
 
-const EQUIPEMENT_CATEGORY_LABELS = {
+const BATIMENT_CATEGORY_LABELS = {
   piscine: "Piscine",
   bibliotheque: "Bibliothèque",
   parc: "Parc",
@@ -94,7 +95,10 @@ function sourceField(source) {
 function reviewBlock(text, reviewer, url) {
   if (!text) return "";
   const link = url ? ` <a href="${url}" target="_blank" rel="noopener">Voir l'avis sur Google Maps</a>` : "";
-  return `<div class="review">"${text}"${reviewer ? ` — ${reviewer}` : ""}${link}</div>`;
+  const reviewerLabel = reviewer === "Promo-Accès"
+    ? `<a class="review-source-link" href="https://promo-acces.com" target="_blank" rel="noopener">${reviewer}</a>`
+    : reviewer;
+  return `<div class="review">"${text}"${reviewer ? ` — ${reviewerLabel}` : ""}${link}</div>`;
 }
 
 function commercePopup(c) {
@@ -176,7 +180,7 @@ function streetViewField(lat, lng) {
   return field("Street View", `<a href="${url}" target="_blank" rel="noopener">Voir sur Google Maps</a>`);
 }
 
-function equipementPopup(e) {
+function batimentPopup(e) {
   const level = levelClass(e.accessibility?.level);
   const a = e.accessibility || {};
   return `
@@ -184,7 +188,7 @@ function equipementPopup(e) {
       <h3>${e.name}</h3>
       <div class="popup-address">${e.address}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
-      ${field("Catégorie", EQUIPEMENT_CATEGORY_LABELS[e.category] || e.category)}
+      ${field("Catégorie", BATIMENT_CATEGORY_LABELS[e.category] || e.category)}
       ${field("Notes", a.notes)}
       ${sourceField(e.source)}
       ${reviewBlock(e.source?.reviewText, e.source?.reviewer, e.source?.reviewUrl)}
@@ -226,13 +230,37 @@ const LAYER_CONFIG = [
     getPopup: logementPopup,
   },
   {
+    key: "batiments-municipaux",
+    label: "Bâtiments municipaux accessibles",
+    file: "data/batiments-municipaux.json",
+    defaultVisible: true,
+    color: ["#c084fc", "#7016b0"],
+    icon: ICONS.batiment,
+    getItems: (data) => data.batiments || [],
+    getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
+    getPopup: batimentPopup,
+  },
+  {
     key: "stationnements",
-    label: "Stationnements accessibles",
-    // Saisie manuelle + places importées de l'AMD et de la signalisation de la Ville.
-    files: ["data/stationnements.json", "data/places-handicapes.json"],
+    label: "Stationnement accessible",
+    // Saisie manuelle uniquement.
+    file: "data/stationnements.json",
     defaultVisible: true,
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.stationnement,
+    size: 28,
+    getItems: (data) => data.stationnements || [],
+    getPopup: stationnementPopup,
+  },
+  {
+    key: "stationnements-payants",
+    label: "Stationnement accessible payant",
+    // Places tarifées importées de l'Agence de mobilité durable.
+    file: "data/places-handicapes.json",
+    defaultVisible: true,
+    color: ["#3b82f6", "#1e3a8a"],
+    icon: ICONS.stationnementPayant,
+    size: 28,
     getItems: (data) => data.stationnements || [],
     getPopup: stationnementPopup,
   },
@@ -243,19 +271,9 @@ const LAYER_CONFIG = [
     defaultVisible: true,
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.debarcadere,
+    size: 28,
     getItems: (data) => data.debarcaderes || [],
     getPopup: debarcaderePopup,
-  },
-  {
-    key: "equipements",
-    label: "Équipements accessibles",
-    file: "data/equipements.json",
-    defaultVisible: true,
-    color: ["#c084fc", "#7016b0"],
-    icon: ICONS.equipement,
-    getItems: (data) => data.equipements || [],
-    getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
-    getPopup: equipementPopup,
   },
   {
     key: "feux-sonores",
@@ -329,12 +347,15 @@ function markerIcon(config, badgeColor) {
     });
   }
   // Goutte de 34px (comme Avant / Après) pivotée de -45° : la pointe se retrouve ~41px sous le coin haut.
+  // Les proportions (ancre, pointe) sont conservées au prorata pour les tailles réduites.
+  const size = config.size || 34;
+  const sizeClass = size !== 34 ? " pin-marker-sm" : "";
   return L.divIcon({
     className: "",
-    html: `<div class="pin-marker" style="width:34px;height:34px"><div class="pin" style="${style}">${config.icon}</div>${badge}</div>`,
-    iconSize: [34, 34],
-    iconAnchor: [17, 41],
-    popupAnchor: [0, -39],
+    html: `<div class="pin-marker${sizeClass}" style="width:${size}px;height:${size}px"><div class="pin" style="${style}">${config.icon}</div>${badge}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, Math.round((size * 41) / 34)],
+    popupAnchor: [0, -Math.round((size * 39) / 34)],
   });
 }
 

@@ -588,6 +588,12 @@ h1, h2, h3, .brand-word {
   box-shadow: 0 10px 20px -4px var(--pin-dark);
 }
 
+/* Stationnements / débarcadères : goutte un peu plus petite que les autres couches. */
+.pin-marker-sm .pin svg {
+  width: 12px;
+  height: 12px;
+}
+
 /* Les feux sonores sont nombreux : une pastille ronde, plus discrète qu'une goutte. */
 .dot-marker .pin {
   border-radius: 50%;
@@ -696,6 +702,19 @@ h1, h2, h3, .brand-word {
 }
 
 .popup-content .review a:hover { background: var(--brand); transform: translateY(-1px); }
+
+.popup-content .review a.review-source-link {
+  display: inline;
+  margin-top: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+.popup-content .review a.review-source-link:hover { background: none; transform: none; }
 
 /* ---------- About modal ---------- */
 

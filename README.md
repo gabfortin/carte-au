@@ -4,9 +4,10 @@ Carte interactive répertoriant, par couches activables/désactivables :
 
 - **Commerces accessibles** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps
 - **Logements accessibles** — saisie manuelle + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99) qui comptent des unités adaptées (positions tirées du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
-- **Stationnements accessibles** — saisie manuelle + places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0) + panneaux « réservé handicapés » de la [signalisation de stationnement de la Ville](https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant) (très incomplète pour le Plateau à ce jour). Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
+- **Stationnement accessible** — saisie manuelle uniquement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
+- **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0).
 - **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
-- **Équipements accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal
+- **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
 
 ## Recherche et filtres
@@ -121,14 +122,14 @@ Champs calqués sur le format des avis Promo-Accès. Laisser un champ à `null` 
 
 Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à ajouter.
 
-### Équipements (`data/equipements.json`)
+### Bâtiments municipaux (`data/batiments-municipaux.json`)
 
-`source.url` pointe vers la fiche de l'équipement sur montreal.ca et s'affiche comme lien « Source » dans le popup.
+`source.url` pointe vers la fiche du bâtiment sur montreal.ca et s'affiche comme lien « Source » dans le popup.
 
 ```json
 {
   "id": "identifiant-unique",
-  "name": "Nom de l'équipement",
+  "name": "Nom du bâtiment",
   "category": "piscine | bibliotheque | parc | arena | centre-sportif | autre",
   "address": "Adresse complète",
   "lat": 45.0,
