@@ -3,8 +3,9 @@
 Carte interactive répertoriant, par couches activables/désactivables :
 
 - **Commerces accessibles** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps
-- **Logements accessibles** — saisie manuelle
-- **Stationnements accessibles** — saisie manuelle (aucun jeu de données ouvertes dédié trouvé à Montréal à ce jour)
+- **Logements accessibles** — saisie manuelle + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99) qui comptent des unités adaptées (positions tirées du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
+- **Stationnements accessibles** — saisie manuelle + places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0) + panneaux « réservé handicapés » de la [signalisation de stationnement de la Ville](https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant) (très incomplète pour le Plateau à ce jour). Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
+- **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données
 - **Équipements accessibles** (piscines municipales, etc.) — saisie manuelle
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
 
@@ -118,6 +119,28 @@ Généré automatiquement, ne pas éditer à la main. Pour rafraîchir avec les 
 
 ```bash
 python3 scripts/import_feux_sonores.py
+```
+
+### Logements de l'OMHM (`data/logements-omhm.json`)
+
+Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Pour rafraîchir :
+
+```bash
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
+```
+
+### Places réservées aux personnes handicapées (`data/places-handicapes.json`)
+
+Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/stationnements.json` et `data/debarcaderes.json`). Pour rafraîchir :
+
+```bash
+python3 scripts/import_places_handicapes.py
+```
+
+Si Python affiche `CERTIFICATE_VERIFY_FAILED` (Python de python.org sur macOS), utiliser les certificats du système :
+
+```bash
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_places_handicapes.py
 ```
 
 ## Déploiement

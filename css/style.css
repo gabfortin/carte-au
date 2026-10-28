@@ -225,40 +225,6 @@ h1, h2, h3, .brand-word {
   100% { transform: scale(1.7); opacity: 0; }
 }
 
-.header-stats {
-  display: flex;
-  gap: 10px;
-  margin-left: 6px;
-}
-
-.stat-pill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px 14px;
-  border-radius: 999px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  min-width: 64px;
-  transition: background 0.18s var(--ease), transform 0.18s var(--ease);
-}
-
-.stat-pill:hover { background: var(--glass-strong); transform: translateY(-1px); }
-
-.stat-pill strong {
-  font-size: 0.95rem;
-  color: var(--brand-dark);
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.1;
-}
-
-.stat-pill span {
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--ink-500);
-}
-
 .header-spacer { flex: 1; }
 
 .header-search input {
@@ -674,6 +640,11 @@ h1, h2, h3, .brand-word {
   color: var(--ink-700);
 }
 
+.popup-field a {
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+
 .popup-field-label {
   display: inline-block;
   font-weight: 600;
@@ -830,7 +801,6 @@ a.about-person:hover { background: rgba(255, 255, 255, 0.5); transform: translat
 
   .brand-sub { display: none; }
   .brand-sub-mobile { display: block; }
-  .header-stats { display: none; }
   .header-spacer { display: none; }
 
   .header-search { order: 10; flex: 1 1 100%; min-width: 0; }
@@ -841,6 +811,10 @@ a.about-person:hover { background: rgba(255, 255, 255, 0.5); transform: translat
   .brand-mark { width: 36px; height: 36px; }
   .brand-mark svg { width: 20px; height: 20px; }
   .brand-word { font-size: 0.95rem; }
+
+  /* Le titre prend la place restante (et s'ellipse au besoin) pour garder
+     le bouton ⓘ sur la même ligne. */
+  .brand { flex: 1 1 0; }
 
   .about-btn { width: 28px; height: 28px; }
   .about-btn svg { width: 14px; height: 14px; }

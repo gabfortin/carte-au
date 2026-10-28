@@ -1,21 +1,156 @@
 {
   "equipements": [
     {
-      "id": "exemple-piscine-municipale",
-      "name": "Piscine municipale Exemple",
-      "category": "piscine",
-      "address": "321 Rue Exemple, Montréal, QC",
-      "lat": 45.5280,
-      "lng": -73.5830,
+      "id": "arena-des-patineuses",
+      "name": "Aréna des Patineuses",
+      "category": "arena",
+      "address": "5633, rue Saint-Dominique, Montréal, QC H2T 1V7",
+      "lat": 45.527568,
+      "lng": -73.599728,
       "accessibility": {
         "level": "accessible",
-        "notes": "Lève-personne disponible, vestiaires adaptés."
+        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, entrée accessible alternative, stationnement accessible, toilettes accessibles (dont en cabine) avec barres d'appui."
       },
       "source": {
-        "reviewer": null,
-        "date": "2024-01-01",
-        "reviewText": "Exemple à remplacer par une vraie donnée.",
-        "reviewUrl": null
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/arena-des-patineuses",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "arena-mont-royal",
+      "name": "Aréna Mont-Royal",
+      "category": "arena",
+      "address": "4365, rue Cartier, Montréal, QC H2H 2N9",
+      "lat": 45.533107478139,
+      "lng": -73.571538337934,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Entrée de plain-pied, porte automatique avec bouton-poussoir, ascenseur, signalisation accessible, toilettes accessibles avec barres d'appui. Places réservées (vignette) et débarcadère pour transport adapté. Lugiglace offerte gratuitement pendant le patin libre pour patiner en fauteuil roulant non électrique (accompagnement requis)."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/arena-mont-royal",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "bibliotheque-du-plateau-mont-royal",
+      "name": "Bibliothèque du Plateau-Mont-Royal",
+      "category": "bibliotheque",
+      "address": "465, avenue du Mont-Royal Est, Montréal, QC H2J 1W3",
+      "lat": 45.524952,
+      "lng": -73.582684,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, porte automatique, toilettes accessibles (dont en cabine) avec barres d'appui, places réservées (vignette)."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/bibliotheque-du-plateau-mont-royal",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "bibliotheque-mordecai-richler",
+      "name": "Bibliothèque Mordecai-Richler",
+      "category": "bibliotheque",
+      "address": "5434, avenue du Parc, Montréal, QC H2V 4G7",
+      "lat": 45.521642,
+      "lng": -73.601661,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, ascenseur, toilettes accessibles (en cabine et individuelle, mixtes) avec barres d'appui."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/bibliotheque-mordecai-richler",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "centre-de-loisirs-saint-denis",
+      "name": "Centre de loisirs Saint-Denis",
+      "category": "centre-sportif",
+      "address": "5115, rue Rivard, Montréal, QC H2J 2P2",
+      "lat": 45.527870579975,
+      "lng": -73.589367627661,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Indiqué accessible en fauteuil roulant (rampe d'accès, ascenseur), mais la fiche précise aussi : quatre marches avec main courante à l'extérieur, et une quinzaine de marches pour se rendre aux toilettes du sous-sol. Une toilette individuelle mixte au 1er étage est disponible sur demande auprès du personnel."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/centre-de-loisirs-saint-denis",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "piscine-du-centre-du-plateau",
+      "name": "Piscine du Centre du Plateau",
+      "category": "piscine",
+      "address": "2275, boulevard Saint-Joseph Est, Montréal, QC H2H 1G4",
+      "lat": 45.539769,
+      "lng": -73.575971,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Accessible en fauteuil roulant, adapté aux poussettes. Ascenseur, porte automatique, toilettes accessibles. La rampe d'accès au bassin est réservée aux personnes qui ne peuvent pas utiliser les échelles : les fauteuils roulants aquatiques ne peuvent pas y circuler, donc pas d'accès au bassin en fauteuil."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/piscine-du-centre-du-plateau",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "piscine-et-pataugeoire-du-parc-sir-wilfrid-laurier",
+      "name": "Piscine et pataugeoire du parc Sir-Wilfrid-Laurier",
+      "category": "piscine",
+      "address": "5200, rue De Brébeuf, Montréal, QC H2J 1G8",
+      "lat": 45.532620235299305,
+      "lng": -73.58628403767284,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Piscine extérieure. Accessible en fauteuil roulant, adapté aux poussettes. Rampe d'accès, fauteuil roulant aquatique et lève-personne pour la piscine (s'informer auprès du personnel sur place)."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/piscine-et-pataugeoire-du-parc-sir-wilfrid-laurier",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "piscine-levesque",
+      "name": "Piscine Lévesque",
+      "category": "piscine",
+      "address": "955, rue Marie-Anne Est, Montréal, QC H2J 4G2",
+      "lat": 45.526249,
+      "lng": -73.577898,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "L'ascenseur aquatique, qui permet aux personnes à mobilité réduite d'accéder au bassin, est actuellement hors service. Rampe d'accès, porte automatique, signalisation accessible, toilettes accessibles, places réservées (vignette) et débarcadère. Adapté aux poussettes."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/piscine-levesque",
+        "date": "2026-10-27"
+      }
+    },
+    {
+      "id": "piscine-schubert",
+      "name": "Piscine Schubert",
+      "category": "piscine",
+      "address": "3950, boulevard Saint-Laurent, Montréal, QC H2W 1Y3",
+      "lat": 45.516453,
+      "lng": -73.578789,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Accessible en fauteuil roulant avec assistance, adapté aux poussettes. Rampe d'accès, ascenseur, porte automatique, fauteuil roulant aquatique et lève-personne pour la piscine, toilettes accessibles, places réservées (vignette) et débarcadère."
+      },
+      "source": {
+        "name": "Ville de Montréal",
+        "url": "https://montreal.ca/lieux/piscine-schubert",
+        "date": "2026-10-27"
       }
     }
   ]

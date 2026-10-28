@@ -1,24 +1,3 @@
 {
-  "logements": [
-    {
-      "id": "exemple-residence-accessible",
-      "name": "Résidence Exemple",
-      "type": "locatif",
-      "address": "789 Boulevard Exemple, Montréal, QC",
-      "lat": 45.5300,
-      "lng": -73.5900,
-      "accessibility": {
-        "level": "accessible",
-        "entree": "plain-pied",
-        "ascenseur": true,
-        "notes": "Unités adaptées disponibles au rez-de-chaussée, ascenseur aux étages supérieurs."
-      },
-      "source": {
-        "reviewer": null,
-        "date": "2024-01-01",
-        "reviewText": "Exemple à remplacer par une vraie donnée.",
-        "reviewUrl": null
-      }
-    }
-  ]
+  "logements": []
 }

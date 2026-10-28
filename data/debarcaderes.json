@@ -1,0 +1,13 @@
+{
+  "debarcaderes": [
+    {
+      "id": "debarcadere-1",
+      "description": "Débarcadère accessible",
+      "address": null,
+      "lat": 45.52499454227742,
+      "lng": -73.59150771094137,
+      "notes": null,
+      "source": null
+    }
+  ]
+}

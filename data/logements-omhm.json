@@ -1,0 +1,176 @@
+{
+  "source": "Office municipal d'habitation de Montréal - répertoire des habitations",
+  "sourceUrl": "https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99&page=0",
+  "logements": [
+    {
+      "id": "omhm-habitations-durocher",
+      "name": "Habitations Durocher",
+      "type": "hlm",
+      "address": "425, rue Sherbrooke Ouest",
+      "lat": 45.5074399,
+      "lng": -73.5722166,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 97 logements (7 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-durocher"
+      }
+    },
+    {
+      "id": "omhm-habitations-drolet-et-b",
+      "name": "Habitations Drolet A et B",
+      "type": "hlm",
+      "address": "5170, 5174, rue Drolet · 5129, 5131, avenue Henri-Julien · 325, 325T, avenue Laurier Est",
+      "lat": 45.5261795,
+      "lng": -73.5905855,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 95 logements (8 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-drolet-et-b"
+      }
+    },
+    {
+      "id": "omhm-habitations-lafontaine-et-b",
+      "name": "Habitations Lafontaine A et B",
+      "type": "hlm",
+      "address": "1701, rue Alexandre-Desève · 3911, avenue Coloniale · 1605, 1607, rue De Champlain · 1728, 1750, 1752, 1754, rue De La Visitation · 3876, 3878, 3880, rue De Mentana · 4530, 4535, avenue Henri-Julien · 1881, rue Montcalm · 3964, rue Rivard · 2028, 2030, rue Wurtele",
+      "lat": 45.5171734,
+      "lng": -73.5766065,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 81 logements (1 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-lafontaine-et-b"
+      }
+    },
+    {
+      "id": "omhm-habitations-emile-nelligan-i",
+      "name": "Habitations Émile-Nelligan I",
+      "type": "hlm",
+      "address": "5230, rue Saint-Dominique",
+      "lat": 45.5246733,
+      "lng": -73.5948844,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 81 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-emile-nelligan-i"
+      }
+    },
+    {
+      "id": "omhm-habitations-emile-nelligan-ii",
+      "name": "Habitations Émile-Nelligan II",
+      "type": "hlm",
+      "address": "5222, avenue Casgrain · 5115, rue Clark · 5301, 5311, 5321, rue Saint-Dominique",
+      "lat": 45.5251508,
+      "lng": -73.5941811,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 22 logements (1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-emile-nelligan-ii"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-lanaudiere",
+      "name": "Habitations De Lanaudière",
+      "type": "hlm",
+      "address": "1315, 1315T, rue Gilford",
+      "lat": 45.5317747,
+      "lng": -73.5811202,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 71 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-lanaudiere"
+      }
+    },
+    {
+      "id": "omhm-habitations-sainte-veronique",
+      "name": "Habitations Sainte-Véronique",
+      "type": "hlm",
+      "address": "4240, 4240T, rue Messier",
+      "lat": 45.5348703,
+      "lng": -73.5669893,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 83 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-veronique"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-mentana",
+      "name": "Habitations De Mentana",
+      "type": "hlm",
+      "address": "4110, 4114, 4118, rue De Mentana · 4077, 4081, 4085, 4085T, 4095, 4105, rue Saint-André",
+      "lat": 45.5239775,
+      "lng": -73.5745292,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "1 unité adaptée sur 158 logements (1 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-mentana"
+      }
+    },
+    {
+      "id": "omhm-habitations-sainte-croix",
+      "name": "Habitations Sainte-Croix",
+      "type": "hlm",
+      "address": "4444, rue Clark",
+      "lat": 45.5187597,
+      "lng": -73.5856712,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 66 logements (4 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-croix"
+      }
+    },
+    {
+      "id": "omhm-habitations-sainte-agnes",
+      "name": "Habitations Sainte-Agnès",
+      "type": "hlm",
+      "address": "350, rue Boucher",
+      "lat": 45.5273304,
+      "lng": -73.5917908,
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "3 unités adaptées sur 51 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-agnes"
+      }
+    }
+  ]
+}
