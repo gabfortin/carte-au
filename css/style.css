@@ -672,6 +672,35 @@ h1, h2, h3, .brand-word {
   margin-right: 0.35rem;
 }
 
+.popup-content .popup-subsection {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--divider);
+}
+
+.popup-content .popup-subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.popup-content .popup-subsection-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-500);
+}
+
+.popup-content .popup-subsection .badge { margin-top: 0; }
+
+.popup-content .popup-subsection-notes {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-700);
+}
+
 .popup-content .review {
   margin-top: 10px;
   padding-top: 10px;

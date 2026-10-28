@@ -1,3 +1,289 @@
 {
-  "toilettes": []
+  "toilettes": [
+    {
+      "id": "toilette-piscine-du-centre-du-plateau",
+      "name": "Toilette accessible — Piscine du Centre du Plateau",
+      "category": "piscine",
+      "address": "2275, boulevard Saint-Joseph Est, Montréal, QC H2H 1G4",
+      "lat": 45.539769,
+      "lng": -73.575971,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Rampe d'accès à l'entrée principale, avec bouton-poussoir. L'ascenseur desservant les étages était signalé brisé au moment de la visite : les cabines accessibles du sous-sol et du 1er étage ne sont accessibles que par cet ascenseur. Sous-sol : toilettes en cabines non mixtes avec barres d'appui, sans table à langer. Rez-de-chaussée : toilettes en cabines non mixtes (en rénovation jusqu'à l'été au moment de la visite) avec barres d'appui ; table à langer pour bébé dans la cabine accessible des femmes. 1er étage : toilettes en cabines accessibles non mixtes, mais sans barres d'appui ni table à langer. Aucun bouton-poussoir à la porte des toilettes, à tous les étages."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-arena-mont-royal",
+      "name": "Toilette accessible — Aréna Mont-Royal",
+      "category": "arena",
+      "address": "4365, rue Cartier, Montréal, QC H2H 2N9",
+      "lat": 45.533107478139,
+      "lng": -73.571538337934,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Entrée plain-pied, mais avec un seuil de plus de 13 mm qui peut être difficile à franchir en fauteuil roulant ; aucune main courante extérieure à l'entrée. Bouton-poussoir à l'entrée du bâtiment, mais pas à la porte de la toilette accessible. Toilettes en cabines non mixtes avec barres d'appui et table à langer pour bébé. Ascenseur présent. Abreuvoir accessible sur place."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-bibliotheque-du-plateau-mont-royal",
+      "name": "Toilette accessible — Bibliothèque du Plateau-Mont-Royal",
+      "category": "bibliotheque",
+      "address": "465, avenue du Mont-Royal Est, Montréal, QC H2J 1W3",
+      "lat": 45.524952,
+      "lng": -73.582684,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Rampe d'accès à l'entrée, avec bouton-poussoir. Toilettes en cabines non mixtes avec barres d'appui et table à langer pour bébé ; abreuvoir accessible. Pas de bouton-poussoir à la porte de la toilette. Une entrée secondaire compte 4 marches avec main courante."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-bibliotheque-mordecai-richler",
+      "name": "Toilette accessible — Bibliothèque Mordecai-Richler",
+      "category": "bibliotheque",
+      "address": "5434, avenue du Parc, Montréal, QC H2V 4G7",
+      "lat": 45.521642,
+      "lng": -73.601661,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Rampe d'accès à l'entrée, mais sans bouton-poussoir au bâtiment. L'accès aux étages se fait par un escalier d'une vingtaine de marches par étage (7 marches extérieures et 5 marches intérieures à l'entrée) ou par l'ascenseur, présent sur place. Sous-sol : toilettes en cabines non mixtes avec barres d'appui et table à langer pour bébé (hommes et femmes). Rez-de-chaussée et 1er étage : toilette individuelle mixte accessible, avec barres d'appui mais sans table à langer. Aucun bouton-poussoir à la porte des toilettes."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-centre-de-loisirs-saint-denis",
+      "name": "Toilette accessible — Centre de loisirs Saint-Denis",
+      "category": "centre-sportif",
+      "address": "5115, rue Rivard, Montréal, QC H2J 2P2",
+      "lat": 45.527870579975,
+      "lng": -73.589367627661,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Rampe d'accès à l'entrée (4 marches extérieures avec main courante à une entrée secondaire), avec bouton-poussoir au bâtiment mais pas à la porte des toilettes. Sous-sol : toilettes en cabines non mixtes, situées dans les vestiaires. 1er étage : toilette individuelle mixte, avec table à langer pour bébé. Barres d'appui et abreuvoir présents. L'accès au sous-sol et au 1er étage se fait par ascenseur (escalier intérieur d'environ 15 marches en alternative). Les toilettes sont accessibles au public sur demande auprès d'un employé."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-chalet-du-parc-baldwin",
+      "name": "Toilette accessible — Chalet du parc Baldwin",
+      "category": "parc",
+      "address": "4491, rue Fullum, Montréal, QC H2H 2J9",
+      "lat": 45.53663947693323,
+      "lng": -73.56731367712688,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Toilette accessible individuelle (mixte), avec barre d'appui et table à langer pour bébé ; abreuvoir à l'extérieur. Pas de bouton-poussoir à la porte. Le bouton-poussoir à l'entrée du bâtiment était signalé défectueux au moment de la caractérisation."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-centre-culturel-calixa-lavallee",
+      "name": "Toilette accessible — Centre culturel Calixa-Lavallée",
+      "category": "autre",
+      "address": "3819, avenue Calixa-Lavallée, Montréal, QC H2L 3A7",
+      "lat": 45.527020948108,
+      "lng": -73.569219457077,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Toilettes en cabines non mixtes avec barre d'appui, mais sans porte de cabine ni table à langer. L'accès se fait par un monte-charge jusqu'au sous-sol, après avoir sonné pour qu'un employé ouvre l'entrée accessible du côté nord ; l'entrée principale compte 10 marches avec main courante."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-chalet-du-parc-la-fontaine",
+      "name": "Toilette accessible — Chalet du parc La Fontaine",
+      "category": "parc",
+      "address": "3933, avenue du Parc-La Fontaine, Montréal, QC H2L 0C7",
+      "lat": 45.5252,
+      "lng": -73.5695,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Rez-de-chaussée : toilette accessible individuelle fermée, avec barre d'appui et table à langer pour bébé. Sous-sol : toilettes en cabines non mixtes, sans porte, avec barre d'appui mais sans table à langer ; accès par quatre marches intérieures avec main courante, ou par une entrée accessible à l'arrière du bâtiment (également utilisée pour les escaliers du restaurant). Pas de bouton-poussoir à la porte des toilettes, à aucun des deux niveaux. Entrée du chalet par rampe d'accès et sentier d'accès ; six marches extérieures avec main courante en alternative."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-maison-de-la-culture-du-plateau-mont-royal",
+      "name": "Toilette accessible — Maison de la culture du Plateau-Mont-Royal",
+      "category": "autre",
+      "address": "465, avenue du Mont-Royal Est, Montréal, QC H2J 1W3",
+      "lat": 45.524952,
+      "lng": -73.582684,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Toilettes en cabines non mixtes avec barre d'appui, mais sans table à langer ni bouton-poussoir à la porte. Entrée par rampe d'accès fixe, pente et porte à ouverture automatique (ou par un escalier secondaire de quatre marches avec main courante)."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-chalet-du-parc-sir-wilfrid-laurier",
+      "name": "Toilette accessible — Chalet du parc Sir-Wilfrid-Laurier",
+      "category": "parc",
+      "address": "1115, avenue Laurier Est, Montréal, QC H2J 1G8",
+      "lat": 45.531456,
+      "lng": -73.585625,
+      "horaire": null,
+      "accessibility": {
+        "level": "non-accessible",
+        "notes": "Toilettes en cabines non mixtes, aucune accessible. Quatre marches avec main courante donnent accès aux toilettes ; aucune barre d'appui ni table à langer. Entrée du chalet par des marches, sans bouton-poussoir ni entrée alternative."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-arena-des-patineuses",
+      "name": "Toilette accessible — Aréna des Patineuses",
+      "category": "arena",
+      "address": "5633, rue Saint-Dominique, Montréal, QC H2T 1V7",
+      "lat": 45.527568,
+      "lng": -73.599728,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Toilettes en cabines non mixtes avec table à langer pour bébé. L'accès se fait par une rampe avec main courante au centre et sur les côtés (deux couloirs plutôt étroits), via l'entrée accessible (nord, rue Saint-Dominique, ou sud, rue Casgrain) ; l'entrée principale compte 16 marches extérieures avec main courante. Informations incomplètes sur la présence de barres d'appui et d'un bouton-poussoir à la porte de la toilette."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-bureau-acces-montreal-le-plateau-mont-royal",
+      "name": "Toilette accessible — Bureau Accès Montréal (Le Plateau-Mont-Royal)",
+      "category": "edifice-municipal",
+      "address": "201, avenue Laurier Est, Bureau 120, Montréal, QC H2T 3E6",
+      "lat": 45.525122703195,
+      "lng": -73.591157197952,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Toilettes en cabines non mixtes, avec barre d'appui mais sans table à langer. La fiche de la Ville indique un bouton-poussoir à la porte de la toilette accessible, mais la caractérisation de l'arrondissement n'en a pas trouvé. Entrée de plain-pied côté De Gaspé ; trois marches à l'entrée principale sur l'avenue Laurier Est."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-comptoir-des-permis-le-plateau-mont-royal",
+      "name": "Toilette accessible — Comptoir des permis (Le Plateau-Mont-Royal)",
+      "category": "edifice-municipal",
+      "address": "201, avenue Laurier Est, 5e étage, Montréal, QC H2T 3E6",
+      "lat": 45.525128,
+      "lng": -73.591167,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Toilette accessible individuelle, mixte, avec bouton-poussoir à la porte, barre d'appui et table à langer pouvant aussi servir à un adulte de petite taille. Accès au 5e étage par ascenseur depuis le rez-de-chaussée (escalier avec main courante en alternative)."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-centre-de-loisirs-multiethnique-saint-louis",
+      "name": "Toilette accessible — Centre de loisirs multiethnique Saint-Louis",
+      "category": "centre-sportif",
+      "address": "3555, rue Saint-Urbain, Montréal, QC H2X 2N6",
+      "lat": 45.512330827314,
+      "lng": -73.572410580331,
+      "horaire": null,
+      "accessibility": {
+        "level": "accessible",
+        "notes": "Toilette accessible individuelle, mixte, avec barre d'appui (incluant un petit banc pliable fixé au mur) et table à langer pour bébé, mais sans bouton-poussoir à la porte. Entrée de plain-pied, avec bouton-poussoir au bâtiment."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "toilette-chalet-du-parc-jeanne-mance",
+      "name": "Toilette accessible — Chalet du parc Jeanne-Mance",
+      "category": "parc",
+      "address": "4422, avenue de l'Esplanade, Montréal, QC H2W 1B9",
+      "lat": 45.514949,
+      "lng": -73.584374,
+      "horaire": null,
+      "accessibility": {
+        "level": "partiellement",
+        "notes": "Toilettes en cabines non mixtes, sans porte, avec barre d'appui mais sans table à langer. Entrée de plain-pied avec un petit seuil de métal qui peut être problématique pour les fauteuils roulants ; pas de bouton-poussoir à l'entrée ni à la porte des toilettes. Une réfection des toilettes est prévue dans le cadre du plan directeur du parc."
+      },
+      "source": {
+        "reviewer": null,
+        "date": "2026-10-28",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    }
+  ]
 }

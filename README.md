@@ -150,7 +150,7 @@ Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à 
 
 ### Bâtiments municipaux (`data/batiments-municipaux.json`)
 
-`source.url` pointe vers la fiche du bâtiment sur montreal.ca et s'affiche comme lien « Source » dans le popup.
+`source.url` pointe vers la fiche du bâtiment sur montreal.ca et s'affiche comme lien « Source » dans le popup. Le champ optionnel `toilette` affiche une section « Toilette » distincte dans le popup, séparée des notes générales du bâtiment — utile quand les deux proviennent de sources différentes (ex : fiche de la Ville pour le bâtiment, caractérisation de l'arrondissement pour les toilettes).
 
 ```json
 {
@@ -161,6 +161,7 @@ Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à 
   "lat": 45.0,
   "lng": -73.0,
   "accessibility": { "level": "accessible", "notes": "..." },
+  "toilette": { "level": "accessible", "notes": "..." },
   "source": { "name": "Ville de Montréal", "url": "https://montreal.ca/lieux/...", "date": "AAAA-MM-JJ" }
 }
 ```
@@ -171,7 +172,7 @@ Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à 
 {
   "id": "identifiant-unique",
   "name": "Nom / emplacement de la toilette",
-  "category": "parc | bibliotheque | centre-communautaire | commerce | edifice-municipal | autre",
+  "category": "parc | bibliotheque | centre-communautaire | commerce | edifice-municipal | piscine | arena | centre-sportif | autre",
   "address": "Adresse complète",
   "lat": 45.0,
   "lng": -73.0,

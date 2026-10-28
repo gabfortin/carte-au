@@ -75,6 +75,9 @@ const TOILETTE_CATEGORY_LABELS = {
   "centre-communautaire": "Centre communautaire",
   commerce: "Commerce",
   "edifice-municipal": "Édifice municipal",
+  piscine: "Piscine",
+  arena: "Aréna",
+  "centre-sportif": "Centre sportif",
   autre: "Autre",
 };
 
@@ -131,6 +134,20 @@ function imagesGallery(images) {
     `
   ).join("");
   return `<div class="popup-images">${figures}</div>`;
+}
+
+function toiletteSection(toilette) {
+  if (!toilette) return "";
+  const level = levelClass(toilette.level);
+  return `
+    <div class="popup-subsection">
+      <div class="popup-subsection-header">
+        <span class="popup-subsection-title">Toilette</span>
+        <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      </div>
+      <p class="popup-subsection-notes">${toilette.notes}</p>
+    </div>
+  `;
 }
 
 function commercePopup(c) {
@@ -227,6 +244,7 @@ function batimentPopup(e) {
       ${field("Notes", a.notes)}
       ${sourceField(e.source)}
       ${reviewBlock(e.source?.reviewText, e.source?.reviewer, e.source?.reviewUrl)}
+      ${toiletteSection(e.toilette)}
       ${imagesGallery(e.images)}
     </div>
   `;

@@ -94,7 +94,8 @@ ENTREE_PAR_LABEL = {"Plain-pied": "plain-pied", "Rampe": "rampe", "Marche(s)": "
 TYPE_STATIONNEMENT_PAR_LABEL = {"Sur rue": "sur-rue", "Hors rue": "hors-rue"}
 TOILETTE_CATEGORIE_PAR_LABEL = {
     "Parc": "parc", "Bibliothèque": "bibliotheque", "Centre communautaire": "centre-communautaire",
-    "Commerce": "commerce", "Édifice municipal": "edifice-municipal", "Autre": "autre",
+    "Commerce": "commerce", "Édifice municipal": "edifice-municipal", "Piscine": "piscine",
+    "Aréna": "arena", "Centre sportif": "centre-sportif", "Autre": "autre",
 }
 GAIN_TYPE_PAR_LABEL = {
     "Logements adaptables": "logements-adaptables", "Accès / rampe": "acces-rampe",
