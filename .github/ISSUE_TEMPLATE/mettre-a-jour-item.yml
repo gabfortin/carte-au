@@ -1,0 +1,86 @@
+name: "Mettre à jour un item existant"
+description: "Ajoutez une description ou des photos à un item déjà publié sur la carte (bâtiment municipal, commerce, débarcadère, stationnement, toilette, gain CCU)."
+title: "[Mettre à jour] "
+labels: ["mettre-a-jour"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Utilisez ce formulaire pour enrichir un item déjà publié sur la
+        carte — typiquement pour ajouter une description ou des photos.
+        Pour proposer un nouvel item, utilisez plutôt un des gabarits
+        « Ajouter... ».
+
+        Laissez vide tout champ que vous ne souhaitez pas modifier.
+
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: "Catégorie de l'item"
+      options:
+        - "Bâtiments municipaux"
+        - "Commerces"
+        - "Débarcadères"
+        - "Stationnement accessible (gratuit)"
+        - "Toilettes accessibles"
+        - "Gains CCU"
+    validations:
+      required: true
+
+  - type: input
+    id: nom_item
+    attributes:
+      label: "Nom exact de l'item"
+      description: >-
+        Pour un bâtiment, un commerce ou une toilette : son nom tel
+        qu'affiché sur la carte. Pour un débarcadère, un stationnement
+        ou un gain CCU : sa description courte telle qu'affichée dans
+        le popup. Copiez-collez exactement ce qui est affiché pour
+        éviter toute confusion.
+      placeholder: "Aréna des Patineuses"
+    validations:
+      required: true
+
+  - type: input
+    id: adresse_item
+    attributes:
+      label: "Adresse de l'item (optionnel)"
+      description: "Utile si plusieurs items portent un nom ou une description similaire."
+
+  - type: textarea
+    id: raison
+    attributes:
+      label: "Qu'ajoutez-vous ou que corrigez-vous, et pourquoi ?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: nouvelle_description
+    attributes:
+      label: "Description à ajouter ou remplacer (optionnel)"
+      description: "Remplace les notes actuelles de l'item. Laissez vide pour ne pas y toucher."
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos à ajouter (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre (ex : « Rampe
+        d'accès côté stationnement »). Elles s'ajoutent aux photos déjà
+        présentes, sans les remplacer.
+      placeholder: "![Rampe d'accès côté stationnement](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."

@@ -1,0 +1,109 @@
+name: "Ajouter une toilette accessible"
+description: "Proposez une toilette publique accessible à ajouter à la carte."
+title: "[Ajouter toilette] "
+labels: ["ajouter-item", "toilettes"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de contribuer à la carte. Remplissez les champs ci-dessous
+        aussi précisément que possible. Une fois votre soumission révisée
+        et approuvée, elle sera intégrée automatiquement à la carte.
+
+        💡 Pour obtenir la latitude et la longitude : clic droit sur
+        l'emplacement dans [Google Maps](https://maps.google.com) ou
+        [OpenStreetMap](https://www.openstreetmap.org), puis copier les
+        coordonnées.
+
+  - type: input
+    id: nom
+    attributes:
+      label: "Nom / emplacement de la toilette"
+      placeholder: "Toilette publique — Parc Laurier"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: "Catégorie"
+      options:
+        - "Parc"
+        - "Bibliothèque"
+        - "Centre communautaire"
+        - "Commerce"
+        - "Édifice municipal"
+        - "Autre"
+    validations:
+      required: true
+
+  - type: input
+    id: adresse
+    attributes:
+      label: "Adresse complète"
+      placeholder: "123 avenue Laurier Est, Montréal, QC"
+    validations:
+      required: true
+
+  - type: input
+    id: lat
+    attributes:
+      label: "Latitude"
+      placeholder: "45.5142"
+    validations:
+      required: true
+
+  - type: input
+    id: lng
+    attributes:
+      label: "Longitude"
+      placeholder: "-73.5904"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: niveau
+    attributes:
+      label: "Niveau d'accessibilité"
+      options:
+        - "Accessible"
+        - "Partiellement accessible"
+        - "Non accessible"
+        - "Inconnu"
+    validations:
+      required: true
+
+  - type: input
+    id: horaire
+    attributes:
+      label: "Horaire (optionnel)"
+      description: "Ex : « Fermée l'hiver », « 7h-22h »."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optionnel)"
+      description: "Détails libres sur l'accessibilité (ex : barres d'appui, hauteur, porte automatique)."
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre.
+      placeholder: "![Barres d'appui et porte automatique](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."

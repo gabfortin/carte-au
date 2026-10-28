@@ -1,0 +1,106 @@
+name: "Ajouter un gain CCU"
+description: "Répertoriez un gain obtenu en matière d'accessibilité universelle via le CCU (ex : % de logements adaptables, rampe d'accès exigée)."
+title: "[Ajouter gain CCU] "
+labels: ["ajouter-item", "gains-ccu"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ce gabarit sert à répertorier les gains obtenus en matière
+        d'accessibilité universelle grâce au processus du CCU (comité
+        consultatif d'urbanisme) — par exemple une exigence d'un plus
+        grand pourcentage de logements adaptables, ou l'ajout d'une
+        rampe d'accès à un projet.
+
+        💡 Pour obtenir la latitude et la longitude du projet concerné :
+        clic droit sur l'emplacement dans
+        [Google Maps](https://maps.google.com) ou
+        [OpenStreetMap](https://www.openstreetmap.org), puis copier les
+        coordonnées.
+
+  - type: input
+    id: titre
+    attributes:
+      label: "Titre court du gain"
+      placeholder: "Augmentation du % de logements adaptables exigé"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type de gain"
+      options:
+        - "Logements adaptables"
+        - "Accès / rampe"
+        - "Stationnement"
+        - "Toilettes"
+        - "Autre"
+    validations:
+      required: true
+
+  - type: input
+    id: adresse
+    attributes:
+      label: "Adresse ou nom du projet concerné"
+      placeholder: "123 rue Rachel, Montréal, QC"
+    validations:
+      required: true
+
+  - type: input
+    id: lat
+    attributes:
+      label: "Latitude"
+      placeholder: "45.5142"
+    validations:
+      required: true
+
+  - type: input
+    id: lng
+    attributes:
+      label: "Longitude"
+      placeholder: "-73.5904"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: "Date du gain (AAAA-MM, optionnel)"
+      placeholder: "2026-03"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Détails du gain"
+      description: "Expliquez ce qui a été obtenu, et dans quel contexte (ex : résolution du CCU, exigence lors de l'émission du permis)."
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: "Lien vers la résolution ou le procès-verbal du CCU (optionnel)"
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre.
+      placeholder: "![Rampe d'accès ajoutée au projet](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."

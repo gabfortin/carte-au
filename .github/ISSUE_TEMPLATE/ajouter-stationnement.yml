@@ -1,0 +1,92 @@
+name: "Ajouter un stationnement accessible (gratuit)"
+description: "Proposez une place de stationnement réservée aux personnes handicapées, non tarifée, à ajouter à la carte."
+title: "[Ajouter stationnement] "
+labels: ["ajouter-item", "stationnements"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de contribuer à la carte. Ce gabarit est pour les places
+        réservées **non tarifées** (ex : rues résidentielles). Les places
+        tarifées de l'Agence de mobilité durable sont déjà importées
+        automatiquement dans la couche « Stationnement accessible payant ».
+
+        Remplissez les champs ci-dessous aussi précisément que possible.
+        Une fois votre soumission révisée et approuvée, elle sera intégrée
+        automatiquement à la carte.
+
+        💡 Pour obtenir la latitude et la longitude : clic droit sur
+        l'emplacement dans [Google Maps](https://maps.google.com) ou
+        [OpenStreetMap](https://www.openstreetmap.org), puis copier les
+        coordonnées.
+
+  - type: input
+    id: description
+    attributes:
+      label: "Description courte"
+      placeholder: "Stationnement réservé aux personnes handicapées"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type"
+      options:
+        - "Sur rue"
+        - "Hors rue"
+    validations:
+      required: true
+
+  - type: input
+    id: adresse
+    attributes:
+      label: "Adresse ou intersection"
+      placeholder: "Rue Rachel, coin Saint-Hubert"
+    validations:
+      required: true
+
+  - type: input
+    id: lat
+    attributes:
+      label: "Latitude"
+      placeholder: "45.5142"
+    validations:
+      required: true
+
+  - type: input
+    id: lng
+    attributes:
+      label: "Longitude"
+      placeholder: "-73.5904"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optionnel)"
+      description: "Détails libres (ex : panneau, horaire)."
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre.
+      placeholder: "![Panneau réservé handicapés](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."

@@ -8,7 +8,9 @@ Carte interactive répertoriant, par couches activables/désactivables :
 - **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0).
 - **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
 - **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal
+- **Toilettes accessibles** — saisie manuelle.
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
+- **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet).
 
 ## Recherche et filtres
 
@@ -33,9 +35,33 @@ python3 -m http.server 8000
 # puis ouvrir http://localhost:8000
 ```
 
-## Ajouter des données
+## Contribuer via une issue
+
+N'importe qui avec un compte GitHub peut proposer un ajout (bâtiment
+municipal, commerce, débarcadère, stationnement accessible gratuit,
+toilette accessible ou gain CCU) ou une mise à jour d'un item déjà publié
+(description, photos) via les
+[gabarits d'issue](.github/ISSUE_TEMPLATE/). Une fois la soumission révisée
+et approuvée (ajout du label `pret-a-publier`), son intégration dans les
+fichiers `data/*.json` (et le téléchargement des photos dans `img/items/`)
+est automatisée par
+[.github/workflows/integrer-soumission.yml](.github/workflows/integrer-soumission.yml),
+qui ouvre une PR à réviser avant de merger. Le détail de ce pipeline est
+dans [scripts/integrate_submission.py](scripts/integrate_submission.py).
+
+## Ajouter des données manuellement
 
 Chaque couche a son fichier dans `data/`. Voir un exemple existant dans chaque fichier avant d'ajouter une entrée.
+
+Les commerces, bâtiments municipaux, débarcadères, stationnements,
+toilettes et gains CCU acceptent un champ optionnel `images`, une liste
+de photos avec leur description, affichées dans le popup :
+
+```json
+"images": [
+  { "image": "img/items/commerces/mon-slug/1.jpg", "description": "Rampe d'accès à l'entrée principale" }
+]
+```
 
 ### Commerces (`data/commerces.json`)
 
@@ -136,6 +162,42 @@ Le lien Street View du popup est construit à partir de `lat` et `lng`, rien à 
   "lng": -73.0,
   "accessibility": { "level": "accessible", "notes": "..." },
   "source": { "name": "Ville de Montréal", "url": "https://montreal.ca/lieux/...", "date": "AAAA-MM-JJ" }
+}
+```
+
+### Toilettes accessibles (`data/toilettes.json`)
+
+```json
+{
+  "id": "identifiant-unique",
+  "name": "Nom / emplacement de la toilette",
+  "category": "parc | bibliotheque | centre-communautaire | commerce | edifice-municipal | autre",
+  "address": "Adresse complète",
+  "lat": 45.0,
+  "lng": -73.0,
+  "horaire": "Ex : « Fermée l'hiver » (ou null)",
+  "accessibility": { "level": "accessible", "notes": "..." },
+  "source": { "reviewer": null, "date": "AAAA-MM-JJ", "reviewText": null, "reviewUrl": null }
+}
+```
+
+### Gains CCU (`data/gains-ccu.json`)
+
+Nom provisoire — sera renommé. Répertorie les gains obtenus en matière
+d'accessibilité universelle via le processus du comité consultatif
+d'urbanisme (CCU), rattachés au projet/adresse concerné.
+
+```json
+{
+  "id": "identifiant-unique",
+  "description": "Titre court du gain (ex : Augmentation du % de logements adaptables exigé)",
+  "type": "logements-adaptables | acces-rampe | stationnement | toilettes | autre",
+  "address": "Adresse ou nom du projet concerné",
+  "lat": 45.0,
+  "lng": -73.0,
+  "date": "AAAA-MM (ou null)",
+  "notes": "Détails du gain obtenu",
+  "source": { "name": "Contribution communautaire", "url": "Lien vers la résolution du CCU (ou null)", "date": "AAAA-MM-JJ" }
 }
 ```
 

@@ -26,6 +26,8 @@ const ICONS = {
   debarcadere: svgIcon('<circle cx="11" cy="4" r="1.8" fill="#fff" stroke="none"/><path d="M11 7.5v6h5l2.5 5"/><path d="M11 10h4.5"/><path d="M8 11a5.5 5.5 0 1 0 7.5 6.5"/>'),
   batiment: svgIcon('<path d="M3 9.5 12 4l9 5.5"/><path d="M5 20h14"/><path d="M6.5 11v6M10 11v6M14 11v6M17.5 11v6"/>'),
   feu: svgIcon('<path d="M4 9.5h3l5-4v13l-5-4H4z" fill="#fff"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/>'),
+  toilette: svgIcon('<path d="M8 3h8v4H8z"/><path d="M6 9a6 6 0 0 1 12 0c0 4-1.5 11-1.5 11h-9S6 13 6 9Z"/>'),
+  gainCcu: svgIcon('<path d="M5 12.5l4.5 5L19 6"/>'),
 };
 
 const CATEGORY_LABELS = {
@@ -67,6 +69,23 @@ const BATIMENT_CATEGORY_LABELS = {
   autre: "Autre",
 };
 
+const TOILETTE_CATEGORY_LABELS = {
+  parc: "Parc",
+  bibliotheque: "Bibliothèque",
+  "centre-communautaire": "Centre communautaire",
+  commerce: "Commerce",
+  "edifice-municipal": "Édifice municipal",
+  autre: "Autre",
+};
+
+const GAIN_TYPE_LABELS = {
+  "logements-adaptables": "Logements adaptables",
+  "acces-rampe": "Accès / rampe",
+  stationnement: "Stationnement",
+  toilettes: "Toilettes",
+  autre: "Autre",
+};
+
 function levelClass(level) {
   return LEVEL_LABELS[level] ? level : "inconnu";
 }
@@ -101,6 +120,19 @@ function reviewBlock(text, reviewer, url) {
   return `<div class="review">"${text}"${reviewer ? ` — ${reviewerLabel}` : ""}${link}</div>`;
 }
 
+function imagesGallery(images) {
+  if (!images?.length) return "";
+  const figures = images.map(
+    (img) => `
+      <figure class="popup-image">
+        <img src="${img.image}" alt="${img.description || ""}" loading="lazy">
+        ${img.description ? `<figcaption>${img.description}</figcaption>` : ""}
+      </figure>
+    `
+  ).join("");
+  return `<div class="popup-images">${figures}</div>`;
+}
+
 function commercePopup(c) {
   const level = levelClass(c.accessibility?.level);
   const a = c.accessibility || {};
@@ -126,6 +158,7 @@ function commercePopup(c) {
       ${field("Stationnement", boolLabel(a.stationnement))}
       ${field("Notes", a.notes)}
       ${reviewBlock(c.source?.reviewText, c.source?.reviewer, c.source?.reviewUrl)}
+      ${imagesGallery(c.images)}
     </div>
   `;
 }
@@ -157,6 +190,7 @@ function stationnementPopup(s) {
       ${field("Notes", s.notes)}
       ${sourceField(s.source)}
       ${reviewBlock(s.source?.reviewText, s.source?.reviewer, s.source?.reviewUrl)}
+      ${imagesGallery(s.images)}
     </div>
   `;
 }
@@ -170,6 +204,7 @@ function debarcaderePopup(d) {
       ${streetViewField(d.lat, d.lng)}
       ${sourceField(d.source)}
       ${reviewBlock(d.source?.reviewText, d.source?.reviewer, d.source?.reviewUrl)}
+      ${imagesGallery(d.images)}
     </div>
   `;
 }
@@ -192,6 +227,39 @@ function batimentPopup(e) {
       ${field("Notes", a.notes)}
       ${sourceField(e.source)}
       ${reviewBlock(e.source?.reviewText, e.source?.reviewer, e.source?.reviewUrl)}
+      ${imagesGallery(e.images)}
+    </div>
+  `;
+}
+
+function toilettePopup(t) {
+  const level = levelClass(t.accessibility?.level);
+  const a = t.accessibility || {};
+  return `
+    <div class="popup-content">
+      <h3>${t.name}</h3>
+      <div class="popup-address">${t.address}</div>
+      <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      ${field("Catégorie", TOILETTE_CATEGORY_LABELS[t.category] || t.category)}
+      ${field("Horaire", t.horaire)}
+      ${field("Notes", a.notes)}
+      ${sourceField(t.source)}
+      ${reviewBlock(t.source?.reviewText, t.source?.reviewer, t.source?.reviewUrl)}
+      ${imagesGallery(t.images)}
+    </div>
+  `;
+}
+
+function gainPopup(g) {
+  return `
+    <div class="popup-content">
+      <h3>${g.description}</h3>
+      ${g.address ? `<div class="popup-address">${g.address}</div>` : ""}
+      ${field("Type de gain", GAIN_TYPE_LABELS[g.type] || g.type)}
+      ${field("Date", g.date)}
+      ${field("Notes", g.notes)}
+      ${sourceField(g.source)}
+      ${imagesGallery(g.images)}
     </div>
   `;
 }
@@ -241,6 +309,17 @@ const LAYER_CONFIG = [
     getPopup: batimentPopup,
   },
   {
+    key: "toilettes",
+    label: "Toilettes accessibles",
+    file: "data/toilettes.json",
+    defaultVisible: true,
+    color: ["#2dd4bf", "#0f766e"],
+    icon: ICONS.toilette,
+    getItems: (data) => data.toilettes || [],
+    getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
+    getPopup: toilettePopup,
+  },
+  {
     key: "stationnements",
     label: "Stationnement accessible",
     // Saisie manuelle uniquement.
@@ -285,6 +364,16 @@ const LAYER_CONFIG = [
     getItems: (data) => data.feuxSonores || [],
     getPopup: feuSonorePopup,
     compact: true,
+  },
+  {
+    key: "gains-ccu",
+    label: "Gains CCU",
+    file: "data/gains-ccu.json",
+    defaultVisible: true,
+    color: ["#fbbf24", "#b45309"],
+    icon: ICONS.gainCcu,
+    getItems: (data) => data.gains || [],
+    getPopup: gainPopup,
   },
 ];
 

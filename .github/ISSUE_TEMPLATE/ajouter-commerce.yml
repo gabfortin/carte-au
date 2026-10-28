@@ -1,0 +1,152 @@
+name: "Ajouter un commerce accessible"
+description: "Proposez un commerce à ajouter à la carte, avec ses infos d'accessibilité."
+title: "[Ajouter commerce] "
+labels: ["ajouter-item", "commerces"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de contribuer à la carte. Remplissez les champs ci-dessous
+        aussi précisément que possible. Une fois votre soumission révisée
+        et approuvée, elle sera intégrée automatiquement à la carte.
+
+        💡 Pour obtenir la latitude et la longitude : clic droit sur
+        l'emplacement dans [Google Maps](https://maps.google.com) ou
+        [OpenStreetMap](https://www.openstreetmap.org), puis copier les
+        coordonnées.
+
+  - type: input
+    id: nom
+    attributes:
+      label: "Nom du commerce"
+      placeholder: "Café de la Place"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: "Catégorie"
+      options:
+        - "Café"
+        - "Bar"
+        - "Restaurant"
+        - "Commerce"
+        - "Friperie"
+        - "Santé"
+        - "Culture"
+        - "Autre"
+    validations:
+      required: true
+
+  - type: input
+    id: adresse
+    attributes:
+      label: "Adresse complète"
+      placeholder: "123 rue Saint-Denis, Montréal, QC"
+    validations:
+      required: true
+
+  - type: input
+    id: lat
+    attributes:
+      label: "Latitude"
+      placeholder: "45.5142"
+    validations:
+      required: true
+
+  - type: input
+    id: lng
+    attributes:
+      label: "Longitude"
+      placeholder: "-73.5904"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: niveau
+    attributes:
+      label: "Niveau d'accessibilité global"
+      options:
+        - "Accessible"
+        - "Partiellement accessible"
+        - "Non accessible"
+        - "Inconnu"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entree
+    attributes:
+      label: "Entrée"
+      description: "Laissez vide si inconnu."
+      options:
+        - "Plain-pied"
+        - "Rampe"
+        - "Marche(s)"
+
+  - type: checkboxes
+    id: elements
+    attributes:
+      label: "Éléments d'accessibilité confirmés présents"
+      description: "Ne cochez que ce que vous avez pu vérifier sur place. Les cases non cochées resteront « non précisé »."
+      options:
+        - label: "Porte automatique"
+        - label: "Toilettes accessibles"
+        - label: "Stationnement adapté à proximité"
+        - label: "Animaux d'assistance acceptés"
+        - label: "Mains courantes"
+        - label: "Ascenseur / monte-charge"
+        - label: "Salle d'essayage accessible"
+        - label: "Mobilier amovible"
+        - label: "Terrasse accessible"
+        - label: "Menu numérique disponible"
+        - label: "Assistance auditive"
+
+  - type: input
+    id: etages
+    attributes:
+      label: "Nombre d'étages accessibles (optionnel)"
+      placeholder: "1"
+
+  - type: input
+    id: terminal_paiement
+    attributes:
+      label: "Terminal de paiement (optionnel)"
+      description: "Ex : « Bouton, amovible »."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optionnel)"
+      description: "Détails libres sur l'accessibilité (ex : équipement en panne au moment de la visite)."
+
+  - type: textarea
+    id: commentaire
+    attributes:
+      label: "Votre avis sur l'accessibilité (optionnel)"
+      description: "Sera affiché comme un avis dans le popup du commerce, comme les avis Promo-Accès."
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre (ex : « Rampe
+        d'accès à l'entrée principale »).
+      placeholder: "![Rampe d'accès à l'entrée principale](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."
