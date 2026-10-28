@@ -785,6 +785,18 @@ a.about-person:hover { background: rgba(255, 255, 255, 0.5); transform: translat
 
 .about-person-role { font-size: 0.76rem; color: var(--ink-500); }
 
+.about-privacy {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--ink-500);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-privacy:hover { color: var(--brand-dark); }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 760px) {
