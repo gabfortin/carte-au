@@ -194,6 +194,8 @@ h1, h2, h3, .brand-word {
   white-space: nowrap;
 }
 
+.brand-word-mobile { display: none; }
+
 .brand-sub {
   font-size: 0.72rem;
   color: var(--ink-500);
@@ -1074,6 +1076,8 @@ a.about-person:hover { background: rgba(255, 255, 255, 0.5); transform: translat
   .brand-mark { width: 36px; height: 36px; }
   .brand-mark svg { width: 20px; height: 20px; }
   .brand-word { font-size: 0.95rem; }
+  .brand-word-full { display: none; }
+  .brand-word-mobile { display: inline; }
 
   /* Le titre prend la place restante (et s'ellipse au besoin) pour garder
      le bouton ⓘ sur la même ligne. */
