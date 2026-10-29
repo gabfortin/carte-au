@@ -565,30 +565,73 @@ map.on("popupclose", (e) => {
   if (markerEl && focusWasInPopup) markerEl.focus({ preventScroll: true });
 });
 
-function markerIcon(config, badgeColor) {
+function markerIcon(config, badgeColor, offset) {
   const [light, dark] = config.color;
   const style = `--pin-light:${light};--pin-dark:${dark}`;
   const badge = badgeColor ? `<span class="pin-badge" style="background:${badgeColor}"></span>` : "";
+  const [dx, dy] = offset || [0, 0];
   if (config.compact) {
     return L.divIcon({
       className: "",
       html: `<div class="pin-marker dot-marker" style="width:18px;height:18px"><div class="pin" style="${style}">${config.icon}</div></div>`,
       iconSize: [18, 18],
-      iconAnchor: [9, 9],
-      popupAnchor: [0, -9],
+      iconAnchor: [9 - dx, 9 - dy],
+      popupAnchor: [dx, -9 + dy],
     });
   }
   // Goutte de 34px (comme Avant / Après) pivotée de -45° : la pointe se retrouve ~41px sous le coin haut.
   // Les proportions (ancre, pointe) sont conservées au prorata pour les tailles réduites.
   const size = config.size || 34;
   const sizeClass = size !== 34 ? " pin-marker-sm" : "";
+  const anchorX = size / 2;
+  const anchorY = Math.round((size * 41) / 34);
+  const popupY = -Math.round((size * 39) / 34);
+  // Décalage purement visuel (quelques px) quand un marqueur partage exactement les
+  // coordonnées d'un autre : la position géographique réelle (lat/lng) n'est jamais
+  // modifiée, seul le rendu de la goutte sur l'écran est déplacé. Voir computeMarkerOffsets().
   return L.divIcon({
     className: "",
     html: `<div class="pin-marker${sizeClass}" style="width:${size}px;height:${size}px"><div class="pin" style="${style}">${config.icon}</div>${badge}</div>`,
     iconSize: [size, size],
-    iconAnchor: [size / 2, Math.round((size * 41) / 34)],
-    popupAnchor: [0, -Math.round((size * 39) / 34)],
+    iconAnchor: [anchorX - dx, anchorY - dy],
+    popupAnchor: [dx, popupY + dy],
   });
+}
+
+// Quand deux lieux de couches différentes partagent exactement les mêmes coordonnées
+// (ex : la toilette d'un bâtiment municipal, à la même adresse que le bâtiment), leurs
+// gouttes se superposent pile l'une sur l'autre. On les éloigne visuellement de
+// quelques pixels en éventail autour du point réel, sans jamais toucher au lat/lng
+// stocké : calculé une fois que toutes les couches sont chargées (voir plus bas).
+let markerOffsets = new Map();
+const MARKER_OFFSET_RADIUS = 9;
+
+function computeMarkerOffsets(layerResults) {
+  const groups = new Map();
+  layerResults.forEach(({ config, items }) => {
+    items.forEach((item) => {
+      if (typeof item.lat !== "number" || typeof item.lng !== "number") return;
+      const coordKey = `${item.lat.toFixed(6)},${item.lng.toFixed(6)}`;
+      const markerKey = `${config.key}:${item.id}`;
+      const list = groups.get(coordKey) || [];
+      list.push(markerKey);
+      groups.set(coordKey, list);
+    });
+  });
+
+  const offsets = new Map();
+  groups.forEach((markerKeys) => {
+    if (markerKeys.length < 2) return;
+    markerKeys.sort();
+    markerKeys.forEach((markerKey, i) => {
+      const angle = (2 * Math.PI * i) / markerKeys.length;
+      offsets.set(markerKey, [
+        Math.round(Math.cos(angle) * MARKER_OFFSET_RADIUS),
+        Math.round(Math.sin(angle) * MARKER_OFFSET_RADIUS),
+      ]);
+    });
+  });
+  return offsets;
 }
 
 const layerGroups = new Map(LAYER_CONFIG.map((c) => [c.key, L.layerGroup()]));
@@ -619,7 +662,8 @@ function renderLayerMarkers(config, items) {
   items.forEach((item) => {
     if (typeof item.lat !== "number" || typeof item.lng !== "number") return;
     const badgeColor = config.getBadge?.(item);
-    const marker = L.marker([item.lat, item.lng], { icon: markerIcon(config, badgeColor) }).bindPopup(config.getPopup(item), popupOptions());
+    const offset = markerOffsets.get(`${config.key}:${item.id}`);
+    const marker = L.marker([item.lat, item.lng], { icon: markerIcon(config, badgeColor, offset) }).bindPopup(config.getPopup(item), popupOptions());
     // Le marqueur est un bouton (Leaflet) sans texte : on lui donne un nom qui inclut
     // la catégorie et le niveau d'accessibilité, sinon indiqué seulement par la couleur.
     const markerLabel = markerName(config, item);
@@ -1039,20 +1083,24 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && aboutOverlay.classList.contains("open")) closeAbout();
 });
 
-LAYER_CONFIG.forEach((config) => {
-  const files = config.files || [config.file];
-  Promise.all(files.map((file) => fetch(file).then((res) => res.json())))
-    .then((datasets) => {
-      const items = datasets.flatMap((data) => config.getItems(data));
-      document.getElementById(`layer-count-${config.key}`).textContent = items.length;
-      if (config.key === "commerces") {
-        allCommerces = items;
-        renderLayerMarkers(config, allCommerces);
-      } else {
-        renderLayerMarkers(config, items);
-      }
-    })
-    .catch((err) => {
-      console.error(`Erreur de chargement (${files.join(", ")}):`, err);
-    });
+// On attend que toutes les couches soient chargées avant de poser les marqueurs, pour
+// pouvoir détecter les lieux qui partagent exactement les mêmes coordonnées entre
+// couches (ex : bâtiment municipal et sa toilette) et les décaler visuellement.
+Promise.all(
+  LAYER_CONFIG.map((config) => {
+    const files = config.files || [config.file];
+    return Promise.all(files.map((file) => fetch(file).then((res) => res.json())))
+      .then((datasets) => ({ config, items: datasets.flatMap((data) => config.getItems(data)) }))
+      .catch((err) => {
+        console.error(`Erreur de chargement (${files.join(", ")}):`, err);
+        return { config, items: [] };
+      });
+  })
+).then((layerResults) => {
+  markerOffsets = computeMarkerOffsets(layerResults);
+  layerResults.forEach(({ config, items }) => {
+    document.getElementById(`layer-count-${config.key}`).textContent = items.length;
+    if (config.key === "commerces") allCommerces = items;
+    renderLayerMarkers(config, items);
+  });
 });
