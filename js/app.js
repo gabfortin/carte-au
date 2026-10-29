@@ -362,7 +362,7 @@ const LAYER_INFO = {
     template: "ajouter-debarcadere.yml",
   },
   "feux-sonores": {
-    about: "Intersections dont les feux pour piétons émettent un signal sonore, pour les personnes aveugles ou malvoyantes.",
+    about: "Intersections dont les feux pour piétons émettent un signal sonore, pour les personnes ayant une déficience visuelle.",
     data: ["Intersection et arrondissement", "Type d'installation (permanente ou temporaire)"],
     process: `Import automatisé des ${externalLink("https://donnees.montreal.ca/dataset/feux-malvoyants", "données ouvertes de la Ville de Montréal")}. Le jeu couvre toute la ville : les feux des arrondissements voisins sont aussi affichés.`,
   },
