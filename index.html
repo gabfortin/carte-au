@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte accessibilité universelle Plateau-Mont-Royal</title>
+  <title>Montréal Accessible</title>
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <script>window.goatcounter = {path: function(p) { return location.host + p }}</script>
   <script data-goatcounter="https://gabfortin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -32,9 +32,9 @@
         </svg>
       </div>
       <div class="brand-text">
-        <h1 class="brand-word"><span class="brand-word-full">Carte accessibilité universelle</span><span class="brand-word-mobile">Accessibilité universelle</span></h1>
-        <div class="brand-sub">Plateau-Mont-Royal · avis de <strong>Promo-Accès</strong>, données de l'<strong>arrondissement</strong> et de la <strong>Ville de Montréal</strong></div>
-        <div class="brand-sub-mobile" aria-hidden="true">Plateau-Mont-Royal</div>
+        <h1 class="brand-word"><span class="brand-word-full">Montréal Accessible</span><span class="brand-word-mobile">Montréal Accessible</span></h1>
+        <div class="brand-sub"><span class="brand-party">Projet Montréal</span> · avis de <strong>Promo-Accès</strong>, données de l'<strong>arrondissement</strong> et de la <strong>Ville de Montréal</strong></div>
+        <div class="brand-sub-mobile" aria-hidden="true"><span class="brand-party">Projet Montréal</span></div>
       </div>
     </div>
 
@@ -46,6 +46,32 @@
     </button>
 
     <div class="header-spacer"></div>
+
+    <div class="header-arrondissement">
+      <label class="sr-only" for="arrondissement-filter">Filtrer par arrondissement</label>
+      <select id="arrondissement-filter">
+        <option value="tous">Tous les arrondissements</option>
+        <option value="ahuntsic-cartierville">Ahuntsic-Cartierville</option>
+        <option value="anjou">Anjou</option>
+        <option value="cote-des-neiges-notre-dame-de-grace">Côte-des-Neiges–Notre-Dame-de-Grâce</option>
+        <option value="l-ile-bizard-sainte-genevieve">L'Île-Bizard–Sainte-Geneviève</option>
+        <option value="lachine">Lachine</option>
+        <option value="lasalle">LaSalle</option>
+        <option value="le-plateau-mont-royal">Le Plateau-Mont-Royal</option>
+        <option value="le-sud-ouest">Le Sud-Ouest</option>
+        <option value="mercier-hochelaga-maisonneuve">Mercier–Hochelaga-Maisonneuve</option>
+        <option value="montreal-nord">Montréal-Nord</option>
+        <option value="outremont">Outremont</option>
+        <option value="pierrefonds-roxboro">Pierrefonds-Roxboro</option>
+        <option value="riviere-des-prairies-pointe-aux-trembles">Rivière-des-Prairies–Pointe-aux-Trembles</option>
+        <option value="rosemont-la-petite-patrie">Rosemont–La Petite-Patrie</option>
+        <option value="saint-laurent">Saint-Laurent</option>
+        <option value="saint-leonard">Saint-Léonard</option>
+        <option value="verdun">Verdun</option>
+        <option value="ville-marie">Ville-Marie</option>
+        <option value="villeray-saint-michel-parc-extension">Villeray–Saint-Michel–Parc-Extension</option>
+      </select>
+    </div>
 
     <div class="header-search" role="search">
       <label class="sr-only" for="search">Rechercher un commerce par nom, adresse ou catégorie</label>

@@ -1,5 +1,5 @@
 name: "Mettre à jour un item existant"
-description: "Ajoutez une description ou des photos à un item déjà publié sur la carte (bâtiment municipal, commerce, débarcadère, stationnement, toilette, gain CCU)."
+description: "Ajoutez une description ou des photos à un item déjà publié sur la carte (bâtiment municipal, commerce, terrasse, sentier déneigé, débarcadère, stationnement, toilette, gain CCU)."
 title: "[Mettre à jour] "
 labels: ["mettre-a-jour"]
 body:
@@ -20,6 +20,8 @@ body:
       options:
         - "Bâtiments municipaux"
         - "Commerces"
+        - "Terrasses inspectées"
+        - "Sentiers déneigés"
         - "Débarcadères"
         - "Stationnement accessible (gratuit)"
         - "Toilettes accessibles"
@@ -32,11 +34,11 @@ body:
     attributes:
       label: "Nom exact de l'item"
       description: >-
-        Pour un bâtiment, un commerce ou une toilette : son nom tel
-        qu'affiché sur la carte. Pour un débarcadère, un stationnement
-        ou un gain CCU : sa description courte telle qu'affichée dans
-        le popup. Copiez-collez exactement ce qui est affiché pour
-        éviter toute confusion.
+        Pour un bâtiment, un commerce, une terrasse, un sentier déneigé ou une
+        toilette : son nom tel qu'affiché sur la carte. Pour un débarcadère,
+        un stationnement ou un gain CCU : sa description courte telle
+        qu'affichée dans le popup. Copiez-collez exactement ce qui est
+        affiché pour éviter toute confusion.
       placeholder: "Aréna des Patineuses"
     validations:
       required: true

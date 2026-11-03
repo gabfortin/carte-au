@@ -1,0 +1,90 @@
+name: "Ajouter un sentier déneigé"
+description: "Proposez un sentier de parc déneigé en hiver par l'arrondissement."
+title: "[Ajouter sentier] "
+labels: ["ajouter-item", "sentiers-deneiges"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de contribuer à la carte. Remplissez les champs ci-dessous
+        aussi précisément que possible. Une fois votre soumission révisée
+        et approuvée, elle sera intégrée automatiquement à la carte.
+
+        💡 Pour le tracé : ouvrez [Google Maps](https://maps.google.com) ou
+        [OpenStreetMap](https://www.openstreetmap.org), puis relevez les
+        coordonnées (clic droit → coordonnées) de quelques points le long
+        du sentier, du début à la fin.
+
+  - type: input
+    id: nom
+    attributes:
+      label: "Nom du sentier"
+      placeholder: "Sentier du parc Laurier (section nord)"
+    validations:
+      required: true
+
+  - type: input
+    id: parc
+    attributes:
+      label: "Parc"
+      placeholder: "Parc Laurier"
+    validations:
+      required: true
+
+  - type: textarea
+    id: trace
+    attributes:
+      label: "Tracé du sentier"
+      description: >-
+        Une paire « latitude,longitude » par ligne, dans l'ordre du parcours
+        (du début à la fin), au moins deux lignes. Utiliser un point pour
+        les décimales.
+      placeholder: |
+        45.5247,-73.5822
+        45.5251,-73.5819
+        45.5255,-73.5815
+    validations:
+      required: true
+
+  - type: dropdown
+    id: largeur
+    attributes:
+      label: "Largeur (optionnel)"
+      options:
+        - "Large"
+        - "Mince"
+
+  - type: input
+    id: longueur
+    attributes:
+      label: "Longueur approximative en mètres (optionnel)"
+      placeholder: "111"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes (optionnel)"
+      description: "Détails libres (pente, zones à surveiller, fréquence de déneigement)."
+
+  - type: textarea
+    id: images
+    attributes:
+      label: "Photos (optionnel) — glissez chaque image ici"
+      description: >-
+        Glissez-déposez (ou collez) une ou plusieurs photos, une après
+        l'autre. Pour chacune, remplacez le texte entre crochets `[ ]`
+        par une courte description de ce qu'elle montre.
+      placeholder: "![Entrée du sentier côté rue Garnier](l'image collée ira ici)"
+
+  - type: input
+    id: votre_nom
+    attributes:
+      label: "Votre nom (affiché publiquement, optionnel)"
+      description: "Laissez vide pour rester anonyme."
+
+  - type: checkboxes
+    id: consentement
+    attributes:
+      label: "Consentement"
+      options:
+        - label: "Si j'ai ajouté des photos, j'autorise leur publication sur cette carte."

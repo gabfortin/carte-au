@@ -28,6 +28,8 @@ const ICONS = {
   feu: svgIcon('<path d="M4 9.5h3l5-4v13l-5-4H4z" fill="#fff"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/>'),
   toilette: svgIcon('<path d="M8 3h8v4H8z"/><path d="M6 9a6 6 0 0 1 12 0c0 4-1.5 11-1.5 11h-9S6 13 6 9Z"/>'),
   gainCcu: svgIcon('<path d="M5 12.5l4.5 5L19 6"/>'),
+  terrasse: svgIcon('<path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9Z"/><path d="M12 12v8"/><path d="M9 20h6"/>'),
+  sentier: svgIcon('<path d="M4 19c3-1 2-5 5-6s2 4 5 2 2-5 5-5"/>'),
 };
 
 const CATEGORY_LABELS = {
@@ -89,6 +91,41 @@ const GAIN_TYPE_LABELS = {
   autre: "Autre",
 };
 
+// Toutes les couches sont saisies pour Le Plateau-Mont-Royal, sauf les feux sonores
+// (jeu de données qui couvre toute la ville — voir ci-dessous) : on leur donne donc cet
+// arrondissement par défaut pour le filtre, sans avoir à le répéter sur chaque item.
+// Voir itemArrondissement() et le filtre #arrondissement-filter.
+const DEFAULT_ARRONDISSEMENT = "le-plateau-mont-royal";
+
+// Correspondance entre la valeur brute du champ ARRONDISSEMENT du jeu « Feux sonores »
+// de la Ville et les options (slugs) du filtre. Si un import futur fait apparaître une
+// nouvelle valeur, l'ajouter ici (sinon ces items restent invisibles dès qu'un
+// arrondissement précis est choisi, mais continuent d'apparaître sous « Tous »).
+const FEUX_SONORES_ARRONDISSEMENT_SLUG = {
+  "Plateau Mont-Royal": "le-plateau-mont-royal",
+  "Côte-des-Neiges - Notre-Dame-de-Grâce": "cote-des-neiges-notre-dame-de-grace",
+  "Ville-Marie": "ville-marie",
+  "Rosemont - Petite-Patrie": "rosemont-la-petite-patrie",
+  "Villeray - Saint-Michel - Parc-Extension": "villeray-saint-michel-parc-extension",
+  "Ahuntsic - Cartierville": "ahuntsic-cartierville",
+  "Mercier - Hochelaga - Maisonneuve": "mercier-hochelaga-maisonneuve",
+  "Sud-Ouest": "le-sud-ouest",
+  "Montréal-Nord": "montreal-nord",
+  "Rivières-des-Prairies - Pointe-aux-Trembles": "riviere-des-prairies-pointe-aux-trembles",
+  "Saint-Léonard": "saint-leonard",
+  Anjou: "anjou",
+  "Saint-Laurent": "saint-laurent",
+  Verdun: "verdun",
+  Lachine: "lachine",
+  Outremont: "outremont",
+  LaSalle: "lasalle",
+  "Pierrefonds - Roxboro": "pierrefonds-roxboro",
+};
+
+function itemArrondissement(config, item) {
+  return config.getArrondissement ? config.getArrondissement(item) : DEFAULT_ARRONDISSEMENT;
+}
+
 function levelClass(level) {
   return LEVEL_LABELS[level] ? level : "inconnu";
 }
@@ -109,6 +146,11 @@ const NEW_TAB = `<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span>`;
 function field(label, value) {
   if (value === undefined || value === null || value === "") return "";
   return `<div class="popup-field"><span class="popup-field-label">${label}</span>${value}</div>`;
+}
+
+function bulletField(label, items) {
+  if (!items?.length) return "";
+  return `<div class="popup-field"><span class="popup-field-label">${label}</span><ul class="popup-bullets">${items.map((item) => `<li>${item}</li>`).join("")}</ul></div>`;
 }
 
 function sourceField(source) {
@@ -182,6 +224,22 @@ function commercePopup(c) {
   `;
 }
 
+function terrassePopup(t) {
+  const level = levelClass(t.accessibility?.level);
+  const a = t.accessibility || {};
+  return `
+    <div class="popup-content">
+      <h3>${t.name}</h3>
+      <div class="popup-address">${t.address}</div>
+      <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      ${field("Notes", a.notes)}
+      ${sourceField(t.source)}
+      ${reviewBlock(t.source?.reviewText, t.source?.reviewer, t.source?.reviewUrl)}
+      ${imagesGallery(t.images)}
+    </div>
+  `;
+}
+
 function logementPopup(l) {
   const level = levelClass(l.accessibility?.level);
   const a = l.accessibility || {};
@@ -243,7 +301,9 @@ function batimentPopup(e) {
       <div class="popup-address">${e.address}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", BATIMENT_CATEGORY_LABELS[e.category] || e.category)}
-      ${field("Notes", a.notes)}
+      ${field("Ascenseur", a.ascenseur)}
+      ${bulletField("Équipements", a.equipements)}
+      ${bulletField("Autre", a.autre)}
       ${sourceField(e.source)}
       ${reviewBlock(e.source?.reviewText, e.source?.reviewer, e.source?.reviewUrl)}
       ${toiletteSection(e.toilette)}
@@ -266,6 +326,25 @@ function toilettePopup(t) {
       ${sourceField(t.source)}
       ${reviewBlock(t.source?.reviewText, t.source?.reviewer, t.source?.reviewUrl)}
       ${imagesGallery(t.images)}
+    </div>
+  `;
+}
+
+const SENTIER_LARGEUR_LABELS = {
+  large: "Large",
+  mince: "Mince",
+};
+
+function sentierPopup(s) {
+  return `
+    <div class="popup-content">
+      <h3>${s.name}</h3>
+      ${s.park ? `<div class="popup-address">${s.park}</div>` : ""}
+      ${field("Largeur", SENTIER_LARGEUR_LABELS[s.largeur] || s.largeur)}
+      ${field("Longueur", typeof s.longueur === "number" ? `${s.longueur} m` : null)}
+      ${field("Notes", s.notes)}
+      ${sourceField(s.source)}
+      ${imagesGallery(s.images)}
     </div>
   `;
 }
@@ -314,6 +393,16 @@ const LAYER_INFO = {
     process: `Chaque fiche reprend un avis d'accessibilité publié par ${externalLink("https://www.google.com/maps/contrib/100918280676331873494", "Promo-Accès sur Google Maps")}. L'avis est retranscrit à la main; un point qu'il ne mentionne pas est laissé vide.`,
     template: "ajouter-commerce.yml",
   },
+  terrasses: {
+    about: "Terrasses commerciales dont l'accessibilité a été inspectée.",
+    data: [
+      "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
+      "Notes d'inspection (accès, largeur de passage, mobilier)",
+      "Photos, lorsque disponibles",
+    ],
+    process: "Saisie à la main à partir des inspections de terrasses de l'arrondissement.",
+    template: "ajouter-terrasse.yml",
+  },
   logements: {
     about: "Immeubles qui comptent des logements adaptés aux personnes à mobilité réduite.",
     data: [
@@ -327,7 +416,7 @@ const LAYER_INFO = {
     about: "Piscines, arénas, bibliothèques, centres sportifs et autres bâtiments de la Ville et de l'arrondissement.",
     data: [
       "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
-      "Aménagements : rampe, entrée accessible, stationnement, toilettes",
+      "Ascenseur, équipements adaptés (ex : lève-personne, lugiglace) et autres aménagements (rampe, entrée accessible, stationnement, toilettes)",
       "Section distincte sur la toilette, lorsque l'information vient d'une autre source",
       "Lien vers la fiche du lieu",
     ],
@@ -343,6 +432,16 @@ const LAYER_INFO = {
     ],
     process: "Saisie à la main à partir d'observations faites sur place. Les notes décrivent l'état au moment de la visite (par exemple, un ascenseur en panne).",
     template: "ajouter-toilette.yml",
+  },
+  "sentiers-deneiges": {
+    about: "Sentiers de parc que l'arrondissement déneige en hiver, pour permettre les déplacements à pied ou en fauteuil roulant.",
+    data: [
+      "Tracé du sentier déneigé",
+      "Parc concerné et notes (largeur, pente, zones à surveiller)",
+      "Photos, lorsque disponibles",
+    ],
+    process: "Saisie à la main à partir des parcours de déneigement communiqués par l'arrondissement.",
+    template: "ajouter-sentier-deneige.yml",
   },
   stationnements: {
     about: "Places de stationnement gratuites réservées aux détenteurs d'une vignette pour personnes handicapées, sur rue ou hors rue.",
@@ -393,7 +492,8 @@ function layerInfoHtml(config) {
 const LAYER_CONFIG = [
   {
     key: "commerces",
-    label: "Commerces accessibles",
+    label: "Commerces",
+    group: "commerce",
     file: "data/commerces.json",
     defaultVisible: true,
     color: ["#7dd3fc", "#0284c7"],
@@ -401,6 +501,18 @@ const LAYER_CONFIG = [
     getItems: (data) => data.commerces || [],
     getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
     getPopup: commercePopup,
+  },
+  {
+    key: "terrasses",
+    label: "Terrasses inspectées",
+    group: "commerce",
+    file: "data/terrasses.json",
+    defaultVisible: true,
+    color: ["#7dd3fc", "#0284c7"],
+    icon: ICONS.terrasse,
+    getItems: (data) => data.terrasses || [],
+    getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
+    getPopup: terrassePopup,
   },
   {
     key: "logements",
@@ -436,8 +548,20 @@ const LAYER_CONFIG = [
     getPopup: toilettePopup,
   },
   {
+    key: "sentiers-deneiges",
+    label: "Sentiers déneigés",
+    type: "line",
+    file: "data/sentiers-deneiges.json",
+    defaultVisible: true,
+    color: ["#cbd5e1", "#334155"],
+    icon: ICONS.sentier,
+    getItems: (data) => data.sentiers || [],
+    getPopup: sentierPopup,
+  },
+  {
     key: "stationnements",
     label: "Stationnement accessible",
+    group: "stationnement",
     // Saisie manuelle uniquement.
     file: "data/stationnements.json",
     defaultVisible: true,
@@ -450,6 +574,7 @@ const LAYER_CONFIG = [
   {
     key: "stationnements-payants",
     label: "Stationnement accessible payant",
+    group: "stationnement",
     // Places tarifées importées de l'Agence de mobilité durable.
     file: "data/places-handicapes.json",
     defaultVisible: true,
@@ -462,6 +587,7 @@ const LAYER_CONFIG = [
   {
     key: "debarcaderes",
     label: "Débarcadères accessibles",
+    group: "stationnement",
     files: ["data/debarcaderes.json", "data/places-handicapes.json"],
     defaultVisible: true,
     color: ["#3b82f6", "#1e3a8a"],
@@ -479,6 +605,7 @@ const LAYER_CONFIG = [
     icon: ICONS.feu,
     getItems: (data) => data.feuxSonores || [],
     getPopup: feuSonorePopup,
+    getArrondissement: (item) => FEUX_SONORES_ARRONDISSEMENT_SLUG[item.arrondissement] || null,
     compact: true,
   },
   {
@@ -492,6 +619,22 @@ const LAYER_CONFIG = [
     getPopup: gainPopup,
   },
 ];
+
+// Regroupe visuellement dans la sidebar certaines catégories de LAYER_CONFIG (celles
+// qui ont un champ "group" correspondant) sous un même en-tête, avec une case à
+// cocher qui bascule les sous-catégories ensemble. Voir buildLayerToggles().
+const LAYER_GROUPS = {
+  commerce: {
+    label: "Commerces accessibles",
+    color: ["#7dd3fc", "#0284c7"],
+    icon: ICONS.commerce,
+  },
+  stationnement: {
+    label: "Stationnement",
+    color: ["#3b82f6", "#1e3a8a"],
+    icon: ICONS.stationnement,
+  },
+};
 
 const map = L.map("map", { zoomControl: false, attributionControl: false }).setView([45.5247742, -73.5855742], 14);
 
@@ -680,6 +823,39 @@ function markerName(config, item) {
   return parts.join(" — ");
 }
 
+// Dessine le tracé réel de chaque sentier, en plus du marqueur posé à son point milieu
+// par renderLayerMarkers (qui porte le popup et l'aria-label accessibles au clavier).
+// Pas de marqueur pour les sentiers : le tracé lui-même porte le popup. On lui ajoute
+// cependant tabindex + aria-label pour rester accessible au clavier (un <path> SVG
+// n'est, contrairement à un marqueur, pas focusable ni annoncé par défaut).
+function renderLayerPaths(config, items) {
+  const group = layerGroups.get(config.key);
+  group.clearLayers();
+  items.forEach((item) => {
+    if (!item.coordinates?.length) return;
+    const polyline = L.polyline(item.coordinates, {
+      color: config.color[1],
+      weight: 5,
+      opacity: 0.85,
+      lineCap: "round",
+    }).bindPopup(config.getPopup(item), popupOptions());
+    const label = markerName(config, item);
+    polyline.on("add", () => {
+      const el = polyline.getElement();
+      if (!el) return;
+      el.setAttribute("tabindex", "0");
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-label", label);
+      el.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        polyline.openPopup();
+      });
+    });
+    polyline.addTo(group);
+  });
+}
+
 const MAX_SEARCH_RESULTS = 20;
 
 const searchStatusEl = document.getElementById("search-status");
@@ -816,16 +992,16 @@ searchInput.addEventListener("input", () => {
   const isEmpty = !searchInput.value.trim();
 
   if (searchWasEmpty && !isEmpty) {
-    layersBeforeSearch = [...layerTogglesEl.querySelectorAll("input")]
+    layersBeforeSearch = [...layerTogglesEl.querySelectorAll("input[data-layer]")]
       .filter((input) => input.dataset.layer !== "commerces" && input.checked)
       .map((input) => input.dataset.layer);
-    layerTogglesEl.querySelectorAll("input").forEach((input) => {
+    layerTogglesEl.querySelectorAll("input[data-layer]").forEach((input) => {
       if (input.dataset.layer === "commerces" || !input.checked) return;
       input.checked = false;
       input.dispatchEvent(new Event("change", { bubbles: true }));
     });
   } else if (!searchWasEmpty && isEmpty) {
-    layerTogglesEl.querySelectorAll("input").forEach((input) => {
+    layerTogglesEl.querySelectorAll("input[data-layer]").forEach((input) => {
       if (input.dataset.layer === "commerces") return;
       const shouldBeChecked = layersBeforeSearch.includes(input.dataset.layer);
       if (input.checked === shouldBeChecked) return;
@@ -840,6 +1016,69 @@ searchInput.addEventListener("input", () => {
 // La recherche ne concerne que les commerces : on la masque quand cette couche est désactivée.
 function setCommercesUiVisible(visible) {
   document.documentElement.classList.toggle("commerces-hidden", !visible);
+}
+
+// groupKey -> { checkbox, checkboxes: [cases des sous-catégories], ul }
+const uiGroups = new Map();
+
+// La case d'un groupe est cochée si toutes ses sous-catégories le sont, décochée si
+// aucune ne l'est, et indéterminée (tiret) si c'est mélangé.
+function syncGroupCheckbox(groupKey) {
+  const uiGroup = uiGroups.get(groupKey);
+  if (!uiGroup) return;
+  const checkedCount = uiGroup.checkboxes.filter((input) => input.checked).length;
+  uiGroup.checkbox.checked = checkedCount === uiGroup.checkboxes.length;
+  uiGroup.checkbox.indeterminate = checkedCount > 0 && checkedCount < uiGroup.checkboxes.length;
+}
+
+function buildLayerGroupHeader(groupKey) {
+  const meta = LAYER_GROUPS[groupKey];
+  const [light, dark] = meta.color;
+  const subgroupId = `layer-subgroup-${groupKey}`;
+  const li = document.createElement("li");
+  li.className = "layer-group";
+  li.innerHTML = `
+    <div class="layer-group-row">
+      <label>
+        <input type="checkbox" data-group="${groupKey}" />
+        <span class="swatch" style="background:linear-gradient(140deg, ${light}, ${dark})">${meta.icon}</span>
+        <span class="layer-label">${meta.label}</span>
+      </label>
+      <button type="button" class="layer-group-collapse collapsed" aria-expanded="false" aria-controls="${subgroupId}" aria-label="Sous-catégories de ${meta.label}">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="layer-subgroup" id="${subgroupId}" hidden></ul>
+  `;
+  const checkbox = li.querySelector("input");
+  const ul = li.querySelector(".layer-subgroup");
+  const collapseBtn = li.querySelector(".layer-group-collapse");
+  const uiGroup = { checkbox, checkboxes: [], ul };
+  checkbox.addEventListener("change", (e) => {
+    // On fige l'état demandé avant la boucle : chaque sous-case déclenche
+    // syncGroupCheckbox(), qui modifie checkbox.checked (donc e.target.checked, le
+    // même élément) en cours de route — le relire à chaque itération ferait sauter
+    // des sous-catégories.
+    const shouldCheck = e.target.checked;
+    uiGroup.checkboxes.forEach((input) => {
+      if (input.checked === shouldCheck) return;
+      input.checked = shouldCheck;
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+    checkbox.checked = shouldCheck;
+    checkbox.indeterminate = false;
+  });
+  collapseBtn.addEventListener("click", () => {
+    const collapsed = ul.hidden;
+    ul.hidden = !collapsed;
+    collapseBtn.setAttribute("aria-expanded", String(collapsed));
+    collapseBtn.classList.toggle("collapsed", !collapsed);
+  });
+  uiGroups.set(groupKey, uiGroup);
+  layerTogglesEl.appendChild(li);
+  return uiGroup;
 }
 
 function buildLayerToggles() {
@@ -864,17 +1103,27 @@ function buildLayerToggles() {
         </svg>
       </button>
     `;
+    const checkbox = li.querySelector("input");
     li.querySelector(".layer-info-btn").addEventListener("click", (e) => toggleLayerInfo(config, e.currentTarget));
-    li.querySelector("input").addEventListener("change", (e) => {
+    checkbox.addEventListener("change", (e) => {
       if (e.target.checked) {
         group.addTo(map);
       } else {
         map.removeLayer(group);
       }
       if (config.key === "commerces") setCommercesUiVisible(e.target.checked);
+      if (config.group) syncGroupCheckbox(config.group);
     });
     if (config.key === "commerces") setCommercesUiVisible(config.defaultVisible);
-    layerTogglesEl.appendChild(li);
+
+    if (config.group) {
+      const uiGroup = uiGroups.get(config.group) || buildLayerGroupHeader(config.group);
+      uiGroup.checkboxes.push(checkbox);
+      uiGroup.ul.appendChild(li);
+      syncGroupCheckbox(config.group);
+    } else {
+      layerTogglesEl.appendChild(li);
+    }
   });
 }
 
@@ -972,7 +1221,7 @@ buildLayerToggles();
 const layersClearBtn = document.getElementById("layers-clear");
 
 function anyLayerChecked() {
-  return layerTogglesEl.querySelector("input:checked") !== null;
+  return layerTogglesEl.querySelector("input[data-layer]:checked") !== null;
 }
 
 function updateLayersClearLabel() {
@@ -981,7 +1230,7 @@ function updateLayersClearLabel() {
 
 layersClearBtn.addEventListener("click", () => {
   const check = !anyLayerChecked();
-  layerTogglesEl.querySelectorAll("input").forEach((input) => {
+  layerTogglesEl.querySelectorAll("input[data-layer]").forEach((input) => {
     if (input.checked === check) return;
     input.checked = check;
     input.dispatchEvent(new Event("change"));
@@ -1083,6 +1332,49 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && aboutOverlay.classList.contains("open")) closeAbout();
 });
 
+// Filtre d'arrondissement (en-tête, à gauche de la recherche) : narrows down which
+// items are rendered, without re-fetching the data files. L'URL ?arrondissement=<slug>
+// permet un lien direct vers une carte déjà filtrée; elle est tenue à jour (sans
+// ajouter d'entrée à l'historique) quand on change le filtre.
+const arrondissementSelect = document.getElementById("arrondissement-filter");
+const validArrondissements = new Set(Array.from(arrondissementSelect.options, (o) => o.value));
+
+function arrondissementFromUrl() {
+  const slug = new URLSearchParams(location.search).get("arrondissement");
+  return slug && validArrondissements.has(slug) ? slug : "tous";
+}
+
+let selectedArrondissement = arrondissementFromUrl();
+arrondissementSelect.value = selectedArrondissement;
+
+// Items tels que chargés depuis data/*.json, avant filtrage par arrondissement.
+let loadedLayers = [];
+
+function visibleItems(config, items) {
+  if (selectedArrondissement === "tous") return items;
+  return items.filter((item) => itemArrondissement(config, item) === selectedArrondissement);
+}
+
+function renderAllLayers() {
+  const filtered = loadedLayers.map(({ config, items }) => ({ config, items: visibleItems(config, items) }));
+  markerOffsets = computeMarkerOffsets(filtered);
+  filtered.forEach(({ config, items }) => {
+    document.getElementById(`layer-count-${config.key}`).textContent = items.length;
+    if (config.key === "commerces") allCommerces = items;
+    if (config.type === "line") renderLayerPaths(config, items);
+    else renderLayerMarkers(config, items);
+  });
+}
+
+arrondissementSelect.addEventListener("change", () => {
+  selectedArrondissement = arrondissementSelect.value;
+  const url = new URL(location.href);
+  if (selectedArrondissement === "tous") url.searchParams.delete("arrondissement");
+  else url.searchParams.set("arrondissement", selectedArrondissement);
+  history.replaceState(null, "", url);
+  renderAllLayers();
+});
+
 // On attend que toutes les couches soient chargées avant de poser les marqueurs, pour
 // pouvoir détecter les lieux qui partagent exactement les mêmes coordonnées entre
 // couches (ex : bâtiment municipal et sa toilette) et les décaler visuellement.
@@ -1097,10 +1389,6 @@ Promise.all(
       });
   })
 ).then((layerResults) => {
-  markerOffsets = computeMarkerOffsets(layerResults);
-  layerResults.forEach(({ config, items }) => {
-    document.getElementById(`layer-count-${config.key}`).textContent = items.length;
-    if (config.key === "commerces") allCommerces = items;
-    renderLayerMarkers(config, items);
-  });
+  loadedLayers = layerResults;
+  renderAllLayers();
 });

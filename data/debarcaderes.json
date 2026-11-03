@@ -1,13 +1,688 @@
 {
   "debarcaderes": [
     {
-      "id": "debarcadere-1",
-      "description": "Débarcadère accessible",
+      "id": "poteau-6475",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
       "address": null,
-      "lat": 45.52499454227742,
-      "lng": -73.59150771094137,
-      "notes": null,
-      "source": null
+      "lat": 45.539342,
+      "lng": -73.560192,
+      "notes": "Espace réservé selon l'horaire suivant : 8 à 20h lun au sam.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-17676",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.521561,
+      "lng": -73.587897,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-17718",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.521754,
+      "lng": -73.588545,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-25284",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.507454,
+      "lng": -73.572001,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-25491",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.530598,
+      "lng": -73.563218,
+      "notes": "Espace réservé selon l'horaire suivant : Lundi au vendredi.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-27046",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.535381,
+      "lng": -73.577637,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-39398",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.520628,
+      "lng": -73.570413,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-39972",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.527538,
+      "lng": -73.57277,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-42606",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.535062,
+      "lng": -73.566761,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-44425",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.527821,
+      "lng": -73.587842,
+      "notes": "Espace réservé selon l'horaire suivant : 9h à 21h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-44787",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.518632,
+      "lng": -73.567844,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-71105",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.516753,
+      "lng": -73.591094,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-73433",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.521791,
+      "lng": -73.601512,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-74547",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.534041,
+      "lng": -73.576805,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-129329",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.520737,
+      "lng": -73.593875,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-157593",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.532696,
+      "lng": -73.58218,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-158513",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.525014,
+      "lng": -73.591505,
+      "notes": "Espace réservé selon l'horaire suivant : 8h-17h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-162696",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524665,
+      "lng": -73.58243,
+      "notes": "Espace réservé selon l'horaire suivant : 8h à 22h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-218124",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.534178,
+      "lng": -73.580311,
+      "notes": "Espace réservé selon l'horaire suivant : 8 à 15h30 lun au vend.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-218140",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524949,
+      "lng": -73.588861,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-222751",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.526469,
+      "lng": -73.594133,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-231251",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.535075,
+      "lng": -73.577242,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-236106",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.529126,
+      "lng": -73.566263,
+      "notes": "Espace réservé selon l'horaire suivant : 7h-20h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-236192",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.526359,
+      "lng": -73.59178,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-242128",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.538911,
+      "lng": -73.580259,
+      "notes": "Espace réservé selon l'horaire suivant : 8h à 16h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-245321",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.520075,
+      "lng": -73.583461,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-250638",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.539252,
+      "lng": -73.560006,
+      "notes": "Espace réservé selon l'horaire suivant : 8 à 20h lun au sam.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-253057",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.525005,
+      "lng": -73.598766,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-254735",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.523866,
+      "lng": -73.574845,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-258230",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524908,
+      "lng": -73.594805,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-265707",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524568,
+      "lng": -73.584034,
+      "notes": "Espace réservé selon l'horaire suivant : 9h à 19h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-273248",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.51174,
+      "lng": -73.576181,
+      "notes": "Espace réservé selon l'horaire suivant : 8h-20h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-275506",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.511734,
+      "lng": -73.576774,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-277704",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.518139,
+      "lng": -73.583796,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-294472",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.540009,
+      "lng": -73.576602,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-296600",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.522349,
+      "lng": -73.602763,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-296611",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524096,
+      "lng": -73.570925,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-296981",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.516531,
+      "lng": -73.578596,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-296983",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.526147,
+      "lng": -73.577703,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-299542",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.532726,
+      "lng": -73.571898,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-299898",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.536197,
+      "lng": -73.579659,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-299917",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.533046,
+      "lng": -73.581721,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-299921",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.52079,
+      "lng": -73.592976,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-299925",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.507794,
+      "lng": -73.573702,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300028",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.526137,
+      "lng": -73.597248,
+      "notes": "Espace réservé selon l'horaire suivant : 8h à 19h.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300031",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.522636,
+      "lng": -73.590931,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300032",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.520813,
+      "lng": -73.574187,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300033",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.519312,
+      "lng": -73.577608,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300045",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524067,
+      "lng": -73.593674,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300082",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.536115,
+      "lng": -73.583639,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300088",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.525032,
+      "lng": -73.599066,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-300119",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.512841,
+      "lng": -73.57337,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-301133",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.524707,
+      "lng": -73.598115,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-301710",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.525631,
+      "lng": -73.604155,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-310810",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.521603,
+      "lng": -73.602983,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-312077",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.525904,
+      "lng": -73.590506,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-314801",
+      "description": "Débarcadère réservé aux personnes à mobilité réduite",
+      "address": null,
+      "lat": 45.512287,
+      "lng": -73.570983,
+      "notes": "Espace réservé selon l'horaire suivant : Tout temps.",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
     }
   ]
 }

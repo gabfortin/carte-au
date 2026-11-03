@@ -34,6 +34,8 @@ JPEG_QUALITY = 82
 CATEGORY_META = {
     "batiments-municipaux": {"file": "data/batiments-municipaux.json", "key": "batiments"},
     "commerces": {"file": "data/commerces.json", "key": "commerces"},
+    "terrasses": {"file": "data/terrasses.json", "key": "terrasses"},
+    "sentiers-deneiges": {"file": "data/sentiers-deneiges.json", "key": "sentiers"},
     "debarcaderes": {"file": "data/debarcaderes.json", "key": "debarcaderes"},
     "stationnements": {"file": "data/stationnements.json", "key": "stationnements"},
     "toilettes": {"file": "data/toilettes.json", "key": "toilettes"},
@@ -41,14 +43,16 @@ CATEGORY_META = {
 }
 
 # Catégories dont l'item est identifié par son champ "name" (plutôt que "description").
-CATEGORIES_PAR_NOM = {"commerces", "batiments-municipaux", "toilettes"}
+CATEGORIES_PAR_NOM = {"commerces", "batiments-municipaux", "toilettes", "terrasses", "sentiers-deneiges"}
 
 # Catégories dont les notes libres sont sous accessibility.notes (plutôt qu'au niveau racine).
-CATEGORIES_NOTES_SOUS_ACCESSIBILITY = {"commerces", "batiments-municipaux", "toilettes"}
+CATEGORIES_NOTES_SOUS_ACCESSIBILITY = {"commerces", "batiments-municipaux", "toilettes", "terrasses"}
 
 CATEGORY_TITLE = {
     "batiments-municipaux": "bâtiment municipal",
     "commerces": "commerce",
+    "terrasses": "terrasse inspectée",
+    "sentiers-deneiges": "sentier déneigé",
     "debarcaderes": "débarcadère",
     "stationnements": "stationnement",
     "toilettes": "toilette accessible",
@@ -58,6 +62,8 @@ CATEGORY_TITLE = {
 LABEL_PAR_CATEGORIE_DROPDOWN = {
     "Bâtiments municipaux": "batiments-municipaux",
     "Commerces": "commerces",
+    "Terrasses inspectées": "terrasses",
+    "Sentiers déneigés": "sentiers-deneiges",
     "Débarcadères": "debarcaderes",
     "Stationnement accessible (gratuit)": "stationnements",
     "Toilettes accessibles": "toilettes",
@@ -394,7 +400,12 @@ def ajouter_batiment(valeurs, issue_number):
         "lng": lng,
         "accessibility": {
             "level": niveau,
-            "notes": valeur_ou_vide(valeurs, "Notes (optionnel)") or None,
+            "ascenseur": None,
+            "equipements": [],
+            "autre": (
+                [valeur_ou_vide(valeurs, "Notes (optionnel)")]
+                if valeur_ou_vide(valeurs, "Notes (optionnel)") else []
+            ),
         },
         "source": {
             "name": "Ville de Montréal" if source_url else "Contribution communautaire",
@@ -559,6 +570,131 @@ def ajouter_toilette(valeurs, issue_number):
     return pr_ajout("toilettes", slug, nom, issue_number)
 
 
+def ajouter_terrasse(valeurs, issue_number):
+    for champ in ("Nom de la terrasse / du commerce", "Adresse complète",
+                  "Latitude", "Longitude", "Niveau d'accessibilité"):
+        if not valeur_ou_vide(valeurs, champ):
+            fail(f"le champ obligatoire « {champ} » est vide ou introuvable.")
+
+    nom = valeur_ou_vide(valeurs, "Nom de la terrasse / du commerce")
+
+    try:
+        lat = float(valeur_ou_vide(valeurs, "Latitude").replace(',', '.'))
+        lng = float(valeur_ou_vide(valeurs, "Longitude").replace(',', '.'))
+    except ValueError:
+        fail("latitude/longitude invalides (doivent être des nombres).")
+
+    niveau_label = valeur_ou_vide(valeurs, "Niveau d'accessibilité")
+    niveau = NIVEAU_PAR_LABEL.get(niveau_label)
+    if not niveau:
+        fail(f"niveau d'accessibilité inconnu : « {niveau_label} »")
+
+    chemin, key, data = charger("terrasses")
+    slug = slug_disponible(slugify(nom), data[key])
+    dossier_images = os.path.join('img', 'items', 'terrasses', slug)
+    images = images_depuis_texte(
+        valeurs.get("Photos (optionnel) — glissez chaque image ici", ""), dossier_images
+    )
+    verifier_consentement(valeurs, bool(images))
+
+    item = {
+        "id": slug,
+        "name": nom,
+        "address": valeur_ou_vide(valeurs, "Adresse complète"),
+        "lat": lat,
+        "lng": lng,
+        "accessibility": {
+            "level": niveau,
+            "notes": valeur_ou_vide(valeurs, "Notes d'inspection (optionnel)") or None,
+        },
+        "source": {
+            "reviewer": valeur_ou_vide(valeurs, "Votre nom (affiché publiquement, optionnel)") or None,
+            "date": aujourdhui(),
+            "reviewText": None,
+            "reviewUrl": None,
+        },
+    }
+    if images:
+        item["images"] = images
+
+    data[key].append(item)
+    sauvegarder(chemin, data)
+    return pr_ajout("terrasses", slug, nom, issue_number)
+
+
+def parser_trace(texte):
+    """Convertit le texte du champ « Tracé du sentier » (une paire
+    latitude,longitude par ligne) en liste de [lat, lng]."""
+    points = []
+    for i, ligne in enumerate(texte.splitlines(), start=1):
+        ligne = ligne.strip()
+        if not ligne:
+            continue
+        parts = ligne.split(',')
+        if len(parts) != 2:
+            fail(f"ligne {i} du tracé invalide (attendu « latitude,longitude ») : « {ligne} »")
+        try:
+            lat = float(parts[0].strip())
+            lng = float(parts[1].strip())
+        except ValueError:
+            fail(f"ligne {i} du tracé invalide (latitude/longitude doivent être des nombres) : « {ligne} »")
+        points.append([lat, lng])
+    if len(points) < 2:
+        fail("le tracé doit comporter au moins deux points.")
+    return points
+
+
+def ajouter_sentier(valeurs, issue_number):
+    for champ in ("Nom du sentier", "Parc", "Tracé du sentier"):
+        if not valeur_ou_vide(valeurs, champ):
+            fail(f"le champ obligatoire « {champ} » est vide ou introuvable.")
+
+    nom = valeur_ou_vide(valeurs, "Nom du sentier")
+    parc = valeur_ou_vide(valeurs, "Parc")
+    coordinates = parser_trace(valeur_ou_vide(valeurs, "Tracé du sentier"))
+
+    largeur_label = valeur_ou_vide(valeurs, "Largeur (optionnel)")
+    largeur = {"Large": "large", "Mince": "mince"}.get(largeur_label)
+
+    longueur_txt = valeur_ou_vide(valeurs, "Longueur approximative en mètres (optionnel)")
+    longueur = None
+    if longueur_txt:
+        try:
+            longueur = int(longueur_txt)
+        except ValueError:
+            fail("la longueur doit être un nombre entier de mètres.")
+
+    chemin, key, data = charger("sentiers-deneiges")
+    slug = slug_disponible(slugify(nom), data[key])
+    dossier_images = os.path.join('img', 'items', 'sentiers-deneiges', slug)
+    images = images_depuis_texte(
+        valeurs.get("Photos (optionnel) — glissez chaque image ici", ""), dossier_images
+    )
+    verifier_consentement(valeurs, bool(images))
+
+    item = {
+        "id": slug,
+        "name": nom,
+        "park": parc,
+        "largeur": largeur,
+        "longueur": longueur,
+        "notes": valeur_ou_vide(valeurs, "Notes (optionnel)") or None,
+        "coordinates": coordinates,
+        "source": {
+            "reviewer": valeur_ou_vide(valeurs, "Votre nom (affiché publiquement, optionnel)") or None,
+            "date": aujourdhui(),
+            "reviewText": None,
+            "reviewUrl": None,
+        },
+    }
+    if images:
+        item["images"] = images
+
+    data[key].append(item)
+    sauvegarder(chemin, data)
+    return pr_ajout("sentiers-deneiges", slug, nom, issue_number)
+
+
 def ajouter_gain(valeurs, issue_number):
     for champ in ("Titre court du gain", "Type de gain", "Adresse ou nom du projet concerné",
                   "Latitude", "Longitude", "Détails du gain"):
@@ -612,6 +748,8 @@ def ajouter_gain(valeurs, issue_number):
 ACTIONS_AJOUT = {
     "batiments-municipaux": ajouter_batiment,
     "commerces": ajouter_commerce,
+    "terrasses": ajouter_terrasse,
+    "sentiers-deneiges": ajouter_sentier,
     "debarcaderes": ajouter_debarcadere,
     "stationnements": ajouter_stationnement,
     "toilettes": ajouter_toilette,
@@ -661,7 +799,12 @@ def mettre_a_jour(valeurs, issue_number):
 
     nouvelle_description = valeur_ou_vide(valeurs, "Description à ajouter ou remplacer (optionnel)")
     if nouvelle_description:
-        if categorie in CATEGORIES_NOTES_SOUS_ACCESSIBILITY:
+        if categorie == "batiments-municipaux":
+            # Les notes d'un bâtiment sont scindées en ascenseur/équipements/autre (voir
+            # ajouter_batiment) : une mise à jour s'ajoute à "autre" plutôt que d'écraser
+            # ce découpage.
+            item.setdefault("accessibility", {}).setdefault("autre", []).append(nouvelle_description)
+        elif categorie in CATEGORIES_NOTES_SOUS_ACCESSIBILITY:
             item.setdefault("accessibility", {})["notes"] = nouvelle_description
         else:
             item["notes"] = nouvelle_description

@@ -1,0 +1,416 @@
+{
+  "sentiers": [
+    {
+      "id": "parc-laurier-sentier-a",
+      "name": "Sentier A",
+      "park": "Parc Laurier",
+      "largeur": "large",
+      "longueur": 111,
+      "notes": null,
+      "coordinates": [
+        [
+          45.530912,
+          -73.588524
+        ],
+        [
+          45.531044,
+          -73.588402
+        ],
+        [
+          45.531755,
+          -73.587768
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-b",
+      "name": "Sentier B",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 191,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531755,
+          -73.587768
+        ],
+        [
+          45.531991,
+          -73.587562
+        ],
+        [
+          45.532131,
+          -73.587432
+        ],
+        [
+          45.532358,
+          -73.587219
+        ],
+        [
+          45.533207,
+          -73.586469
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-c",
+      "name": "Sentier C",
+      "park": "Parc Laurier",
+      "largeur": "large",
+      "longueur": 218,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531954,
+          -73.59081
+        ],
+        [
+          45.531984,
+          -73.590589
+        ],
+        [
+          45.531264,
+          -73.588912
+        ],
+        [
+          45.531044,
+          -73.588402
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-d",
+      "name": "Sentier D",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 296,
+      "notes": "Tracé courbe.",
+      "coordinates": [
+        [
+          45.531984,
+          -73.590589
+        ],
+        [
+          45.532011,
+          -73.590547
+        ],
+        [
+          45.532052,
+          -73.590403
+        ],
+        [
+          45.532124,
+          -73.590241
+        ],
+        [
+          45.532166,
+          -73.590173
+        ],
+        [
+          45.532261,
+          -73.590084
+        ],
+        [
+          45.532386,
+          -73.589923
+        ],
+        [
+          45.532478,
+          -73.589833
+        ],
+        [
+          45.532619,
+          -73.589726
+        ],
+        [
+          45.532698,
+          -73.58972
+        ],
+        [
+          45.532717,
+          -73.589709
+        ],
+        [
+          45.532724,
+          -73.589689
+        ],
+        [
+          45.532717,
+          -73.589643
+        ],
+        [
+          45.532701,
+          -73.589601
+        ],
+        [
+          45.532608,
+          -73.589428
+        ],
+        [
+          45.532543,
+          -73.589279
+        ],
+        [
+          45.532457,
+          -73.589125
+        ],
+        [
+          45.53243,
+          -73.589027
+        ],
+        [
+          45.532405,
+          -73.588966
+        ],
+        [
+          45.532397,
+          -73.588803
+        ],
+        [
+          45.532384,
+          -73.588747
+        ],
+        [
+          45.532373,
+          -73.588644
+        ],
+        [
+          45.532373,
+          -73.588412
+        ],
+        [
+          45.532384,
+          -73.588114
+        ],
+        [
+          45.532374,
+          -73.587937
+        ],
+        [
+          45.532347,
+          -73.587718
+        ],
+        [
+          45.532322,
+          -73.587615
+        ],
+        [
+          45.532285,
+          -73.587508
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-e",
+      "name": "Sentier E",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 46,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531144,
+          -73.589033
+        ],
+        [
+          45.531264,
+          -73.588912
+        ],
+        [
+          45.531486,
+          -73.588706
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-f",
+      "name": "Sentier F",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 57,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531755,
+          -73.587768
+        ],
+        [
+          45.531467,
+          -73.587168
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-g",
+      "name": "Sentier G",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 154,
+      "notes": null,
+      "coordinates": [
+        [
+          45.532358,
+          -73.587219
+        ],
+        [
+          45.532075,
+          -73.586602
+        ],
+        [
+          45.531611,
+          -73.585552
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-h",
+      "name": "Sentier H",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 187,
+      "notes": null,
+      "coordinates": [
+        [
+          45.532075,
+          -73.586602
+        ],
+        [
+          45.531467,
+          -73.587168
+        ],
+        [
+          45.530656,
+          -73.587898
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-i",
+      "name": "Sentier I",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 83,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531467,
+          -73.587168
+        ],
+        [
+          45.530728,
+          -73.587057
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-j",
+      "name": "Sentier J",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 23,
+      "notes": null,
+      "coordinates": [
+        [
+          45.532131,
+          -73.587432
+        ],
+        [
+          45.532013,
+          -73.587193
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    },
+    {
+      "id": "parc-laurier-sentier-k",
+      "name": "Sentier K",
+      "park": "Parc Laurier",
+      "largeur": "mince",
+      "longueur": 53,
+      "notes": null,
+      "coordinates": [
+        [
+          45.531991,
+          -73.587562
+        ],
+        [
+          45.531892,
+          -73.587309
+        ],
+        [
+          45.531836,
+          -73.58719
+        ],
+        [
+          45.531744,
+          -73.586982
+        ]
+      ],
+      "source": {
+        "reviewer": null,
+        "date": "2026-11-03",
+        "reviewText": null,
+        "reviewUrl": null
+      }
+    }
+  ]
+}

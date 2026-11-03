@@ -9,7 +9,15 @@
       "lng": -73.599728,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, entrée accessible alternative, stationnement accessible, toilettes accessibles (dont en cabine) avec barres d'appui."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Rampe d'accès.",
+          "Entrée accessible alternative.",
+          "Stationnement accessible.",
+          "Toilettes accessibles (dont en cabine) avec barres d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -30,7 +38,17 @@
       "lng": -73.571538337934,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Entrée de plain-pied, porte automatique avec bouton-poussoir, ascenseur, signalisation accessible, toilettes accessibles avec barres d'appui. Places réservées (vignette) et débarcadère pour transport adapté. Lugiglace offerte gratuitement pendant le patin libre pour patiner en fauteuil roulant non électrique (accompagnement requis)."
+        "ascenseur": "Présent.",
+        "equipements": [
+          "Lugiglace offerte gratuitement pendant le patin libre, pour patiner en fauteuil roulant non électrique (accompagnement requis)."
+        ],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Entrée de plain-pied, porte automatique avec bouton-poussoir.",
+          "Signalisation accessible.",
+          "Toilettes accessibles avec barres d'appui.",
+          "Places réservées (vignette) et débarcadère pour transport adapté."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -51,7 +69,14 @@
       "lng": -73.582684,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, porte automatique, toilettes accessibles (dont en cabine) avec barres d'appui, places réservées (vignette)."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Rampe d'accès, porte automatique.",
+          "Toilettes accessibles (dont en cabine) avec barres d'appui.",
+          "Places réservées (vignette)."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -72,7 +97,13 @@
       "lng": -73.601661,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, ascenseur, toilettes accessibles (en cabine et individuelle, mixtes) avec barres d'appui."
+        "ascenseur": "Présent.",
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Rampe d'accès.",
+          "Toilettes accessibles (en cabine et individuelle, mixtes) avec barres d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -93,7 +124,12 @@
       "lng": -73.589367627661,
       "accessibility": {
         "level": "partiellement",
-        "notes": "Indiqué accessible en fauteuil roulant (rampe d'accès, ascenseur), mais la fiche précise aussi : quatre marches avec main courante à l'extérieur, et une quinzaine de marches pour se rendre aux toilettes du sous-sol. Une toilette individuelle mixte au 1er étage est disponible sur demande auprès du personnel."
+        "ascenseur": "Présent.",
+        "equipements": [],
+        "autre": [
+          "Indiqué accessible en fauteuil roulant (rampe d'accès, ascenseur), mais la fiche précise aussi : quatre marches avec main courante à l'extérieur, et une quinzaine de marches pour se rendre aux toilettes du sous-sol.",
+          "Une toilette individuelle mixte au 1er étage est disponible sur demande auprès du personnel."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -114,7 +150,14 @@
       "lng": -73.575971,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant, adapté aux poussettes. Ascenseur, porte automatique, toilettes accessibles. La rampe d'accès au bassin est réservée aux personnes qui ne peuvent pas utiliser les échelles : les fauteuils roulants aquatiques ne peuvent pas y circuler, donc pas d'accès au bassin en fauteuil."
+        "ascenseur": "Présent.",
+        "equipements": [
+          "La rampe d'accès au bassin est réservée aux personnes qui ne peuvent pas utiliser les échelles : les fauteuils roulants aquatiques ne peuvent pas y circuler, donc pas d'accès au bassin en fauteuil roulant."
+        ],
+        "autre": [
+          "Accessible en fauteuil roulant, adapté aux poussettes.",
+          "Porte automatique, toilettes accessibles."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -135,7 +178,15 @@
       "lng": -73.58628403767284,
       "accessibility": {
         "level": "accessible",
-        "notes": "Piscine extérieure. Accessible en fauteuil roulant, adapté aux poussettes. Rampe d'accès, fauteuil roulant aquatique et lève-personne pour la piscine (s'informer auprès du personnel sur place)."
+        "ascenseur": null,
+        "equipements": [
+          "Fauteuil roulant aquatique et lève-personne pour la piscine (s'informer auprès du personnel sur place)."
+        ],
+        "autre": [
+          "Piscine extérieure.",
+          "Accessible en fauteuil roulant, adapté aux poussettes.",
+          "Rampe d'accès."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -152,7 +203,17 @@
       "lng": -73.577898,
       "accessibility": {
         "level": "partiellement",
-        "notes": "L'ascenseur aquatique, qui permet aux personnes à mobilité réduite d'accéder au bassin, est actuellement hors service. Rampe d'accès, porte automatique, signalisation accessible, toilettes accessibles, places réservées (vignette) et débarcadère. Adapté aux poussettes."
+        "ascenseur": null,
+        "equipements": [
+          "L'ascenseur aquatique, qui permet aux personnes à mobilité réduite d'accéder au bassin, est actuellement hors service."
+        ],
+        "autre": [
+          "Rampe d'accès, porte automatique.",
+          "Signalisation accessible.",
+          "Toilettes accessibles.",
+          "Places réservées (vignette) et débarcadère.",
+          "Adapté aux poussettes."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -169,7 +230,16 @@
       "lng": -73.578789,
       "accessibility": {
         "level": "partiellement",
-        "notes": "Accessible en fauteuil roulant avec assistance, adapté aux poussettes. Rampe d'accès, ascenseur, porte automatique, fauteuil roulant aquatique et lève-personne pour la piscine, toilettes accessibles, places réservées (vignette) et débarcadère."
+        "ascenseur": "Présent.",
+        "equipements": [
+          "Fauteuil roulant aquatique et lève-personne pour la piscine."
+        ],
+        "autre": [
+          "Accessible en fauteuil roulant avec assistance, adapté aux poussettes.",
+          "Rampe d'accès, porte automatique.",
+          "Toilettes accessibles.",
+          "Places réservées (vignette) et débarcadère."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -186,7 +256,13 @@
       "lng": -73.56731367712688,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès à l'entrée (trois marches extérieures avec main courante en alternative). Toilette accessible individuelle, mixte, avec barre d'appui."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Rampe d'accès à l'entrée (trois marches extérieures avec main courante en alternative).",
+          "Toilette accessible individuelle, mixte, avec barre d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -207,7 +283,13 @@
       "lng": -73.569219457077,
       "accessibility": {
         "level": "partiellement",
-        "notes": "Accessible en fauteuil roulant avec assistance, adapté aux poussettes. Entrée accessible alternative du côté nord du bâtiment (il faut sonner pour qu'un employé ouvre la porte) ; ascenseur. Toilette accessible en cabine avec barre d'appui ; 10 marches avec main courante pour y accéder depuis l'entrée principale."
+        "ascenseur": "Présent.",
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant avec assistance, adapté aux poussettes.",
+          "Entrée accessible alternative du côté nord du bâtiment (il faut sonner pour qu'un employé ouvre la porte).",
+          "Toilette accessible en cabine avec barre d'appui ; 10 marches avec main courante pour y accéder depuis l'entrée principale."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -228,7 +310,16 @@
       "lng": -73.5695,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes. Rampe d'accès, entrée accessible alternative et sentier d'accès ; six marches extérieures avec main courante à l'entrée du rez-de-chaussée, quatre marches avec main courante pour le sous-sol du rez-de-chaussée. Toilette accessible individuelle et toilette accessible en cabine, avec barre d'appui. Zone de débarcadère, dont une pour le transport adapté. Luge adaptée pour le ski de fond prêtée gratuitement au comptoir de Patin Patin, sur présentation d'une pièce d'identité."
+        "ascenseur": null,
+        "equipements": [
+          "Luge adaptée pour le ski de fond, prêtée gratuitement au comptoir de Patin Patin sur présentation d'une pièce d'identité."
+        ],
+        "autre": [
+          "Accessible en fauteuil roulant (seul ou avec assistance), adapté aux poussettes.",
+          "Rampe d'accès, entrée accessible alternative et sentier d'accès ; six marches extérieures avec main courante à l'entrée du rez-de-chaussée, quatre marches avec main courante pour le sous-sol du rez-de-chaussée.",
+          "Toilette accessible individuelle et toilette accessible en cabine, avec barre d'appui.",
+          "Zone de débarcadère, dont une pour le transport adapté."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -249,7 +340,18 @@
       "lng": -73.582684,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes. Rampe d'accès fixe, pente et porte à ouverture automatique ; entrée alternative par un escalier de quatre marches avec main courante. Place de stationnement avec vignette réservée à l'avant. Sièges réservables pour personnes ayant une limitation fonctionnelle, système d'aide à l'audition avec casque d'écoute, représentations décontractées à niveau sonore réduit et lumière tamisée. Toilette accessible en cabine, avec barre d'appui."
+        "ascenseur": null,
+        "equipements": [
+          "Système d'aide à l'audition avec casque d'écoute.",
+          "Sièges réservables pour personnes ayant une limitation fonctionnelle.",
+          "Représentations décontractées à niveau sonore réduit et lumière tamisée."
+        ],
+        "autre": [
+          "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes.",
+          "Rampe d'accès fixe, pente et porte à ouverture automatique ; entrée alternative par un escalier de quatre marches avec main courante.",
+          "Place de stationnement avec vignette réservée à l'avant.",
+          "Toilette accessible en cabine, avec barre d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -270,7 +372,11 @@
       "lng": -73.585625,
       "accessibility": {
         "level": "non-accessible",
-        "notes": "Les toilettes ne sont pas accessibles en fauteuil roulant : quatre marches avec main courante y donnent accès, et aucune des cabines n'est accessible."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Les toilettes ne sont pas accessibles en fauteuil roulant : quatre marches avec main courante y donnent accès, et aucune des cabines n'est accessible."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -291,7 +397,14 @@
       "lng": -73.591157197952,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes. Entrée de plain-pied côté De Gaspé (trois marches à l'entrée principale sur l'avenue Laurier Est), rampe d'accès, ascenseur, bouton-poussoir à l'entrée du bâtiment. Toilette accessible en cabine et toilette accessible individuelle, mixtes, avec barre d'appui et bouton-poussoir à la porte. Zone de débarcadère, dont une pour le transport adapté."
+        "ascenseur": "Présent.",
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes.",
+          "Entrée de plain-pied côté De Gaspé (trois marches à l'entrée principale sur l'avenue Laurier Est), rampe d'accès, bouton-poussoir à l'entrée du bâtiment.",
+          "Toilette accessible en cabine et toilette accessible individuelle, mixtes, avec barre d'appui et bouton-poussoir à la porte.",
+          "Zone de débarcadère, dont une pour le transport adapté."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -312,7 +425,15 @@
       "lng": -73.591167,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes. Porte à ouverture automatique et bouton-poussoir à l'entrée (trois marches à l'entrée principale sur l'avenue Laurier Est, aucune côté De Gaspé) ; ascenseur pour se rendre au 5e étage (escalier avec main courante en alternative). Toilette accessible individuelle, mixte, avec bouton-poussoir à la porte et barre d'appui. Table à langer pouvant aussi servir à un adulte de petite taille. Zone de débarcadère, dont une pour le transport adapté."
+        "ascenseur": "Présent, pour se rendre au 5e étage (escalier avec main courante en alternative).",
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes.",
+          "Porte à ouverture automatique et bouton-poussoir à l'entrée (trois marches à l'entrée principale sur l'avenue Laurier Est, aucune côté De Gaspé).",
+          "Toilette accessible individuelle, mixte, avec bouton-poussoir à la porte et barre d'appui.",
+          "Table à langer pouvant aussi servir à un adulte de petite taille.",
+          "Zone de débarcadère, dont une pour le transport adapté."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -333,7 +454,12 @@
       "lng": -73.572410580331,
       "accessibility": {
         "level": "accessible",
-        "notes": "Entrée de plain-pied. Barre d'appui, toilette accessible individuelle, mixte."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Entrée de plain-pied.",
+          "Toilette accessible individuelle, mixte, avec barre d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
@@ -354,7 +480,13 @@
       "lng": -73.584374,
       "accessibility": {
         "level": "accessible",
-        "notes": "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes. Entrée de plain-pied. Toilette accessible en cabine, avec barre d'appui."
+        "ascenseur": null,
+        "equipements": [],
+        "autre": [
+          "Accessible en fauteuil roulant (avec assistance), adapté aux poussettes.",
+          "Entrée de plain-pied.",
+          "Toilette accessible en cabine, avec barre d'appui."
+        ]
       },
       "source": {
         "name": "Ville de Montréal",
