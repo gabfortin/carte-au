@@ -11,12 +11,867 @@
   ],
   "stationnements": [
     {
+      "id": "amd-A306",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.493985480332135,
+      "lng": -73.58390380731349,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AB121",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Chabanel, Montréal",
+      "lat": 45.53855910494314,
+      "lng": -73.65466810350635,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 3,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AB154",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Chabanel, Montréal",
+      "lat": 45.54022008460036,
+      "lng": -73.65369051507875,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 3,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AB504",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Parc, Montréal",
+      "lat": 45.53812689853428,
+      "lng": -73.65445196114624,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 3,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AB884",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Millen, Montréal",
+      "lat": 45.55665968209241,
+      "lng": -73.667800822904,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AC249",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Fleury, Montréal",
+      "lat": 45.560595568784876,
+      "lng": -73.65776692015704,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AC341",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Chambord, Montréal",
+      "lat": 45.55984267114429,
+      "lng": -73.65866805084046,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-AC411",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 335 - rue Fleury - voie Est, Montréal",
+      "lat": 45.560096230996066,
+      "lng": -73.65826821110925,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Place tarifée : 3,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-B726",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Crescent, Montréal",
+      "lat": 45.49886398217241,
+      "lng": -73.57908234038011,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-B727",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Crescent, Montréal",
+      "lat": 45.49883331443601,
+      "lng": -73.57901806129156,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-C232",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sainte-Catherine, Montréal",
+      "lat": 45.49395400820472,
+      "lng": -73.57918542827984,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-C293",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sainte-Catherine, Montréal",
+      "lat": 45.495159650856394,
+      "lng": -73.57764916457468,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-C607",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mackay, Montréal",
+      "lat": 45.49657376392112,
+      "lng": -73.57847689288727,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-C930",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Crescent, Montréal",
+      "lat": 45.49604249340288,
+      "lng": -73.57329526996887,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-C931",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Crescent, Montréal",
+      "lat": 45.49601755659095,
+      "lng": -73.57324219891103,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-CN038",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Marlowe, Montréal",
+      "lat": 45.47545556186221,
+      "lng": -73.60788924159698,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-CN053",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Grey, Montréal",
+      "lat": 45.47628982133725,
+      "lng": -73.60619402516487,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-D388",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Drummond, Montréal",
+      "lat": 45.49915888447282,
+      "lng": -73.57526854225678,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-D389",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Drummond, Montréal",
+      "lat": 45.49912829239956,
+      "lng": -73.57520530346535,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-D495",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Stanley, Montréal",
+      "lat": 45.49949021904117,
+      "lng": -73.57400561224672,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-D793",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mansfield, Montréal",
+      "lat": 45.50139359301781,
+      "lng": -73.57178498377115,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-E219",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.50573030620614,
+      "lng": -73.57274779556249,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-E572",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Metcalfe, Montréal",
+      "lat": 45.50209512861482,
+      "lng": -73.57495650258387,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-F316",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cathcart, Montréal",
+      "lat": 45.501800461803306,
+      "lng": -73.57001106050305,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-F317",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cathcart, Montréal",
+      "lat": 45.50184212781318,
+      "lng": -73.56997040886985,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-F523",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mansfield, Montréal",
+      "lat": 45.500834800209844,
+      "lng": -73.57037772678574,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-F524",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mansfield, Montréal",
+      "lat": 45.500802825793954,
+      "lng": -73.57031170991972,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-F557",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Robert-Bourassa, Montréal",
+      "lat": 45.50346525658202,
+      "lng": -73.570494704597,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G180",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Norbert, Montréal",
+      "lat": 45.51230048482599,
+      "lng": -73.56795017574008,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G683",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.515364751528956,
+      "lng": -73.56548658590592,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G684",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.51541880110133,
+      "lng": -73.56546839809108,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G829",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Denis, Montréal",
+      "lat": 45.51486512612131,
+      "lng": -73.56305583921532,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G830",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Denis, Montréal",
+      "lat": 45.51483460011899,
+      "lng": -73.56298903813722,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-G846",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Denis, Montréal",
+      "lat": 45.51584994327671,
+      "lng": -73.5650089861039,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-H172",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Boisbriand, Montréal",
+      "lat": 45.51243983622153,
+      "lng": -73.56261815302283,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-H444",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Bleury, Montréal",
+      "lat": 45.50581971870214,
+      "lng": -73.56583129941693,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-H445",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Bleury, Montréal",
+      "lat": 45.50578721868659,
+      "lng": -73.5657651886557,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-K218",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Belmont, Montréal",
+      "lat": 45.502189928747235,
+      "lng": -73.56511270616724,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-K664",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Beaver Hall, Montréal",
+      "lat": 45.502855562581814,
+      "lng": -73.56600372654262,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-K691",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Beaver Hall, Montréal",
+      "lat": 45.50282476030778,
+      "lng": -73.56568048514956,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-L318",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Brennan, Montréal",
+      "lat": 45.49579157731877,
+      "lng": -73.55334127553975,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-LA257",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "18e Avenue  (LCH), Montréal",
+      "lat": 45.433464530311475,
+      "lng": -73.68062724393987,
+      "arrondissement": "lachine",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-M318",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Jacques, Montréal",
+      "lat": 45.50142737455867,
+      "lng": -73.56016783605672,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-M450",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.502206818695896,
+      "lng": -73.55872325097074,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-M556",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Youville (Place), Montréal",
+      "lat": 45.499995089244244,
+      "lng": -73.55604807855877,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-M557",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Youville (Place), Montréal",
+      "lat": 45.50004180814762,
+      "lng": -73.55600592171373,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MA332",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.547687223566065,
+      "lng": -73.54326712819585,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MA412",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.54969144047794,
+      "lng": -73.54168832374287,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MA491",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cuvillier, Montréal",
+      "lat": 45.54374308635894,
+      "lng": -73.54601827344334,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MB109",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rouen, Montréal",
+      "lat": 45.551958596921665,
+      "lng": -73.5445213834165,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MB159",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.551303235151174,
+      "lng": -73.54067459935035,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MC522",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sainte-Catherine, Montréal",
+      "lat": 45.55021848571886,
+      "lng": -73.53453994933372,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-MC563",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sainte-Catherine, Montréal",
+      "lat": 45.551821538506815,
+      "lng": -73.5334920976268,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-N372",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Antoine, Montréal",
+      "lat": 45.507206058159085,
+      "lng": -73.5571047846286,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-N373",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Antoine, Montréal",
+      "lat": 45.50725244775421,
+      "lng": -73.55707072729489,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-N506",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.50812515724372,
+      "lng": -73.56015936444828,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-N507",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.508094823485465,
+      "lng": -73.56009201198611,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-P233",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Jacques, Montréal",
+      "lat": 45.5041165317807,
+      "lng": -73.55822138579221,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-P265",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Jacques, Montréal",
+      "lat": 45.50634803062032,
+      "lng": -73.55642659961686,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-P629",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Youville (Place), Montréal",
+      "lat": 45.50092341853189,
+      "lng": -73.55533513823536,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-P874",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Gabriel, Montréal",
+      "lat": 45.50688368897441,
+      "lng": -73.55472929686884,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
       "id": "amd-PA128",
       "description": "Stationnement réservé aux personnes handicapées",
       "type": "sur-rue",
       "address": "Aylmer, Montréal",
       "lat": 45.5064829059242,
       "lng": -73.57300014207549,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -30,6 +885,7 @@
       "address": "Rigaud, Montréal",
       "lat": 45.51776169839038,
       "lng": -73.568505609288,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -43,6 +899,7 @@
       "address": "Roy, Montréal",
       "lat": 45.51700974970506,
       "lng": -73.5746665689677,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -56,6 +913,7 @@
       "address": "Sherbrooke, Montréal",
       "lat": 45.516791017350414,
       "lng": -73.56761357851246,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -69,6 +927,7 @@
       "address": "Rachel, Montréal",
       "lat": 45.525386459446175,
       "lng": -73.57492466738094,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -82,6 +941,7 @@
       "address": "Terrain 197 - Émile-Duployé, Montréal",
       "lat": 45.5274996597695,
       "lng": -73.56443461243246,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,50 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -95,6 +955,7 @@
       "address": "Terrain 197 - Émile-Duployé, Montréal",
       "lat": 45.52753504392248,
       "lng": -73.56442326923965,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,50 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -108,6 +969,7 @@
       "address": "Parc-La Fontaine, Montréal",
       "lat": 45.52410199224179,
       "lng": -73.57108163208923,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -121,6 +983,7 @@
       "address": "Montgomery, Montréal",
       "lat": 45.53929001067776,
       "lng": -73.56016996676574,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -134,6 +997,7 @@
       "address": "Montgomery, Montréal",
       "lat": 45.53926582819212,
       "lng": -73.56010634913069,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -147,6 +1011,7 @@
       "address": "Montgomery, Montréal",
       "lat": 45.53924515144402,
       "lng": -73.56004790877743,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -160,6 +1025,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.5172909912806,
       "lng": -73.58021655872923,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -173,6 +1039,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.51656713426332,
       "lng": -73.57862622649971,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -186,6 +1053,7 @@
       "address": "Berri, Montréal",
       "lat": 45.522930611566764,
       "lng": -73.57760075492568,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -199,6 +1067,7 @@
       "address": "Saint-Denis, Montréal",
       "lat": 45.51980872407342,
       "lng": -73.57390893558139,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -212,6 +1081,7 @@
       "address": "Saint-Denis, Montréal",
       "lat": 45.52098763324053,
       "lng": -73.57627418430197,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -225,6 +1095,7 @@
       "address": "Hôtel-de-Ville, Montréal",
       "lat": 45.519888032996235,
       "lng": -73.58019511705156,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -238,6 +1109,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.51993377245437,
       "lng": -73.58660323497475,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h. Panneau : « P RESERVE HANDICAPES 8h - 16h LUN A VEN »",
       "source": {
         "name": "Agence de mobilité durable",
@@ -251,6 +1123,7 @@
       "address": "Parc, Montréal",
       "lat": 45.51718626743151,
       "lng": -73.59010461161289,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -264,6 +1137,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.522122297937905,
       "lng": -73.59091158215016,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -277,6 +1151,7 @@
       "address": "Esplanade, Montréal",
       "lat": 45.51825322419099,
       "lng": -73.58834300039844,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -290,6 +1165,7 @@
       "address": "Saint-Denis, Montréal",
       "lat": 45.52488080364647,
       "lng": -73.58504854019085,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -303,6 +1179,7 @@
       "address": "Saint-Denis, Montréal",
       "lat": 45.524853460716095,
       "lng": -73.58498765681976,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -316,6 +1193,7 @@
       "address": "Saint-Denis, Montréal",
       "lat": 45.52424141901672,
       "lng": -73.58365186346846,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -329,6 +1207,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.52487702801618,
       "lng": -73.5821786788721,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -342,6 +1221,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.527539301914,
       "lng": -73.57955981418668,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -355,6 +1235,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.53198965903184,
       "lng": -73.57537493102302,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -368,6 +1249,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.533254038968565,
       "lng": -73.57431877011342,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -381,6 +1263,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.536205973546444,
       "lng": -73.57153889635256,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -394,6 +1277,7 @@
       "address": "Mont-Royal, Montréal",
       "lat": 45.53821211211065,
       "lng": -73.56963056049557,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -407,6 +1291,7 @@
       "address": "Marie-Anne, Montréal",
       "lat": 45.53273730818522,
       "lng": -73.57150372485953,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -420,6 +1305,7 @@
       "address": "Marie-Anne, Montréal",
       "lat": 45.53277955398363,
       "lng": -73.5714640035174,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -433,6 +1319,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.519214172910914,
       "lng": -73.59609238687342,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -446,6 +1333,7 @@
       "address": "Parc, Montréal",
       "lat": 45.52241230768341,
       "lng": -73.6028567651257,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -459,6 +1347,7 @@
       "address": "Parc, Montréal",
       "lat": 45.52301117226492,
       "lng": -73.60387063698707,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -472,6 +1361,7 @@
       "address": "Parc, Montréal",
       "lat": 45.522981126268974,
       "lng": -73.60380013524278,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -485,6 +1375,7 @@
       "address": "Parc, Montréal",
       "lat": 45.521773108131434,
       "lng": -73.6014112586618,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -498,6 +1389,7 @@
       "address": "Parc, Montréal",
       "lat": 45.520590191518444,
       "lng": -73.59852438366237,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -511,6 +1403,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.52287860269202,
       "lng": -73.59256851131966,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -524,6 +1417,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.52284742024408,
       "lng": -73.59249722348156,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -537,6 +1431,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.52281613338341,
       "lng": -73.59243112939572,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -550,6 +1445,7 @@
       "address": "Saint-Laurent, Montréal",
       "lat": 45.52278508671612,
       "lng": -73.59236285776751,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -563,6 +1459,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.52081135546565,
       "lng": -73.59468895247562,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -576,6 +1473,7 @@
       "address": "Casgrain, Montréal",
       "lat": 45.52763353259933,
       "lng": -73.59890021378192,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -589,6 +1487,7 @@
       "address": "Casgrain, Montréal",
       "lat": 45.52586876237886,
       "lng": -73.59505752023658,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -602,6 +1501,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.540156980105,
       "lng": -73.57637819337711,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -615,6 +1515,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.54067144493551,
       "lng": -73.57594118173947,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -628,6 +1529,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.54072259606987,
       "lng": -73.57589257705973,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -641,6 +1543,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.53986913897106,
       "lng": -73.57656468195523,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -654,6 +1557,7 @@
       "address": "Laurier, Montréal",
       "lat": 45.540056249789046,
       "lng": -73.57638803158376,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
@@ -667,12 +1571,2823 @@
       "address": "Laurier, Montréal",
       "lat": 45.540104203179126,
       "lng": -73.57634169121707,
+      "arrondissement": "le-plateau-mont-royal",
       "notes": "Place tarifée : 4,25 $/h.",
       "source": {
         "name": "Agence de mobilité durable",
         "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
       }
+    },
+    {
+      "id": "amd-Q191",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Champ-de-Mars, Montréal",
+      "lat": 45.50960631560104,
+      "lng": -73.55410204796057,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Q227",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.509190317424675,
+      "lng": -73.5532030323396,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Q228",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.50923207193615,
+      "lng": -73.5531684667765,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Q330",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Paul, Montréal",
+      "lat": 45.51072505353018,
+      "lng": -73.55125260831097,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Q415",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sainte-Catherine, Montréal",
+      "lat": 45.51446167390597,
+      "lng": -73.55991277398003,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Q719",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Berri, Montréal",
+      "lat": 45.51458979268207,
+      "lng": -73.55937726825218,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R147",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cedar, Montréal",
+      "lat": 45.49741410704353,
+      "lng": -73.5898079644423,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R224",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cedar, Montréal",
+      "lat": 45.496592593892686,
+      "lng": -73.5902976695006,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R225",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cedar, Montréal",
+      "lat": 45.49664092919812,
+      "lng": -73.59026179439098,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R236",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cedar, Montréal",
+      "lat": 45.49718734875109,
+      "lng": -73.5898402411378,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R241",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Cedar, Montréal",
+      "lat": 45.49738615969567,
+      "lng": -73.58968886647993,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R484",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Drummond, Montréal",
+      "lat": 45.502052837237805,
+      "lng": -73.58128260141952,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R922",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.50887934565299,
+      "lng": -73.58143013846941,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R923",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.508848839165374,
+      "lng": -73.58136765978121,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R924",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.50881830149236,
+      "lng": -73.58130313596583,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R925",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.50879010907912,
+      "lng": -73.5812463666201,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R931",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.50862604198849,
+      "lng": -73.58090406046695,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-R932",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "University, Montréal",
+      "lat": 45.508595409202,
+      "lng": -73.58084047612124,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA190",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mozart, Montréal",
+      "lat": 45.53363721521753,
+      "lng": -73.6156881605579,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA249",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Dante, Montréal",
+      "lat": 45.5327647923231,
+      "lng": -73.61380023875395,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA266",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.53438502400859,
+      "lng": -73.61778085739077,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA328",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.53380053312993,
+      "lng": -73.61626756912437,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA380",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.531969859703366,
+      "lng": -73.61247210014525,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA663",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 078 (Boyer sud Bélanger) Niveau A, Montréal",
+      "lat": 45.53936659925154,
+      "lng": -73.6087911247547,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 3,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RA665",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 078 (Boyer sud Bélanger) Niveau A, Montréal",
+      "lat": 45.539343506187166,
+      "lng": -73.60873900112708,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 3,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RB289",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Bélanger, Montréal",
+      "lat": 45.53998225249432,
+      "lng": -73.60920380502617,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RB587",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Hubert, Montréal",
+      "lat": 45.533219505498124,
+      "lng": -73.5967513851936,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RD331",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Masson, Montréal",
+      "lat": 45.54620841119755,
+      "lng": -73.57610522755617,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RD580",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "5e, Montréal",
+      "lat": 45.5476157865705,
+      "lng": -73.57540382844243,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RD773",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 073 (nord Masson) - voie 1, Montréal",
+      "lat": 45.54851007749277,
+      "lng": -73.57544054180057,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RD789",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 073 (nord Masson) - voie 1, Montréal",
+      "lat": 45.54846681408292,
+      "lng": -73.57529949688838,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RD820",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 075 (nord Masson) - voie 1, Montréal",
+      "lat": 45.54985803940632,
+      "lng": -73.57463284493768,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RT014",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain TER 024 - rue Saint-André Nord, Montréal",
+      "lat": 45.53811490978059,
+      "lng": -73.60520742643516,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 3,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-RT020",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain TER 024 - rue Saint-André Ouest , Montréal",
+      "lat": 45.53781714138238,
+      "lng": -73.60533450719522,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Place tarifée : 3,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SA149",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.513241641712334,
+      "lng": -73.68131263594066,
+      "arrondissement": "saint-laurent",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SA256",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.51044314432631,
+      "lng": -73.67655729162303,
+      "arrondissement": "saint-laurent",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SA371",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rue de l' Église  (SLR), Montréal",
+      "lat": 45.51193740189105,
+      "lng": -73.67775026488849,
+      "arrondissement": "saint-laurent",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SA385",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rue Saint-Germain  (SLR), Montréal",
+      "lat": 45.51253839159149,
+      "lng": -73.67740258342339,
+      "arrondissement": "saint-laurent",
+      "notes": "Place tarifée : 2,50 $/h. Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SA386",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rue Saint-Germain  (SLR), Montréal",
+      "lat": 45.51250172935243,
+      "lng": -73.67734600531959,
+      "arrondissement": "saint-laurent",
+      "notes": "Place tarifée : 2,50 $/h. Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SN112",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Bel-Air, Montréal",
+      "lat": 45.48241078283233,
+      "lng": -73.58371906820744,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SN158",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48229394169721,
+      "lng": -73.57634594680616,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SN159",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48232956816061,
+      "lng": -73.57628757620759,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SN269",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48357412652417,
+      "lng": -73.57405999651114,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP136",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.49481917129776,
+      "lng": -73.56328753190033,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP429",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48031860523155,
+      "lng": -73.57971736453646,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP538",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48933339050976,
+      "lng": -73.56775341906115,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP539",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.4893769963427,
+      "lng": -73.56771812130417,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP542",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Notre-Dame, Montréal",
+      "lat": 45.48951780624505,
+      "lng": -73.5676006168841,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP631",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 361 - Pl. St-Henri C/N (V1), Montréal",
+      "lat": 45.477310895397395,
+      "lng": -73.5853876123769,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP632",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 361 - Pl. St-Henri C/N (V1), Montréal",
+      "lat": 45.477329101747756,
+      "lng": -73.58536314397078,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SP826",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Bourget, Montréal",
+      "lat": 45.479498527396586,
+      "lng": -73.58157634419118,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ128",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monk, Montréal",
+      "lat": 45.460049695433696,
+      "lng": -73.59653499952202,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ196",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monk, Montréal",
+      "lat": 45.45754818414919,
+      "lng": -73.59559883471285,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ211",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monk, Montréal",
+      "lat": 45.4595725775461,
+      "lng": -73.59648573753023,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ298",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monk, Montréal",
+      "lat": 45.45481090033581,
+      "lng": -73.59457336282675,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ546",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jolicoeur, Montréal",
+      "lat": 45.45673125945085,
+      "lng": -73.59608635804679,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ634",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Jacques, Montréal",
+      "lat": 45.4834825259665,
+      "lng": -73.58015110971373,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-SQ646",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Greene, Montréal",
+      "lat": 45.48283938963982,
+      "lng": -73.58156427794052,
+      "arrondissement": "le-sud-ouest",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-T246",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Trans-Island, Montréal",
+      "lat": 45.4845034998855,
+      "lng": -73.62886546877728,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-T255",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Mountain Sights, Montréal",
+      "lat": 45.48504966940706,
+      "lng": -73.62868101318521,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-T538",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.47062802737083,
+      "lng": -73.61553835537734,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TA258",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Avenue Bernard  (OUT), Montréal",
+      "lat": 45.52132808338281,
+      "lng": -73.60770324443786,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TA363",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Laurier, Montréal",
+      "lat": 45.51732306751238,
+      "lng": -73.5979135819478,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TA388",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Laurier, Montréal",
+      "lat": 45.51825751921745,
+      "lng": -73.59710064031097,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TA745",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Avenue Querbes  (OUT), Montréal",
+      "lat": 45.52163712535772,
+      "lng": -73.60706088970014,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TB165",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Van Horne, Montréal",
+      "lat": 45.52144996823665,
+      "lng": -73.61411296127876,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TB256",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Avenue Bernard  (OUT), Montréal",
+      "lat": 45.51964896955506,
+      "lng": -73.60920519426713,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TB287",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Avenue Bernard  (OUT), Montréal",
+      "lat": 45.51995696267371,
+      "lng": -73.60875527827356,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TC179",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Van Horne, Montréal",
+      "lat": 45.51917313423919,
+      "lng": -73.61614432594307,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TD244",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Avenue Vincent-D'Indy  (MTL+OUT), Montréal",
+      "lat": 45.511059742966154,
+      "lng": -73.61396108484765,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TJ002",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Avenue Dollard  (OUT), Montréal",
+      "lat": 45.519633441442956,
+      "lng": -73.61901733331537,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 0,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-TJ003",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Avenue Dollard  (OUT), Montréal",
+      "lat": 45.519649721030135,
+      "lng": -73.6190027755598,
+      "arrondissement": "outremont",
+      "notes": "Place tarifée : 0,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U102",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Goyer, Montréal",
+      "lat": 45.50312988038079,
+      "lng": -73.63672989194755,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U280",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Edouard-Montpetit, Montréal",
+      "lat": 45.49705880013459,
+      "lng": -73.62455661701435,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U331",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.50305848367018,
+      "lng": -73.63694307241495,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U412",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.50035936088479,
+      "lng": -73.63122288014826,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U427",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.49967333308631,
+      "lng": -73.62971022549863,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U466",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.5000636657087,
+      "lng": -73.63027587248573,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U467",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.500034514606604,
+      "lng": -73.63020976653453,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U513",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-des-Neiges, Montréal",
+      "lat": 45.49835093893231,
+      "lng": -73.62695532305106,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U907",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Decelles, Montréal",
+      "lat": 45.50095029352334,
+      "lng": -73.6261216296876,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-U910",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Decelles, Montréal",
+      "lat": 45.500872598072775,
+      "lng": -73.62594919730627,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VA262",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Talon, Montréal",
+      "lat": 45.52803632572745,
+      "lng": -73.62372213874217,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VA467",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Durocher, Montréal",
+      "lat": 45.52915185794576,
+      "lng": -73.623342702917,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VA499",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Hutchison, Montréal",
+      "lat": 45.529797555730596,
+      "lng": -73.62338379560863,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VB498",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jarry, Montréal",
+      "lat": 45.5402658130215,
+      "lng": -73.63044770172408,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VC304",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Chambord, Montréal",
+      "lat": 45.544822525359486,
+      "lng": -73.61043330963017,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée (tarif variable, voir la signalisation sur place).",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VD448",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Saint-Laurent, Montréal",
+      "lat": 45.54014732556484,
+      "lng": -73.63523407652407,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VE076",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Talon, Montréal",
+      "lat": 45.54584251286411,
+      "lng": -73.60908796582642,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée (tarif variable, voir la signalisation sur place).",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VE085",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Garnier, Montréal",
+      "lat": 45.54624853694942,
+      "lng": -73.6089833134621,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée (tarif variable, voir la signalisation sur place).",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VE086",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Garnier, Montréal",
+      "lat": 45.546219738196214,
+      "lng": -73.6089191816575,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée (tarif variable, voir la signalisation sur place).",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VL438",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Talon, Montréal",
+      "lat": 45.5645494134538,
+      "lng": -73.59311586656415,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Place tarifée (tarif variable, voir la signalisation sur place).",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VM019",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Notre-Dame Voie Sud, Montréal",
+      "lat": 45.49659223714762,
+      "lng": -73.56255078218692,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 6,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VM020",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Notre-Dame Voie Sud, Montréal",
+      "lat": 45.496551622346935,
+      "lng": -73.56257604589639,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 6,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VM074",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Notre-Dame Voie Nord, Montréal",
+      "lat": 45.49686831456829,
+      "lng": -73.56265609768732,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 6,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VM075",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain Notre-Dame Voie Nord, Montréal",
+      "lat": 45.49684907571835,
+      "lng": -73.56267283799916,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 6,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN424",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rielle (Ver), Montréal",
+      "lat": 45.460076823087554,
+      "lng": -73.56701855415133,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN425",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Rielle (Ver), Montréal",
+      "lat": 45.46007342143513,
+      "lng": -73.56693880013432,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN467",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "1ere Avenue (Ver), Montréal",
+      "lat": 45.45838642935547,
+      "lng": -73.56712759480787,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN491",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "2e Avenue (Ver), Montréal",
+      "lat": 45.45780523166964,
+      "lng": -73.56720659773039,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN492",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "2e Avenue (Ver), Montréal",
+      "lat": 45.45780114287395,
+      "lng": -73.56711789923777,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN557",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "5e Avenue (Ver), Montréal",
+      "lat": 45.45603570193619,
+      "lng": -73.56733039050359,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN558",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "5e Avenue (Ver), Montréal",
+      "lat": 45.45603365222523,
+      "lng": -73.56725790012513,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VN592",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Galt (Ver), Montréal",
+      "lat": 45.46196062512394,
+      "lng": -73.56762050858968,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP119",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Wellington (Ver), Montréal",
+      "lat": 45.46733481318081,
+      "lng": -73.56665263321254,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP266",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Wellington (Ver), Montréal",
+      "lat": 45.46409656233756,
+      "lng": -73.56683569236533,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP378",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.46285341387994,
+      "lng": -73.5694107926147,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP379",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.462848955199895,
+      "lng": -73.56932438545235,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP385",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.46282397618397,
+      "lng": -73.5688076491931,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP407",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.46275521713221,
+      "lng": -73.56733051027354,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP426",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.462709415234265,
+      "lng": -73.56452115370315,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP471",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Église (Ver), Montréal",
+      "lat": 45.462625477265355,
+      "lng": -73.56441892798927,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP598",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Lasalle (Ver), Montréal",
+      "lat": 45.464161536252455,
+      "lng": -73.56451650877669,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP613",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Lasalle (Ver), Montréal",
+      "lat": 45.46341606622812,
+      "lng": -73.56398583499941,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP614",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Lasalle (Ver), Montréal",
+      "lat": 45.463374388653335,
+      "lng": -73.5639568928384,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP670",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Gaétan-Laberge (Ver), Montréal",
+      "lat": 45.463802498912784,
+      "lng": -73.56284760396208,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP671",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Gaétan-Laberge (Ver), Montréal",
+      "lat": 45.463753336862034,
+      "lng": -73.56283592237412,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP723",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.464095621484596,
+      "lng": -73.56266488863773,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP724",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.46407354186302,
+      "lng": -73.56265982200966,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP725",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.46403392200302,
+      "lng": -73.56264968994093,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP726",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.46401184238142,
+      "lng": -73.56264462332447,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP727",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.46397658749629,
+      "lng": -73.56263556651733,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP728",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Ouest, Montréal",
+      "lat": 45.463954507873844,
+      "lng": -73.56263049991153,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP836",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Est, Montréal",
+      "lat": 45.464216936504144,
+      "lng": -73.56227277926573,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP837",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Est, Montréal",
+      "lat": 45.464166826228784,
+      "lng": -73.56226250453145,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP838",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 433-rue Gaétan-Laberge - Voie Est, Montréal",
+      "lat": 45.464144746590456,
+      "lng": -73.56225743805403,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VP920",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Lasalle (Ver), Montréal",
+      "lat": 45.46788246977451,
+      "lng": -73.56668465992614,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ470",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 434 - Gaétan-Laberge - Voie Est, Montréal",
+      "lat": 45.46328184744456,
+      "lng": -73.56090797826953,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ471",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 434 - Gaétan-Laberge - Voie Est, Montréal",
+      "lat": 45.46324523003738,
+      "lng": -73.5609100768726,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ544",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Verdun (Ver), Montréal",
+      "lat": 45.449757106362654,
+      "lng": -73.5725895345254,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ557",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Verdun (Ver), Montréal",
+      "lat": 45.448940071257006,
+      "lng": -73.57266213361818,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ693",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "6e Avenue (VER), Montréal",
+      "lat": 45.4555272613554,
+      "lng": -73.57169645959429,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VQ744",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Melrose (Ver), Montréal",
+      "lat": 45.453857391074884,
+      "lng": -73.5719219453725,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VR330",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 438 - rue Éthel - Niv 3, Montréal",
+      "lat": 45.46365053618119,
+      "lng": -73.56753291205327,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VR333",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 438 - rue Éthel - Niv 3, Montréal",
+      "lat": 45.463564864102494,
+      "lng": -73.5675359122308,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VR894",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Place du Commerce - voie 1 (Ver), Montréal",
+      "lat": 45.46830536569017,
+      "lng": -73.54511670551277,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT118",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 508- La Salle - Voie Centrale, Montréal",
+      "lat": 45.458596581020956,
+      "lng": -73.56314156986858,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 2,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT191",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 436 - Verdun 36 - Gaëtan-Laberge, Montréal",
+      "lat": 45.46226680128466,
+      "lng": -73.562464848176,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT193",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 436 - Verdun 36 - Gaëtan-Laberge, Montréal",
+      "lat": 45.462264632878856,
+      "lng": -73.56241503914748,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT195",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 436 - Verdun 36 - Gaëtan-Laberge, Montréal",
+      "lat": 45.46226244959461,
+      "lng": -73.56234299294766,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT349",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 514 - Verdun 14 - Voie Est, Montréal",
+      "lat": 45.45920496643782,
+      "lng": -73.57389412856837,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT364",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 502 - Gaétan-Laberge - voie nord, Montréal",
+      "lat": 45.466597857418826,
+      "lng": -73.56178422945162,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-VT370",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "hors-rue",
+      "address": "Terrain 502 - Gaétan-Laberge - voie Ouest, Montréal",
+      "lat": 45.46625763366801,
+      "lng": -73.5619599595075,
+      "arrondissement": "verdun",
+      "notes": "Place tarifée : 1,75 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-W102",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.522690649182756,
+      "lng": -73.56540879802496,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-W114",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Ontario, Montréal",
+      "lat": 45.517987094804546,
+      "lng": -73.56416319291823,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X017",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Decelles, Montréal",
+      "lat": 45.497303578985964,
+      "lng": -73.61872610910376,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X052",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.498713882265044,
+      "lng": -73.61900826316241,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X053",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.498766133585114,
+      "lng": -73.61896384137275,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X054",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.49881726492859,
+      "lng": -73.61891880921796,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X361",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Victoria, Montréal",
+      "lat": 45.492845765239,
+      "lng": -73.63409648240685,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X706",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.49725553537776,
+      "lng": -73.6288183068854,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X707",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.49730117370141,
+      "lng": -73.62877723098408,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X708",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.49735091473908,
+      "lng": -73.62873241788947,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X709",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.49739283226899,
+      "lng": -73.62869325332855,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X710",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.497438569708635,
+      "lng": -73.62864942477131,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X711",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Côte-Sainte-Catherine, Montréal",
+      "lat": 45.49748150154292,
+      "lng": -73.62861375626954,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X860",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.49499597585343,
+      "lng": -73.62276363076336,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X861",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.495041922616736,
+      "lng": -73.62272297568424,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X866",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.49526340553397,
+      "lng": -73.62252711306036,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-X867",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Jean-Brillant, Montréal",
+      "lat": 45.49531448072032,
+      "lng": -73.62248191968095,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 4,00 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Y695",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Papineau, Montréal",
+      "lat": 45.521742167325506,
+      "lng": -73.5506701622617,
+      "arrondissement": "ville-marie",
+      "notes": "Place tarifée : 4,25 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z122",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monkland, Montréal",
+      "lat": 45.469991540115586,
+      "lng": -73.62798437910017,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z323",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Marcil, Montréal",
+      "lat": 45.475798417193225,
+      "lng": -73.62294425889014,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z326",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Old Orchard, Montréal",
+      "lat": 45.47616155081725,
+      "lng": -73.62202030251049,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z441",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Queen-Mary, Montréal",
+      "lat": 45.48506705670383,
+      "lng": -73.62809881437113,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z464",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Queen-Mary, Montréal",
+      "lat": 45.484840968118064,
+      "lng": -73.6280392391166,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z558",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.48543712011829,
+      "lng": -73.63256263723899,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z562",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.484814236469866,
+      "lng": -73.63235600928091,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z563",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.484785301179485,
+      "lng": -73.63229062342448,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z591",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Décarie(Blvd), Montréal",
+      "lat": 45.48399956911853,
+      "lng": -73.63051322599323,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z703",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.46867021179354,
+      "lng": -73.61935671281601,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z704",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.468705000597744,
+      "lng": -73.61928893464237,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z752",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.47020936687232,
+      "lng": -73.61664014952302,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z774",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Sherbrooke, Montréal",
+      "lat": 45.46308708803621,
+      "lng": -73.63002736507187,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z857",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Harvard, Montréal",
+      "lat": 45.47461289522254,
+      "lng": -73.62401199503682,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z892",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Old Orchard, Montréal",
+      "lat": 45.476354405653524,
+      "lng": -73.6224504670264,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "amd-Z991",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "type": "sur-rue",
+      "address": "Monkland, Montréal",
+      "lat": 45.47281075252968,
+      "lng": -73.62527418262873,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Place tarifée : 3,50 $/h.",
+      "source": {
+        "name": "Agence de mobilité durable",
+        "url": "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
+      }
+    },
+    {
+      "id": "poteau-125798",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.537223,
+      "lng": -73.679576,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-125802",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.537444,
+      "lng": -73.679438,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-125808",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.537566,
+      "lng": -73.679358,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-125811",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.537732,
+      "lng": -73.679253,
+      "arrondissement": "ahuntsic-cartierville",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-159063",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.50081,
+      "lng": -73.560719,
+      "arrondissement": "ville-marie",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-162309",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.550273,
+      "lng": -73.543918,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-187931",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.443522,
+      "lng": -73.667699,
+      "arrondissement": "lachine",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-227141",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.47175,
+      "lng": -73.613684,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-259846",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.544044,
+      "lng": -73.633944,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P RESERVE HANDICAPES 8h - 16h LUN A VEN »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-259847",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.544021,
+      "lng": -73.633875,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P RESERVE HANDICAPES 8h - 16h LUN A VEN »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-267520",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.542861,
+      "lng": -73.629828,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-267521",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.542838,
+      "lng": -73.629752,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-273540",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.569525,
+      "lng": -73.571278,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-274428",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.486975,
+      "lng": -73.880026,
+      "arrondissement": "l-ile-bizard-sainte-genevieve",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-28974",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.569561,
+      "lng": -73.571397,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-298850",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.50076,
+      "lng": -73.560794,
+      "arrondissement": "ville-marie",
+      "notes": "Panneau : « P RÉSERVÉ PERSONNE HANDICAPÉE »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-307762",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.539689,
+      "lng": -73.634667,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-307763",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.539646,
+      "lng": -73.634692,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
+    },
+    {
+      "id": "poteau-4090",
+      "description": "Stationnement réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.550215,
+      "lng": -73.543718,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "notes": "Panneau : « P EXEPTE HANDICAPES 8h-18h LUN A SAM »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      },
+      "type": "sur-rue"
     }
   ],
-  "debarcaderes": []
+  "debarcaderes": [
+    {
+      "id": "poteau-205155",
+      "description": "Débarcadère réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.52802,
+      "lng": -73.675602,
+      "arrondissement": "saint-laurent",
+      "notes": "Panneau : « HANDICAPÉS - DÉBARCADÈRE (Bleu) »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-219619",
+      "description": "Débarcadère réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.517696,
+      "lng": -73.682111,
+      "arrondissement": "saint-laurent",
+      "notes": "Panneau : « HANDICAPÉS - DÉBARCADÈRE (Bleu) »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-219620",
+      "description": "Débarcadère réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.517656,
+      "lng": -73.682048,
+      "arrondissement": "saint-laurent",
+      "notes": "Panneau : « HANDICAPÉS - DÉBARCADÈRE (Bleu) »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-248532",
+      "description": "Débarcadère réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.508465,
+      "lng": -73.676364,
+      "arrondissement": "saint-laurent",
+      "notes": "Panneau : « HANDICAPÉS - DÉBARCADÈRE (Bleu) »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    },
+    {
+      "id": "poteau-248533",
+      "description": "Débarcadère réservé aux personnes handicapées",
+      "address": null,
+      "lat": 45.508505,
+      "lng": -73.676313,
+      "arrondissement": "saint-laurent",
+      "notes": "Panneau : « HANDICAPÉS - DÉBARCADÈRE (Bleu) »",
+      "source": {
+        "name": "Ville de Montréal (signalisation)",
+        "url": "https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant"
+      }
+    }
+  ]
 }

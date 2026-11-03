@@ -1,20 +1,25 @@
 # Montréal Accessible
 
-Carte interactive répertoriant, par couches activables/désactivables :
+Carte interactive répertoriant, par couches activables/désactivables,
+l'information sur l'accessibilité universelle. Le projet vise à couvrir
+l'ensemble de Montréal; certaines couches le font déjà (import automatisé de
+données ouvertes à l'échelle de la ville), d'autres restent pour l'instant
+concentrées au Plateau-Mont-Royal (saisie manuelle), l'arrondissement d'où le
+projet est parti — précisé couche par couche ci-dessous.
 
-- **Commerces** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps
-- **Terrasses inspectées** — saisie manuelle à partir des inspections de l'arrondissement.
+- **Commerces** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps. Plateau-Mont-Royal seulement.
+- **Terrasses inspectées** — saisie manuelle à partir des inspections de l'arrondissement. Plateau-Mont-Royal seulement.
 
   Ces deux couches apparaissent regroupées dans la sidebar sous « Commerces accessibles ».
-- **Sentiers déneigés** — sentiers de parc déneigés en hiver par l'arrondissement, saisie manuelle. Affichés comme un tracé sur la carte plutôt qu'un simple point.
-- **Logements accessibles** — saisie manuelle + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99) qui comptent des unités adaptées (positions tirées du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
-- **Stationnement accessible** — saisie manuelle uniquement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
-- **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0).
-- **Débarcadères accessibles** — saisie manuelle + panneaux « débarcadère réservé handicapés » du même jeu de données. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
-- **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal
-- **Toilettes accessibles** — saisie manuelle.
-- **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants)
-- **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet).
+- **Sentiers déneigés** — sentiers de parc déneigés en hiver par l'arrondissement, saisie manuelle. Plateau-Mont-Royal seulement. Affichés comme un tracé sur la carte plutôt qu'un simple point.
+- **Logements accessibles** — saisie manuelle (Plateau-Mont-Royal) + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations) qui comptent des unités adaptées, **pour tout Montréal** (positions et arrondissement tirés du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
+- **Stationnement accessible** — saisie manuelle uniquement, Plateau-Mont-Royal seulement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
+- **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
+- **Débarcadères accessibles** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
+- **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal. Plateau-Mont-Royal seulement.
+- **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement.
+- **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants), **pour tout Montréal**.
+- **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement.
 
 ## Filtre d'arrondissement
 
@@ -294,7 +299,7 @@ python3 scripts/import_feux_sonores.py
 
 ### Logements de l'OMHM (`data/logements-omhm.json`)
 
-Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Pour rafraîchir :
+Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Pour rafraîchir :
 
 ```bash
 SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
@@ -302,7 +307,7 @@ SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
 
 ### Places réservées aux personnes handicapées (`data/places-handicapes.json`)
 
-Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/stationnements.json` et `data/debarcaderes.json`). Pour rafraîchir :
+Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/stationnements.json` et `data/debarcaderes.json`). Pour rafraîchir :
 
 ```bash
 python3 scripts/import_places_handicapes.py
@@ -313,6 +318,8 @@ Si Python affiche `CERTIFICATE_VERIFY_FAILED` (Python de python.org sur macOS), 
 ```bash
 SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_places_handicapes.py
 ```
+
+Ces deux imports (et `import_debarcaderes_spectrum.py`) étiquettent chaque item avec son arrondissement via [scripts/montreal_arrondissements.py](scripts/montreal_arrondissements.py), pour le filtre d'arrondissement de la carte — voir [Filtre d'arrondissement](#filtre-darrondissement).
 
 ## Déploiement
 

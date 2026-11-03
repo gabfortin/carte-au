@@ -37,6 +37,9 @@ import sys
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from montreal_arrondissements import slug_arrondissement
+
 SIGNALISATION_URL = (
     "https://donnees.montreal.ca/dataset/8ac6dd33-b0d3-4eab-a334-5a6283eb7940/"
     "resource/7f1d4ae9-1a12-46d7-953e-6b9c18c78680/download/"
@@ -115,6 +118,14 @@ def main():
     poteaux = poteaux_par_id(args.arrondissement)
     print(f"{len(poteaux)} poteau(x) trouvé(s) dans cet arrondissement.")
 
+    arrondissement_slug = slug_arrondissement(args.arrondissement)
+    if not arrondissement_slug:
+        sys.exit(
+            f"« {args.arrondissement} » ne correspond à aucun des 19 arrondissements "
+            "reconnus par scripts/montreal_arrondissements.py (orthographe exacte requise, "
+            "ex : « Ahuntsic-Cartierville »)."
+        )
+
     with open(OUTPUT_PATH, encoding="utf-8") as f:
         data = json.load(f)
     existants = {d["id"] for d in data["debarcaderes"]}
@@ -138,6 +149,7 @@ def main():
             "address": None,
             "lat": lat,
             "lng": lng,
+            "arrondissement": arrondissement_slug,
             "notes": f"Espace réservé selon l'horaire suivant : {infos}." if infos else None,
             "source": {"name": "Ville de Montréal (signalisation)", "url": SIGNALISATION_DATASET_URL},
         }

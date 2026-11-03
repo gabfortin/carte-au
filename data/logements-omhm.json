@@ -1,7 +1,97 @@
 {
   "source": "Office municipal d'habitation de Montréal - répertoire des habitations",
-  "sourceUrl": "https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99&page=0",
+  "sourceUrl": "https://www.omhm.qc.ca/fr/habitations?page=0",
   "logements": [
+    {
+      "id": "omhm-habitations-charlebois",
+      "name": "Habitations Charlebois A",
+      "type": "hlm",
+      "address": "4450, 4450T, rue Saint-Jacques",
+      "lat": 45.4754373,
+      "lng": -73.5907344,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 80 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-charlebois"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-terrebonne",
+      "name": "Habitations De Terrebonne",
+      "type": "hlm",
+      "address": "6350, rue De Terrebonne",
+      "lat": 45.4683319,
+      "lng": -73.6331687,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 128 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-terrebonne"
+      }
+    },
+    {
+      "id": "omhm-habitations-montmorency",
+      "name": "Habitations Montmorency",
+      "type": "hlm",
+      "address": "1105, 1105T, rue de la Sucrerie · 1695, rue Grand Trunk",
+      "lat": 45.4837631,
+      "lng": -73.5599826,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 85 logements (7 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-montmorency"
+      }
+    },
+    {
+      "id": "omhm-habitations-angrignon-i-et-ii",
+      "name": "Habitations Angrignon I et II",
+      "type": "hlm",
+      "address": "3055, 3055T, boulevard Des Trinitaires · 2721, 2723, 2725, rue Knox · 1100, rue Soulanges",
+      "lat": 45.4464736,
+      "lng": -73.5986139,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 66 logements (3 × 1 ch., 1 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-angrignon-i-et-ii"
+      }
+    },
+    {
+      "id": "omhm-habitations-favard",
+      "name": "Habitations Favard",
+      "type": "hlm",
+      "address": "2066, 2066T, rue Favard",
+      "lat": 45.4781862,
+      "lng": -73.555858,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "9 unités adaptées sur 112 logements (8 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-favard"
+      }
+    },
     {
       "id": "omhm-habitations-durocher",
       "name": "Habitations Durocher",
@@ -9,6 +99,7 @@
       "address": "425, rue Sherbrooke Ouest",
       "lat": 45.5074399,
       "lng": -73.5722166,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -20,12 +111,229 @@
       }
     },
     {
+      "id": "omhm-habitations-andre-laurendeau",
+      "name": "Habitations André-Laurendeau",
+      "type": "hlm",
+      "address": "2431, rue Saint-Charles",
+      "lat": 45.4802669,
+      "lng": -73.5685363,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "2 unités adaptées sur 43 logements (2 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-andre-laurendeau"
+      }
+    },
+    {
+      "id": "omhm-habitations-du-fort",
+      "name": "Habitations Du Fort",
+      "type": "hlm",
+      "address": "2101, 2101T, boulevard René-Lévesque Ouest",
+      "lat": 45.4897527,
+      "lng": -73.5801388,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 88 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-du-fort"
+      }
+    },
+    {
+      "id": "omhm-habitations-notre-dame-de-grace",
+      "name": "Habitations Notre-Dame-de-Grâce",
+      "type": "hlm",
+      "address": "4040, avenue Girouard",
+      "lat": 45.4749889,
+      "lng": -73.6184757,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 102 logements (4 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-notre-dame-de-grace"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-raymond",
+      "name": "Habitations Saint-Raymond",
+      "type": "hlm",
+      "address": "5605, chemin Upper-Lachine",
+      "lat": 45.4697788,
+      "lng": -73.6094357,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 106 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-raymond"
+      }
+    },
+    {
+      "id": "omhm-habitations-monkland",
+      "name": "Habitations Monkland",
+      "type": "hlm",
+      "address": "5959, avenue De Monkland",
+      "lat": 45.4718126,
+      "lng": -73.6267182,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "9 unités adaptées sur 78 logements (8 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-monkland"
+      }
+    },
+    {
+      "id": "omhm-habitations-goyer",
+      "name": "Habitations Goyer",
+      "type": "hlm",
+      "address": "2929, rue Goyer",
+      "lat": 45.5096101,
+      "lng": -73.6311287,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "3 unités adaptées sur 86 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-goyer"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-lerabliere",
+      "name": "Habitations De l'Érablière",
+      "type": "hlm",
+      "address": "1745, 1745T, rue Notre-Dame Ouest · 500, 504, 508, 512, 516, 520, 524, 528, 532, 536, rue Richmond",
+      "lat": 45.4888874,
+      "lng": -73.5686235,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "9 unités adaptées sur 96 logements (9 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-lerabliere"
+      }
+    },
+    {
+      "id": "omhm-habitations-angers",
+      "name": "Habitations Angers",
+      "type": "hlm",
+      "address": "1625, 1625T, rue Galt",
+      "lat": 45.4629605,
+      "lng": -73.5854076,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 106 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-angers"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-montmagny",
+      "name": "Habitations De Montmagny",
+      "type": "hlm",
+      "address": "6245, 6245T, rue Jogues",
+      "lat": 45.4551717,
+      "lng": -73.6025543,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 89 logements (5 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-montmagny"
+      }
+    },
+    {
+      "id": "omhm-habitations-des-fleurs",
+      "name": "Habitations Des Fleurs A",
+      "type": "hlm",
+      "address": "605, 615, 625, 625T, 635, 645, boulevard Georges-Vanier",
+      "lat": 45.4864282,
+      "lng": -73.5729061,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 68 logements (7 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-des-fleurs"
+      }
+    },
+    {
+      "id": "omhm-habitations-tourville",
+      "name": "Habitations Tourville A",
+      "type": "hlm",
+      "address": "215, rue Beaudoin · 95, 105, rue Saint-Philippe",
+      "lat": 45.4739482,
+      "lng": -73.5845545,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 17 logements (1 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-tourville"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-carillon",
+      "name": "Habitations De Carillon",
+      "type": "hlm",
+      "address": "5335, 5335T, rue Notre-Dame Ouest",
+      "lat": 45.4693417,
+      "lng": -73.5951368,
+      "arrondissement": "le-sud-ouest",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "10 unités adaptées sur 104 logements (5 × 1 ch., 5 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-carillon"
+      }
+    },
+    {
       "id": "omhm-habitations-drolet-et-b",
       "name": "Habitations Drolet A et B",
       "type": "hlm",
       "address": "5170, 5174, rue Drolet · 5129, 5131, avenue Henri-Julien · 325, 325T, avenue Laurier Est",
       "lat": 45.5261795,
       "lng": -73.5905855,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -37,12 +345,49 @@
       }
     },
     {
+      "id": "omhm-habitations-terrasse-ontario-et-c",
+      "name": "Habitations Terrasse Ontario A et C",
+      "type": "hlm",
+      "address": "1750, 1760, 1770, 1800, 1810, 1820, 1900, 1910, 1920, 1930, rue Montcalm · 1100, rue Sherbrooke Est · 1755, 1757, 1765, 1767, rue Wolfe",
+      "lat": 45.5214458,
+      "lng": -73.5650661,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "12 unités adaptées sur 118 logements (10 × 1 ch., 2 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-terrasse-ontario-et-c"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-marseille",
+      "name": "Habitations De Marseille",
+      "type": "hlm",
+      "address": "6191, rue De Marseille",
+      "lat": 45.5766528,
+      "lng": -73.54131,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 101 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-marseille"
+      }
+    },
+    {
       "id": "omhm-habitations-lafontaine-et-b",
       "name": "Habitations Lafontaine A et B",
       "type": "hlm",
       "address": "1701, rue Alexandre-Desève · 3911, avenue Coloniale · 1605, 1607, rue De Champlain · 1728, 1750, 1752, 1754, rue De La Visitation · 3876, 3878, 3880, rue De Mentana · 4530, 4535, avenue Henri-Julien · 1881, rue Montcalm · 3964, rue Rivard · 2028, 2030, rue Wurtele",
-      "lat": 45.5171734,
-      "lng": -73.5766065,
+      "lat": 45.5230158,
+      "lng": -73.55708,
+      "arrondissement": "ville-marie",
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
@@ -54,12 +399,67 @@
       }
     },
     {
+      "id": "omhm-habitations-boyce-viau",
+      "name": "Habitations Boyce-Viau",
+      "type": "hlm",
+      "address": "4830, 4838, 4846, 4854, 4862, 4870, 4878, 4886, 4894, 4902, 4910, 4918, 4926, 4934, avenue Pierre-De Coubertin · 2601, 2603, 2605, 2607, 2609, 2611, 2613, 2615, 2621, 2623, 2625, 2627, 2629, 2635, 2641, 2647, 2653, 2659, 2661, 2663, 2665, 2667, 2669, 2675, 2677, 2679, 2681, 2683, 2685, 2687, rue Théodore · 2600, 2602, 2604, 2610, 2612, 2614, 2616, 2618, 2620, 2622, 2630, 2632, 2634, 2636, 2638, 2640, 2650, 2660, 2670, 2680, rue Viau",
+      "lat": 45.561507,
+      "lng": -73.5453468,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 206 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-boyce-viau"
+      }
+    },
+    {
+      "id": "omhm-habitations-duquesne",
+      "name": "Habitations Duquesne",
+      "type": "hlm",
+      "address": "6400, 6400T, rue Du Quesne",
+      "lat": 45.582501,
+      "lng": -73.5625608,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-duquesne"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-germain-adam",
+      "name": "Habitations Saint-Germain (Adam)",
+      "type": "hlm",
+      "address": "3215, 3217, 3219, 3221, 3223, 3253, 3255, 3257, 3259, rue Adam",
+      "lat": 45.5403706,
+      "lng": -73.543473,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "3 unités adaptées sur 15 logements (1 × 1 ch., 1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-germain-adam"
+      }
+    },
+    {
       "id": "omhm-habitations-emile-nelligan-i",
       "name": "Habitations Émile-Nelligan I",
       "type": "hlm",
       "address": "5230, rue Saint-Dominique",
       "lat": 45.5246733,
       "lng": -73.5948844,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -71,12 +471,31 @@
       }
     },
     {
+      "id": "omhm-habitations-du-parc-frontenac",
+      "name": "Habitations Du Parc Frontenac",
+      "type": "hlm",
+      "address": "1901, rue Frontenac",
+      "lat": 45.5328717,
+      "lng": -73.5514565,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 92 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-du-parc-frontenac"
+      }
+    },
+    {
       "id": "omhm-habitations-emile-nelligan-ii",
       "name": "Habitations Émile-Nelligan II",
       "type": "hlm",
       "address": "5222, avenue Casgrain · 5115, rue Clark · 5301, 5311, 5321, rue Saint-Dominique",
       "lat": 45.5251508,
       "lng": -73.5941811,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
@@ -88,12 +507,121 @@
       }
     },
     {
+      "id": "omhm-habitations-hotel-de-ville",
+      "name": "Habitations Hôtel-de-Ville",
+      "type": "hlm",
+      "address": "220, 220T, boulevard René-Lévesque Est",
+      "lat": 45.5107677,
+      "lng": -73.5594225,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 88 logements (8 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-hotel-de-ville"
+      }
+    },
+    {
+      "id": "omhm-habitations-la-pepiniere",
+      "name": "Habitations La Pépinière",
+      "type": "hlm",
+      "address": "6000, 6030, 6060, 6090, 6120, 6150, 6180, 6210, avenue Albani · 6050, 6054, 6058, 6062, 6066, 6070, 6074, 6078, 6082, 6086, 6090, 6094, avenue De Charette · 6040, 6045, 6080, 6085, 6100, 6105, 6110, 6115, 6130, 6135, 6160, 6165, allée Des Châtaigniers · 6057, 6059, 6061, 6063, 6065, 6075, 6077, 6079, 6081, 6083, allée Des Pruches · 6060, 6062, 6064, 6066, 6068, 6078, 6080, 6082, 6084, 6086, allée Des Tilleuls · 6005, 6035, 6065, 6095, 6125, 6155, 6185, 6215, rue Du Quesne · 6051, 6055, 6059, 6063, 6067, 6071, 6075, 6079, 6083, 6087, 6091, 6095, boulevard Rosemont",
+      "lat": 45.5824039,
+      "lng": -73.558947,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 192 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-la-pepiniere"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-francois-solano",
+      "name": "Habitations Saint-François-Solano",
+      "type": "hlm",
+      "address": "5425, 5435, avenue Charlemagne · 5410, 5420, 5430, avenue Jeanne-D'Arc · 3985, rue Masson",
+      "lat": 45.5582105,
+      "lng": -73.5695917,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 45 logements (2 × 1 ch., 2 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-francois-solano"
+      }
+    },
+    {
+      "id": "omhm-habitations-desjardins",
+      "name": "Habitations Desjardins",
+      "type": "hlm",
+      "address": "4210, rue La Fontaine",
+      "lat": 45.5506577,
+      "lng": -73.5381019,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 136 logements (6 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-desjardins"
+      }
+    },
+    {
+      "id": "omhm-habitations-viauville",
+      "name": "Habitations Viauville",
+      "type": "hlm",
+      "address": "4920, 4920T, rue La Fontaine",
+      "lat": 45.5580198,
+      "lng": -73.5332779,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 104 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-viauville"
+      }
+    },
+    {
+      "id": "omhm-habitations-fullum",
+      "name": "Habitations Fullum",
+      "type": "hlm",
+      "address": "2328, rue De Bordeaux · 1946, rue Dorion · 1851, rue Dufresne · 2101, 2107, 2111, 2115, 2119, 2121, rue Fullum · 590, rue Poupart",
+      "lat": 45.5291771,
+      "lng": -73.5619896,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "5 unités adaptées sur 42 logements (1 × 1 ch., 1 × 2 ch., 3 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-fullum"
+      }
+    },
+    {
       "id": "omhm-habitations-de-lanaudiere",
       "name": "Habitations De Lanaudière",
       "type": "hlm",
       "address": "1315, 1315T, rue Gilford",
       "lat": 45.5317747,
       "lng": -73.5811202,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -111,6 +639,7 @@
       "address": "4240, 4240T, rue Messier",
       "lat": 45.5348703,
       "lng": -73.5669893,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -122,12 +651,229 @@
       }
     },
     {
+      "id": "omhm-habitations-pierre-bernard",
+      "name": "Habitations Pierre-Bernard",
+      "type": "hlm",
+      "address": "8955, 8955T, rue Sherbrooke Est",
+      "lat": 45.6069987,
+      "lng": -73.5292556,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 93 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-pierre-bernard"
+      }
+    },
+    {
+      "id": "omhm-habitations-seguin",
+      "name": "Habitations Séguin",
+      "type": "hlm",
+      "address": "13687, 13687T, 13701, 13703, 13705, 13707, 13709, 13711, 13713, 13723, 13725, 13727, 13729, 13731, 13733, 13735, 13745, 13755, 13765, 13775, rue Forsyth",
+      "lat": 45.6650948,
+      "lng": -73.5052489,
+      "arrondissement": "riviere-des-prairies-pointe-aux-trembles",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 194 logements (2 × 2 ch., 2 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-seguin"
+      }
+    },
+    {
+      "id": "omhm-habitations-lafond",
+      "name": "Habitations Lafond",
+      "type": "hlm",
+      "address": "3505, avenue Laurier Est",
+      "lat": 45.5525141,
+      "lng": -73.5703019,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 58 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-lafond"
+      }
+    },
+    {
+      "id": "omhm-habitations-honore-beaugrand",
+      "name": "Habitations Honoré-Beaugrand",
+      "type": "hlm",
+      "address": "8051, avenue Souligny",
+      "lat": 45.5942228,
+      "lng": -73.5219047,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 67 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-honore-beaugrand"
+      }
+    },
+    {
+      "id": "omhm-habitations-adelard-langevin",
+      "name": "Habitations Adélard-Langevin",
+      "type": "hlm",
+      "address": "1830, rue Saint-Germain",
+      "lat": 45.5409458,
+      "lng": -73.5454583,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 69 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-adelard-langevin"
+      }
+    },
+    {
+      "id": "omhm-habitations-marguerite-bourgeoys",
+      "name": "Habitations Marguerite-Bourgeoys",
+      "type": "hlm",
+      "address": "2122, rue Panet",
+      "lat": 45.5235614,
+      "lng": -73.5632124,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 58 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-marguerite-bourgeoys"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-chambly",
+      "name": "Habitations De Chambly",
+      "type": "hlm",
+      "address": "3663, rue Rachel Est",
+      "lat": 45.5503523,
+      "lng": -73.5582091,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 70 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-chambly"
+      }
+    },
+    {
+      "id": "omhm-habitations-ville-marie",
+      "name": "Habitations Ville-Marie",
+      "type": "hlm",
+      "address": "555, avenue Bourbonnière · 550, avenue D'Orléans · 555, avenue De La Salle · 525, 535, 540, 550, avenue Letourneux",
+      "lat": 45.5458894,
+      "lng": -73.5355758,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "3 unités adaptées sur 38 logements (3 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-ville-marie"
+      }
+    },
+    {
+      "id": "omhm-habitations-notre-dame",
+      "name": "Habitations Notre-Dame",
+      "type": "hlm",
+      "address": "500, 504, 508, 509, 512, 513, 516, 517, 520, 521, 524, 525, 528, 529, 532, avenue Aird · 505, 511, 515, 519, 523, 527, 531, 535, 539, avenue Bennett · 530, 534, 538, 542, 546, 550, avenue De La Salle · 545, 549, 553, 557, 561, 565, avenue Desjardins · 504, 508, 512, 516, 520, 524, rue Leclaire · 508, 511, 512, 515, 516, 519, 520, 523, 524, 527, 528, 531, rue Saint-Clément · 509, 513, 517, 521, 525, 526, 529, 530, 533, 534, 537, 541, rue Sicard · 505, 509, 513, 517, 521, 525, rue Théodore",
+      "lat": 45.5564283,
+      "lng": -73.5288963,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "4 unités adaptées sur 72 logements (2 × 2 ch., 2 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-notre-dame"
+      }
+    },
+    {
+      "id": "omhm-habitations-valois",
+      "name": "Habitations Valois",
+      "type": "hlm",
+      "address": "528, 530, 532, rue Cuvillier · 551, 553, 555, avenue D'Orléans · 528, 530, 532, rue Darling · 515, 517, 535, rue Davidson · 530, rue Dézéry · 513, 515, 517, rue Moreau · 535, 537, rue Nicolet · 528, 530, 548, 550, rue Préfontaine · 528, 530, 548, 550, 552, avenue Valois",
+      "lat": 45.5412363,
+      "lng": -73.53839,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "8 unités adaptées sur 56 logements (7 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-valois"
+      }
+    },
+    {
+      "id": "omhm-habitations-des-pointeliers",
+      "name": "Habitations Des Pointeliers",
+      "type": "hlm",
+      "address": "850, 860, boulevard Saint-Jean-Baptiste",
+      "lat": 45.6403138,
+      "lng": -73.4953563,
+      "arrondissement": "riviere-des-prairies-pointe-aux-trembles",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 55 logements (2 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-des-pointeliers"
+      }
+    },
+    {
+      "id": "omhm-habitations-joliette",
+      "name": "Habitations Joliette",
+      "type": "hlm",
+      "address": "3350, avenue Du Mont-Royal Est · 4900, place Henri-Valade · 3030, 3040, 3050, 3060, 3070, 3080, 3090, 3100, boulevard Saint-Joseph Est · 4041, 4051, 4061, 4071, 4081, 4091, 4425, 4435, 4445, 4455, 4465, 4475, 4485, 4495, boulevard Saint-Michel",
+      "lat": 45.5477998,
+      "lng": -73.5688488,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "4 unités adaptées sur 98 logements (4 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-joliette"
+      }
+    },
+    {
       "id": "omhm-habitations-de-mentana",
       "name": "Habitations De Mentana",
       "type": "hlm",
       "address": "4110, 4114, 4118, rue De Mentana · 4077, 4081, 4085, 4085T, 4095, 4105, rue Saint-André",
       "lat": 45.5239775,
       "lng": -73.5745292,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -139,12 +885,661 @@
       }
     },
     {
+      "id": "omhm-habitations-rousselot",
+      "name": "Habitations Rousselot",
+      "type": "hlm",
+      "address": "7747, 7777, 7787, 7797, rue De Lanaudière · 1355, 1365, 1375, rue Villeray",
+      "lat": 45.5489839,
+      "lng": -73.6174656,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 118 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-rousselot"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-timothee",
+      "name": "Habitations Saint-Timothée",
+      "type": "hlm",
+      "address": "1441, 1455, rue Saint-André · 1444, rue Saint-Timothée",
+      "lat": 45.517112,
+      "lng": -73.5587124,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "4 unités adaptées sur 64 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-timothee"
+      }
+    },
+    {
+      "id": "omhm-habitations-papineau",
+      "name": "Habitations Papineau A",
+      "type": "hlm",
+      "address": "1895, 1895T, rue Beaudry",
+      "lat": 45.521331,
+      "lng": -73.5609953,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 85 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-papineau"
+      }
+    },
+    {
+      "id": "omhm-habitations-richard-angus",
+      "name": "Habitations Richard-Angus",
+      "type": "hlm",
+      "address": "3441, 3451, 3451T, avenue Du Mont-Royal Est",
+      "lat": 45.5502861,
+      "lng": -73.5642157,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 135 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-richard-angus"
+      }
+    },
+    {
+      "id": "omhm-habitations-pierre-de-coubertin",
+      "name": "Habitations Pierre-de-Coubertin",
+      "type": "hlm",
+      "address": "2600, avenue Aird",
+      "lat": 45.558159,
+      "lng": -73.5470221,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "10 unités adaptées sur 106 logements (10 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-pierre-de-coubertin"
+      }
+    },
+    {
+      "id": "omhm-habitations-henri-gratton",
+      "name": "Habitations Henri-Gratton",
+      "type": "hlm",
+      "address": "8660, 8670, 8680, 8680T, rue Berri · 420, 422, 430, boulevard Crémazie Est",
+      "lat": 45.5455688,
+      "lng": -73.6378331,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 77 logements (7 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-henri-gratton"
+      }
+    },
+    {
+      "id": "omhm-habitations-cartier",
+      "name": "Habitations Cartier",
+      "type": "hlm",
+      "address": "1880, boulevard René-Lévesque Est",
+      "lat": 45.5219759,
+      "lng": -73.5486432,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 18 logements (2 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-cartier"
+      }
+    },
+    {
+      "id": "omhm-habitations-cadot",
+      "name": "Habitations Cadot",
+      "type": "hlm",
+      "address": "551, 555, rue D'Iberville · 530, 534, 536, 540, 544, 548, 552, 555, 556, 559, 563, 567, 571, rue Frontenac",
+      "lat": 45.529473,
+      "lng": -73.5449497,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 31 logements (2 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-cadot"
+      }
+    },
+    {
+      "id": "omhm-habitations-sainte-brigide",
+      "name": "Habitations Sainte-Brigide",
+      "type": "hlm",
+      "address": "1225, rue Alexandre-Desève",
+      "lat": 45.5208046,
+      "lng": -73.5518808,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 65 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-brigide"
+      }
+    },
+    {
+      "id": "omhm-habitations-parthenais",
+      "name": "Habitations Parthenais",
+      "type": "hlm",
+      "address": "2177, rue Logan",
+      "lat": 45.5273102,
+      "lng": -73.552578,
+      "arrondissement": "ville-marie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 126 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-parthenais"
+      }
+    },
+    {
+      "id": "omhm-habitations-beaubien",
+      "name": "Habitations Beaubien",
+      "type": "hlm",
+      "address": "525, 525T, 545, 555, rue Beaubien Est · 6510, 6520, avenue De Chateaubriand",
+      "lat": 45.5352202,
+      "lng": -73.6043642,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "9 unités adaptées sur 112 logements (7 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-beaubien"
+      }
+    },
+    {
+      "id": "omhm-habitations-dauteuil",
+      "name": "Habitations D'Auteuil",
+      "type": "hlm",
+      "address": "255, 255T, 265, boulevard Henri-Bourassa Est",
+      "lat": 45.5528498,
+      "lng": -73.670242,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 90 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-dauteuil"
+      }
+    },
+    {
+      "id": "omhm-habitations-emile-journault",
+      "name": "Habitations Émile-Journault",
+      "type": "hlm",
+      "address": "320, 325, 330, 335, 340, 345, 350, 355, 360, 365, 370, 375, avenue Émile-Journault · 325, 335, 345, 355, 365, 375, rue Farly · 320, 330, 340, 350, 360, 370, avenue Laflamme",
+      "lat": 45.5457521,
+      "lng": -73.6424694,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "4 unités adaptées sur 48 logements (4 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-emile-journault"
+      }
+    },
+    {
+      "id": "omhm-habitations-laure-conan",
+      "name": "Habitations Laure-Conan",
+      "type": "hlm",
+      "address": "3000, 3000T, rue Jean-Talon Est",
+      "lat": 45.55638,
+      "lng": -73.5991006,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 55 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-laure-conan"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-salaberry",
+      "name": "Habitations De Salaberry",
+      "type": "hlm",
+      "address": "2175, 2175T, rue De Salaberry",
+      "lat": 45.5394607,
+      "lng": -73.6978472,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 98 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-salaberry"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-pontbriand-i",
+      "name": "Habitations De Pontbriand I",
+      "type": "hlm",
+      "address": "600, 600T, rue Villeray",
+      "lat": 45.5426629,
+      "lng": -73.6214605,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 89 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-pontbriand-i"
+      }
+    },
+    {
+      "id": "omhm-habitations-gabriel-sagard",
+      "name": "Habitations Gabriel-Sagard",
+      "type": "hlm",
+      "address": "3001, rue Everett",
+      "lat": 45.5587717,
+      "lng": -73.6012311,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 88 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-gabriel-sagard"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-lesplanade-i",
+      "name": "Habitations De l'Esplanade I",
+      "type": "hlm",
+      "address": "8801, 8803, 8815, 8825, 8835, 8845, 8861, 8871, 8873, avenue De L'Esplanade",
+      "lat": 45.5392334,
+      "lng": -73.6455645,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 22 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-lesplanade-i"
+      }
+    },
+    {
+      "id": "omhm-habitations-des-carriers",
+      "name": "Habitations Des Carriers",
+      "type": "hlm",
+      "address": "8605, boulevard Saint-Michel",
+      "lat": 45.5681044,
+      "lng": -73.618415,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 90 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-des-carriers"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-fleurimont",
+      "name": "Habitations De Fleurimont",
+      "type": "hlm",
+      "address": "5977, rue Boyer",
+      "lat": 45.5353339,
+      "lng": -73.5978088,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 49 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-fleurimont"
+      }
+    },
+    {
+      "id": "omhm-habitations-isabella",
+      "name": "Habitations Isabella",
+      "type": "hlm",
+      "address": "4550, avenue Isabella",
+      "lat": 45.4922582,
+      "lng": -73.6257277,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 112 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-isabella"
+      }
+    },
+    {
+      "id": "omhm-habitations-bruchesi",
+      "name": "Habitations Bruchési",
+      "type": "hlm",
+      "address": "9444, avenue Bruchési",
+      "lat": 45.5704936,
+      "lng": -73.6383425,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-bruchesi"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-la-mennais",
+      "name": "Habitations De La Mennais",
+      "type": "hlm",
+      "address": "387, 387T, rue Beaubien Est",
+      "lat": 45.5337611,
+      "lng": -73.6057699,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 113 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-la-mennais"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-lesplanade-ii",
+      "name": "Habitations De l'Esplanade II",
+      "type": "hlm",
+      "address": "8885, avenue De L'Esplanade",
+      "lat": 45.5394484,
+      "lng": -73.6462821,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "10 unités adaptées sur 10 logements (7 × 1 ch., 3 × 2 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-lesplanade-ii"
+      }
+    },
+    {
+      "id": "omhm-habitations-place-lucy",
+      "name": "Habitations Place Lucy",
+      "type": "hlm",
+      "address": "5600, boulevard Décarie",
+      "lat": 45.4870701,
+      "lng": -73.6378951,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 67 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-place-lucy"
+      }
+    },
+    {
+      "id": "omhm-habitations-marie-rollet",
+      "name": "Habitations Marie-Rollet",
+      "type": "hlm",
+      "address": "6556, 26e avenue",
+      "lat": 45.5649621,
+      "lng": -73.579003,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 77 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-marie-rollet"
+      }
+    },
+    {
+      "id": "omhm-habitations-cremazie",
+      "name": "Habitations Crémazie",
+      "type": "hlm",
+      "address": "8750, rue Berri · 401, boulevard Crémazie Est",
+      "lat": 45.5458184,
+      "lng": -73.6397547,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 74 logements (6 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-cremazie"
+      }
+    },
+    {
+      "id": "omhm-habitations-boyer",
+      "name": "Habitations Boyer",
+      "type": "hlm",
+      "address": "1000, rue Villeray",
+      "lat": 45.5450585,
+      "lng": -73.619532,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 97 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-boyer"
+      }
+    },
+    {
+      "id": "omhm-habitations-marquette",
+      "name": "Habitations Marquette",
+      "type": "hlm",
+      "address": "6522, 6526, 6530, rue Marquette",
+      "lat": 45.5426135,
+      "lng": -73.5979879,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 11 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-marquette"
+      }
+    },
+    {
+      "id": "omhm-habitations-rosemont",
+      "name": "Habitations Rosemont",
+      "type": "hlm",
+      "address": "6005, 6145, 6155, 6165, 6175, 6185, 6195, 18e avenue · 6000, 6010, 6020, 6030, 6178, 6180, 19e avenue · 3800, 3810, 3820, 3825, 3829, 3833, 3837, 3841, 3845, 3855, 3860, allée De Bellechasse · 3810, 3814, 3818, 3822, 3826, 3830, 3834, 3850, rue De Bellechasse · 3855, boulevard Rosemont",
+      "lat": 45.5586014,
+      "lng": -73.5772777,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "2 unités adaptées sur 136 logements (1 × 2 ch., 1 × 4 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-rosemont"
+      }
+    },
+    {
+      "id": "omhm-habitations-andre-corneau",
+      "name": "Habitations André-Corneau",
+      "type": "hlm",
+      "address": "8383, 14e avenue",
+      "lat": 45.5432717,
+      "lng": -73.680493,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-andre-corneau"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-roch",
+      "name": "Habitations Saint-Roch",
+      "type": "hlm",
+      "address": "400, 400T, rue Jarry Ouest",
+      "lat": 45.5328766,
+      "lng": -73.6340379,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 97 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-roch"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-marc",
+      "name": "Habitations Saint-Marc",
+      "type": "hlm",
+      "address": "6275, 6275T, 6e avenue",
+      "lat": 45.5518104,
+      "lng": -73.58608,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 84 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-marc"
+      }
+    },
+    {
+      "id": "omhm-habitations-de-bellechasse",
+      "name": "Habitations De Bellechasse",
+      "type": "hlm",
+      "address": "6001, 6060, 6061, 29e avenue",
+      "lat": 45.5651744,
+      "lng": -73.5709198,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 108 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-de-bellechasse"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-etienne",
+      "name": "Habitations Saint-Étienne",
+      "type": "hlm",
+      "address": "5888, 5892, 5896, 5900, 5904, 5908, 5912, 5916, 5920, 5924, 5928, 5932, 5936, 5940, 5944, avenue Christophe-Colomb",
+      "lat": 45.5353258,
+      "lng": -73.5968357,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "4 unités adaptées sur 30 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-etienne"
+      }
+    },
+    {
+      "id": "omhm-habitations-chapleau",
+      "name": "Habitations Chapleau",
+      "type": "hlm",
+      "address": "5185, 5187, 5205, 5207, 5215, 5217, rue Chapleau",
+      "lat": 45.5424399,
+      "lng": -73.5780366,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 18 logements (1 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-chapleau"
+      }
+    },
+    {
       "id": "omhm-habitations-sainte-croix",
       "name": "Habitations Sainte-Croix",
       "type": "hlm",
       "address": "4444, rue Clark",
       "lat": 45.5187597,
       "lng": -73.5856712,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -156,12 +1551,103 @@
       }
     },
     {
+      "id": "omhm-habitations-ahuntsic",
+      "name": "Habitations Ahuntsic",
+      "type": "hlm",
+      "address": "10333, 10333T, rue Berri · 515, 525, rue Fleury Est",
+      "lat": 45.5530406,
+      "lng": -73.6627499,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 75 logements (4 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-ahuntsic"
+      }
+    },
+    {
+      "id": "omhm-habitations-place-newman",
+      "name": "Habitations Place Newman",
+      "type": "hlm",
+      "address": "6300, boulevard Décarie",
+      "lat": 45.4896362,
+      "lng": -73.6439271,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "10 unités adaptées sur 62 logements (8 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-place-newman"
+      }
+    },
+    {
+      "id": "omhm-habitations-lavoie",
+      "name": "Habitations Lavoie",
+      "type": "hlm",
+      "address": "4515, 4525, 4535, 4545, 4555, 4565, 4575, 4585, 4595, 4600, 4610, 4620, 4630, 4640, 4650, avenue Isabella · 5250, 5260, 5270, 5280, 5290, rue Lavoie",
+      "lat": 45.4918615,
+      "lng": -73.6264433,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 87 logements (8 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-lavoie"
+      }
+    },
+    {
+      "id": "omhm-habitations-sainte-lucie",
+      "name": "Habitations Sainte-Lucie",
+      "type": "hlm",
+      "address": "8753, 8801, 8807, 8813, 8819, 8831, 8839, 8845, 8851, 15e avenue",
+      "lat": 45.5711982,
+      "lng": -73.6200102,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 34 logements (2 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-lucie"
+      }
+    },
+    {
+      "id": "omhm-habitations-cote-des-neiges",
+      "name": "Habitations Côte-Des-Neiges",
+      "type": "hlm",
+      "address": "5250, 5250T, avenue Gatineau",
+      "lat": 45.4964118,
+      "lng": -73.6208237,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 84 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-cote-des-neiges"
+      }
+    },
+    {
       "id": "omhm-habitations-sainte-agnes",
       "name": "Habitations Sainte-Agnès",
       "type": "hlm",
       "address": "350, rue Boucher",
       "lat": 45.5273304,
       "lng": -73.5917908,
+      "arrondissement": "le-plateau-mont-royal",
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
@@ -170,6 +1656,366 @@
       "source": {
         "name": "OMHM",
         "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-sainte-agnes"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-georges-i",
+      "name": "Habitations Saint-Georges I",
+      "type": "hlm",
+      "address": "7255, rue Lajeunesse",
+      "lat": 45.5403024,
+      "lng": -73.6156292,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "3 unités adaptées sur 72 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-georges-i"
+      }
+    },
+    {
+      "id": "omhm-habitations-bourret",
+      "name": "Habitations Bourret",
+      "type": "hlm",
+      "address": "5814, 5820, boulevard Décarie",
+      "lat": 45.4879226,
+      "lng": -73.6397649,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "1 unité adaptée sur 91 logements (1 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-bourret"
+      }
+    },
+    {
+      "id": "omhm-habitations-akela",
+      "name": "Habitations Akela",
+      "type": "hlm",
+      "address": "12005, 41E avenue · 8977, 8979, 8981, boulevard Maurice-Duplessis",
+      "lat": 45.643205,
+      "lng": -73.5746743,
+      "arrondissement": "riviere-des-prairies-pointe-aux-trembles",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 24 logements (1 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-akela"
+      }
+    },
+    {
+      "id": "omhm-habitations-des-hirondelles",
+      "name": "Habitations Des Hirondelles",
+      "type": "hlm",
+      "address": "2550, 2550T, rue Fleury Est",
+      "lat": 45.5758013,
+      "lng": -73.6466328,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 79 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-des-hirondelles"
+      }
+    },
+    {
+      "id": "omhm-habitations-emmaus",
+      "name": "Habitations Emmaüs",
+      "type": "hlm",
+      "address": "9400, rue Irène-Joly",
+      "lat": 45.5720341,
+      "lng": -73.6368601,
+      "arrondissement": "villeray-saint-michel-parc-extension",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 84 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-emmaus"
+      }
+    },
+    {
+      "id": "omhm-habitations-mayfair",
+      "name": "Habitations Mayfair",
+      "type": "hlm",
+      "address": "6900, chemin De La Côte-Saint-Luc · 5450, avenue Rosedale",
+      "lat": 45.4674448,
+      "lng": -73.6517483,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 107 logements (7 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-mayfair"
+      }
+    },
+    {
+      "id": "omhm-habitations-maurice-duplessis",
+      "name": "Habitations Maurice-Duplessis",
+      "type": "hlm",
+      "address": "8983, 8985, 8987, 8989, 8991, 8993, 8995, boulevard Maurice-Duplessis",
+      "lat": 45.6437003,
+      "lng": -73.5740207,
+      "arrondissement": "riviere-des-prairies-pointe-aux-trembles",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 25 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-maurice-duplessis"
+      }
+    },
+    {
+      "id": "omhm-habitations-berri-lajeunesse",
+      "name": "Habitations Berri-Lajeunesse",
+      "type": "hlm",
+      "address": "9550, 9550T, rue Lajeunesse",
+      "lat": 45.5503458,
+      "lng": -73.6528806,
+      "arrondissement": "ahuntsic-cartierville",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "9 unités adaptées sur 112 logements (9 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-berri-lajeunesse"
+      }
+    },
+    {
+      "id": "omhm-habitations-perras",
+      "name": "Habitations Perras",
+      "type": "hlm",
+      "address": "8740, 8746, 8752, 8758, 8764, 8770, 8772, 8776, 8782, 8784, boulevard Perras",
+      "lat": 45.6453767,
+      "lng": -73.5830416,
+      "arrondissement": "riviere-des-prairies-pointe-aux-trembles",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "1 unité adaptée sur 37 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-perras"
+      }
+    },
+    {
+      "id": "omhm-habitations-saint-vallier",
+      "name": "Habitations Saint-Vallier",
+      "type": "hlm",
+      "address": "5600, 5610, rue De Saint-Vallier · 401, 405, 409, 413, 417, 421, 425, 429, rue Des Carrières · 5605, 5655, 5675, rue Saint-Denis",
+      "lat": 45.5308088,
+      "lng": -73.5965719,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "5 unités adaptées sur 149 logements (5 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-saint-vallier"
+      }
+    },
+    {
+      "id": "omhm-habitations-place-lachine",
+      "name": "Habitations Place Lachine",
+      "type": "hlm",
+      "address": "1500, 1610, 1610T, 1720, 1830, 1940, 2050, 2160, 2270, rue Duff Court",
+      "lat": 45.4463317,
+      "lng": -73.6784608,
+      "arrondissement": "lachine",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "3 unités adaptées sur 396 logements (2 × 1 ch., 1 × 2 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-place-lachine"
+      }
+    },
+    {
+      "id": "omhm-habitations-roland-farineau-pierre-remy",
+      "name": "Habitations Roland-Farineau / Pierre-Rémy",
+      "type": "hlm",
+      "address": "485, 18e avenue · 45, 8e avenue",
+      "lat": 45.4376176,
+      "lng": -73.6807213,
+      "arrondissement": "lachine",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": false,
+        "notes": "2 unités adaptées sur 42 logements (1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-roland-farineau-pierre-remy"
+      }
+    },
+    {
+      "id": "omhm-habitations-john-patterson",
+      "name": "Habitations John-Patterson",
+      "type": "hlm",
+      "address": "3000, rue Saint-Antoine",
+      "lat": 45.4402828,
+      "lng": -73.6907767,
+      "arrondissement": "lachine",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "7 unités adaptées sur 106 logements (1 × 1 ch., 6 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-john-patterson"
+      }
+    },
+    {
+      "id": "omhm-habitations-le-domaine-des-rapides",
+      "name": "Habitations Le Domaine des Rapides",
+      "type": "hlm",
+      "address": "720, 720T, rue Gamelin",
+      "lat": 45.4228878,
+      "lng": -73.6092045,
+      "arrondissement": "lasalle",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "6 unités adaptées sur 105 logements (6 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-le-domaine-des-rapides"
+      }
+    },
+    {
+      "id": "omhm-habitations-shevchenko",
+      "name": "Habitations Shevchenko",
+      "type": "hlm",
+      "address": "1580, boulevard Shevchenko",
+      "lat": 45.4308896,
+      "lng": -73.6246585,
+      "arrondissement": "lasalle",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "3 unités adaptées sur 31 logements (1 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-shevchenko"
+      }
+    },
+    {
+      "id": "omhm-habitations-beaudet",
+      "name": "Habitations Beaudet",
+      "type": "hlm",
+      "address": "695, 695T, boulevard Décarie",
+      "lat": 45.5107277,
+      "lng": -73.6765909,
+      "arrondissement": "saint-laurent",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "8 unités adaptées sur 91 logements (8 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-beaudet"
+      }
+    },
+    {
+      "id": "omhm-habitations-badeaux-sauve",
+      "name": "Habitations Badeaux-Sauvé",
+      "type": "hlm",
+      "address": "680, avenue Sainte-Croix",
+      "lat": 45.5122703,
+      "lng": -73.6740616,
+      "arrondissement": "saint-laurent",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 49 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-badeaux-sauve"
+      }
+    },
+    {
+      "id": "omhm-maison-roland-bouchard",
+      "name": "Maison Roland-Bouchard",
+      "type": "hlm",
+      "address": "1500, rue Elizabeth",
+      "lat": 45.5229818,
+      "lng": -73.6833882,
+      "arrondissement": "saint-laurent",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "4 unités adaptées sur 48 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/maison-roland-bouchard"
+      }
+    },
+    {
+      "id": "omhm-habitations-emilien-gagnon",
+      "name": "Habitations Émilien-Gagnon",
+      "type": "hlm",
+      "address": "6150, 6180, rue Jarry Est",
+      "lat": 45.5917558,
+      "lng": -73.5835777,
+      "arrondissement": "saint-leonard",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "12 unités adaptées sur 208 logements (12 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/habitations-emilien-gagnon"
+      }
+    },
+    {
+      "id": "omhm-manoir-anjou",
+      "name": "Manoir Anjou",
+      "type": "hlm",
+      "address": "7025, 7025T, avenue Rondeau",
+      "lat": 45.6142908,
+      "lng": -73.5460304,
+      "arrondissement": "anjou",
+      "accessibility": {
+        "level": "accessible",
+        "ascenseur": true,
+        "notes": "2 unités adaptées sur 82 logements (1 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+      },
+      "source": {
+        "name": "OMHM",
+        "url": "https://www.omhm.qc.ca/fr/repertoire-des-habitations/manoir-anjou"
       }
     }
   ]

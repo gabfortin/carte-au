@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 Importe, depuis le répertoire des habitations de l'Office municipal
-d'habitation de Montréal (OMHM), les immeubles du Plateau-Mont-Royal qui
-comptent des unités adaptées, et les écrit au format utilisé par l'app
+d'habitation de Montréal (OMHM), les immeubles de Montréal qui comptent des
+unités adaptées, et les écrit au format utilisé par l'app
 (data/logements-omhm.json).
 
 Les fiches de l'OMHM n'ont pas de coordonnées : on les prend dans le jeu de
-données ouvertes de la Ville "Logements hors marché", par nom de projet.
+données ouvertes de la Ville "Logements hors marché", par nom de projet (ce
+jeu donne aussi l'arrondissement de chaque projet).
 
 Les logements saisis à la main restent dans data/logements.json ; ce
 fichier-ci est régénéré à chaque import.
@@ -18,19 +19,21 @@ import html
 import io
 import json
 import re
+import sys
 import unicodedata
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from montreal_arrondissements import slug_arrondissement
+
 OMHM_BASE = "https://www.omhm.qc.ca"
-# Identifiant du Plateau-Mont-Royal dans le filtre du répertoire de l'OMHM.
-OMHM_LISTE_URL = OMHM_BASE + "/fr/habitations?arrondissement_1=99&page={page}"
+OMHM_LISTE_URL = OMHM_BASE + "/fr/habitations?page={page}"
 HORS_MARCHE_URL = (
     "https://donnees.montreal.ca/fr/dataset/d26fad0f-2eae-44d5-88a0-2bc699fd2592/"
     "resource/bb380faa-1ba5-458b-b520-9e2287bcc07f/download/"
     "log_horsmarche_donneesouvertes_20251231.csv"
 )
-ARRONDISSEMENT = "Le Plateau-Mont-Royal"
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "logements-omhm.json"
 
 
@@ -62,7 +65,7 @@ def field_items(page: str, name: str):
 
 def building_links():
     links = []
-    for page in range(10):
+    for page in range(80):
         found = re.findall(r'href="(/fr/repertoire-des-habitations/[^"]+)"', fetch_text(OMHM_LISTE_URL.format(page=page)))
         new = [link for link in dict.fromkeys(found) if link not in links]
         if not new:
@@ -91,7 +94,7 @@ def parse_building(url: str) -> dict:
 
 def hors_marche_rows():
     text = fetch_text(HORS_MARCHE_URL)
-    return [r for r in csv.DictReader(io.StringIO(text.lstrip("﻿"))) if "Plateau" in r["arrondvill"]]
+    return list(csv.DictReader(io.StringIO(text.lstrip("﻿"))))
 
 
 def locate(building: dict, rows):
@@ -103,8 +106,7 @@ def locate(building: dict, rows):
     # Les unités adaptées sont presque toujours dans la tour avec ascenseurs :
     # on vise cette adresse si la fiche la donne, sinon la première adresse.
     target = normalize(building["elevators"] or " ".join(building["addresses"]))
-    best = next((r for r in candidates if normalize(r["nomrue"]) in target), candidates[0])
-    return float(best["Latitude_y"]), float(best["Long_x"])
+    return next((r for r in candidates if normalize(r["nomrue"]) in target), candidates[0])
 
 
 def unit_label(unit: str) -> str:
@@ -117,9 +119,13 @@ def convert(buildings, rows) -> dict:
     for b in buildings:
         if not b["adapted_count"]:
             continue
-        position = locate(b, rows)
-        if not position:
+        row = locate(b, rows)
+        if not row:
             print(f"Position introuvable, ignoré : {b['name']}")
+            continue
+        arrondissement = slug_arrondissement(row["arrondvill"])
+        if not arrondissement:
+            print(f"Arrondissement introuvable ou hors Montréal, ignoré : {b['name']}")
             continue
         notes = [
             f"{b['adapted_count']} unité{'s' if b['adapted_count'] > 1 else ''} adaptée{'s' if b['adapted_count'] > 1 else ''}"
@@ -129,15 +135,15 @@ def convert(buildings, rows) -> dict:
         if len(b["addresses"]) > 1:
             notes.append("L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées.")
         notes.append("Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM.")
-        lat, lng = position
         logements.append(
             {
                 "id": "omhm-" + b["url"].rstrip("/").rsplit("/", 1)[-1],
                 "name": b["name"],
                 "type": "hlm",
                 "address": " · ".join(b["addresses"]),
-                "lat": lat,
-                "lng": lng,
+                "lat": float(row["Latitude_y"]),
+                "lng": float(row["Long_x"]),
+                "arrondissement": arrondissement,
                 "accessibility": {
                     "level": "accessible",
                     "ascenseur": bool(b["elevators"]),

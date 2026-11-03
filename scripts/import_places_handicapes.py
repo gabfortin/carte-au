@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """
 Importe les places de stationnement et les débarcadères réservés aux
-personnes handicapées du Plateau-Mont-Royal, depuis deux sources ouvertes, et
-les écrit au format utilisé par l'app (data/places-handicapes.json) :
+personnes handicapées de Montréal, depuis deux sources ouvertes, et les
+écrit au format utilisé par l'app (data/places-handicapes.json) :
 
 - Agence de mobilité durable (AMD) : places tarifées réservées (Places.csv,
-  sGenre = HANDICAPÉ). Le fichier n'indique pas l'arrondissement : on garde
-  les places situées dans la limite officielle du Plateau.
+  sGenre = HANDICAPÉ). Le fichier n'indique pas l'arrondissement : on le
+  détermine en testant chacune des places contre les limites officielles de
+  chacun des 19 arrondissements. Une place qui ne tombe dans aucun (ex :
+  dans une ville liée comme Westmount) est ignorée.
 - Ville de Montréal, "Signalisation (stationnement sur rue)" : panneaux
   "réservé handicapés" et "débarcadère réservé handicapés", un point par
-  poteau. Un poteau à moins de DEDUP_METRES d'une place de l'AMD désigne la
-  même place : son panneau est ajouté aux notes de la place de l'AMD.
+  poteau, avec son arrondissement (NOM_ARROND). Un poteau à moins de
+  DEDUP_METRES d'une place de l'AMD désigne la même place : son panneau est
+  ajouté aux notes de la place de l'AMD.
 
 Les places saisies à la main restent dans data/stationnements.json et
 data/debarcaderes.json ; ce fichier-ci est régénéré à chaque import.
@@ -21,8 +24,12 @@ import csv
 import io
 import json
 import math
+import sys
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from montreal_arrondissements import slug_arrondissement
 
 AMD_PLACES_URL = "https://www.agencemobilitedurable.ca/images/data/Places.csv"
 AMD_DATASET_URL = "https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles"
@@ -38,7 +45,6 @@ LIMITES_URL = (
     "resource/e18bfd07-edc8-4ce8-8a5a-3b617662a794/download/"
     "limites-administratives-agglomeration.geojson"
 )
-ARRONDISSEMENT = "Le Plateau-Mont-Royal"
 DEDUP_METRES = 15
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "places-handicapes.json"
 
@@ -59,12 +65,26 @@ def fetch_csv(url: str, encoding: str):
         yield from csv.DictReader(io.TextIOWrapper(resp, encoding=encoding))
 
 
-def fetch_borough_polygons(name: str):
+def fetch_arrondissement_polygons():
+    """{slug: polygones} pour chacun des 19 arrondissements (les villes liées,
+    ex : Westmount, Mont-Royal, sont exclues : TYPE != "Arrondissement")."""
     with open_url(LIMITES_URL) as resp:
         geojson = json.load(resp)
-    feature = next(f for f in geojson["features"] if f["properties"]["NOM"] == name)
-    geometry = feature["geometry"]
-    return geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+    polygons = {}
+    for feature in geojson["features"]:
+        props = feature["properties"]
+        if props["TYPE"] != "Arrondissement":
+            continue
+        slug = slug_arrondissement(props["NOM"])
+        if not slug:
+            continue
+        geometry = feature["geometry"]
+        polygons[slug] = geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+    return polygons
+
+
+def arrondissement_at(lng, lat, arrondissement_polygons):
+    return next((slug for slug, polygons in arrondissement_polygons.items() if in_polygons(lng, lat, polygons)), None)
 
 
 def in_ring(lng, lat, ring):
@@ -89,16 +109,22 @@ def distance_m(a, b):
     return 6371000 * math.hypot(dx, dy)
 
 
-def amd_places(polygons):
+def amd_places(arrondissement_polygons):
     places = []
     for row in fetch_csv(AMD_PLACES_URL, "cp1252"):
         if row["sGenre"] != "HANDICAPÉ":
             continue
         lng, lat = float(row["nPositionCentreLongitude"]), float(row["nPositionCentreLatitude"])
-        if not in_polygons(lng, lat, polygons):
+        arrondissement = arrondissement_at(lng, lat, arrondissement_polygons)
+        if not arrondissement:
             continue
         hors_rue = row["sLocalisation"] == "H"
-        tarif = f"{int(row['nTarifHoraire']) / 100:.2f}".replace(".", ",")
+        # nTarifHoraire est vide pour certains types d'exploitation (ex : "Parcojour
+        # Payez-Partez"), où le tarif n'est pas un taux horaire fixe.
+        if row["nTarifHoraire"]:
+            tarif_note = f"Place tarifée : {int(row['nTarifHoraire']) / 100:.2f}".replace(".", ",") + " $/h."
+        else:
+            tarif_note = "Place tarifée (tarif variable, voir la signalisation sur place)."
         places.append(
             {
                 "id": f"amd-{row['sNoPlace']}",
@@ -108,7 +134,8 @@ def amd_places(polygons):
                 "address": f"Terrain {row['sNomRue']}, Montréal" if hors_rue else f"{row['sNomRue']}, Montréal",
                 "lat": lat,
                 "lng": lng,
-                "notes": f"Place tarifée : {tarif} $/h.",
+                "arrondissement": arrondissement,
+                "notes": tarif_note,
                 "source": {"name": "Agence de mobilité durable", "url": AMD_DATASET_URL},
             }
         )
@@ -130,14 +157,21 @@ def sign_text(description: str) -> str:
 def signalisation_poles():
     poles = {}
     for row in fetch_csv(SIGNALISATION_URL, "utf-8"):
-        if row["NOM_ARROND"] != ARRONDISSEMENT:
+        arrondissement = slug_arrondissement(row["NOM_ARROND"])
+        if not arrondissement:
             continue
         kind = kind_of(row["DESCRIPTION_RPA"])
         if not kind:
             continue
         pole = poles.setdefault(
             row["POTEAU_ID_POT"],
-            {"kind": kind, "lat": float(row["Latitude"]), "lng": float(row["Longitude"]), "signs": []},
+            {
+                "kind": kind,
+                "lat": float(row["Latitude"]),
+                "lng": float(row["Longitude"]),
+                "arrondissement": arrondissement,
+                "signs": [],
+            },
         )
         text = sign_text(row["DESCRIPTION_RPA"])
         if text not in pole["signs"]:
@@ -149,8 +183,8 @@ def signs_note(signs):
     return "Panneau : " + " · ".join(f"« {s} »" for s in signs)
 
 
-def convert(polygons) -> dict:
-    amd = amd_places(polygons)
+def convert(arrondissement_polygons) -> dict:
+    amd = amd_places(arrondissement_polygons)
     stationnements = list(amd)
     debarcaderes = []
     for pole_id, pole in sorted(signalisation_poles().items()):
@@ -166,6 +200,7 @@ def convert(polygons) -> dict:
             "address": None,
             "lat": pole["lat"],
             "lng": pole["lng"],
+            "arrondissement": pole["arrondissement"],
             "notes": signs_note(pole["signs"]),
             "source": {"name": "Ville de Montréal (signalisation)", "url": SIGNALISATION_DATASET_URL},
         }
@@ -187,7 +222,7 @@ def convert(polygons) -> dict:
 
 
 def main():
-    data = convert(fetch_borough_polygons(ARRONDISSEMENT))
+    data = convert(fetch_arrondissement_polygons())
     OUTPUT_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

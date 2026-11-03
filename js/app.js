@@ -410,7 +410,7 @@ const LAYER_INFO = {
       "Taille des logements, clientèle visée, ascenseur",
       "Conditions d'admissibilité, pour les HLM",
     ],
-    process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations?arrondissement_1=99", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées; leur position vient du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
+    process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées; leur position et leur arrondissement viennent du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. Le jeu couvre tout Montréal. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
   },
   "batiments-municipaux": {
     about: "Piscines, arénas, bibliothèques, centres sportifs et autres bâtiments de la Ville et de l'arrondissement.",
@@ -452,12 +452,12 @@ const LAYER_INFO = {
   "stationnements-payants": {
     about: "Places tarifées réservées aux détenteurs d'une vignette pour personnes handicapées.",
     data: ["Emplacement", "Tarif horaire", "Panneau de signalisation associé, s'il y a lieu"],
-    process: `Import automatisé des ${externalLink("https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles", "données ouvertes de l'Agence de mobilité durable")} (licence CC-BY 4.0), en gardant les places situées dans les limites du Plateau. Un panneau « réservé handicapés » de la Ville à moins de 15 m d'une place y est jumelé.`,
+    process: `Import automatisé des ${externalLink("https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles", "données ouvertes de l'Agence de mobilité durable")} (licence CC-BY 4.0). Le jeu couvre tout Montréal. Un panneau « réservé handicapés » de la Ville à moins de 15 m d'une place y est jumelé.`,
   },
   debarcaderes: {
     about: "Zones d'arrêt réservées pour faire monter ou descendre une personne handicapée.",
     data: ["Emplacement et description", "Lien Street View pour voir l'aménagement sur place"],
-    process: `Saisie à la main, complétée par les panneaux « débarcadère réservé handicapés » du jeu ${externalLink("https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant", "Signalisation (stationnement sur rue)")} de la Ville, importés automatiquement.`,
+    process: `Saisie à la main pour le Plateau, complétée par les panneaux « débarcadère réservé handicapés » du jeu ${externalLink("https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant", "Signalisation (stationnement sur rue)")} de la Ville, importés automatiquement pour tout Montréal.`,
     template: "ajouter-debarcadere.yml",
   },
   "feux-sonores": {
@@ -523,6 +523,7 @@ const LAYER_CONFIG = [
     color: ["#4ade80", "#15803d"],
     icon: ICONS.logement,
     getItems: (data) => data.logements || [],
+    getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
     getPopup: logementPopup,
   },
   {
@@ -582,6 +583,7 @@ const LAYER_CONFIG = [
     icon: ICONS.stationnementPayant,
     size: 28,
     getItems: (data) => data.stationnements || [],
+    getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
     getPopup: stationnementPopup,
   },
   {
@@ -591,6 +593,7 @@ const LAYER_CONFIG = [
     files: ["data/debarcaderes.json", "data/places-handicapes.json"],
     defaultVisible: true,
     color: ["#3b82f6", "#1e3a8a"],
+    getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
     icon: ICONS.debarcadere,
     size: 28,
     getItems: (data) => data.debarcaderes || [],
