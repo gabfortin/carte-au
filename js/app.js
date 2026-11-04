@@ -639,7 +639,9 @@ const LAYER_GROUPS = {
   },
 };
 
-const map = L.map("map", { zoomControl: false, attributionControl: false }).setView([45.5247742, -73.5855742], 14);
+// Vue de départ (Plateau-Mont-Royal), utilisée aussi pour « Tous les arrondissements ».
+const DEFAULT_VIEW = { center: [45.5247742, -73.5855742], zoom: 14 };
+const map = L.map("map", { zoomControl: false, attributionControl: false }).setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
 
 L.control.zoom({ position: "bottomright", zoomInTitle: "Zoom avant", zoomOutTitle: "Zoom arrière" }).addTo(map);
 L.control.attribution({ position: "bottomright" }).addTo(map);
@@ -1411,6 +1413,36 @@ function renderAllLayers() {
   });
 }
 
+// Rectangles englobants des 19 arrondissements (data/arrondissements.json, généré par
+// scripts/import_arrondissements.py) : la carte se cadre sur l'arrondissement choisi,
+// au centre de la zone visible (sous l'en-tête, à droite du panneau latéral ouvert).
+let arrondissementBounds = {};
+const arrondissementBoundsReady = fetch("data/arrondissements.json")
+  .then((res) => res.json())
+  .then((data) => { arrondissementBounds = data; })
+  .catch((err) => console.error("Erreur de chargement (data/arrondissements.json):", err));
+
+function frameArrondissement(slug, animate) {
+  if (slug === "tous") {
+    map.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom, { animate });
+    return;
+  }
+  const arr = arrondissementBounds[slug];
+  if (!arr) return;
+  const area = visibleMapArea();
+  map.fitBounds(arr.bounds, {
+    paddingTopLeft: [area.left, area.top],
+    paddingBottomRight: [window.innerWidth - area.right, window.innerHeight - area.bottom],
+    maxZoom: 16,
+    animate,
+  });
+}
+
+// Lien direct ?arrondissement=<slug> : cadrage dès le chargement, sans animation.
+if (selectedArrondissement !== "tous") {
+  arrondissementBoundsReady.then(() => frameArrondissement(selectedArrondissement, false));
+}
+
 arrondissementSelect.addEventListener("change", () => {
   selectedArrondissement = arrondissementSelect.value;
   const url = new URL(location.href);
@@ -1418,6 +1450,7 @@ arrondissementSelect.addEventListener("change", () => {
   else url.searchParams.set("arrondissement", selectedArrondissement);
   history.replaceState(null, "", url);
   renderAllLayers();
+  frameArrondissement(selectedArrondissement, true);
 });
 
 // On attend que toutes les couches soient chargées avant de poser les marqueurs, pour

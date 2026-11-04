@@ -29,6 +29,12 @@ Toutes les couches sont saisies pour Le Plateau-Mont-Royal et y sont donc rattac
 
 Le paramètre d'URL `?arrondissement=<slug>` donne un lien direct vers une carte déjà filtrée, ex : `index.html?arrondissement=ville-marie`. Il est mis à jour automatiquement (sans ajouter d'entrée à l'historique) quand on change le filtre, et retiré quand on revient à « Tous les arrondissements ».
 
+Choisir un arrondissement (dans le filtre ou par l'URL) **cadre aussi la carte** sur cet arrondissement : centrée sur lui, au zoom adapté à sa taille, dans la partie visible de la carte (sous l'en-tête, à droite du panneau latéral ouvert). « Tous les arrondissements » ramène à la vue de départ (Plateau-Mont-Royal). Les rectangles englobants des 19 arrondissements sont dans `data/arrondissements.json`, généré à partir des [limites administratives](https://donnees.montreal.ca/dataset/limites-administratives-agglomeration) de la Ville par :
+
+```bash
+python3 scripts/import_arrondissements.py   # à relancer seulement si les limites changent
+```
+
 ## Recherche
 
 La barre de recherche (nom ou adresse) ne porte que sur les commerces : elle affiche les résultats correspondants dans un dropdown sous la barre, et filtre les marqueurs commerces affichés sur la carte. Cliquer un résultat centre la carte sur le commerce et ouvre son popup. Cette barre est masquée quand la couche Commerces est désactivée.

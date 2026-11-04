@@ -1,0 +1,325 @@
+{
+  "ahuntsic-cartierville": {
+    "nom": "Ahuntsic-Cartierville",
+    "bounds": [
+      [
+        45.50649,
+        -73.76369
+      ],
+      [
+        45.58363,
+        -73.62174
+      ]
+    ],
+    "centre": [
+      45.54506,
+      -73.69272
+    ]
+  },
+  "anjou": {
+    "nom": "Anjou",
+    "bounds": [
+      [
+        45.59031,
+        -73.60314
+      ],
+      [
+        45.63421,
+        -73.5355
+      ]
+    ],
+    "centre": [
+      45.61226,
+      -73.56932
+    ]
+  },
+  "cote-des-neiges-notre-dame-de-grace": {
+    "nom": "Côte-des-Neiges-Notre-Dame-de-Grâce",
+    "bounds": [
+      [
+        45.45078,
+        -73.67721
+      ],
+      [
+        45.51656,
+        -73.594
+      ]
+    ],
+    "centre": [
+      45.48367,
+      -73.63561
+    ]
+  },
+  "l-ile-bizard-sainte-genevieve": {
+    "nom": "L'Île-Bizard-Sainte-Geneviève",
+    "bounds": [
+      [
+        45.46421,
+        -73.97435
+      ],
+      [
+        45.52555,
+        -73.85318
+      ]
+    ],
+    "centre": [
+      45.49488,
+      -73.91376
+    ]
+  },
+  "lachine": {
+    "nom": "Lachine",
+    "bounds": [
+      [
+        45.4218,
+        -73.72481
+      ],
+      [
+        45.47346,
+        -73.62914
+      ]
+    ],
+    "centre": [
+      45.44763,
+      -73.67698
+    ]
+  },
+  "lasalle": {
+    "nom": "LaSalle",
+    "bounds": [
+      [
+        45.40965,
+        -73.6661
+      ],
+      [
+        45.45768,
+        -73.5398
+      ]
+    ],
+    "centre": [
+      45.43367,
+      -73.60295
+    ]
+  },
+  "le-plateau-mont-royal": {
+    "nom": "Le Plateau-Mont-Royal",
+    "bounds": [
+      [
+        45.50497,
+        -73.61242
+      ],
+      [
+        45.54162,
+        -73.55923
+      ]
+    ],
+    "centre": [
+      45.52329,
+      -73.58583
+    ]
+  },
+  "le-sud-ouest": {
+    "nom": "Le Sud-Ouest",
+    "bounds": [
+      [
+        45.4375,
+        -73.6353
+      ],
+      [
+        45.4983,
+        -73.52167
+      ]
+    ],
+    "centre": [
+      45.4679,
+      -73.57848
+    ]
+  },
+  "mercier-hochelaga-maisonneuve": {
+    "nom": "Mercier-Hochelaga-Maisonneuve",
+    "bounds": [
+      [
+        45.53131,
+        -73.5697
+      ],
+      [
+        45.61584,
+        -73.50393
+      ]
+    ],
+    "centre": [
+      45.57358,
+      -73.53682
+    ]
+  },
+  "montreal-nord": {
+    "nom": "Montréal-Nord",
+    "bounds": [
+      [
+        45.576,
+        -73.65847
+      ],
+      [
+        45.63368,
+        -73.60166
+      ]
+    ],
+    "centre": [
+      45.60484,
+      -73.63006
+    ]
+  },
+  "outremont": {
+    "nom": "Outremont",
+    "bounds": [
+      [
+        45.50433,
+        -73.62667
+      ],
+      [
+        45.52778,
+        -73.59021
+      ]
+    ],
+    "centre": [
+      45.51605,
+      -73.60844
+    ]
+  },
+  "pierrefonds-roxboro": {
+    "nom": "Pierrefonds-Roxboro",
+    "bounds": [
+      [
+        45.4406,
+        -73.97435
+      ],
+      [
+        45.51872,
+        -73.75174
+      ]
+    ],
+    "centre": [
+      45.47966,
+      -73.86304
+    ]
+  },
+  "riviere-des-prairies-pointe-aux-trembles": {
+    "nom": "Rivière-des-Prairies-Pointe-aux-Trembles",
+    "bounds": [
+      [
+        45.6126,
+        -73.62464
+      ],
+      [
+        45.70758,
+        -73.47387
+      ]
+    ],
+    "centre": [
+      45.66009,
+      -73.54925
+    ]
+  },
+  "rosemont-la-petite-patrie": {
+    "nom": "Rosemont-La Petite-Patrie",
+    "bounds": [
+      [
+        45.52562,
+        -73.62153
+      ],
+      [
+        45.58193,
+        -73.54899
+      ]
+    ],
+    "centre": [
+      45.55378,
+      -73.58526
+    ]
+  },
+  "saint-laurent": {
+    "nom": "Saint-Laurent",
+    "bounds": [
+      [
+        45.4606,
+        -73.7742
+      ],
+      [
+        45.53236,
+        -73.65075
+      ]
+    ],
+    "centre": [
+      45.49648,
+      -73.71248
+    ]
+  },
+  "saint-leonard": {
+    "nom": "Saint-Léonard",
+    "bounds": [
+      [
+        45.56637,
+        -73.62961
+      ],
+      [
+        45.61113,
+        -73.56395
+      ]
+    ],
+    "centre": [
+      45.58875,
+      -73.59678
+    ]
+  },
+  "verdun": {
+    "nom": "Verdun",
+    "bounds": [
+      [
+        45.42805,
+        -73.59943
+      ],
+      [
+        45.4766,
+        -73.51879
+      ]
+    ],
+    "centre": [
+      45.45232,
+      -73.55911
+    ]
+  },
+  "ville-marie": {
+    "nom": "Ville-Marie",
+    "bounds": [
+      [
+        45.48674,
+        -73.60547
+      ],
+      [
+        45.53992,
+        -73.51923
+      ]
+    ],
+    "centre": [
+      45.51333,
+      -73.56235
+    ]
+  },
+  "villeray-saint-michel-parc-extension": {
+    "nom": "Villeray-Saint-Michel-Parc-Extension",
+    "bounds": [
+      [
+        45.52335,
+        -73.64862
+      ],
+      [
+        45.58547,
+        -73.58629
+      ]
+    ],
+    "centre": [
+      45.55441,
+      -73.61745
+    ]
+  }
+}
