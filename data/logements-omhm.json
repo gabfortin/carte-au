@@ -13,7 +13,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 80 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 80,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -31,7 +36,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 128 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 128,
+        "repartitionAdaptees": [
+          "5 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -49,7 +60,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 85 logements (7 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 85,
+        "repartitionAdaptees": [
+          "7 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -67,7 +84,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 66 logements (3 × 1 ch., 1 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 66,
+        "repartitionAdaptees": [
+          "3 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -85,7 +108,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "9 unités adaptées sur 112 logements (8 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 9,
+        "totalLogements": 112,
+        "repartitionAdaptees": [
+          "8 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -103,7 +132,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 97 logements (7 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 97,
+        "repartitionAdaptees": [
+          "7 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -121,7 +156,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "2 unités adaptées sur 43 logements (2 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 43,
+        "repartitionAdaptees": [
+          "2 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -139,7 +179,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 88 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 88,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -157,7 +202,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 102 logements (4 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 102,
+        "repartitionAdaptees": [
+          "4 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -175,7 +226,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 106 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 106,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -193,7 +249,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "9 unités adaptées sur 78 logements (8 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 9,
+        "totalLogements": 78,
+        "repartitionAdaptees": [
+          "8 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -211,7 +273,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "3 unités adaptées sur 86 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 86,
+        "repartitionAdaptees": [
+          "3 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -229,7 +296,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "9 unités adaptées sur 96 logements (9 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 9,
+        "totalLogements": 96,
+        "repartitionAdaptees": [
+          "9 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -247,7 +319,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 106 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 106,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -265,7 +342,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 89 logements (5 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 89,
+        "repartitionAdaptees": [
+          "5 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -283,7 +365,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 68 logements (7 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 68,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -301,7 +388,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 17 logements (1 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 17,
+        "repartitionAdaptees": [
+          "1 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -319,7 +411,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "10 unités adaptées sur 104 logements (5 × 1 ch., 5 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 10,
+        "totalLogements": 104,
+        "repartitionAdaptees": [
+          "5 × 1 ch.",
+          "5 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -337,7 +435,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 95 logements (8 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 95,
+        "repartitionAdaptees": [
+          "8 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -355,7 +458,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "12 unités adaptées sur 118 logements (10 × 1 ch., 2 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 12,
+        "totalLogements": 118,
+        "repartitionAdaptees": [
+          "10 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -373,7 +482,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 101 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 101,
+        "repartitionAdaptees": [
+          "5 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -391,7 +506,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 81 logements (1 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 81,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -409,7 +530,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 206 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 206,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -427,7 +553,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 62,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -445,7 +576,14 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "3 unités adaptées sur 15 logements (1 × 1 ch., 1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 15,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "1 × 2 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -463,7 +601,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 81 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 81,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -481,7 +624,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 92 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 92,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -499,7 +647,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 22 logements (1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 22,
+        "repartitionAdaptees": [
+          "1 × 2 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -517,7 +671,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 88 logements (8 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 88,
+        "repartitionAdaptees": [
+          "8 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -535,7 +694,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 192 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 192,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -553,7 +717,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 45 logements (2 × 1 ch., 2 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 45,
+        "repartitionAdaptees": [
+          "2 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -571,7 +741,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 136 logements (6 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 136,
+        "repartitionAdaptees": [
+          "6 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -589,7 +765,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 104 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 104,
+        "repartitionAdaptees": [
+          "8 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -607,7 +788,14 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "5 unités adaptées sur 42 logements (1 × 1 ch., 1 × 2 ch., 3 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 42,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "1 × 2 ch.",
+          "3 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -625,7 +813,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 71 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 71,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -643,7 +836,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 83 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 83,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -661,7 +859,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 93 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 93,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -679,7 +882,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 194 logements (2 × 2 ch., 2 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 194,
+        "repartitionAdaptees": [
+          "2 × 2 ch.",
+          "2 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -697,7 +906,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 58 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 58,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -715,7 +929,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 67 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 67,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -733,7 +952,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 69 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 69,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -751,7 +975,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 58 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 58,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -769,7 +998,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 70 logements (7 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 70,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -787,7 +1021,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "3 unités adaptées sur 38 logements (3 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 38,
+        "repartitionAdaptees": [
+          "3 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -805,7 +1044,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "4 unités adaptées sur 72 logements (2 × 2 ch., 2 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 72,
+        "repartitionAdaptees": [
+          "2 × 2 ch.",
+          "2 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -823,7 +1068,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "8 unités adaptées sur 56 logements (7 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 56,
+        "repartitionAdaptees": [
+          "7 × 1 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -841,7 +1092,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 55 logements (2 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 55,
+        "repartitionAdaptees": [
+          "2 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -859,7 +1116,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "4 unités adaptées sur 98 logements (4 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 98,
+        "repartitionAdaptees": [
+          "4 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -877,7 +1139,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "1 unité adaptée sur 158 logements (1 × 2 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 158,
+        "repartitionAdaptees": [
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -895,7 +1162,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 118 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 118,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -913,7 +1185,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "4 unités adaptées sur 64 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 64,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -931,7 +1208,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 85 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 85,
+        "repartitionAdaptees": [
+          "8 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -949,7 +1231,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 135 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 135,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -967,7 +1254,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "10 unités adaptées sur 106 logements (10 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 10,
+        "totalLogements": 106,
+        "repartitionAdaptees": [
+          "10 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -985,7 +1277,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 77 logements (7 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 77,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1003,7 +1300,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 18 logements (2 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 18,
+        "repartitionAdaptees": [
+          "2 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1021,7 +1323,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 31 logements (2 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 31,
+        "repartitionAdaptees": [
+          "2 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1039,7 +1346,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 65 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 65,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1057,7 +1369,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 126 logements (8 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 126,
+        "repartitionAdaptees": [
+          "8 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1075,7 +1392,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "9 unités adaptées sur 112 logements (7 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 9,
+        "totalLogements": 112,
+        "repartitionAdaptees": [
+          "7 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1093,7 +1416,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 90 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 90,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1111,7 +1439,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "4 unités adaptées sur 48 logements (4 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 48,
+        "repartitionAdaptees": [
+          "4 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1129,7 +1462,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 55 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 55,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1147,7 +1485,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 98 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 98,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1165,7 +1508,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 89 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 89,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1183,7 +1531,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 88 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 88,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1201,7 +1554,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 22 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 22,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1219,7 +1577,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 90 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 90,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1237,7 +1600,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 49 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 49,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1255,7 +1623,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 112 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 112,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1273,7 +1646,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 62,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1291,7 +1669,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 113 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 113,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1309,7 +1692,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "10 unités adaptées sur 10 logements (7 × 1 ch., 3 × 2 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 10,
+        "totalLogements": 10,
+        "repartitionAdaptees": [
+          "7 × 1 ch.",
+          "3 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1327,7 +1716,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 67 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 67,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1345,7 +1739,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 77 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 77,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1363,7 +1762,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 74 logements (6 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 74,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1381,7 +1785,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 97 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 97,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1399,7 +1808,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 11 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 11,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1417,7 +1831,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "2 unités adaptées sur 136 logements (1 × 2 ch., 1 × 4 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 136,
+        "repartitionAdaptees": [
+          "1 × 2 ch.",
+          "1 × 4 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1435,7 +1855,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 62 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 62,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1453,7 +1878,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 97 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 97,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1471,7 +1901,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 84 logements (5 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 84,
+        "repartitionAdaptees": [
+          "5 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1489,7 +1925,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 108 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 108,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1507,7 +1948,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "4 unités adaptées sur 30 logements (4 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 30,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1525,7 +1971,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 18 logements (1 × 1 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 18,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1543,7 +1995,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 66 logements (4 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 66,
+        "repartitionAdaptees": [
+          "4 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1561,7 +2019,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 75 logements (4 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 75,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1579,7 +2042,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "10 unités adaptées sur 62 logements (8 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 10,
+        "totalLogements": 62,
+        "repartitionAdaptees": [
+          "8 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1597,7 +2066,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 87 logements (8 × 1 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 87,
+        "repartitionAdaptees": [
+          "8 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1615,7 +2089,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 34 logements (2 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 34,
+        "repartitionAdaptees": [
+          "2 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1633,7 +2112,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 84 logements (6 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 84,
+        "repartitionAdaptees": [
+          "6 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1651,7 +2135,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "3 unités adaptées sur 51 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 51,
+        "repartitionAdaptees": [
+          "3 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1669,7 +2158,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "3 unités adaptées sur 72 logements (3 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 72,
+        "repartitionAdaptees": [
+          "3 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1687,7 +2181,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "1 unité adaptée sur 91 logements (1 × 1 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 91,
+        "repartitionAdaptees": [
+          "1 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1705,7 +2204,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 24 logements (1 × 2 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 24,
+        "repartitionAdaptees": [
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1723,7 +2227,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 79 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 79,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1741,7 +2250,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 84 logements (5 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 84,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1759,7 +2273,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 107 logements (7 × 1 ch.). Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 107,
+        "repartitionAdaptees": [
+          "7 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1777,7 +2296,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 25 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 25,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1795,7 +2319,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "9 unités adaptées sur 112 logements (9 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 9,
+        "totalLogements": 112,
+        "repartitionAdaptees": [
+          "9 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1813,7 +2342,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "1 unité adaptée sur 37 logements (1 × 3 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 1,
+        "totalLogements": 37,
+        "repartitionAdaptees": [
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1831,7 +2365,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "5 unités adaptées sur 149 logements (5 × 1 ch.). Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 5,
+        "totalLogements": 149,
+        "repartitionAdaptees": [
+          "5 × 1 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules, personnes âgées. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1849,7 +2388,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "3 unités adaptées sur 396 logements (2 × 1 ch., 1 × 2 ch.). Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 396,
+        "repartitionAdaptees": [
+          "2 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1867,7 +2412,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": false,
-        "notes": "2 unités adaptées sur 42 logements (1 × 2 ch., 1 × 3 ch.). Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 42,
+        "repartitionAdaptees": [
+          "1 × 2 ch.",
+          "1 × 3 ch."
+        ],
+        "notes": "Clientèle : Familles, couples, personnes seules. L'immeuble compte plusieurs adresses : la fiche de l'OMHM ne précise pas où sont les unités adaptées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1885,7 +2436,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "7 unités adaptées sur 106 logements (1 × 1 ch., 6 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 7,
+        "totalLogements": 106,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "6 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1903,7 +2460,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "6 unités adaptées sur 105 logements (6 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 6,
+        "totalLogements": 105,
+        "repartitionAdaptees": [
+          "6 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1921,7 +2483,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "3 unités adaptées sur 31 logements (1 × 1 ch., 2 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 3,
+        "totalLogements": 31,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "2 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1939,7 +2507,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "8 unités adaptées sur 91 logements (8 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 8,
+        "totalLogements": 91,
+        "repartitionAdaptees": [
+          "8 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1957,7 +2530,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 49 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 49,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1975,7 +2553,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "4 unités adaptées sur 48 logements (4 × 1 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 4,
+        "totalLogements": 48,
+        "repartitionAdaptees": [
+          "4 × 1 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -1993,7 +2576,12 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "12 unités adaptées sur 208 logements (12 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 12,
+        "totalLogements": 208,
+        "repartitionAdaptees": [
+          "12 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",
@@ -2011,7 +2599,13 @@
       "accessibility": {
         "level": "accessible",
         "ascenseur": true,
-        "notes": "2 unités adaptées sur 82 logements (1 × 1 ch., 1 × 2 ch.). Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
+        "unitesAdaptees": 2,
+        "totalLogements": 82,
+        "repartitionAdaptees": [
+          "1 × 1 ch.",
+          "1 × 2 ch."
+        ],
+        "notes": "Clientèle : Personnes âgées. Logement HLM : admissibilité selon le revenu, demande auprès de l'OMHM."
       },
       "source": {
         "name": "OMHM",

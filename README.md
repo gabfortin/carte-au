@@ -41,6 +41,10 @@ La barre de recherche (nom ou adresse) ne porte que sur les commerces : elle aff
 
 Quand on commence une recherche, les autres couches sont désactivées pour ne garder que les commerces sur la carte. On peut les réactiver à la main pendant la recherche.
 
+## Mode sombre
+
+La carte suit le mode clair ou sombre de l'appareil (`prefers-color-scheme`), selon la recette commune des cartes (`~/Developer/MAP-DESIGN-SYSTEM.md`, section « Mode sombre ») : valeurs du « dashboard verre », tuiles OSM inversées en CSS (`--tile-filter`). Toutes les couleurs de surface et de texte passent par les jetons du `:root` de [css/style.css](css/style.css), redéfinis dans le bloc `@media (prefers-color-scheme: dark)` ; ne pas écrire de couleur claire en dur dans un composant. Les textes de marque utilisent `--brand-ink` (bleu clair en sombre), pas `--brand-dark`. La page de confidentialité a aussi son mode sombre.
+
 ## Stack
 
 - HTML/CSS/JS vanilla
@@ -180,6 +184,8 @@ clavier, activer avec Entrée/Espace) le tracé ouvre son popup.
 }
 ```
 
+Champs facultatifs dans `accessibility`, mis en évidence en tête du popup (encadré avec le nombre en gros) : `unitesAdaptees` (nombre de logements adaptés), `totalLogements` (nombre total de logements de l'immeuble) et `repartitionAdaptees` (ex. `["5 × 1 ch.", "1 × 2 ch."]`). Sans `unitesAdaptees`, l'encadré n'apparaît pas.
+
 ### Stationnements (`data/stationnements.json`)
 
 ```json
@@ -305,7 +311,7 @@ python3 scripts/import_feux_sonores.py
 
 ### Logements de l'OMHM (`data/logements-omhm.json`)
 
-Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Pour rafraîchir :
+Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Le nombre d'unités adaptées, le total de logements et leur répartition par taille sont écrits dans `unitesAdaptees`, `totalLogements` et `repartitionAdaptees` (voir le format ci-dessus) ; les notes ne contiennent plus que la clientèle et les conditions d'admissibilité. Pour rafraîchir :
 
 ```bash
 SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py

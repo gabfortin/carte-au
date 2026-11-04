@@ -240,6 +240,27 @@ function terrassePopup(t) {
   `;
 }
 
+// Nombre de logements adaptés mis en évidence (OMHM : champs produits par
+// scripts/import_logements_omhm.py ; facultatifs dans data/logements.json).
+function adaptesHighlight(a) {
+  const n = a.unitesAdaptees;
+  if (!Number.isFinite(n) || n <= 0) return "";
+  const s = n > 1 ? "s" : "";
+  const details = [
+    Number.isFinite(a.totalLogements) ? `sur ${a.totalLogements} logements` : "",
+    a.repartitionAdaptees?.length ? a.repartitionAdaptees.join(", ") : "",
+  ].filter(Boolean).join(" · ");
+  return `
+    <div class="popup-highlight">
+      <span class="popup-highlight-number">${n}</span>
+      <span class="popup-highlight-text">
+        <strong>logement${s} adapté${s}</strong>
+        ${details ? `<span>${details}</span>` : ""}
+      </span>
+    </div>
+  `;
+}
+
 function logementPopup(l) {
   const level = levelClass(l.accessibility?.level);
   const a = l.accessibility || {};
@@ -248,6 +269,7 @@ function logementPopup(l) {
       <h3>${l.name}</h3>
       <div class="popup-address">${l.address}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
+      ${adaptesHighlight(a)}
       ${field("Type", LOGEMENT_TYPE_LABELS[l.type] || l.type)}
       ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
       ${field("Ascenseur", boolLabel(a.ascenseur))}

@@ -127,9 +127,9 @@ def convert(buildings, rows) -> dict:
         if not arrondissement:
             print(f"Arrondissement introuvable ou hors Montréal, ignoré : {b['name']}")
             continue
+        # Le nombre d'unités adaptées est un champ à part (mis en évidence dans le
+        # popup), plus une phrase des notes.
         notes = [
-            f"{b['adapted_count']} unité{'s' if b['adapted_count'] > 1 else ''} adaptée{'s' if b['adapted_count'] > 1 else ''}"
-            f" sur {b['total']} logements ({', '.join(unit_label(u) for u in b['adapted'])}).",
             f"Clientèle : {', '.join(b['clientele']).capitalize()}.",
         ]
         if len(b["addresses"]) > 1:
@@ -147,6 +147,9 @@ def convert(buildings, rows) -> dict:
                 "accessibility": {
                     "level": "accessible",
                     "ascenseur": bool(b["elevators"]),
+                    "unitesAdaptees": b["adapted_count"],
+                    "totalLogements": b["total"],
+                    "repartitionAdaptees": [unit_label(u) for u in b["adapted"]],
                     "notes": " ".join(notes),
                 },
                 "source": {"name": "OMHM", "url": b["url"]},
