@@ -980,6 +980,24 @@ h1, h2, h3, .brand-word {
   margin-right: 0.35rem;
 }
 
+/* Stations de métro et REM : pastille de la couleur de ligne (GTFS route_color),
+   et avertissement quand le quai d'une ligne n'est pas accessible. */
+.popup-line-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  vertical-align: 0;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.7);
+}
+
+.popup-warning { color: #b91c1c; font-weight: 700; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .popup-warning { color: #fca5a5; }
+}
+
 /* Nombre de logements adaptés, isolé en tête du popup des logements. */
 .popup-highlight {
   display: flex;

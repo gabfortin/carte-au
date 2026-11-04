@@ -30,6 +30,8 @@ const ICONS = {
   gainCcu: svgIcon('<path d="M5 12.5l4.5 5L19 6"/>'),
   terrasse: svgIcon('<path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9Z"/><path d="M12 12v8"/><path d="M9 20h6"/>'),
   sentier: svgIcon('<path d="M4 19c3-1 2-5 5-6s2 4 5 2 2-5 5-5"/>'),
+  metro: svgIcon('<rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14"/><path d="M8 21l2-4M16 21l-2-4"/><circle cx="9" cy="14" r=".6" fill="#fff"/><circle cx="15" cy="14" r=".6" fill="#fff"/>'),
+  rem: svgIcon('<path d="M7 3h10l2 10H5L7 3Z"/><path d="M5 13v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3"/><path d="M8 21l2-4M16 21l-2-4"/><path d="M12 3v10"/>'),
 };
 
 const CATEGORY_LABELS = {
@@ -385,6 +387,42 @@ function gainPopup(g) {
   `;
 }
 
+// Stations de métro et du REM : données GTFS reprises telles quelles
+// (voir scripts/import_stations_transport.py).
+const STATION_SOURCES = {
+  Métro: { name: "STM", url: "https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes" },
+  REM: { name: "REM (données de l'ARTM)", url: "https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain" },
+};
+
+function stationPopup(s) {
+  const lignes = (s.lignes || []).map((l) => {
+    const dot = l.couleur ? `<span class="popup-line-dot" style="background:${l.couleur}"></span>` : "";
+    const quai = l.quaiAccessible ? "" : ` <strong class="popup-warning">· quai non accessible</strong>`;
+    return `${dot}${l.nom}${quai}`;
+  });
+  const fiche = s.url
+    ? field("Fiche", `<a href="${s.url}" target="_blank" rel="noopener">Fiche de la station (${s.reseau === "Métro" ? "STM" : "REM"})${NEW_TAB}</a>`)
+    : "";
+  // Station du REM qui partage son nom avec une station de métro non accessible
+  // (ex : Édouard-Montpetit) : lien vers la fiche STM de la station de métro.
+  const ficheMetro = s.ficheMetro
+    ? field("Métro", `<a href="${s.ficheMetro}" target="_blank" rel="noopener">Fiche de la station de métro (STM)${NEW_TAB}</a>`)
+    : "";
+  return `
+    <div class="popup-content">
+      <h3>${s.name}</h3>
+      <div class="popup-address">${s.reseau === "Métro" ? "Métro de Montréal (STM)" : "Réseau express métropolitain (REM)"}</div>
+      <span class="badge accessible">${LEVEL_LABELS.accessible}</span>
+      ${bulletField("Lignes", lignes)}
+      ${bulletField("Accès accessibles", s.accesAccessibles)}
+      ${fiche}
+      ${ficheMetro}
+      ${sourceField(STATION_SOURCES[s.reseau])}
+      ${s.ficheMetro ? sourceField(STATION_SOURCES["Métro"]) : ""}
+    </div>
+  `;
+}
+
 function feuSonorePopup(f) {
   return `
     <div class="popup-content">
@@ -486,6 +524,16 @@ const LAYER_INFO = {
     about: "Intersections dont les feux pour piétons émettent un signal sonore, pour les personnes ayant une déficience visuelle.",
     data: ["Intersection et arrondissement", "Type d'installation (permanente ou temporaire)"],
     process: `Import automatisé des ${externalLink("https://donnees.montreal.ca/dataset/feux-malvoyants", "données ouvertes de la Ville de Montréal")}. Le jeu couvre toute la ville : les feux des arrondissements voisins sont aussi affichés.`,
+  },
+  "stations-metro": {
+    about: "Stations de métro de la STM accessibles en fauteuil roulant (ascenseurs de la rue jusqu'aux quais), selon les données officielles de la STM.",
+    data: ["Lignes desservies, et quai de chaque ligne s'il n'est pas accessible", "Entrées accessibles", "Lien vers la fiche de la station sur stm.info, qui donne l'état des ascenseurs"],
+    process: `Import automatisé du ${externalLink("https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes", "GTFS de la STM")} : stations, quais et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Les noms sont ceux publiés par la STM. Toutes les stations accessibles sont affichées, y compris à Laval. Un ascenseur peut être en panne : vérifier la fiche de la station avant de partir.`,
+  },
+  "stations-rem": {
+    about: "Stations du Réseau express métropolitain (REM) accessibles en fauteuil roulant, selon les données officielles du REM.",
+    data: ["Antennes desservies", "Entrées accessibles"],
+    process: `Import automatisé du ${externalLink("https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain", "GTFS du REM")} publié par l'ARTM (licence CC BY 4.0) : stations et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Toutes les stations sont affichées, y compris hors de Montréal (Brossard, Deux-Montagnes, etc.).`,
   },
   "gains-ccu": {
     about: "Améliorations de l'accessibilité obtenues lors de l'étude de projets immobiliers par le comité consultatif d'urbanisme (CCU) de l'arrondissement, par exemple une proportion de logements adaptables ou une rampe d'accès.",
@@ -634,6 +682,32 @@ const LAYER_CONFIG = [
     compact: true,
   },
   {
+    key: "stations-metro",
+    label: "Métro",
+    group: "stations",
+    // Import du GTFS de la STM : toutes les stations accessibles, y compris à Laval.
+    file: "data/stations-transport.json",
+    defaultVisible: true,
+    color: ["#a5b4fc", "#4338ca"],
+    icon: ICONS.metro,
+    getItems: (data) => (data.stations || []).filter((s) => s.reseau === "Métro"),
+    getArrondissement: (item) => item.arrondissement || null,
+    getPopup: stationPopup,
+  },
+  {
+    key: "stations-rem",
+    label: "REM",
+    group: "stations",
+    // Import du GTFS du REM (ARTM) : toutes les stations, y compris hors de Montréal.
+    file: "data/stations-transport.json",
+    defaultVisible: true,
+    color: ["#a5b4fc", "#4338ca"],
+    icon: ICONS.rem,
+    getItems: (data) => (data.stations || []).filter((s) => s.reseau === "REM"),
+    getArrondissement: (item) => item.arrondissement || null,
+    getPopup: stationPopup,
+  },
+  {
     key: "gains-ccu",
     label: "Gains CCU",
     file: "data/gains-ccu.json",
@@ -658,6 +732,11 @@ const LAYER_GROUPS = {
     label: "Stationnement",
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.stationnement,
+  },
+  stations: {
+    label: "Stations de métro et REM accessibles",
+    color: ["#a5b4fc", "#4338ca"],
+    icon: ICONS.metro,
   },
 };
 

@@ -19,6 +19,7 @@ projet est parti — précisé couche par couche ci-dessous.
 - **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal. Plateau-Mont-Royal seulement.
 - **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement.
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants), **pour tout Montréal**.
+- **Stations de métro et REM accessibles** — stations accessibles en fauteuil roulant selon les GTFS officiels de la [STM](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes) et du [REM](https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain) (ARTM, CC BY 4.0), **toutes les stations, y compris hors de Montréal** (Laval, Brossard, Deux-Montagnes…). Deux sous-couches, Métro et REM, regroupées dans la sidebar. Le popup indique les lignes, le quai d'une ligne s'il n'est pas accessible (ex. ligne 4 à Berri-UQAM), les entrées accessibles et le lien vers la fiche STM de la station. Les stations hors des 19 arrondissements n'ont pas d'arrondissement : elles ne s'affichent qu'avec « Tous les arrondissements ». Une station du REM qui porte exactement le même nom qu'une station de métro non accessible (aujourd'hui seulement Édouard-Montpetit) affiche aussi la ligne de métro, avec « quai non accessible » selon le GTFS de la STM, et le lien vers sa fiche STM ; quand les deux sont accessibles (ex. McGill), chaque réseau a son propre marqueur.
 - **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement.
 
 ## Filtre d'arrondissement
@@ -309,6 +310,14 @@ Généré automatiquement, ne pas éditer à la main. Pour rafraîchir avec les 
 python3 scripts/import_feux_sonores.py
 ```
 
+### Stations de métro et du REM (`data/stations-transport.json`)
+
+Généré automatiquement, ne pas éditer à la main. Le script télécharge les GTFS de la STM (≈ 70 Mo) et du REM, et reprend leurs champs tels quels : stations, quais et entrées dont `wheelchair_boarding` vaut 1, noms publiés par chaque réseau, lignes déduites de `stop_times.txt`, `stop_url` des quais pour la fiche STM. La version de chaque GTFS est notée dans `sources`. Pour rafraîchir :
+
+```bash
+python3 scripts/import_stations_transport.py
+```
+
 ### Logements de l'OMHM (`data/logements-omhm.json`)
 
 Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/logements.json`). Le nombre d'unités adaptées, le total de logements et leur répartition par taille sont écrits dans `unitesAdaptees`, `totalLogements` et `repartitionAdaptees` (voir le format ci-dessus) ; les notes ne contiennent plus que la clientèle et les conditions d'admissibilité. Pour rafraîchir :
@@ -332,6 +341,26 @@ SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_places_handicapes.py
 ```
 
 Ces deux imports (et `import_debarcaderes_spectrum.py`) étiquettent chaque item avec son arrondissement via [scripts/montreal_arrondissements.py](scripts/montreal_arrondissements.py), pour le filtre d'arrondissement de la carte — voir [Filtre d'arrondissement](#filtre-darrondissement).
+
+## Mise à jour automatique des données
+
+Le workflow [`.github/workflows/mise-a-jour-donnees.yml`](.github/workflows/mise-a-jour-donnees.yml) relance chaque mois (le 1er, 7 h à Montréal en hiver) les scripts qui téléchargent des données ouvertes, puis commite les fichiers qui ont changé avec le message `data: mise à jour automatique (AAAA-MM-JJ)`. On peut aussi le lancer à la main : onglet Actions → « Mise à jour mensuelle des données » → Run workflow.
+
+| Source | Script | Fichier |
+|---|---|---|
+| Limites des arrondissements (Ville) | `import_arrondissements.py` | `data/arrondissements.json` |
+| Feux sonores (Ville) | `import_feux_sonores.py` | `data/feux-sonores.json` |
+| Places et débarcadères réservés (AMD + signalisation de la Ville) | `import_places_handicapes.py` | `data/places-handicapes.json` |
+| Stations de métro et du REM (GTFS STM et REM) | `import_stations_transport.py` | `data/stations-transport.json` |
+| Logements de l'OMHM (+ positions du jeu « Logements hors marché ») | `import_logements_omhm.py` | `data/logements-omhm.json` |
+
+Chaque source est importée puis vérifiée par [`scripts/valider_donnees.py`](scripts/valider_donnees.py) : JSON lisible, listes non vides, et pas de baisse de plus de moitié par rapport à la version publiée (au-delà de 20 éléments). Si une source échoue, son fichier précédent est conservé, les autres sources sont quand même publiées, et le workflow finit en échec (courriel de GitHub) avec le détail dans le résumé de l'exécution.
+
+Pas automatisé : `import_debarcaderes_spectrum.py`, qui part d'un export manuel de l'outil interne de l'arrondissement.
+
+**Avis par courriel** : chaque exécution ouvre une issue « Mise à jour des données — AAAA-MM-JJ » avec le résultat de chaque source, le lien vers le commit des données et une case à cocher pour mettre à jour le CSV Spectrum à la main. GitHub l'envoie par courriel aux personnes qui suivent le dépôt (Watch → All Activity, ou au minimum Issues). Pour la recevoir à info@gabfortin.com plutôt qu'à l'adresse principale du compte : github.com → Settings → Notifications → Custom routing, choisir `gabfortin` → info@gabfortin.com (l'adresse doit être ajoutée et vérifiée dans Settings → Emails). Fermer l'issue une fois le CSV intégré.
+
+Prérequis une fois : Settings → Actions → General → Workflow permissions → **Read and write permissions**. Le dépôt reçoit des commits du robot : faire `git pull` avant de modifier le code.
 
 ## Déploiement
 

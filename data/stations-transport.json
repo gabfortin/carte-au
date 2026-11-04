@@ -1,0 +1,1190 @@
+{
+  "sources": [
+    {
+      "name": "STM - GTFS",
+      "url": "https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes",
+      "version": "20261029135439_26N"
+    },
+    {
+      "name": "REM - GTFS (ARTM, CC BY 4.0)",
+      "url": "https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain",
+      "version": "20260520"
+    }
+  ],
+  "stations": [
+    {
+      "id": "metro-STATION_M118",
+      "reseau": "Métro",
+      "name": "Station Angrignon",
+      "lat": 45.446397,
+      "lng": -73.603293,
+      "arrondissement": "le-sud-ouest",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Angrignon"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/angrignon"
+    },
+    {
+      "id": "metro-STATION_M122",
+      "reseau": "Métro",
+      "name": "Station Jolicoeur",
+      "lat": 45.456783,
+      "lng": -73.581991,
+      "arrondissement": "le-sud-ouest",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Jolicoeur"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/jolicoeur"
+    },
+    {
+      "id": "metro-STATION_M132",
+      "reseau": "Métro",
+      "name": "Station Lionel-Groulx",
+      "lat": 45.482818,
+      "lng": -73.579721,
+      "arrondissement": "le-sud-ouest",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Lionel-Groulx"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/lionel-groulx"
+    },
+    {
+      "id": "metro-STATION_M140",
+      "reseau": "Métro",
+      "name": "Station McGill",
+      "lat": 45.504137,
+      "lng": -73.571793,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station McGill - Accès Nord-Est boul De Maisonneuve"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/mcgill"
+    },
+    {
+      "id": "metro-STATION_M142",
+      "reseau": "Métro",
+      "name": "Station Place-des-Arts",
+      "lat": 45.508173,
+      "lng": -73.568313,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Place-des-Arts - Accès (D) rue De Bleury"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/place-des-arts"
+    },
+    {
+      "id": "metro-STATION_M146",
+      "reseau": "Métro",
+      "name": "Station Berri-UQAM",
+      "lat": 45.514852,
+      "lng": -73.560106,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "4",
+          "nom": "Ligne 4 - Jaune",
+          "couleur": "#FFD900",
+          "quaiAccessible": false
+        }
+      ],
+      "accesAccessibles": [
+        "Station Berri-UQAM - Accès (D) rue Saint-Denis"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/berri-uqam"
+    },
+    {
+      "id": "metro-STATION_M154",
+      "reseau": "Métro",
+      "name": "Station Préfontaine",
+      "lat": 45.54177,
+      "lng": -73.554543,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Préfontaine - Accès (A) rue Hochelaga"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/prefontaine"
+    },
+    {
+      "id": "metro-STATION_M158",
+      "reseau": "Métro",
+      "name": "Station Pie-IX",
+      "lat": 45.553658,
+      "lng": -73.551696,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Pie-IX - Accès (A) boul Pie-IX",
+        "Station Pie-IX - Accès (B) Ouest boul Pie-IX"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/pie-ix"
+    },
+    {
+      "id": "metro-STATION_M160",
+      "reseau": "Métro",
+      "name": "Station Viau",
+      "lat": 45.560976,
+      "lng": -73.54703,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Viau"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/viau"
+    },
+    {
+      "id": "metro-STATION_M170",
+      "reseau": "Métro",
+      "name": "Station Honoré-Beaugrand",
+      "lat": 45.596495,
+      "lng": -73.535053,
+      "arrondissement": "mercier-hochelaga-maisonneuve",
+      "lignes": [
+        {
+          "ligne": "1",
+          "nom": "Ligne 1 - Verte",
+          "couleur": "#00B300",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Honoré-Beaugrand - Accès (A) rue Honoré-Beaugrand"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/honore-beaugrand"
+    },
+    {
+      "id": "metro-STATION_M222",
+      "reseau": "Métro",
+      "name": "Station Côte-Vertu",
+      "lat": 45.514244,
+      "lng": -73.682766,
+      "arrondissement": "saint-laurent",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Côte-Vertu - Accès Nord ch de la Côte-Vertu"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/cote-vertu"
+    },
+    {
+      "id": "metro-STATION_M224",
+      "reseau": "Métro",
+      "name": "Station Du Collège",
+      "lat": 45.508356,
+      "lng": -73.673282,
+      "arrondissement": "saint-laurent",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Du Collège - Accès rue du Collège"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/du-college"
+    },
+    {
+      "id": "metro-STATION_M236",
+      "reseau": "Métro",
+      "name": "Station Snowdon",
+      "lat": 45.485244,
+      "lng": -73.627806,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "5",
+          "nom": "Ligne 5 - Bleue",
+          "couleur": "#0095E6",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Snowdon"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/snowdon"
+    },
+    {
+      "id": "metro-STATION_M238",
+      "reseau": "Métro",
+      "name": "Station Villa-Maria",
+      "lat": 45.479559,
+      "lng": -73.61979,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Villa-Maria"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/villa-maria"
+    },
+    {
+      "id": "metro-STATION_M242",
+      "reseau": "Métro",
+      "name": "Station Vendôme",
+      "lat": 45.473861,
+      "lng": -73.603865,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Vendôme - Accès Est Boul De Maisonneuve",
+        "Station Vendôme - Accès principal CUSM"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/vendome"
+    },
+    {
+      "id": "metro-STATION_M252",
+      "reseau": "Métro",
+      "name": "Station Bonaventure",
+      "lat": 45.498053,
+      "lng": -73.567129,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Bonaventure - Accès ascenseur du 1000 rue De La Gauchetière"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/bonaventure"
+    },
+    {
+      "id": "metro-STATION_M256",
+      "reseau": "Métro",
+      "name": "Station Place-d'Armes",
+      "lat": 45.506277,
+      "lng": -73.559505,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Place-d'Armes - Accès rue Saint-Urbain"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/place-d-armes"
+    },
+    {
+      "id": "metro-STATION_M258",
+      "reseau": "Métro",
+      "name": "Station Champ-de-Mars",
+      "lat": 45.510031,
+      "lng": -73.556462,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Champ-de-Mars"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/champ-de-mars"
+    },
+    {
+      "id": "metro-STATION_M264",
+      "reseau": "Métro",
+      "name": "Station Mont-Royal",
+      "lat": 45.524716,
+      "lng": -73.582234,
+      "arrondissement": "le-plateau-mont-royal",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Mont-Royal"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/mont-royal"
+    },
+    {
+      "id": "metro-STATION_M268",
+      "reseau": "Métro",
+      "name": "Station Rosemont",
+      "lat": 45.531023,
+      "lng": -73.598493,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Rosemont",
+        "Station Rosemont - Accès Terminus Rosemont"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/rosemont"
+    },
+    {
+      "id": "metro-STATION_M272",
+      "reseau": "Métro",
+      "name": "Station Jean-Talon",
+      "lat": 45.539074,
+      "lng": -73.613814,
+      "arrondissement": "rosemont-la-petite-patrie",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "5",
+          "nom": "Ligne 5 - Bleue",
+          "couleur": "#0095E6",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Jean-Talon - Accès Ouest rue Jean-Talon"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/jean-talon"
+    },
+    {
+      "id": "metro-STATION_M280",
+      "reseau": "Métro",
+      "name": "Station Henri-Bourassa",
+      "lat": 45.55522,
+      "lng": -73.668199,
+      "arrondissement": "ahuntsic-cartierville",
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Henri-Bourassa - Accès Sud boul Henri-Bourassa"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/henri-bourassa"
+    },
+    {
+      "id": "metro-STATION_M282",
+      "reseau": "Métro",
+      "name": "Station Cartier -Zone B",
+      "lat": 45.560398,
+      "lng": -73.681719,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Cartier - Accès Terminus Cartier"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/cartier-%28zone-b%29"
+    },
+    {
+      "id": "metro-STATION_M286",
+      "reseau": "Métro",
+      "name": "Station De la Concorde -Zone B",
+      "lat": 45.560544,
+      "lng": -73.709337,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station De la Concorde"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/de-la-concorde-%28zone-b%29"
+    },
+    {
+      "id": "metro-STATION_M288",
+      "reseau": "Métro",
+      "name": "Station Montmorency -Zone B",
+      "lat": 45.558434,
+      "lng": -73.722423,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "2",
+          "nom": "Ligne 2 - Orange",
+          "couleur": "#D95700",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Station Montmorency"
+      ],
+      "url": "https://www.stm.info/fr/infos/reseaux/metro/montmorency-%28zone-b%29"
+    },
+    {
+      "id": "rem-ST_A40_1",
+      "reseau": "REM",
+      "name": "Station Côte-de-Liesse",
+      "lat": 45.521823,
+      "lng": -73.661868,
+      "arrondissement": "saint-laurent",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - Rue Deslauriers",
+        "Entrée Porte B - Rue Stinson"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_BFC_1",
+      "reseau": "REM",
+      "name": "Station Bois-Franc",
+      "lat": 45.522024,
+      "lng": -73.712529,
+      "arrondissement": "saint-laurent",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - 2000 Boul Keller",
+        "Entrée Porte B - 2700 Boul Marcel-Laurin - Terminus d'autobus"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_CAN_1",
+      "reseau": "REM",
+      "name": "Station Canora",
+      "lat": 45.51397,
+      "lng": -73.634647,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_DEM_1",
+      "reseau": "REM",
+      "name": "Station Deux-Montagnes",
+      "lat": 45.545686,
+      "lng": -73.912409,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_DSO_1",
+      "reseau": "REM",
+      "name": "Station Des Sources",
+      "lat": 45.477123,
+      "lng": -73.791056,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_DUQ_1",
+      "reseau": "REM",
+      "name": "Station Du Quartier",
+      "lat": 45.446859,
+      "lng": -73.433519,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - Quartier DIX30",
+        "Entrée Porte B - Boul. Du Quartier",
+        "Entrée Porte C - Solar Uniquartier",
+        "Entrée Solar - Solar Uniquartier"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_EDM_1",
+      "reseau": "REM",
+      "name": "Station Édouard-Montpetit",
+      "lat": 45.510012,
+      "lng": -73.612189,
+      "arrondissement": "cote-des-neiges-notre-dame-de-grace",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "5",
+          "nom": "Ligne 5 - Bleue",
+          "couleur": "#0095E6",
+          "quaiAccessible": false,
+          "reseau": "Métro"
+        }
+      ],
+      "accesAccessibles": [
+        "Accès Sortie - métro",
+        "Entrée principale"
+      ],
+      "url": null,
+      "ficheMetro": "https://www.stm.info/fr/infos/reseaux/metro/edouard-montpetit"
+    },
+    {
+      "id": "rem-ST_GCT_1",
+      "reseau": "REM",
+      "name": "Station Gare Centrale",
+      "lat": 45.500048,
+      "lng": -73.566978,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée",
+        "Entrée - 895 De la Gauchetière Ouest",
+        "Entrée - De La Gauchetière Ouest / Mansfield"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_GRM_1",
+      "reseau": "REM",
+      "name": "Station Grand-Moulin",
+      "lat": 45.537103,
+      "lng": -73.887642,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - Rue de la Gare",
+        "Entrée Porte B - 9e Avenue"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_IDS_1",
+      "reseau": "REM",
+      "name": "Station Île-des-Soeurs",
+      "lat": 45.470324,
+      "lng": -73.538877,
+      "arrondissement": "verdun",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée - Accès débarcadère autobus",
+        "Entrée - Boul. René Lévesque"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_ILB_1",
+      "reseau": "REM",
+      "name": "Station Île-Bigras",
+      "lat": 45.519767,
+      "lng": -73.8528,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - Chemin du Tour/Du Bois",
+        "Entrée Porte B - Chemin des Rocailles/Des Trilles"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_JYV_1",
+      "reseau": "REM",
+      "name": "Station Kirkland",
+      "lat": 45.440275,
+      "lng": -73.885581,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_MCG_1",
+      "reseau": "REM",
+      "name": "Station McGill",
+      "lat": 45.502535,
+      "lng": -73.572116,
+      "arrondissement": "ville-marie",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Centre Eaton",
+        "Entrée Place Montréal Trust"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_MPE_1",
+      "reseau": "REM",
+      "name": "Station Montpellier",
+      "lat": 45.52494,
+      "lng": -73.67272,
+      "arrondissement": "saint-laurent",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - 461 Boul de la Côte-Vertu",
+        "Entrée Porte B - 465 Boul de la Côte-Vertu"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_MRL_1",
+      "reseau": "REM",
+      "name": "Station Ville-de-Mont-Royal",
+      "lat": 45.516531,
+      "lng": -73.643543,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_PAN_1",
+      "reseau": "REM",
+      "name": "Station Panama",
+      "lat": 45.464961,
+      "lng": -73.470599,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale",
+        "Entrée tunnel"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_PTC_1",
+      "reseau": "REM",
+      "name": "Station Fairview-Pointe-Claire",
+      "lat": 45.459943,
+      "lng": -73.835339,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_RIV_1",
+      "reseau": "REM",
+      "name": "Station Brossard",
+      "lat": 45.438065,
+      "lng": -73.430552,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - Stationnement P1",
+        "Entrée Porte B - Boul. de Rome"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_ROX_1",
+      "reseau": "REM",
+      "name": "Station Pierrefonds-Roxboro",
+      "lat": 45.509707,
+      "lng": -73.811892,
+      "arrondissement": "pierrefonds-roxboro",
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_RUI_1",
+      "reseau": "REM",
+      "name": "Station Du Ruisseau",
+      "lat": 45.52893,
+      "lng": -73.690165,
+      "arrondissement": "ahuntsic-cartierville",
+      "lignes": [
+        {
+          "ligne": "A1",
+          "nom": "Bois-Franc / A1 - Brossard",
+          "couleur": "#72A300",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        },
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - stationnement - débarcadère",
+        "Entrée Porte B - 3555 Boul Henri-Bourassa Ouest"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_SAB_1",
+      "reseau": "REM",
+      "name": "Station Anse-à-l'Orme",
+      "lat": 45.431596,
+      "lng": -73.909901,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A3-A1",
+          "nom": "A3 - Anse-à-l'Orme / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_SDR_1",
+      "reseau": "REM",
+      "name": "Station Sainte-Dorothée",
+      "lat": 45.523462,
+      "lng": -73.862197,
+      "arrondissement": null,
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée Porte A - stationnement",
+        "Entrée Porte B - terminus d'autobus"
+      ],
+      "url": null
+    },
+    {
+      "id": "rem-ST_SUN_1",
+      "reseau": "REM",
+      "name": "Station Sunnybrooke",
+      "lat": 45.503944,
+      "lng": -73.786422,
+      "arrondissement": "pierrefonds-roxboro",
+      "lignes": [
+        {
+          "ligne": "A4-A1",
+          "nom": "A4 - Deux-Montagnes / A1 - Brossard",
+          "couleur": "#73A400",
+          "quaiAccessible": true
+        }
+      ],
+      "accesAccessibles": [
+        "Entrée principale"
+      ],
+      "url": null
+    }
+  ]
+}

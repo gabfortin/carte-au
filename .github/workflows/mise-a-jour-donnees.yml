@@ -1,0 +1,133 @@
+name: Mise à jour mensuelle des données
+
+# Relance chaque mois les scripts d'import des données ouvertes (voir README,
+# section « Mise à jour automatique ») et publie les fichiers qui ont changé.
+# Chaque source est importée et validée séparément : une source en panne ne
+# bloque pas les autres, mais fait échouer le workflow à la fin, après la
+# publication des autres.
+#
+# Chaque exécution ouvre une issue « Mise à jour des données — AAAA-MM-JJ »
+# (résultat par source + rappel de mettre à jour le CSV Spectrum à la main) :
+# GitHub l'envoie par courriel aux personnes qui suivent le dépôt.
+
+on:
+  schedule:
+    # Le 1er du mois à 12:00 UTC = 7 h à Montréal en hiver, 8 h en été
+    # (le cron GitHub est toujours en UTC, il ne suit pas l'heure avancée)
+    - cron: '0 12 1 * *'
+  workflow_dispatch: {}          # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: mise-a-jour-donnees
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"   # ne pas toucher aux .pyc commités dans scripts/__pycache__
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Importer et valider chaque source
+        id: imports
+        run: |
+          set -u
+          failed=""
+          # Tableau des résultats, repris dans le résumé de l'exécution et dans l'issue
+          RAPPORT="$RUNNER_TEMP/rapport.md"
+          {
+            echo "| Source | Fichier | Résultat |"
+            echo "|---|---|---|"
+          } > "$RAPPORT"
+
+          importer() {
+            local label="$1" script="$2" file="$3" compte
+            echo "::group::$label"
+            if timeout 30m python3 "scripts/$script" && compte=$(python3 scripts/valider_donnees.py "$file"); then
+              echo "$compte"
+              echo "| $label | \`$file\` | ✅ ${compte//$'\n'/<br>} |" >> "$RAPPORT"
+            else
+              echo "::error::$label : import ou validation en échec, données précédentes conservées"
+              # Remettre le fichier publié ; un fichier jamais commité est supprimé.
+              git checkout -- "$file" 2>/dev/null || rm -f "$file"
+              echo "| $label | \`$file\` | ❌ échec, données précédentes conservées (voir le journal) |" >> "$RAPPORT"
+              failed="$failed $label;"
+            fi
+            echo "::endgroup::"
+          }
+
+          importer "Limites des arrondissements (Ville)" import_arrondissements.py    data/arrondissements.json
+          importer "Feux sonores (Ville)"               import_feux_sonores.py       data/feux-sonores.json
+          importer "Places et débarcadères (AMD, Ville)" import_places_handicapes.py data/places-handicapes.json
+          importer "Stations de métro et du REM (STM, REM)" import_stations_transport.py data/stations-transport.json
+          importer "Logements de l'OMHM"                import_logements_omhm.py     data/logements-omhm.json
+
+          cat "$RAPPORT" >> "$GITHUB_STEP_SUMMARY"
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+
+      - name: Commiter si les données ont changé
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/arrondissements.json data/feux-sonores.json data/places-handicapes.json \
+                  data/stations-transport.json data/logements-omhm.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "data: mise à jour automatique ($(date -u +%Y-%m-%d))"
+            git push
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ouvrir l'issue de suivi (courriel)
+        if: always() && steps.imports.outcome != 'skipped'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ steps.commit.outputs.sha }}
+          FAILED: ${{ steps.imports.outputs.failed }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BODY="$RUNNER_TEMP/issue.md"
+          {
+            if [ -n "$FAILED" ]; then
+              echo "⚠️ **Sources en échec :**$FAILED leurs données précédentes restent en ligne."
+            else
+              echo "Toutes les sources ont été mises à jour."
+            fi
+            echo
+            cat "$RUNNER_TEMP/rapport.md" 2>/dev/null || echo "_Rapport indisponible : voir le journal._"
+            echo
+            if [ -n "$SHA" ]; then
+              echo "Données publiées : $REPO_URL/commit/$SHA"
+            else
+              echo "Aucune donnée n'a changé depuis le mois dernier : rien n'a été publié."
+            fi
+            echo
+            echo "Journal de l'exécution : $RUN_URL"
+            echo
+            echo "### À faire à la main"
+            echo
+            echo "- [ ] Mettre à jour les débarcadères à partir d'un nouvel export CSV de « la carte interactive » (Spectrum) de l'arrondissement : marche à suivre dans le [README, section « Intégrer un export de la carte interactive (Spectrum) »]($REPO_URL#intégrer-un-export-de--la-carte-interactive--spectrum)."
+            echo
+            echo "Fermer cette issue une fois le CSV intégré."
+          } > "$BODY"
+          gh issue create --title "Mise à jour des données — $DATE" --body-file "$BODY"
+
+      - name: Signaler les sources en échec
+        if: steps.imports.outputs.failed != ''
+        run: |
+          echo "::error::Sources en échec :${{ steps.imports.outputs.failed }}"
+          exit 1
