@@ -139,6 +139,16 @@ def valeur_ou_vide(valeurs, champ):
     return v
 
 
+def url_https_ou_vide(valeurs, champ):
+    """Lien soumis par le public : uniquement une adresse https:// complète, sans
+    espace ni guillemet (sinon l'intégration échoue avec un message clair). Le site
+    échappe aussi les liens à l'affichage (safeUrl() dans js/app.js) : double garde."""
+    v = valeur_ou_vide(valeurs, champ)
+    if v and not re.fullmatch(r'https://[^\s"\'<>]+', v):
+        fail(f"« {champ} » doit être une adresse web complète qui commence par https:// (reçu : {v[:80]}).")
+    return v
+
+
 def slugify(texte):
     nfkd = unicodedata.normalize('NFKD', texte)
     sans_accents = ''.join(c for c in nfkd if not unicodedata.combining(c))
@@ -389,7 +399,7 @@ def ajouter_batiment(valeurs, issue_number):
     )
     verifier_consentement(valeurs, bool(images))
 
-    source_url = valeur_ou_vide(valeurs, "Lien vers la fiche du bâtiment sur montreal.ca (optionnel)")
+    source_url = url_https_ou_vide(valeurs, "Lien vers la fiche du bâtiment sur montreal.ca (optionnel)")
 
     item = {
         "id": slug,
@@ -721,7 +731,7 @@ def ajouter_gain(valeurs, issue_number):
     )
     verifier_consentement(valeurs, bool(images))
 
-    source_url = valeur_ou_vide(valeurs, "Lien vers la résolution ou le procès-verbal du CCU (optionnel)")
+    source_url = url_https_ou_vide(valeurs, "Lien vers la résolution ou le procès-verbal du CCU (optionnel)")
     votre_nom = valeur_ou_vide(valeurs, "Votre nom (affiché publiquement, optionnel)")
 
     item = {

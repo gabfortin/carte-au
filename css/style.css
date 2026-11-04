@@ -1416,3 +1416,11 @@ a.about-person:hover { background: var(--surface-hover); transform: translateX(2
     z-index: 1440;
   }
 }
+
+/* Très petits écrans (iPhone SE 1re génération, 320 px) : le titre tient en entier. */
+@media (max-width: 360px) {
+  .brand { gap: 8px; }
+  .brand-mark { width: 32px; height: 32px; border-radius: 10px; }
+  .brand-mark svg { width: 18px; height: 18px; }
+  .brand-word { font-size: 0.86rem; }
+}

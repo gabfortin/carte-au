@@ -145,41 +145,72 @@ function boolLabel(value) {
 
 const NEW_TAB = `<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span>`;
 
-function field(label, value) {
-  if (value === undefined || value === null || value === "") return "";
-  return `<div class="popup-field"><span class="popup-field-label">${label}</span>${value}</div>`;
+// Sécurité : une partie des données vient de soumissions publiques (issues GitHub,
+// voir scripts/integrate_submission.py). Tout texte issu des données passe par
+// esc() avant d'être inséré dans le HTML des popups, et tout lien par safeUrl().
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
 
-function bulletField(label, items) {
+// Liens web (http/https) et chemins relatifs du site (images) seulement :
+// jamais de « javascript: » ni de « data: ». Retourne "" si le lien est refusé.
+function safeUrl(url) {
+  if (typeof url !== "string" || !url.trim()) return "";
+  const u = url.trim();
+  if (/^https?:\/\//i.test(u)) return esc(u);
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(u) && !u.startsWith("//")) return esc(u); // chemin relatif
+  return "";
+}
+
+// field() / bulletField() échappent leur contenu ; les variantes *Html() reçoivent
+// du HTML construit par le code (liens, pastilles), jamais un texte des données brut.
+function fieldHtml(label, html) {
+  if (html === undefined || html === null || html === "") return "";
+  return `<div class="popup-field"><span class="popup-field-label">${label}</span>${html}</div>`;
+}
+
+function field(label, value) {
+  if (value === undefined || value === null || value === "") return "";
+  return fieldHtml(label, esc(value));
+}
+
+function bulletFieldHtml(label, items) {
   if (!items?.length) return "";
   return `<div class="popup-field"><span class="popup-field-label">${label}</span><ul class="popup-bullets">${items.map((item) => `<li>${item}</li>`).join("")}</ul></div>`;
 }
 
+function bulletField(label, items) {
+  return bulletFieldHtml(label, (items || []).map(esc));
+}
+
+function linkHtml(url, text) {
+  const href = safeUrl(url);
+  return href ? `<a href="${href}" target="_blank" rel="noopener">${esc(text)}${NEW_TAB}</a>` : "";
+}
+
 function sourceField(source) {
-  if (!source?.url) return "";
-  return field("Source", `<a href="${source.url}" target="_blank" rel="noopener">${source.name || "Voir la fiche"}${NEW_TAB}</a>`);
+  return fieldHtml("Source", linkHtml(source?.url, source?.name || "Voir la fiche"));
 }
 
 function reviewBlock(text, reviewer, url) {
   if (!text) return "";
-  const link = url ? ` <a href="${url}" target="_blank" rel="noopener">Voir l'avis sur Google Maps${NEW_TAB}</a>` : "";
+  const link = linkHtml(url, "Voir l'avis sur Google Maps");
   const reviewerLabel = reviewer === "Promo-Accès"
-    ? `<a class="review-source-link" href="https://promo-acces.com" target="_blank" rel="noopener">${reviewer}${NEW_TAB}</a>`
-    : reviewer;
-  return `<div class="review">"${text}"${reviewer ? ` — ${reviewerLabel}` : ""}${link}</div>`;
+    ? `<a class="review-source-link" href="https://promo-acces.com" target="_blank" rel="noopener">Promo-Accès${NEW_TAB}</a>`
+    : esc(reviewer);
+  return `<div class="review">"${esc(text)}"${reviewer ? ` — ${reviewerLabel}` : ""}${link ? ` ${link}` : ""}</div>`;
 }
 
 function imagesGallery(images) {
-  if (!images?.length) return "";
-  const figures = images.map(
+  const figures = (images || []).filter((img) => safeUrl(img.image)).map(
     (img) => `
       <figure class="popup-image">
-        <img src="${img.image}" alt="${img.description || ""}" loading="lazy">
-        ${img.description ? `<figcaption>${img.description}</figcaption>` : ""}
+        <img src="${safeUrl(img.image)}" alt="${esc(img.description)}" loading="lazy">
+        ${img.description ? `<figcaption>${esc(img.description)}</figcaption>` : ""}
       </figure>
     `
   ).join("");
-  return `<div class="popup-images">${figures}</div>`;
+  return figures ? `<div class="popup-images">${figures}</div>` : "";
 }
 
 function toiletteSection(toilette) {
@@ -191,7 +222,7 @@ function toiletteSection(toilette) {
         <span class="popup-subsection-title">Toilette</span>
         <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       </div>
-      <p class="popup-subsection-notes">${toilette.notes}</p>
+      <p class="popup-subsection-notes">${esc(toilette.notes)}</p>
     </div>
   `;
 }
@@ -201,8 +232,8 @@ function commercePopup(c) {
   const a = c.accessibility || {};
   return `
     <div class="popup-content">
-      <h3>${c.name}</h3>
-      <div class="popup-address">${c.address}</div>
+      <h3>${esc(c.name)}</h3>
+      <div class="popup-address">${esc(c.address)}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", CATEGORY_LABELS[c.category] || c.category)}
       ${field("Entrée", ENTREE_LABELS[a.entree] || a.entree)}
@@ -231,8 +262,8 @@ function terrassePopup(t) {
   const a = t.accessibility || {};
   return `
     <div class="popup-content">
-      <h3>${t.name}</h3>
-      <div class="popup-address">${t.address}</div>
+      <h3>${esc(t.name)}</h3>
+      <div class="popup-address">${esc(t.address)}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Notes", a.notes)}
       ${sourceField(t.source)}
@@ -250,11 +281,11 @@ function adaptesHighlight(a) {
   const s = n > 1 ? "s" : "";
   const details = [
     Number.isFinite(a.totalLogements) ? `sur ${a.totalLogements} logements` : "",
-    a.repartitionAdaptees?.length ? a.repartitionAdaptees.join(", ") : "",
+    a.repartitionAdaptees?.length ? esc(a.repartitionAdaptees.join(", ")) : "",
   ].filter(Boolean).join(" · ");
   return `
     <div class="popup-highlight">
-      <span class="popup-highlight-number">${n}</span>
+      <span class="popup-highlight-number">${esc(n)}</span>
       <span class="popup-highlight-text">
         <strong>logement${s} adapté${s}</strong>
         ${details ? `<span>${details}</span>` : ""}
@@ -268,8 +299,8 @@ function logementPopup(l) {
   const a = l.accessibility || {};
   return `
     <div class="popup-content">
-      <h3>${l.name}</h3>
-      <div class="popup-address">${l.address}</div>
+      <h3>${esc(l.name)}</h3>
+      <div class="popup-address">${esc(l.address)}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${adaptesHighlight(a)}
       ${field("Type", LOGEMENT_TYPE_LABELS[l.type] || l.type)}
@@ -285,8 +316,8 @@ function logementPopup(l) {
 function stationnementPopup(s) {
   return `
     <div class="popup-content">
-      <h3>${s.description}</h3>
-      ${s.address ? `<div class="popup-address">${s.address}</div>` : ""}
+      <h3>${esc(s.description)}</h3>
+      ${s.address ? `<div class="popup-address">${esc(s.address)}</div>` : ""}
       ${field("Type", STATIONNEMENT_TYPE_LABELS[s.type] || s.type)}
       ${field("Notes", s.notes)}
       ${sourceField(s.source)}
@@ -299,8 +330,8 @@ function stationnementPopup(s) {
 function debarcaderePopup(d) {
   return `
     <div class="popup-content">
-      <h3>${d.description}</h3>
-      ${d.address ? `<div class="popup-address">${d.address}</div>` : ""}
+      <h3>${esc(d.description)}</h3>
+      ${d.address ? `<div class="popup-address">${esc(d.address)}</div>` : ""}
       ${field("Notes", d.notes)}
       ${streetViewField(d.lat, d.lng)}
       ${sourceField(d.source)}
@@ -313,7 +344,7 @@ function debarcaderePopup(d) {
 function streetViewField(lat, lng) {
   if (lat == null || lng == null) return "";
   const url = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}`;
-  return field("Street View", `<a href="${url}" target="_blank" rel="noopener">Voir sur Google Maps${NEW_TAB}</a>`);
+  return fieldHtml("Street View", linkHtml(url, "Voir sur Google Maps"));
 }
 
 function batimentPopup(e) {
@@ -321,8 +352,8 @@ function batimentPopup(e) {
   const a = e.accessibility || {};
   return `
     <div class="popup-content">
-      <h3>${e.name}</h3>
-      <div class="popup-address">${e.address}</div>
+      <h3>${esc(e.name)}</h3>
+      <div class="popup-address">${esc(e.address)}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", BATIMENT_CATEGORY_LABELS[e.category] || e.category)}
       ${field("Ascenseur", a.ascenseur)}
@@ -341,8 +372,8 @@ function toilettePopup(t) {
   const a = t.accessibility || {};
   return `
     <div class="popup-content">
-      <h3>${t.name}</h3>
-      <div class="popup-address">${t.address}</div>
+      <h3>${esc(t.name)}</h3>
+      <div class="popup-address">${esc(t.address)}</div>
       <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       ${field("Catégorie", TOILETTE_CATEGORY_LABELS[t.category] || t.category)}
       ${field("Horaire", t.horaire)}
@@ -362,8 +393,8 @@ const SENTIER_LARGEUR_LABELS = {
 function sentierPopup(s) {
   return `
     <div class="popup-content">
-      <h3>${s.name}</h3>
-      ${s.park ? `<div class="popup-address">${s.park}</div>` : ""}
+      <h3>${esc(s.name)}</h3>
+      ${s.park ? `<div class="popup-address">${esc(s.park)}</div>` : ""}
       ${field("Largeur", SENTIER_LARGEUR_LABELS[s.largeur] || s.largeur)}
       ${field("Longueur", typeof s.longueur === "number" ? `${s.longueur} m` : null)}
       ${field("Notes", s.notes)}
@@ -376,8 +407,8 @@ function sentierPopup(s) {
 function gainPopup(g) {
   return `
     <div class="popup-content">
-      <h3>${g.description}</h3>
-      ${g.address ? `<div class="popup-address">${g.address}</div>` : ""}
+      <h3>${esc(g.description)}</h3>
+      ${g.address ? `<div class="popup-address">${esc(g.address)}</div>` : ""}
       ${field("Type de gain", GAIN_TYPE_LABELS[g.type] || g.type)}
       ${field("Date", g.date)}
       ${field("Notes", g.notes)}
@@ -396,24 +427,20 @@ const STATION_SOURCES = {
 
 function stationPopup(s) {
   const lignes = (s.lignes || []).map((l) => {
-    const dot = l.couleur ? `<span class="popup-line-dot" style="background:${l.couleur}"></span>` : "";
+    const dot = /^#[0-9a-f]{6}$/i.test(l.couleur || "") ? `<span class="popup-line-dot" style="background:${l.couleur}"></span>` : "";
     const quai = l.quaiAccessible ? "" : ` <strong class="popup-warning">· quai non accessible</strong>`;
-    return `${dot}${l.nom}${quai}`;
+    return `${dot}${esc(l.nom)}${quai}`;
   });
-  const fiche = s.url
-    ? field("Fiche", `<a href="${s.url}" target="_blank" rel="noopener">Fiche de la station (${s.reseau === "Métro" ? "STM" : "REM"})${NEW_TAB}</a>`)
-    : "";
+  const fiche = fieldHtml("Fiche", linkHtml(s.url, `Fiche de la station (${s.reseau === "Métro" ? "STM" : "REM"})`));
   // Station du REM qui partage son nom avec une station de métro non accessible
   // (ex : Édouard-Montpetit) : lien vers la fiche STM de la station de métro.
-  const ficheMetro = s.ficheMetro
-    ? field("Métro", `<a href="${s.ficheMetro}" target="_blank" rel="noopener">Fiche de la station de métro (STM)${NEW_TAB}</a>`)
-    : "";
+  const ficheMetro = fieldHtml("Métro", linkHtml(s.ficheMetro, "Fiche de la station de métro (STM)"));
   return `
     <div class="popup-content">
-      <h3>${s.name}</h3>
+      <h3>${esc(s.name)}</h3>
       <div class="popup-address">${s.reseau === "Métro" ? "Métro de Montréal (STM)" : "Réseau express métropolitain (REM)"}</div>
       <span class="badge accessible">${LEVEL_LABELS.accessible}</span>
-      ${bulletField("Lignes", lignes)}
+      ${bulletFieldHtml("Lignes", lignes)}
       ${bulletField("Accès accessibles", s.accesAccessibles)}
       ${fiche}
       ${ficheMetro}
@@ -426,7 +453,7 @@ function stationPopup(s) {
 function feuSonorePopup(f) {
   return `
     <div class="popup-content">
-      <h3>${f.intersection}</h3>
+      <h3>${esc(f.intersection)}</h3>
       ${field("Arrondissement", f.arrondissement)}
       ${field("Type", f.statut)}
     </div>
@@ -450,7 +477,7 @@ const LAYER_INFO = {
       "Toilettes, terrasse, salle d'essayage, terminal de paiement, menu numérique, assistance auditive",
       "Extrait de l'avis et photos, lorsque disponibles",
     ],
-    process: `Chaque fiche reprend un avis d'accessibilité publié par ${externalLink("https://www.google.com/maps/contrib/100918280676331873494", "Promo-Accès sur Google Maps")}. L'avis est retranscrit à la main; un point qu'il ne mentionne pas est laissé vide.`,
+    process: `Chaque fiche reprend un avis d'accessibilité publié par ${externalLink("https://www.google.com/maps/contrib/100918280676331873494", "Promo-Accès sur Google Maps")}. L'avis est retranscrit à la main ; un point qu'il ne mentionne pas est laissé vide.`,
     template: "ajouter-commerce.yml",
   },
   terrasses: {
@@ -470,13 +497,13 @@ const LAYER_INFO = {
       "Taille des logements, clientèle visée, ascenseur",
       "Conditions d'admissibilité, pour les HLM",
     ],
-    process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées; leur position et leur arrondissement viennent du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. Le jeu couvre tout Montréal. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
+    process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées ; leur position et leur arrondissement viennent du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. Le jeu couvre tout Montréal. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
   },
   "batiments-municipaux": {
     about: "Piscines, arénas, bibliothèques, centres sportifs et autres bâtiments de la Ville et de l'arrondissement.",
     data: [
       "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
-      "Ascenseur, équipements adaptés (ex : lève-personne, lugiglace) et autres aménagements (rampe, entrée accessible, stationnement, toilettes)",
+      "Ascenseur, équipements adaptés (ex : lève-personne, lugiglace) et autres aménagements (rampe, entrée accessible, stationnement, toilettes)",
       "Section distincte sur la toilette, lorsque l'information vient d'une autre source",
       "Lien vers la fiche du lieu",
     ],
@@ -487,10 +514,10 @@ const LAYER_INFO = {
     about: "Toilettes accessibles au public dans les parcs, bibliothèques, piscines, édifices municipaux et commerces.",
     data: [
       "Niveau d'accessibilité, indiqué par la pastille de couleur du marqueur",
-      "Aménagements observés : entrée, seuils, barres d'appui, table à langer",
+      "Aménagements observés : entrée, seuils, barres d'appui, table à langer",
       "Horaire ou fermeture saisonnière",
     ],
-    process: "Saisie à la main à partir d'observations faites sur place. Les notes décrivent l'état au moment de la visite (par exemple, un ascenseur en panne).",
+    process: "Saisie à la main à partir d'observations faites sur place. Les notes décrivent l'état au moment de la visite (par exemple, un ascenseur en panne). Les toilettes relevées comme non accessibles ne sont pas affichées.",
     template: "ajouter-toilette.yml",
   },
   "sentiers-deneiges": {
@@ -506,34 +533,34 @@ const LAYER_INFO = {
   stationnements: {
     about: "Places de stationnement gratuites réservées aux détenteurs d'une vignette pour personnes handicapées, sur rue ou hors rue.",
     data: ["Emplacement et type (sur rue ou hors rue)", "Notes et photos, lorsque disponibles"],
-    process: "Saisie à la main seulement. Les places réservées gratuites des rues résidentielles ne figurent dans aucun jeu de données ouvertes : la liste n'est pas complète.",
+    process: "Saisie à la main seulement. Les places réservées gratuites des rues résidentielles ne figurent dans aucun jeu de données ouvertes : la liste n'est pas complète.",
     template: "ajouter-stationnement.yml",
   },
   "stationnements-payants": {
     about: "Places tarifées réservées aux détenteurs d'une vignette pour personnes handicapées.",
     data: ["Emplacement", "Tarif horaire", "Panneau de signalisation associé, s'il y a lieu"],
-    process: `Import automatisé des ${externalLink("https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles", "données ouvertes de l'Agence de mobilité durable")} (licence CC-BY 4.0). Le jeu couvre tout Montréal. Un panneau « réservé handicapés » de la Ville à moins de 15 m d'une place y est jumelé.`,
+    process: `Import automatisé des ${externalLink("https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles", "données ouvertes de l'Agence de mobilité durable")} (licence CC-BY 4.0). Le jeu couvre tout Montréal. Un panneau « réservé handicapés » de la Ville à moins de 15 m d'une place y est jumelé.`,
   },
   debarcaderes: {
     about: "Zones d'arrêt réservées pour faire monter ou descendre une personne handicapée.",
     data: ["Emplacement et description", "Lien Street View pour voir l'aménagement sur place"],
-    process: `Saisie à la main pour le Plateau, complétée par les panneaux « débarcadère réservé handicapés » du jeu ${externalLink("https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant", "Signalisation (stationnement sur rue)")} de la Ville, importés automatiquement pour tout Montréal.`,
+    process: `Saisie à la main pour le Plateau, complétée par les panneaux « débarcadère réservé handicapés » du jeu ${externalLink("https://donnees.montreal.ca/dataset/stationnement-sur-rue-signalisation-courant", "Signalisation (stationnement sur rue)")} de la Ville, importés automatiquement pour tout Montréal.`,
     template: "ajouter-debarcadere.yml",
   },
   "feux-sonores": {
     about: "Intersections dont les feux pour piétons émettent un signal sonore, pour les personnes ayant une déficience visuelle.",
     data: ["Intersection et arrondissement", "Type d'installation (permanente ou temporaire)"],
-    process: `Import automatisé des ${externalLink("https://donnees.montreal.ca/dataset/feux-malvoyants", "données ouvertes de la Ville de Montréal")}. Le jeu couvre toute la ville : les feux des arrondissements voisins sont aussi affichés.`,
+    process: `Import automatisé des ${externalLink("https://donnees.montreal.ca/dataset/feux-malvoyants", "données ouvertes de la Ville de Montréal")}. Le jeu couvre toute la ville : les feux des arrondissements voisins sont aussi affichés.`,
   },
   "stations-metro": {
     about: "Stations de métro de la STM accessibles en fauteuil roulant (ascenseurs de la rue jusqu'aux quais), selon les données officielles de la STM.",
     data: ["Lignes desservies, et quai de chaque ligne s'il n'est pas accessible", "Entrées accessibles", "Lien vers la fiche de la station sur stm.info, qui donne l'état des ascenseurs"],
-    process: `Import automatisé du ${externalLink("https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes", "GTFS de la STM")} : stations, quais et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Les noms sont ceux publiés par la STM. Toutes les stations accessibles sont affichées, y compris à Laval. Un ascenseur peut être en panne : vérifier la fiche de la station avant de partir.`,
+    process: `Import automatisé du ${externalLink("https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes", "GTFS de la STM")} : stations, quais et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Les noms sont ceux publiés par la STM. Toutes les stations accessibles sont affichées, y compris à Laval. Un ascenseur peut être en panne : vérifier la fiche de la station avant de partir.`,
   },
   "stations-rem": {
     about: "Stations du Réseau express métropolitain (REM) accessibles en fauteuil roulant, selon les données officielles du REM.",
     data: ["Antennes desservies", "Entrées accessibles"],
-    process: `Import automatisé du ${externalLink("https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain", "GTFS du REM")} publié par l'ARTM (licence CC BY 4.0) : stations et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Toutes les stations sont affichées, y compris hors de Montréal (Brossard, Deux-Montagnes, etc.).`,
+    process: `Import automatisé du ${externalLink("https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain", "GTFS du REM")} publié par l'ARTM (licence CC BY 4.0) : stations et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Toutes les stations sont affichées, y compris hors de Montréal (Brossard, Deux-Montagnes, etc.).`,
   },
   "gains-ccu": {
     about: "Améliorations de l'accessibilité obtenues lors de l'étude de projets immobiliers par le comité consultatif d'urbanisme (CCU) de l'arrondissement, par exemple une proportion de logements adaptables ou une rampe d'accès.",
@@ -546,7 +573,7 @@ const LAYER_INFO = {
 function layerInfoHtml(config) {
   const info = LAYER_INFO[config.key];
   const contribute = info.template
-    ? `<p class="layer-info-contribute">Vous connaissez un lieu à ajouter? ${externalLink(ISSUE_URL + info.template, "Proposer un ajout sur GitHub")} (compte requis).</p>`
+    ? `<p class="layer-info-contribute">Vous connaissez un lieu à ajouter ? ${externalLink(ISSUE_URL + info.template, "Proposer un ajout sur GitHub")} (compte requis).</p>`
     : "";
   return `
     <h3 id="layer-info-title">${config.label}</h3>
@@ -614,7 +641,9 @@ const LAYER_CONFIG = [
     defaultVisible: true,
     color: ["#2dd4bf", "#0f766e"],
     icon: ICONS.toilette,
-    getItems: (data) => data.toilettes || [],
+    // Les toilettes « non accessibles » restent dans data/toilettes.json (relevé complet)
+    // mais ne sont pas affichées sur la carte.
+    getItems: (data) => (data.toilettes || []).filter((t) => t.accessibility?.level !== "non-accessible"),
     getBadge: (item) => LEVEL_COLORS[levelClass(item.accessibility?.level)],
     getPopup: toilettePopup,
   },
@@ -635,7 +664,7 @@ const LAYER_CONFIG = [
     group: "stationnement",
     // Saisie manuelle uniquement.
     file: "data/stationnements.json",
-    defaultVisible: true,
+    defaultVisible: false, // décochée au départ : couche dense, la carte serait surchargée à l'ouverture
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.stationnement,
     size: 28,
@@ -648,7 +677,7 @@ const LAYER_CONFIG = [
     group: "stationnement",
     // Places tarifées importées de l'Agence de mobilité durable.
     file: "data/places-handicapes.json",
-    defaultVisible: true,
+    defaultVisible: false, // décochée au départ : couche dense, la carte serait surchargée à l'ouverture
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.stationnementPayant,
     size: 28,
@@ -661,7 +690,7 @@ const LAYER_CONFIG = [
     label: "Débarcadères accessibles",
     group: "stationnement",
     files: ["data/debarcaderes.json", "data/places-handicapes.json"],
-    defaultVisible: true,
+    defaultVisible: false, // décochée au départ : couche dense, la carte serait surchargée à l'ouverture
     color: ["#3b82f6", "#1e3a8a"],
     getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
     icon: ICONS.debarcadere,
@@ -673,7 +702,7 @@ const LAYER_CONFIG = [
     key: "feux-sonores",
     label: "Feux sonores",
     file: "data/feux-sonores.json",
-    defaultVisible: true,
+    defaultVisible: false, // décochée au départ : couche dense, la carte serait surchargée à l'ouverture
     color: ["#f87171", "#b91c1c"],
     icon: ICONS.feu,
     getItems: (data) => data.feuxSonores || [],
@@ -997,8 +1026,8 @@ function renderSearchResults(commerces) {
     const li = document.createElement("li");
     li.innerHTML = `
       <button type="button">
-        <span class="name">${c.name}</span>
-        <span class="address">${c.address}</span>
+        <span class="name">${esc(c.name)}</span>
+        <span class="address">${esc(c.address)}</span>
         <span class="badge ${level}">${LEVEL_LABELS[level]}</span>
       </button>
     `;

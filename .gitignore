@@ -7,3 +7,7 @@ node_modules/
 # tout le dépôt est servi publiquement par GitHub Pages. Voir sources/README.md.
 sources/*
 !sources/README.md
+
+# Fichiers compilés de Python (régénérés à chaque exécution des scripts)
+__pycache__/
+*.pyc

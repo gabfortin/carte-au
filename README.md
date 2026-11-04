@@ -17,7 +17,7 @@ projet est parti — précisé couche par couche ci-dessous.
 - **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
 - **Débarcadères accessibles** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
 - **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal. Plateau-Mont-Royal seulement.
-- **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement.
+- **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement. Les toilettes de niveau `non-accessible` restent dans `data/toilettes.json` (relevé complet) mais ne sont pas affichées sur la carte (filtre dans `getItems` de la couche, `js/app.js`).
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants), **pour tout Montréal**.
 - **Stations de métro et REM accessibles** — stations accessibles en fauteuil roulant selon les GTFS officiels de la [STM](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes) et du [REM](https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain) (ARTM, CC BY 4.0), **toutes les stations, y compris hors de Montréal** (Laval, Brossard, Deux-Montagnes…). Deux sous-couches, Métro et REM, regroupées dans la sidebar. Le popup indique les lignes, le quai d'une ligne s'il n'est pas accessible (ex. ligne 4 à Berri-UQAM), les entrées accessibles et le lien vers la fiche STM de la station. Les stations hors des 19 arrondissements n'ont pas d'arrondissement : elles ne s'affichent qu'avec « Tous les arrondissements ». Une station du REM qui porte exactement le même nom qu'une station de métro non accessible (aujourd'hui seulement Édouard-Montpetit) affiche aussi la ligne de métro, avec « quai non accessible » selon le GTFS de la STM, et le lien vers sa fiche STM ; quand les deux sont accessibles (ex. McGill), chaque réseau a son propre marqueur.
 - **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement.
@@ -49,10 +49,19 @@ La carte suit le mode clair ou sombre de l'appareil (`prefers-color-scheme`), se
 ## Stack
 
 - HTML/CSS/JS vanilla
-- [Leaflet](https://leafletjs.com/) + tuiles OpenStreetMap (pas de clé API requise)
+- [Leaflet](https://leafletjs.com/) 1.9.4, hébergé dans `vendor/leaflet-1.9.4/` (copie identique à unpkg, pour ne dépendre d'aucun CDN) + tuiles OpenStreetMap (pas de clé API requise)
 - Données statiques dans `data/*.json`, une couche = un fichier
 - Hébergement : GitHub Pages
 - Statistiques de visite : [GoatCounter](https://www.goatcounter.com/) (sans cookies), décrit dans [confidentialite.html](confidentialite.html)
+- Référencement : métadonnées Open Graph et JSON-LD (`Map`) dans `index.html`, image d'aperçu `og-image.jpg` (1200 × 630, faite à partir du gabarit `scripts/og-image.html`, même style que celle d'avantapres), `sitemap.xml`, `robots.txt`, `llms.txt`
+
+### Sécurité des données affichées
+
+Une partie des données vient de soumissions publiques (issues GitHub). Dans `js/app.js`, tout texte issu des données passe par `esc()` avant d'être inséré dans le HTML, et tout lien par `safeUrl()` (seulement `http(s)://` ou un chemin relatif du site). `field()` et `bulletField()` échappent leur contenu ; `fieldHtml()` et `bulletFieldHtml()` sont réservées au HTML construit par le code (liens, pastilles). Ne jamais insérer un champ des données sans passer par l'une de ces fonctions. Côté intégration, `scripts/integrate_submission.py` refuse tout lien soumis qui n'est pas une adresse `https://` complète.
+
+### Couches affichées au départ
+
+Toutes les couches sont cochées à l'ouverture, sauf « Stationnement » (places gratuites, places payantes, débarcadères) et « Feux sonores » : trop denses, elles surchargeraient la carte (`defaultVisible: false` dans `LAYER_CONFIG`).
 
 ## Développer en local
 
@@ -365,3 +374,13 @@ Prérequis une fois : Settings → Actions → General → Workflow permissions 
 ## Déploiement
 
 Activer GitHub Pages sur ce dépôt (Settings → Pages → branche `main`, dossier `/`). Le site sera servi statiquement, aucune étape de build requise.
+
+Avant de commiter un changement à `css/style.css` ou `js/app.js`, mettre à jour leurs empreintes dans `index.html` :
+
+```bash
+python3 scripts/stamp_assets.py
+```
+
+Sinon, pendant les 10 minutes de cache de GitHub Pages, un visiteur peut recevoir le nouveau JS avec l'ancien CSS.
+
+Pour modifier l'image de partage `og-image.jpg` (1200 × 630), éditer `scripts/og-image.html`, puis suivre les étapes en commentaire en tête du fichier.

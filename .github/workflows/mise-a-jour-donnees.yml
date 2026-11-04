@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      PYTHONDONTWRITEBYTECODE: "1"   # ne pas toucher aux .pyc commités dans scripts/__pycache__
+      PYTHONDONTWRITEBYTECODE: "1"   # pas de fichiers __pycache__ sur le runner
     steps:
       - uses: actions/checkout@v4
 
