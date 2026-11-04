@@ -1304,35 +1304,77 @@ document.querySelector('.skip-link[href="#sidebar"]').addEventListener("click", 
   layerTogglesEl.querySelector("input")?.focus();
 });
 
-const aboutOverlay = document.getElementById("about-overlay");
-
-const aboutBtn = document.getElementById("about-btn");
-// Pendant que la fenêtre est ouverte, le reste de la page est inerte : le focus y reste.
+// Pendant qu'une fenêtre modale (À propos, Suggestion) est ouverte, le reste de la
+// page est inerte : le focus y reste, Échap ou un clic hors de la fenêtre la ferme.
 const backgroundEls = [".skip-link", ".site-header", "#sidebar", "#map"].flatMap((sel) => [...document.querySelectorAll(sel)]);
 
-function openAbout() {
-  closeLayerInfo({ restoreFocus: false });
-  aboutOverlay.classList.add("open");
-  aboutOverlay.inert = false;
-  backgroundEls.forEach((el) => (el.inert = true));
-  document.getElementById("about-modal-close").focus();
+function setupModal({ overlay, closeBtn, openTrigger, focusReturnTo, onOpen }) {
+  function open() {
+    closeLayerInfo({ restoreFocus: false });
+    overlay.classList.add("open");
+    overlay.inert = false;
+    backgroundEls.forEach((el) => (el.inert = true));
+    closeBtn.focus();
+    onOpen?.();
+  }
+  function close() {
+    overlay.classList.remove("open");
+    overlay.inert = true;
+    backgroundEls.forEach((el) => (el.inert = false));
+    syncSidebarState();
+    focusReturnTo.focus();
+  }
+  openTrigger?.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("open")) close();
+  });
+  return { open, close };
 }
 
-function closeAbout() {
-  aboutOverlay.classList.remove("open");
-  aboutOverlay.inert = true;
-  backgroundEls.forEach((el) => (el.inert = false));
-  syncSidebarState();
-  aboutBtn.focus();
-}
+const aboutBtn = document.getElementById("about-btn");
 
-aboutBtn.addEventListener("click", openAbout);
-document.getElementById("about-modal-close").addEventListener("click", closeAbout);
-aboutOverlay.addEventListener("click", (e) => {
-  if (e.target === aboutOverlay) closeAbout();
+const aboutModal = setupModal({
+  overlay: document.getElementById("about-overlay"),
+  closeBtn: document.getElementById("about-modal-close"),
+  openTrigger: aboutBtn,
+  focusReturnTo: aboutBtn,
 });
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && aboutOverlay.classList.contains("open")) closeAbout();
+
+// Le lien « Suggérer une fonctionnalité » vit dans le panneau À propos (voir
+// index.html) plutôt que comme bouton séparé dans l'en-tête : on ferme donc le
+// panneau À propos avant d'ouvrir la fenêtre de suggestion, pour ne jamais avoir
+// deux fenêtres modales ouvertes en même temps; au retour, le focus va au bouton
+// ⓘ, seul point d'entrée stable vers ce flux.
+const suggestionModal = setupModal({
+  overlay: document.getElementById("suggestion-overlay"),
+  closeBtn: document.getElementById("suggestion-modal-close"),
+  focusReturnTo: aboutBtn,
+  onOpen: () => document.getElementById("suggestion-text").focus(),
+});
+
+document.getElementById("about-suggest-link").addEventListener("click", () => {
+  aboutModal.close();
+  suggestionModal.open();
+});
+
+// Formulaire de suggestion : purement client (pas de serveur), ouvre le client
+// courriel du visiteur avec un mailto: pré-rempli plutôt que d'envoyer quoi que ce
+// soit depuis la page. Le visiteur doit encore cliquer « Envoyer » dans son client.
+function suggestionMailtoUrl(texte, nom) {
+  const corps = nom ? `${texte}\n\n— ${nom}` : texte;
+  const sujet = "Suggestion - Montréal Accessible";
+  return `mailto:info@gabfortin.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+}
+
+document.getElementById("suggestion-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const texte = document.getElementById("suggestion-text").value.trim();
+  const nom = document.getElementById("suggestion-name").value.trim();
+  location.href = suggestionMailtoUrl(texte, nom);
 });
 
 // Filtre d'arrondissement (en-tête, à gauche de la recherche) : narrows down which
