@@ -12,7 +12,9 @@ projet est parti — précisé couche par couche ci-dessous.
 
   Ces deux couches apparaissent regroupées dans la sidebar sous « Commerces accessibles ».
 - **Sentiers déneigés** — sentiers de parc déneigés en hiver par l'arrondissement, saisie manuelle. Plateau-Mont-Royal seulement. Affichés comme un tracé sur la carte plutôt qu'un simple point.
-- **Logements accessibles** — saisie manuelle (Plateau-Mont-Royal) + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations) qui comptent des unités adaptées, **pour tout Montréal** (positions et arrondissement tirés du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
+- **Logement** — deux sous-couches regroupées dans la sidebar :
+  - **Logements OMHM** — saisie manuelle (Plateau-Mont-Royal) + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations) qui comptent des unités adaptées, **pour tout Montréal** (positions et arrondissement tirés du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
+  - **Logements adaptables** — projets dérogatoires autorisés par le conseil d'arrondissement du Plateau-Mont-Royal qui prévoient des logements adaptables (liste compilée à la main à partir des ordres du jour et procès-verbaux, depuis 2022). Ce sont des engagements : un projet peut ne pas être construit. Plateau-Mont-Royal seulement. Voir [Logements adaptables](#logements-adaptables-datalogements-adaptablesjson).
 - **Stationnement accessible** — saisie manuelle uniquement, Plateau-Mont-Royal seulement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
 - **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
 - **Débarcadères accessibles** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
@@ -181,6 +183,8 @@ clavier, activer avec Entrée/Espace) le tracé ouvre son popup.
 
 ### Logements (`data/logements.json`)
 
+Saisie manuelle, affichée dans la sous-couche « Logements OMHM » avec les HLM importés (même clé de couche `logements`). Voir [NOTES.md](NOTES.md) si on y ajoute des logements du marché privé.
+
 ```json
 {
   "id": "identifiant-unique",
@@ -335,6 +339,23 @@ Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les
 SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
 ```
 
+### Logements adaptables (`data/logements-adaptables.json`)
+
+Choix de méthode et cas particuliers : [NOTES.md](NOTES.md#groupe--logement--et-logements-adaptables-novembre-2026).
+
+Généré par [`scripts/import_logements_adaptables.py`](scripts/import_logements_adaptables.py) à partir d'un classeur Excel tenu à la main (colonnes `Adresse`, `Nombre de logements adaptables`, `Note`, `# GDD`, `Lien GDD`), déposé dans `sources/` (non publié). Ne pas éditer le JSON à la main : modifier le classeur, puis :
+
+```bash
+python3 scripts/import_logements_adaptables.py sources/logements-adaptables-projets-derogatoires.xlsx
+```
+
+- Nombre, note et numéro GDD repris tels quels. Une cellule de nombre vide reste vide (ex. « minimum de 20 % » sans nombre) : pas d'encadré chiffré dans le popup.
+- Adresse : celle du classeur, avec les seules corrections listées dans `ADRESSE_CORRECTIONS` (trait d'union perdu au copier-coller du PDF : « SaintHubert » → « Saint-Hubert »). L'original reste dans `adresseSource`.
+- Date de la séance : lue dans le nom du PDF de l'ordre du jour (`…_ORDI_AAAA-MM-JJ_…`).
+- Position : jeu [Adresse ponctuelle](https://donnees.montreal.ca/dataset/adresses-ponctuelles) de la Ville (CC BY 4.0, 36 Mo, téléchargé dans `sources/` au premier lancement), par rue, orientation, parité et plage de numéros, dans les limites du Plateau. Une adresse à plusieurs bâtiments vise le premier (`GEOCODE_REQUETES`). Un numéro absent du jeu (lot vacant, bâtiment à construire) prend le numéro voisin du même côté de la rue, à 20 numéros au plus : la fiche porte alors `positionApproximative: true` et le popup le dit. Sinon, le script échoue : ajouter la position dans `POSITIONS_MANUELLES`.
+
+Pas dans le robot mensuel : la source est un fichier tenu à la main.
+
 ### Places réservées aux personnes handicapées (`data/places-handicapes.json`)
 
 Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les ajouts manuels vont dans `data/stationnements.json` et `data/debarcaderes.json`). Pour rafraîchir :
@@ -365,7 +386,7 @@ Le workflow [`.github/workflows/mise-a-jour-donnees.yml`](.github/workflows/mise
 
 Chaque source est importée puis vérifiée par [`scripts/valider_donnees.py`](scripts/valider_donnees.py) : JSON lisible, listes non vides, et pas de baisse de plus de moitié par rapport à la version publiée (au-delà de 20 éléments). Si une source échoue, son fichier précédent est conservé, les autres sources sont quand même publiées, et le workflow finit en échec (courriel de GitHub) avec le détail dans le résumé de l'exécution.
 
-Pas automatisé : `import_debarcaderes_spectrum.py`, qui part d'un export manuel de l'outil interne de l'arrondissement.
+Pas automatisé : `import_debarcaderes_spectrum.py`, qui part d'un export manuel de l'outil interne de l'arrondissement, et `import_logements_adaptables.py`, qui part d'un classeur tenu à la main.
 
 **Avis par courriel** : chaque exécution ouvre une issue « Mise à jour des données — AAAA-MM-JJ » avec le résultat de chaque source, le lien vers le commit des données et une case à cocher pour mettre à jour le CSV Spectrum à la main. GitHub l'envoie par courriel aux personnes qui suivent le dépôt (Watch → All Activity, ou au minimum Issues). Pour la recevoir à info@gabfortin.com plutôt qu'à l'adresse principale du compte : github.com → Settings → Notifications → Custom routing, choisir `gabfortin` → info@gabfortin.com (l'adresse doit être ajoutée et vérifiée dans Settings → Emails). Fermer l'issue une fois le CSV intégré.
 
