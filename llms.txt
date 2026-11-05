@@ -2,7 +2,7 @@
 
 > Carte interactive et gratuite de l'accessibilité universelle à Montréal (Québec, Canada) : commerces, logements adaptés, stationnements et débarcadères réservés aux personnes handicapées, bâtiments municipaux, toilettes, sentiers déneigés, stations de métro et du REM accessibles, et feux sonores pour piétons.
 
-Application web en français, sans compte ni installation : https://carte-au.gabfortin.com/
+Application web en français, sans compte ni installation : https://montrealaccessible.ca/
 
 ## Ce que montre la carte
 
@@ -32,6 +32,6 @@ Conçu par **Gabriel Fortin**, conseiller d'arrondissement du Plateau-Mont-Royal
 
 ## Liens
 
-- [Carte](https://carte-au.gabfortin.com/)
-- [Politique de confidentialité](https://carte-au.gabfortin.com/confidentialite.html)
+- [Carte](https://montrealaccessible.ca/)
+- [Politique de confidentialité](https://montrealaccessible.ca/confidentialite.html)
 - [Gabriel Fortin](https://gabfortin.com)

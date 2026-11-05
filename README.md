@@ -375,6 +375,8 @@ Prérequis une fois : Settings → Actions → General → Workflow permissions 
 
 Activer GitHub Pages sur ce dépôt (Settings → Pages → branche `main`, dossier `/`). Le site sera servi statiquement, aucune étape de build requise.
 
+Domaine final : **montrealaccessible.ca** (adresses canoniques, balises de partage, JSON-LD, `sitemap.xml`, `robots.txt` et `llms.txt` y pointent déjà). Le fichier `CNAME` contient `montrealaccessible.ca` : configurer le DNS du domaine vers GitHub Pages (enregistrements A/AAAA de l'apex vers les adresses de GitHub Pages, `www` en CNAME vers `gabfortin.github.io`), puis cocher « Enforce HTTPS » dans Settings → Pages. Les adresses absolues sont dans le `<head>` de `index.html` et de `confidentialite.html`, et dans `sitemap.xml`, `robots.txt` et `llms.txt`.
+
 Avant de commiter un changement à `css/style.css` ou `js/app.js`, mettre à jour leurs empreintes dans `index.html` :
 
 ```bash

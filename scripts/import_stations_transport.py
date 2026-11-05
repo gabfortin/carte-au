@@ -42,7 +42,7 @@ STM_DATASET_URL = "https://www.stm.info/a-propos/documents-donnees/donnees-ouver
 ARTM_API = "https://donnees.artm.quebec/catalogue/api/3/action"
 REM_PACKAGE = "offres-de-service-planifie-du-reseau-express-metropolitain"
 REM_DATASET_URL = f"https://donnees.artm.quebec/catalogue/dataset/{REM_PACKAGE}"
-USER_AGENT = "carte-au (https://carte-au.gabfortin.com)"
+USER_AGENT = "Montreal Accessible (https://montrealaccessible.ca)"
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "stations-transport.json"
 
 # route_type GTFS : 0 = tramway / métro léger (REM), 1 = métro
