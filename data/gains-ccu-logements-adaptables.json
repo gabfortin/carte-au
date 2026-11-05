@@ -1,17 +1,18 @@
 {
   "source": "Projets dérogatoires autorisés par le conseil d'arrondissement du Plateau-Mont-Royal (ordres du jour et procès-verbaux), compilés à la main",
-  "logements": [
+  "gains": [
     {
       "id": "adaptables-1258398003",
-      "name": "920, avenue Duluth Est",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "920, avenue Duluth Est",
       "lat": 45.523637,
       "lng": -73.573018,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2025-05-05",
       "logementsAdaptables": 1,
-      "note": null,
+      "notes": null,
       "gdd": "1258398003",
-      "dateSeance": "2025-05-05",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2025-05-05_16h00_FR.pdf"
@@ -19,15 +20,16 @@
     },
     {
       "id": "adaptables-1218339016",
-      "name": "4058, rue Parthenais",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "4058, rue Parthenais",
       "lat": 45.533093,
       "lng": -73.56481,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2022-05-02",
       "logementsAdaptables": 2,
-      "note": null,
+      "notes": null,
       "gdd": "1218339016",
-      "dateSeance": "2022-05-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2022-05-02_19h00_FR.pdf"
@@ -35,15 +37,16 @@
     },
     {
       "id": "adaptables-1237894004",
-      "name": "4801, rue Saint-Denis",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "4801, rue Saint-Denis",
       "lat": 45.525736,
       "lng": -73.586362,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2023-09-05",
       "logementsAdaptables": 4,
-      "note": null,
+      "notes": null,
       "gdd": "1237894004",
-      "dateSeance": "2023-09-05",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2023-09-05_19h00_FR.pdf"
@@ -51,15 +54,16 @@
     },
     {
       "id": "adaptables-1248398004",
-      "name": "3412, rue Durocher",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "3412, rue Durocher",
       "lat": 45.507269,
       "lng": -73.573111,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2024-04-02",
       "logementsAdaptables": 38,
-      "note": "20% des unités seront adaptables et respecteront les normes supérieures en matière d’accessibilité de la Société canadienne d'hypothèques et de logement (SCHL)",
+      "notes": "20% des unités seront adaptables et respecteront les normes supérieures en matière d’accessibilité de la Société canadienne d'hypothèques et de logement (SCHL)",
       "gdd": "1248398004",
-      "dateSeance": "2024-04-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2024-04-02_19h00_FR.pdf"
@@ -68,15 +72,16 @@
     },
     {
       "id": "adaptables-1249239003",
-      "name": "501-507, avenue Duluth Est",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "501-507, avenue Duluth Est",
       "lat": 45.521908,
       "lng": -73.574987,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2024-07-02",
       "logementsAdaptables": 1,
-      "note": null,
+      "notes": null,
       "gdd": "1249239003",
-      "dateSeance": "2024-07-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2024-07-02_19h00_FR.pdf"
@@ -84,15 +89,16 @@
     },
     {
       "id": "adaptables-1249239005",
-      "name": "5500, rue Saint-Hubert",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "5500, rue Saint-Hubert",
       "lat": 45.531461,
       "lng": -73.593567,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2024-12-02",
       "logementsAdaptables": 30,
-      "note": "8 (adaptables) + 22 (accessibles SCHL)\nQu’un minimum de 5 % des logements soit adaptable selon le Code de construction du Québec, Chapitre I – Bâtiment (CNB 2015 modifié – Québec). (2022); Qu'un minimum de 15% des logements soit accessible selon les critères du Fonds pour le logement abordable de la SCHL;",
+      "notes": "8 (adaptables) + 22 (accessibles SCHL)\nQu’un minimum de 5 % des logements soit adaptable selon le Code de construction du Québec, Chapitre I – Bâtiment (CNB 2015 modifié – Québec). (2022); Qu'un minimum de 15% des logements soit accessible selon les critères du Fonds pour le logement abordable de la SCHL;",
       "gdd": "1249239005",
-      "dateSeance": "2024-12-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2024-12-02_19h00_FR.pdf"
@@ -101,15 +107,16 @@
     },
     {
       "id": "adaptables-1258398001",
-      "name": "3462-3466, avenue Parc",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "3462-3466, avenue Parc",
       "lat": 45.508924,
       "lng": -73.573076,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2025-04-07",
       "logementsAdaptables": 4,
-      "note": null,
+      "notes": null,
       "gdd": "1258398001",
-      "dateSeance": "2025-04-07",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2025-04-07_19h00_FR.pdf"
@@ -117,15 +124,16 @@
     },
     {
       "id": "adaptables-1259240003",
-      "name": "1221-1225, rue Marie-Anne Est",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "1221-1225, rue Marie-Anne Est",
       "lat": 45.528109,
       "lng": -73.575963,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2025-05-05",
       "logementsAdaptables": 1,
-      "note": null,
+      "notes": null,
       "gdd": "1259240003",
-      "dateSeance": "2025-05-05",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2025-05-05_16h00_FR.pdf"
@@ -134,15 +142,16 @@
     },
     {
       "id": "adaptables-1252583006",
-      "name": "3700, rue Berri et 3725, rue Saint-Denis",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "3700, rue Berri et 3725, rue Saint-Denis",
       "lat": 45.519482,
       "lng": -73.57068,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2025-09-02",
       "logementsAdaptables": null,
-      "note": "minimum de 20% de logements adaptables",
+      "notes": "minimum de 20% de logements adaptables",
       "gdd": "1252583006",
-      "dateSeance": "2025-09-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2025-09-02_19h00_FR.pdf"
@@ -151,15 +160,16 @@
     },
     {
       "id": "adaptables-1259239009",
-      "name": "61-63 et 69-75 Rachel Ouest",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "61-63 et 69-75 Rachel Ouest",
       "lat": 45.51743,
       "lng": -73.582661,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2025-11-17",
       "logementsAdaptables": 4,
-      "note": "minimum de 10% de logements adaptables",
+      "notes": "minimum de 10% de logements adaptables",
       "gdd": "1259239009",
-      "dateSeance": "2025-11-17",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2025-11-17_19h00_FR.pdf"
@@ -167,15 +177,16 @@
     },
     {
       "id": "adaptables-1269239001",
-      "name": "3505-3511, boulevard Saint-Laurent",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "3505-3511, boulevard Saint-Laurent",
       "lat": 45.513394,
       "lng": -73.571036,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2026-04-13",
       "logementsAdaptables": 1,
-      "note": null,
+      "notes": null,
       "gdd": "1269239001",
-      "dateSeance": "2026-04-13",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2026-04-13_18h30_FR.pdf"
@@ -183,15 +194,16 @@
     },
     {
       "id": "adaptables-1269239005",
-      "name": "5791, boulevard Saint-Laurent",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "5791, boulevard Saint-Laurent",
       "lat": 45.52752,
       "lng": -73.601815,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2026-06-01",
       "logementsAdaptables": 11,
-      "note": null,
+      "notes": null,
       "gdd": "1269239005",
-      "dateSeance": "2026-06-01",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2026-06-01_18h30_FR.pdf"
@@ -200,15 +212,16 @@
     },
     {
       "id": "adaptables-1264602004",
-      "name": "2400, avenue du Mont-Royal Est",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "2400, avenue du Mont-Royal Est",
       "lat": 45.538069,
       "lng": -73.569378,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2026-09-08",
       "logementsAdaptables": 3,
-      "note": null,
+      "notes": null,
       "gdd": "1264602004",
-      "dateSeance": "2026-09-08",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2026-09-08_18h30_FR.pdf"
@@ -217,15 +230,16 @@
     },
     {
       "id": "adaptables-1269239010",
-      "name": "4403-4423, avenue de l'Esplanade",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "4403-4423, avenue de l'Esplanade",
       "lat": 45.51794,
       "lng": -73.586476,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2026-11-02",
       "logementsAdaptables": 7,
-      "note": null,
+      "notes": null,
       "gdd": "1269239010",
-      "dateSeance": "2026-11-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2026-11-02_18h30_FR.pdf"
@@ -233,15 +247,16 @@
     },
     {
       "id": "adaptables-1269987004",
-      "name": "1651, rue Marie-Anne Est",
+      "description": "Logements adaptables",
+      "type": "logements-adaptables",
       "address": "1651, rue Marie-Anne Est",
       "lat": 45.531269,
       "lng": -73.573029,
       "arrondissement": "le-plateau-mont-royal",
+      "date": "2026-11-02",
       "logementsAdaptables": 1,
-      "note": "L’aménagement intérieur du nouveau logement sera conçu de manière adaptable et ira audelà des exigences applicables aux logements minimalement accessibles. Bien que l’accès au logement ne soit pas universellement accessible dans sa configuration initiale, un plan prévoit les modifications nécessaires à l’aménagement futur d’un accès latéral universellement accessible, selon les besoins d’un éventuel occupant.",
+      "notes": "L’aménagement intérieur du nouveau logement sera conçu de manière adaptable et ira audelà des exigences applicables aux logements minimalement accessibles. Bien que l’accès au logement ne soit pas universellement accessible dans sa configuration initiale, un plan prévoit les modifications nécessaires à l’aménagement futur d’un accès latéral universellement accessible, selon les besoins d’un éventuel occupant.",
       "gdd": "1269987004",
-      "dateSeance": "2026-11-02",
       "source": {
         "name": "Ordre du jour du conseil d'arrondissement (PDF)",
         "url": "https://ville.montreal.qc.ca/documents/Adi_Public/CA_Pmr/CA_Pmr_ODJ_LPP_ORDI_2026-11-02_18h30_FR.pdf"

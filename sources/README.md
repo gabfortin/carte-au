@@ -27,7 +27,7 @@ correspond à un champ de ce même jeu de données (ou d'un autre jeu ouvert) av
 chercher une autre façon de le géolocaliser — et étendre le script plutôt que de
 refaire la correspondance à la main.
 
-## Logements adaptables (projets dérogatoires)
+## Logements adaptables (projets dérogatoires, Gains CCU → Logement)
 
 - `logements-adaptables-projets-derogatoires.xlsx` : classeur tenu à la main à partir des
   ordres du jour et procès-verbaux du conseil d'arrondissement du Plateau-Mont-Royal
@@ -42,4 +42,4 @@ refaire la correspondance à la main.
   automatiquement par le script au premier lancement et réutilisé ensuite. Le supprimer
   pour obtenir la version la plus récente (nouveaux bâtiments).
 
-Choix de méthode (géocodage, termes, corrections) : voir [NOTES.md](../NOTES.md#groupe--logement--et-logements-adaptables-novembre-2026).
+Choix de méthode (géocodage, termes, corrections) : voir [NOTES.md](../NOTES.md#logements-adaptables-des-projets-dérogatoires-novembre-2026).

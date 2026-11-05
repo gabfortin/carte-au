@@ -9,12 +9,13 @@ Application web en français, sans compte ni installation : https://montrealacce
 Chaque catégorie est une couche que l'on peut afficher ou masquer, et la carte se filtre par arrondissement.
 
 - **Commerces accessibles** : avis d'accessibilité de Promo-Accès publiés sur Google Maps (entrée, porte automatique, toilettes, etc.). Plateau-Mont-Royal.
-- **Logement** : immeubles HLM de l'Office municipal d'habitation de Montréal (OMHM) qui comptent des logements adaptés, avec leur nombre (tout Montréal) ; projets immobiliers autorisés par le conseil d'arrondissement du Plateau-Mont-Royal qui prévoient des logements adaptables, avec le nombre, la date de la séance et le dossier décisionnel (Plateau-Mont-Royal).
+- **Logement** : immeubles HLM de l'Office municipal d'habitation de Montréal (OMHM) qui comptent des logements adaptés, avec leur nombre. Tout Montréal.
 - **Stationnement** : places tarifées réservées aux personnes handicapées (Agence de mobilité durable) et débarcadères réservés (signalisation de la Ville). Tout Montréal.
 - **Bâtiments municipaux et toilettes accessibles** : piscines, arénas, bibliothèques, chalets de parc. Plateau-Mont-Royal.
 - **Sentiers déneigés** : sentiers de parc déneigés l'hiver. Plateau-Mont-Royal.
 - **Stations de métro et du REM accessibles** : stations accessibles en fauteuil roulant selon les données officielles de la STM et du REM, avec les lignes dont le quai n'est pas accessible et les entrées accessibles. Tout le réseau, y compris Laval et la Rive-Sud.
 - **Feux sonores** : intersections dont les feux pour piétons émettent un signal sonore. Tout Montréal.
+- **Gains CCU** (nom provisoire) : gains d'accessibilité obtenus lors de l'étude de projets immobiliers, en deux sous-catégories, Logement et Commerce. Logement : projets dérogatoires autorisés par le conseil d'arrondissement qui prévoient des logements adaptables (nombre, date de la séance, dossier décisionnel). Plateau-Mont-Royal.
 
 ## Données
 

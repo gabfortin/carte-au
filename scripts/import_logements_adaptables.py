@@ -2,8 +2,12 @@
 """
 Importe la liste des projets immobiliers autorisés par le conseil
 d'arrondissement du Plateau-Mont-Royal (projets dérogatoires) qui prévoient
-des logements adaptables, et l'écrit au format de l'app
-(data/logements-adaptables.json).
+des logements adaptables, et l'écrit au format de la couche « Gains CCU »
+(data/gains-ccu-logements-adaptables.json, type "logements-adaptables").
+
+Fichier distinct de data/gains-ccu.json, que remplissent les contributions
+du public (scripts/integrate_submission.py) : relancer ce script ne touche
+jamais à ces contributions.
 
 Source : un classeur Excel tenu à la main à partir des ordres du jour et des
 procès-verbaux du conseil d'arrondissement (une ligne par projet : adresse,
@@ -44,7 +48,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_PAR_DEFAUT = ROOT / "sources" / "logements-adaptables-projets-derogatoires.xlsx"
-OUTPUT_PATH = ROOT / "data" / "logements-adaptables.json"
+OUTPUT_PATH = ROOT / "data" / "gains-ccu-logements-adaptables.json"
 ARRONDISSEMENT = "le-plateau-mont-royal"
 
 COLONNES = {
@@ -263,17 +267,20 @@ def main(argv):
             identifiant, i = f"{base}-{i}", i + 1
         ids.add(identifiant)
 
+        # Champs du format « Gains CCU » (README), plus logementsAdaptables, gdd,
+        # positionApproximative et adresseSource, propres à cet import.
         logement = {
             "id": identifiant,
-            "name": adresse,
+            "description": "Logements adaptables",
+            "type": "logements-adaptables",
             "address": adresse,
             "lat": position[0],
             "lng": position[1],
             "arrondissement": ARRONDISSEMENT,
+            "date": date_seance(ligne["lien"]),
             "logementsAdaptables": int(nombre) if nombre else None,
-            "note": ligne["note"] or None,
+            "notes": ligne["note"] or None,
             "gdd": ligne["gdd"] or None,
-            "dateSeance": date_seance(ligne["lien"]),
             "source": {"name": "Ordre du jour du conseil d'arrondissement (PDF)", "url": ligne["lien"] or None},
         }
         if approximative:
@@ -289,7 +296,7 @@ def main(argv):
 
     sortie = {
         "source": "Projets dérogatoires autorisés par le conseil d'arrondissement du Plateau-Mont-Royal (ordres du jour et procès-verbaux), compilés à la main",
-        "logements": logements,
+        "gains": logements,
     }
     OUTPUT_PATH.write_text(json.dumps(sortie, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total = sum(l["logementsAdaptables"] or 0 for l in logements)

@@ -12,9 +12,8 @@ projet est parti — précisé couche par couche ci-dessous.
 
   Ces deux couches apparaissent regroupées dans la sidebar sous « Commerces accessibles ».
 - **Sentiers déneigés** — sentiers de parc déneigés en hiver par l'arrondissement, saisie manuelle. Plateau-Mont-Royal seulement. Affichés comme un tracé sur la carte plutôt qu'un simple point.
-- **Logement** — deux sous-couches regroupées dans la sidebar :
+- **Logement** — groupe dans la sidebar, avec pour l'instant une seule sous-couche :
   - **Logements OMHM** — saisie manuelle (Plateau-Mont-Royal) + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations) qui comptent des unités adaptées, **pour tout Montréal** (positions et arrondissement tirés du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
-  - **Logements adaptables** — projets dérogatoires autorisés par le conseil d'arrondissement du Plateau-Mont-Royal qui prévoient des logements adaptables (liste compilée à la main à partir des ordres du jour et procès-verbaux, depuis 2022). Ce sont des engagements : un projet peut ne pas être construit. Plateau-Mont-Royal seulement. Voir [Logements adaptables](#logements-adaptables-datalogements-adaptablesjson).
 - **Stationnement accessible** — saisie manuelle uniquement, Plateau-Mont-Royal seulement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
 - **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
 - **Débarcadères accessibles** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
@@ -22,7 +21,7 @@ projet est parti — précisé couche par couche ci-dessous.
 - **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement. Les toilettes de niveau `non-accessible` restent dans `data/toilettes.json` (relevé complet) mais ne sont pas affichées sur la carte (filtre dans `getItems` de la couche, `js/app.js`).
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants), **pour tout Montréal**.
 - **Stations de métro et REM accessibles** — stations accessibles en fauteuil roulant selon les GTFS officiels de la [STM](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes) et du [REM](https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain) (ARTM, CC BY 4.0), **toutes les stations, y compris hors de Montréal** (Laval, Brossard, Deux-Montagnes…). Deux sous-couches, Métro et REM, regroupées dans la sidebar. Le popup indique les lignes, le quai d'une ligne s'il n'est pas accessible (ex. ligne 4 à Berri-UQAM), les entrées accessibles et le lien vers la fiche STM de la station. Les stations hors des 19 arrondissements n'ont pas d'arrondissement : elles ne s'affichent qu'avec « Tous les arrondissements ». Une station du REM qui porte exactement le même nom qu'une station de métro non accessible (aujourd'hui seulement Édouard-Montpetit) affiche aussi la ligne de métro, avec « quai non accessible » selon le GTFS de la STM, et le lien vers sa fiche STM ; quand les deux sont accessibles (ex. McGill), chaque réseau a son propre marqueur.
-- **Gains CCU** (nom provisoire) — saisie manuelle des gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement.
+- **Gains CCU** (nom provisoire) — gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement. Groupe à deux sous-couches, réparties selon le `type` du gain : **Logement** (`logements-adaptables`) et **Commerce** (tous les autres types : accès / rampe, stationnement, toilettes, autre). Deux fichiers : `data/gains-ccu.json` (saisie manuelle et contributions) et `data/gains-ccu-logements-adaptables.json` (projets dérogatoires autorisés par le conseil d'arrondissement qui prévoient des logements adaptables, importés d'un classeur, voir [plus bas](#logements-adaptables-datagains-ccu-logements-adaptablesjson)).
 
 ## Filtre d'arrondissement
 
@@ -315,6 +314,10 @@ d'urbanisme (CCU), rattachés au projet/adresse concerné.
 }
 ```
 
+Champs facultatifs, remplis par l'import des logements adaptables (ci-dessous) : `logementsAdaptables` (nombre, mis en évidence en tête du popup), `gdd` (numéro du dossier décisionnel ; le champ `date` s'affiche alors « Séance du conseil »), `positionApproximative` et `adresseSource`. Les retours de ligne de `notes` sont conservés à l'affichage.
+
+Ne pas ajouter les logements adaptables des projets dérogatoires dans ce fichier : ils sont dans `data/gains-ccu-logements-adaptables.json`, régénéré par script.
+
 ### Feux sonores (`data/feux-sonores.json`)
 
 Généré automatiquement, ne pas éditer à la main. Pour rafraîchir avec les dernières données de la Ville :
@@ -339,9 +342,9 @@ Couvre tout Montréal. Généré automatiquement, ne pas éditer à la main (les
 SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
 ```
 
-### Logements adaptables (`data/logements-adaptables.json`)
+### Logements adaptables (`data/gains-ccu-logements-adaptables.json`)
 
-Choix de méthode et cas particuliers : [NOTES.md](NOTES.md#groupe--logement--et-logements-adaptables-novembre-2026).
+Affichés dans la sous-couche « Logement » du groupe « Gains CCU » (type `logements-adaptables`), au format ci-dessus. Fichier distinct de `data/gains-ccu.json`, que modifient les contributions du public : relancer l'import n'efface jamais une contribution. Choix de méthode et cas particuliers : [NOTES.md](NOTES.md#logements-adaptables-des-projets-dérogatoires-novembre-2026).
 
 Généré par [`scripts/import_logements_adaptables.py`](scripts/import_logements_adaptables.py) à partir d'un classeur Excel tenu à la main (colonnes `Adresse`, `Nombre de logements adaptables`, `Note`, `# GDD`, `Lien GDD`), déposé dans `sources/` (non publié). Ne pas éditer le JSON à la main : modifier le classeur, puis :
 

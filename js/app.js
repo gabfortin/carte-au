@@ -21,7 +21,6 @@ function svgIcon(paths) {
 const ICONS = {
   commerce: svgIcon('<path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/>'),
   logement: svgIcon('<path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/>'),
-  logementAdaptable: svgIcon('<path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M12 11.5v6M9 14.5h6"/>'),
   stationnement: svgIcon('<path d="M8 20V4h5.5a4.5 4.5 0 0 1 0 9H8"/>'),
   stationnementPayant: svgIcon('<path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>'),
   debarcadere: svgIcon('<circle cx="11" cy="4" r="1.8" fill="#fff" stroke="none"/><path d="M11 7.5v6h5l2.5 5"/><path d="M11 10h4.5"/><path d="M8 11a5.5 5.5 0 1 0 7.5 6.5"/>'),
@@ -300,29 +299,10 @@ function adaptesHighlight(a) {
   return highlightHtml(a.unitesAdaptees, "adapté", details);
 }
 
-// « 2024-12-02 » → « 2 décembre 2024 » (date de la séance, lue dans le nom du PDF).
+// « 2024-12-02 » → « 2 décembre 2024 ». Toute autre forme (ex. « 2024-12 ») est rendue telle quelle.
 function dateLongue(iso) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || "")) return null;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || "")) return iso || null;
   return new Date(`${iso}T12:00:00Z`).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-}
-
-// Projets autorisés par le conseil d'arrondissement (scripts/import_logements_adaptables.py).
-// Le nombre, la note et le numéro GDD sont ceux du classeur source, sans retouche.
-function logementAdaptablePopup(l) {
-  const note = l.note ? esc(l.note).replace(/\n/g, "<br>") : "";
-  const position = l.positionApproximative ? "Approximative : numéro civique absent du registre des adresses de la Ville, marqueur placé au numéro voisin" : null;
-  return `
-    <div class="popup-content">
-      <h3>${esc(l.name)}</h3>
-      <div class="popup-address">Projet autorisé par le conseil d'arrondissement</div>
-      ${highlightHtml(l.logementsAdaptables, "adaptable", "prévus au projet")}
-      ${fieldHtml("Note", note)}
-      ${field("Séance du conseil", dateLongue(l.dateSeance))}
-      ${field("Dossier décisionnel (GDD)", l.gdd)}
-      ${field("Position", position)}
-      ${sourceField(l.source)}
-    </div>
-  `;
 }
 
 function logementPopup(l) {
@@ -435,14 +415,22 @@ function sentierPopup(s) {
   `;
 }
 
+// Gains saisis à la main (data/gains-ccu.json) ou importés des projets dérogatoires
+// (data/gains-ccu-logements-adaptables.json : logementsAdaptables, gdd et
+// positionApproximative en plus, voir scripts/import_logements_adaptables.py).
 function gainPopup(g) {
+  const notes = g.notes ? esc(g.notes).replace(/\n/g, "<br>") : "";
+  const position = g.positionApproximative ? "Approximative : numéro civique absent du registre des adresses de la Ville, marqueur placé au numéro voisin" : null;
   return `
     <div class="popup-content">
       <h3>${esc(g.description)}</h3>
       ${g.address ? `<div class="popup-address">${esc(g.address)}</div>` : ""}
+      ${highlightHtml(g.logementsAdaptables, "adaptable", "prévus au projet")}
       ${field("Type de gain", GAIN_TYPE_LABELS[g.type] || g.type)}
-      ${field("Date", g.date)}
-      ${field("Notes", g.notes)}
+      ${field(g.gdd ? "Séance du conseil" : "Date", dateLongue(g.date))}
+      ${field("Dossier décisionnel (GDD)", g.gdd)}
+      ${fieldHtml("Notes", notes)}
+      ${field("Position", position)}
       ${sourceField(g.source)}
       ${imagesGallery(g.images)}
     </div>
@@ -530,16 +518,6 @@ const LAYER_INFO = {
     ],
     process: `Les HLM proviennent du ${externalLink("https://www.omhm.qc.ca/fr/habitations", "répertoire des habitations de l'OMHM")}, qui indique les unités adaptées ; leur position et leur arrondissement viennent du jeu « ${externalLink("https://donnees.montreal.ca/dataset/logements-sociaux", "Logements hors marché")} » de la Ville. Le jeu couvre tout Montréal. L'import est automatisé et d'autres logements peuvent être ajoutés à la main. Aucun registre des logements accessibles du marché privé n'existe : la liste n'est pas complète.`,
   },
-  "logements-adaptables": {
-    about: "Projets immobiliers du Plateau-Mont-Royal autorisés par le conseil d'arrondissement (projets dérogatoires) qui prévoient des logements adaptables. Un logement adaptable est conçu pour pouvoir être modifié facilement selon les besoins d'une personne à mobilité réduite. Ce sont des engagements : un projet peut ne pas être encore construit.",
-    data: [
-      "Nombre de logements adaptables prévus, lorsqu'il est chiffré",
-      "Note sur l'exigence (pourcentage, normes visées), telle que rédigée",
-      "Date de la séance du conseil et numéro du dossier décisionnel (GDD)",
-      "Lien vers l'ordre du jour de la séance",
-    ],
-    process: `Liste compilée à la main à partir des ordres du jour et des procès-verbaux du conseil d'arrondissement du Plateau-Mont-Royal, depuis 2022. Le nombre et la note sont repris tels quels. La position vient du jeu « ${externalLink("https://donnees.montreal.ca/dataset/adresses-ponctuelles", "Adresse ponctuelle")} » de la Ville (licence CC BY 4.0) ; pour un projet à plusieurs adresses, le marqueur est au premier numéro. Seuls les projets dérogatoires passent par le conseil : les projets conformes à la réglementation n'y figurent pas, la liste n'est donc pas complète.`,
-  },
   "batiments-municipaux": {
     about: "Piscines, arénas, bibliothèques, centres sportifs et autres bâtiments de la Ville et de l'arrondissement.",
     data: [
@@ -603,12 +581,24 @@ const LAYER_INFO = {
     data: ["Antennes desservies", "Entrées accessibles"],
     process: `Import automatisé du ${externalLink("https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain", "GTFS du REM")} publié par l'ARTM (licence CC BY 4.0) : stations et entrées dont le champ « wheelchair_boarding » vaut 1 (accessible). Toutes les stations sont affichées, y compris hors de Montréal (Brossard, Deux-Montagnes, etc.).`,
   },
-  "gains-ccu": {
-    about: "Améliorations de l'accessibilité obtenues lors de l'étude de projets immobiliers par le comité consultatif d'urbanisme (CCU) de l'arrondissement, par exemple une proportion de logements adaptables ou une rampe d'accès.",
-    data: ["Description et type de gain", "Projet ou adresse concernés, date", "Lien vers la résolution du CCU, lorsque disponible"],
-    process: "Saisie à la main au fil des séances du CCU. Le nom de cette catégorie est provisoire.",
+  "gains-ccu-logement": {
+    about: "Logements adaptables obtenus lors de l'étude de projets immobiliers par le comité consultatif d'urbanisme (CCU) et le conseil d'arrondissement. Un logement adaptable est conçu pour pouvoir être modifié facilement selon les besoins d'une personne à mobilité réduite.",
+    data: [
+      "Nombre de logements adaptables prévus, lorsqu'il est chiffré",
+      "Note sur l'exigence (pourcentage, normes visées), telle que rédigée",
+      "Date de la séance du conseil et numéro du dossier décisionnel (GDD)",
+      "Lien vers l'ordre du jour de la séance",
+    ],
+    process: `Liste compilée à la main à partir des ordres du jour et des procès-verbaux du conseil d'arrondissement du Plateau-Mont-Royal, depuis 2022 ; le nombre et la note sont repris tels quels. Ce sont des engagements : un projet peut ne pas être encore construit. Seuls les projets dérogatoires passent par le CCU et le conseil : la liste n'est pas complète. Position : jeu « ${externalLink("https://donnees.montreal.ca/dataset/adresses-ponctuelles", "Adresse ponctuelle")} » de la Ville (licence CC BY 4.0). Le nom de cette catégorie est provisoire.`,
     template: "ajouter-gain-ccu.yml",
   },
+  "gains-ccu-commerce": {
+    about: "Autres améliorations de l'accessibilité obtenues lors de l'étude de projets par le comité consultatif d'urbanisme (CCU) de l'arrondissement, par exemple une rampe d'accès ou des toilettes accessibles.",
+    data: ["Description et type de gain", "Projet ou adresse concernés, date", "Lien vers la résolution du CCU, lorsque disponible"],
+    process: "Saisie à la main au fil des séances du CCU. Tous les gains qui ne sont pas des logements adaptables apparaissent ici. Le nom de cette catégorie est provisoire.",
+    template: "ajouter-gain-ccu.yml",
+  },
+
 };
 
 function layerInfoHtml(config) {
@@ -664,19 +654,6 @@ const LAYER_CONFIG = [
     getItems: (data) => data.logements || [],
     getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
     getPopup: logementPopup,
-  },
-  {
-    key: "logements-adaptables",
-    label: "Logements adaptables",
-    group: "logement",
-    // Projets dérogatoires autorisés par le conseil d'arrondissement (Plateau).
-    file: "data/logements-adaptables.json",
-    defaultVisible: true,
-    color: ["#4ade80", "#15803d"],
-    icon: ICONS.logementAdaptable,
-    getItems: (data) => data.logements || [],
-    getArrondissement: (item) => item.arrondissement || DEFAULT_ARRONDISSEMENT,
-    getPopup: logementAdaptablePopup,
   },
   {
     key: "batiments-municipaux",
@@ -791,14 +768,30 @@ const LAYER_CONFIG = [
     getArrondissement: (item) => item.arrondissement || null,
     getPopup: stationPopup,
   },
+  // Gains CCU : un groupe, deux sous-couches réparties selon le type de gain.
+  // Logement = type « logements-adaptables » (dont tout l'import des projets
+  // dérogatoires, scripts/import_logements_adaptables.py) ; Commerce = tous les
+  // autres types (accès / rampe, stationnement, toilettes, autre).
   {
-    key: "gains-ccu",
-    label: "Gains CCU",
+    key: "gains-ccu-logement",
+    label: "Logement",
+    group: "gains-ccu",
+    files: ["data/gains-ccu.json", "data/gains-ccu-logements-adaptables.json"],
+    defaultVisible: true,
+    color: ["#fbbf24", "#b45309"],
+    icon: ICONS.logement,
+    getItems: (data) => (data.gains || []).filter((g) => g.type === "logements-adaptables"),
+    getPopup: gainPopup,
+  },
+  {
+    key: "gains-ccu-commerce",
+    label: "Commerce",
+    group: "gains-ccu",
     file: "data/gains-ccu.json",
     defaultVisible: true,
     color: ["#fbbf24", "#b45309"],
-    icon: ICONS.gainCcu,
-    getItems: (data) => data.gains || [],
+    icon: ICONS.commerce,
+    getItems: (data) => (data.gains || []).filter((g) => g.type !== "logements-adaptables"),
     getPopup: gainPopup,
   },
 ];
@@ -826,6 +819,11 @@ const LAYER_GROUPS = {
     label: "Stations de métro et REM accessibles",
     color: ["#a5b4fc", "#4338ca"],
     icon: ICONS.metro,
+  },
+  "gains-ccu": {
+    label: "Gains CCU",
+    color: ["#fbbf24", "#b45309"],
+    icon: ICONS.gainCcu,
   },
 };
 

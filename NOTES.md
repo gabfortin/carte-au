@@ -2,18 +2,25 @@
 
 Décisions non évidentes. Le fonctionnement et les commandes sont dans le [README](README.md).
 
-## Groupe « Logement » et logements adaptables (novembre 2026)
+## Logements adaptables des projets dérogatoires (novembre 2026)
 
-### Ce qui a changé
+### Où ils s'affichent
 
-L'ancienne couche « Logements accessibles » est devenue un groupe **Logement** à deux sous-couches, sur le modèle de « Stationnement » et « Stations » (`group: "logement"` dans `LAYER_CONFIG`, en-tête dans `LAYER_GROUPS`) :
+Dans le groupe **Gains CCU** (jaune), sous-couche **Logement**, et non dans le groupe Logement. Une première version en faisait une sous-couche « Logements adaptables » du groupe Logement ; Gabriel a demandé de les déplacer dans Gains CCU, qui prévoyait déjà ce type de gain.
 
-| Sous-couche | Clé | Fichiers | Couverture |
-|---|---|---|---|
-| Logements OMHM | `logements` | `data/logements-omhm.json` (robot mensuel) + `data/logements.json` (saisie manuelle, vide pour l'instant) | Tout Montréal |
-| Logements adaptables | `logements-adaptables` | `data/logements-adaptables.json` (`scripts/import_logements_adaptables.py`) | Plateau-Mont-Royal |
+Gains CCU est devenu un groupe à deux sous-couches (`group: "gains-ccu"`, clés `gains-ccu-logement` et `gains-ccu-commerce`), réparties selon le champ `type` des gains :
 
-La clé `logements` n'a pas changé : seul le libellé affiché est passé de « Logements accessibles » à « Logements OMHM ». Si des logements du marché privé sont un jour saisis dans `data/logements.json`, ils s'afficheront sous « Logements OMHM » : il faudra alors les sortir dans une sous-couche à part.
+| Sous-couche | Gains affichés | Fichiers |
+|---|---|---|
+| Logement | `type: "logements-adaptables"` | `data/gains-ccu.json` + `data/gains-ccu-logements-adaptables.json` |
+| Commerce | tous les autres types (accès / rampe, stationnement, toilettes, autre) | `data/gains-ccu.json` |
+
+Le formulaire de contribution (`ajouter-gain-ccu.yml`) n'a pas changé : un gain soumis va dans Logement ou Commerce selon le type choisi. Un gain « stationnement » ou « toilettes » lié à un immeuble résidentiel s'afficherait donc sous Commerce. Si ça devient gênant, ajouter un champ explicite (ex. `secteur: logement | commerce`) plutôt que de deviner à partir du type.
+
+- Les données sont dans `data/gains-ccu-logements-adaptables.json`, régénéré par `scripts/import_logements_adaptables.py`. La couche lit deux fichiers (`files` dans `LAYER_CONFIG`). Le fichier est séparé de `data/gains-ccu.json` parce que les contributions du public (issue → PR, `scripts/integrate_submission.py`) écrivent dans ce dernier : un import ne doit jamais les écraser.
+- Format : celui des gains (`description`, `type`, `address`, `date`, `notes`, `source`), plus `logementsAdaptables`, `gdd`, `positionApproximative` et `adresseSource`. `gainPopup()` affiche ces champs quand ils sont présents. Avec un `gdd`, la date s'intitule « Séance du conseil ».
+
+Le groupe **Logement** ne garde qu'une sous-couche, **Logements OMHM** : la clé `logements`, dont le libellé est passé de « Logements accessibles » à « Logements OMHM ». Un groupe à une seule sous-couche fonctionne tel quel et laisse la place à une deuxième. Si des logements du marché privé sont un jour saisis dans `data/logements.json`, ils s'afficheront sous « Logements OMHM » : il faudra alors les sortir dans une sous-couche à part.
 
 ### Pourquoi « adaptables » et pas « accessibles »
 
@@ -23,7 +30,7 @@ La demande parlait de « logement accessible », mais la source (le classeur et 
 - **adaptable** : conçu pour pouvoir être modifié facilement au besoin (Code de construction du Québec) ;
 - **accessible** : selon une norme d'accessibilité, par exemple les critères de la SCHL.
 
-On garde le terme de la source dans le libellé, le popup et le panneau ⓘ. Le popup réutilise l'encadré chiffré des HLM (`highlightHtml()`), avec l'adjectif passé en paramètre (« adapté » pour l'OMHM, « adaptable » ici), pour que les deux termes ne se mélangent jamais.
+On garde le terme de la source. L'encadré chiffré du popup (`highlightHtml()`) sert aux HLM et aux gains, avec l'adjectif passé en paramètre (« adapté » ou « adaptable ») pour que les deux termes ne se mélangent jamais.
 
 ### Source
 
@@ -31,7 +38,7 @@ On garde le terme de la source dans le libellé, le popup et le panneau ⓘ. Le 
 
 - Les liens du classeur mènent aux **ordres du jour** (`CA_Pmr_ODJ_…pdf`), pas aux procès-verbaux : le lien s'intitule donc « Ordre du jour du conseil d'arrondissement (PDF) ».
 - La date de la séance est lue dans le nom du PDF (`_ORDI_AAAA-MM-JJ_`), pas saisie.
-- Seuls les projets **dérogatoires** passent par le conseil. Les projets conformes à la réglementation n'y sont pas, et la liste n'est donc pas complète. Le panneau ⓘ le dit.
+- Seuls les projets **dérogatoires** passent par le CCU et le conseil. Les projets conformes à la réglementation n'y sont pas, et la liste n'est donc pas complète. Le panneau ⓘ de Gains CCU → Logement le dit.
 - Ce sont des **engagements** : un projet autorisé peut ne pas être encore construit, ou ne jamais l'être.
 - Le classeur n'est pas publié (`sources/` est ignoré par git). Seuls les champs listés dans le script vont dans `data/`. Il ne contient aucune donnée personnelle.
 
@@ -74,7 +81,3 @@ Les 15 positions ont été vérifiées sur la carte le 5 novembre 2026.
 ### Pas dans le robot mensuel
 
 La source est un fichier tenu à la main, pas un jeu ouvert. Le script se relance à la main après chaque mise à jour du classeur. Le jeu d'adresses n'est retéléchargé que si on supprime `sources/adresses-ponctuelles.csv`. Il vaut la peine de le faire de temps en temps, pour attraper les nouveaux bâtiments et retirer des positions approximatives.
-
-### Lien avec « Gains CCU »
-
-La couche « Gains CCU » (vide, nom provisoire) prévoyait un type « logements adaptables ». Les projets du classeur en font partie, mais ils ont été placés dans le groupe Logement, comme demandé. Si Gains CCU reste vide, il faudra décider s'il faut la retirer ou la réserver aux autres gains (rampe, stationnement, toilettes).
