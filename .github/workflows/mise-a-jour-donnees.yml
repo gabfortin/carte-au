@@ -85,6 +85,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "Aucun changement."
           else
+            # Date affichée dans la fenêtre « À propos » de la carte
+            python3 scripts/date_donnees.py
+            git add data/meta.json
             git commit -m "data: mise à jour automatique ($(date -u +%Y-%m-%d))"
             git push
             echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

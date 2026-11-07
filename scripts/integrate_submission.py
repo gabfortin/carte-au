@@ -65,6 +65,9 @@ LABEL_PAR_CATEGORIE_DROPDOWN = {
     "Terrasses inspectées": "terrasses",
     "Sentiers déneigés": "sentiers-deneiges",
     "Débarcadères": "debarcaderes",
+    "Stationnements gratuits": "stationnements",
+    "Toilettes": "toilettes",
+    # Anciens libellés du formulaire, pour les issues ouvertes avant novembre 2026
     "Stationnement accessible (gratuit)": "stationnements",
     "Toilettes accessibles": "toilettes",
     "Gains CCU": "gains-ccu",

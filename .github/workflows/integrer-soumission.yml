@@ -31,6 +31,10 @@ jobs:
           ERROR_FILE: /tmp/erreur-integration.txt
         run: python3 scripts/integrate_submission.py
 
+      - name: Dater les données (affichée dans « À propos »)
+        if: success()
+        run: python3 scripts/date_donnees.py
+
       - name: Ouvrir la PR de révision
         if: success()
         id: pr

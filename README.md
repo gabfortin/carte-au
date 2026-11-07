@@ -7,27 +7,36 @@ données ouvertes à l'échelle de la ville), d'autres restent pour l'instant
 concentrées au Plateau-Mont-Royal (saisie manuelle), l'arrondissement d'où le
 projet est parti — précisé couche par couche ci-dessous.
 
-- **Commerces** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps. Plateau-Mont-Royal seulement.
+- **Commerces Promo-Accès** — basé sur les avis d'accessibilité de [Promo-Accès](https://www.google.com/maps/contrib/100918280676331873494) sur Google Maps. Plateau-Mont-Royal seulement.
 - **Terrasses inspectées** — saisie manuelle à partir des inspections de l'arrondissement. Plateau-Mont-Royal seulement.
 
-  Ces deux couches apparaissent regroupées dans la sidebar sous « Commerces accessibles ».
+  Ces deux couches apparaissent regroupées dans la sidebar sous « Commerces ».
 - **Sentiers déneigés** — sentiers de parc déneigés en hiver par l'arrondissement, saisie manuelle. Plateau-Mont-Royal seulement. Affichés comme un tracé sur la carte plutôt qu'un simple point.
-- **Logement** — groupe dans la sidebar, avec pour l'instant une seule sous-couche :
+- **Logements** — groupe dans la sidebar, avec pour l'instant une seule sous-couche :
   - **Logements OMHM** — saisie manuelle (Plateau-Mont-Royal) + immeubles HLM du [répertoire de l'OMHM](https://www.omhm.qc.ca/fr/habitations) qui comptent des unités adaptées, **pour tout Montréal** (positions et arrondissement tirés du jeu [Logements hors marché](https://donnees.montreal.ca/dataset/logements-sociaux) de la Ville). Aucun registre des logements accessibles du marché privé n'existe.
-- **Stationnement accessible** — saisie manuelle uniquement, Plateau-Mont-Royal seulement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
-- **Stationnement accessible payant** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
-- **Débarcadères accessibles** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
-- **Bâtiments municipaux accessibles** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal. Plateau-Mont-Royal seulement.
-- **Toilettes accessibles** — saisie manuelle. Plateau-Mont-Royal seulement. Les toilettes de niveau `non-accessible` restent dans `data/toilettes.json` (relevé complet) mais ne sont pas affichées sur la carte (filtre dans `getItems` de la couche, `js/app.js`).
+- **Stationnements gratuits** — saisie manuelle uniquement, Plateau-Mont-Royal seulement. Les places réservées non tarifées des rues résidentielles ne figurent dans aucun jeu de données.
+- **Stationnements payants** — places tarifées réservées importées des [données ouvertes de l'Agence de mobilité durable](https://www.agencemobilitedurable.ca/fr/informations/donnees-ouvertes/description-des-donnees-disponibles) (CC-BY 4.0), **pour tout Montréal**.
+- **Débarcadères** — saisie manuelle pour le Plateau + panneaux « débarcadère réservé handicapés » du même jeu de données, **pour tout Montréal**. Le popup de chaque débarcadère offre un lien qui ouvre Google Maps en Street View à ses coordonnées, pour voir l'aménagement sur place.
+- **Bâtiments municipaux** (piscines, arénas, bibliothèques, centres sportifs) — saisie manuelle à partir des fiches [montreal.ca/lieux](https://montreal.ca/lieux) de la Ville de Montréal. Plateau-Mont-Royal seulement.
+- **Toilettes** — saisie manuelle. Plateau-Mont-Royal seulement. Les toilettes de niveau `non-accessible` restent dans `data/toilettes.json` (relevé complet) mais ne sont pas affichées sur la carte (filtre dans `getItems` de la couche, `js/app.js`).
 - **Feux sonores** — importé des [données ouvertes de la Ville de Montréal](https://donnees.montreal.ca/dataset/feux-malvoyants), **pour tout Montréal**.
-- **Stations de métro et REM accessibles** — stations accessibles en fauteuil roulant selon les GTFS officiels de la [STM](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes) et du [REM](https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain) (ARTM, CC BY 4.0), **toutes les stations, y compris hors de Montréal** (Laval, Brossard, Deux-Montagnes…). Deux sous-couches, Métro et REM, regroupées dans la sidebar. Le popup indique les lignes, le quai d'une ligne s'il n'est pas accessible (ex. ligne 4 à Berri-UQAM), les entrées accessibles et le lien vers la fiche STM de la station. Les stations hors des 19 arrondissements n'ont pas d'arrondissement : elles ne s'affichent qu'avec « Tous les arrondissements ». Une station du REM qui porte exactement le même nom qu'une station de métro non accessible (aujourd'hui seulement Édouard-Montpetit) affiche aussi la ligne de métro, avec « quai non accessible » selon le GTFS de la STM, et le lien vers sa fiche STM ; quand les deux sont accessibles (ex. McGill), chaque réseau a son propre marqueur.
-- **Gains CCU** (nom provisoire) — gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement. Groupe à deux sous-couches, réparties selon le `type` du gain : **Logement** (`logements-adaptables`) et **Commerce** (tous les autres types : accès / rampe, stationnement, toilettes, autre). Deux fichiers : `data/gains-ccu.json` (saisie manuelle et contributions) et `data/gains-ccu-logements-adaptables.json` (projets dérogatoires autorisés par le conseil d'arrondissement qui prévoient des logements adaptables, importés d'un classeur, voir [plus bas](#logements-adaptables-datagains-ccu-logements-adaptablesjson)).
+- **Stations de métro et REM** — stations accessibles en fauteuil roulant selon les GTFS officiels de la [STM](https://www.stm.info/a-propos/documents-donnees/donnees-ouvertes) et du [REM](https://donnees.artm.quebec/catalogue/dataset/offres-de-service-planifie-du-reseau-express-metropolitain) (ARTM, CC BY 4.0), **toutes les stations, y compris hors de Montréal** (Laval, Brossard, Deux-Montagnes…). Deux sous-couches, Métro et REM, regroupées dans la sidebar. Le popup indique les lignes, le quai d'une ligne s'il n'est pas accessible (ex. ligne 4 à Berri-UQAM), les entrées accessibles et le lien vers la fiche STM de la station. Les stations hors des 19 arrondissements n'ont pas d'arrondissement : elles ne s'affichent qu'avec « Tous les arrondissements ». Une station du REM qui porte exactement le même nom qu'une station de métro non accessible (aujourd'hui seulement Édouard-Montpetit) affiche aussi la ligne de métro, avec « quai non accessible » selon le GTFS de la STM, et le lien vers sa fiche STM ; quand les deux sont accessibles (ex. McGill), chaque réseau a son propre marqueur.
+- **Gains CCU** (nom provisoire) — gains obtenus en matière d'accessibilité universelle via le processus du comité consultatif d'urbanisme (ex : % de logements adaptables exigé, rampe d'accès ajoutée à un projet). Plateau-Mont-Royal seulement. Groupe à deux sous-couches, réparties selon le `type` du gain : **Logements** (`logements-adaptables`) et **Commerces** (tous les autres types : accès / rampe, stationnement, toilettes, autre). Deux fichiers : `data/gains-ccu.json` (saisie manuelle et contributions) et `data/gains-ccu-logements-adaptables.json` (projets dérogatoires autorisés par le conseil d'arrondissement qui prévoient des logements adaptables, importés d'un classeur, voir [plus bas](#logements-adaptables-datagains-ccu-logements-adaptablesjson)).
 
 ## Filtre d'arrondissement
 
 Le sélecteur en haut à droite (à gauche de la recherche) filtre les items affichés par arrondissement. Par défaut (« Tous les arrondissements »), rien n'est filtré.
 
-Toutes les couches sont saisies pour Le Plateau-Mont-Royal et y sont donc rattachées implicitement, sauf les feux sonores dont le jeu de données couvre toute la ville et porte un champ `arrondissement` par item (voir `FEUX_SONORES_ARRONDISSEMENT_SLUG` dans [js/app.js](js/app.js)). Choisir un autre arrondissement que Le Plateau-Mont-Royal ne laisse donc visible, pour l'instant, que les feux sonores de cet arrondissement — le reste des couches n'a pas de couverture ailleurs.
+Chaque couche dit à quel arrondissement appartient un item (`getArrondissement` dans `LAYER_CONFIG`, [js/app.js](js/app.js)) :
+
+| Couches | Arrondissement de chaque item |
+|---|---|
+| Commerces, terrasses, bâtiments municipaux, toilettes, sentiers déneigés, stationnements gratuits, gains CCU (sans `getArrondissement`) | toujours Le Plateau-Mont-Royal (`DEFAULT_ARRONDISSEMENT`), même si l'item a un champ `arrondissement` |
+| Logements (OMHM et saisis), stationnements payants, débarcadères | champ `arrondissement` de l'item, sinon Le Plateau-Mont-Royal ; les imports le fournissent pour tout Montréal |
+| Feux sonores | nom de la source converti en slug (`FEUX_SONORES_ARRONDISSEMENT_SLUG`), pour tout Montréal |
+| Stations de métro et du REM | champ `arrondissement` ; les stations hors des 19 arrondissements (Laval, Brossard…) n'en ont pas et ne s'affichent qu'avec « Tous les arrondissements » |
+
+Choisir un autre arrondissement que Le Plateau-Mont-Royal affiche donc les couches qui couvrent tout Montréal (logements OMHM, stationnements payants, débarcadères importés, feux sonores, stations). Les autres couches restent vides ailleurs : pour y saisir des items d'un autre arrondissement, il faudra d'abord leur donner un `getArrondissement` comme celui des logements.
 
 Le paramètre d'URL `?arrondissement=<slug>` donne un lien direct vers une carte déjà filtrée, ex : `index.html?arrondissement=ville-marie`. Il est mis à jour automatiquement (sans ajouter d'entrée à l'historique) quand on change le filtre, et retiré quand on revient à « Tous les arrondissements ».
 
@@ -62,7 +71,13 @@ Une partie des données vient de soumissions publiques (issues GitHub). Dans `js
 
 ### Couches affichées au départ
 
-Toutes les couches sont cochées à l'ouverture, sauf « Stationnement » (places gratuites, places payantes, débarcadères) et « Feux sonores » : trop denses, elles surchargeraient la carte (`defaultVisible: false` dans `LAYER_CONFIG`).
+Toutes les couches sont cochées à l'ouverture, sauf « Stationnements » (places gratuites, places payantes, débarcadères) et « Feux sonores » : trop denses, elles surchargeraient la carte (`defaultVisible: false` dans `LAYER_CONFIG`).
+
+### Noms des catégories et catégories vides
+
+Les noms du panneau sont au pluriel et sans « accessibles » (le titre de la carte le dit déjà) ; une sous-catégorie précise la source ou le type quand elle partagerait sinon le nom de son groupe (« Commerces → Commerces Promo-Accès », « Stationnements → Stationnements gratuits / payants »). Les phrases des panneaux ⓘ gardent leur description complète. Raisons dans [NOTES.md](NOTES.md#noms-des-catégories-et-catégories-vides-novembre-2026).
+
+Une catégorie dont les fichiers ne contiennent encore aucun item garde sa place dans le panneau, avec un badge « à venir » au lieu du compteur (`updateLayerCount()` dans `js/app.js`). Le badge dépend du total avant le filtre d'arrondissement, et disparaît dès le premier item ajouté. En novembre 2026 : Terrasses inspectées, Stationnements gratuits et Gains CCU → Commerces.
 
 ## Développer en local
 
@@ -77,7 +92,7 @@ python3 -m http.server 8000
 
 N'importe qui avec un compte GitHub peut proposer un ajout (bâtiment
 municipal, commerce, terrasse inspectée, sentier déneigé, débarcadère,
-stationnement accessible gratuit, toilette accessible ou gain CCU) ou une mise à jour
+stationnement gratuit, toilette ou gain CCU) ou une mise à jour
 d'un item déjà publié (description, photos) via les
 [gabarits d'issue](.github/ISSUE_TEMPLATE/). Une fois la soumission révisée
 et approuvée (ajout du label `pret-a-publier`), son intégration dans les
@@ -278,7 +293,7 @@ Plutôt qu'un seul champ `notes` fourre-tout, l'accessibilité est scindée en t
 }
 ```
 
-### Toilettes accessibles (`data/toilettes.json`)
+### Toilettes (`data/toilettes.json`)
 
 ```json
 {
@@ -344,7 +359,7 @@ SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/import_logements_omhm.py
 
 ### Logements adaptables (`data/gains-ccu-logements-adaptables.json`)
 
-Affichés dans la sous-couche « Logement » du groupe « Gains CCU » (type `logements-adaptables`), au format ci-dessus. Fichier distinct de `data/gains-ccu.json`, que modifient les contributions du public : relancer l'import n'efface jamais une contribution. Choix de méthode et cas particuliers : [NOTES.md](NOTES.md#logements-adaptables-des-projets-dérogatoires-novembre-2026).
+Affichés dans la sous-couche « Logements » du groupe « Gains CCU » (type `logements-adaptables`), au format ci-dessus. Fichier distinct de `data/gains-ccu.json`, que modifient les contributions du public : relancer l'import n'efface jamais une contribution. Choix de méthode et cas particuliers : [NOTES.md](NOTES.md#logements-adaptables-des-projets-dérogatoires-novembre-2026).
 
 Généré par [`scripts/import_logements_adaptables.py`](scripts/import_logements_adaptables.py) à partir d'un classeur Excel tenu à la main (colonnes `Adresse`, `Nombre de logements adaptables`, `Note`, `# GDD`, `Lien GDD`), déposé dans `sources/` (non publié). Ne pas éditer le JSON à la main : modifier le classeur, puis :
 
@@ -377,7 +392,7 @@ Ces deux imports (et `import_debarcaderes_spectrum.py`) étiquettent chaque item
 
 ## Mise à jour automatique des données
 
-Le workflow [`.github/workflows/mise-a-jour-donnees.yml`](.github/workflows/mise-a-jour-donnees.yml) relance chaque mois (le 1er, 7 h à Montréal en hiver) les scripts qui téléchargent des données ouvertes, puis commite les fichiers qui ont changé avec le message `data: mise à jour automatique (AAAA-MM-JJ)`. On peut aussi le lancer à la main : onglet Actions → « Mise à jour mensuelle des données » → Run workflow.
+Le workflow [`.github/workflows/mise-a-jour-donnees.yml`](.github/workflows/mise-a-jour-donnees.yml) relance chaque mois (le 1er, 7 h à Montréal en hiver) les scripts qui téléchargent des données ouvertes, puis commite les fichiers qui ont changé avec le message `data: mise à jour automatique (AAAA-MM-JJ)`, ainsi que `data/meta.json` (date affichée dans « À propos », voir [Date des données](#date-des-données)). On peut aussi le lancer à la main : onglet Actions → « Mise à jour mensuelle des données » → Run workflow.
 
 | Source | Script | Fichier |
 |---|---|---|
@@ -401,12 +416,16 @@ Activer GitHub Pages sur ce dépôt (Settings → Pages → branche `main`, doss
 
 Domaine final : **montrealaccessible.ca** (adresses canoniques, balises de partage, JSON-LD, `sitemap.xml`, `robots.txt` et `llms.txt` y pointent déjà). Le fichier `CNAME` contient `montrealaccessible.ca` : configurer le DNS du domaine vers GitHub Pages (enregistrements A/AAAA de l'apex vers les adresses de GitHub Pages, `www` en CNAME vers `gabfortin.github.io`), puis cocher « Enforce HTTPS » dans Settings → Pages. Les adresses absolues sont dans le `<head>` de `index.html` et de `confidentialite.html`, et dans `sitemap.xml`, `robots.txt` et `llms.txt`.
 
-Avant de commiter un changement à `css/style.css` ou `js/app.js`, mettre à jour leurs empreintes dans `index.html` :
+Avant de commiter un changement à `css/style.css`, `js/app.js` ou `data/`, lancer :
 
 ```bash
 python3 scripts/stamp_assets.py
 ```
 
-Sinon, pendant les 10 minutes de cache de GitHub Pages, un visiteur peut recevoir le nouveau JS avec l'ancien CSS.
+Il met à jour les empreintes `?v=` dans `index.html` (sinon, pendant les 10 minutes de cache de GitHub Pages, un visiteur peut recevoir le nouveau JS avec l'ancien CSS) et, si `data/` a changé, la date des données (voir plus bas).
+
+### Date des données
+
+La fenêtre « À propos » affiche « Données mises à jour le … », lue dans `data/meta.json`. Ce fichier est écrit par [`scripts/date_donnees.py`](scripts/date_donnees.py), appelé par le robot mensuel (quand un import change un fichier), par l'intégration des soumissions (dans la PR) et par `stamp_assets.py` (saisie ou import à la main). Sans `data/meta.json`, la phrase reste masquée.
 
 Pour modifier l'image de partage `og-image.jpg` (1200 × 630), éditer `scripts/og-image.html`, puis suivre les étapes en commentaire en tête du fichier.

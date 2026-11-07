@@ -93,9 +93,10 @@ const GAIN_TYPE_LABELS = {
   autre: "Autre",
 };
 
-// Toutes les couches sont saisies pour Le Plateau-Mont-Royal, sauf les feux sonores
-// (jeu de données qui couvre toute la ville — voir ci-dessous) : on leur donne donc cet
-// arrondissement par défaut pour le filtre, sans avoir à le répéter sur chaque item.
+// Arrondissement par défaut d'un item, pour le filtre : les couches saisies à la main
+// couvrent Le Plateau-Mont-Royal. Une couche avec getArrondissement (logements,
+// stationnements payants, débarcadères, feux sonores, stations) lit plutôt le champ
+// de chaque item, fourni par les imports pour tout Montréal.
 // Voir itemArrondissement() et le filtre #arrondissement-filter.
 const DEFAULT_ARRONDISSEMENT = "le-plateau-mont-royal";
 
@@ -620,7 +621,7 @@ function layerInfoHtml(config) {
 const LAYER_CONFIG = [
   {
     key: "commerces",
-    label: "Commerces",
+    label: "Commerces Promo-Accès",
     group: "commerce",
     file: "data/commerces.json",
     defaultVisible: true,
@@ -657,7 +658,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "batiments-municipaux",
-    label: "Bâtiments municipaux accessibles",
+    label: "Bâtiments municipaux",
     file: "data/batiments-municipaux.json",
     defaultVisible: true,
     color: ["#c084fc", "#7016b0"],
@@ -668,7 +669,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "toilettes",
-    label: "Toilettes accessibles",
+    label: "Toilettes",
     file: "data/toilettes.json",
     defaultVisible: true,
     color: ["#2dd4bf", "#0f766e"],
@@ -692,7 +693,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "stationnements",
-    label: "Stationnement accessible",
+    label: "Stationnements gratuits",
     group: "stationnement",
     // Saisie manuelle uniquement.
     file: "data/stationnements.json",
@@ -705,7 +706,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "stationnements-payants",
-    label: "Stationnement accessible payant",
+    label: "Stationnements payants",
     group: "stationnement",
     // Places tarifées importées de l'Agence de mobilité durable.
     file: "data/places-handicapes.json",
@@ -719,7 +720,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "debarcaderes",
-    label: "Débarcadères accessibles",
+    label: "Débarcadères",
     group: "stationnement",
     files: ["data/debarcaderes.json", "data/places-handicapes.json"],
     defaultVisible: false, // décochée au départ : couche dense, la carte serait surchargée à l'ouverture
@@ -774,7 +775,7 @@ const LAYER_CONFIG = [
   // autres types (accès / rampe, stationnement, toilettes, autre).
   {
     key: "gains-ccu-logement",
-    label: "Logement",
+    label: "Logements",
     group: "gains-ccu",
     files: ["data/gains-ccu.json", "data/gains-ccu-logements-adaptables.json"],
     defaultVisible: true,
@@ -785,7 +786,7 @@ const LAYER_CONFIG = [
   },
   {
     key: "gains-ccu-commerce",
-    label: "Commerce",
+    label: "Commerces",
     group: "gains-ccu",
     file: "data/gains-ccu.json",
     defaultVisible: true,
@@ -801,22 +802,22 @@ const LAYER_CONFIG = [
 // cocher qui bascule les sous-catégories ensemble. Voir buildLayerToggles().
 const LAYER_GROUPS = {
   commerce: {
-    label: "Commerces accessibles",
+    label: "Commerces",
     color: ["#7dd3fc", "#0284c7"],
     icon: ICONS.commerce,
   },
   logement: {
-    label: "Logement",
+    label: "Logements",
     color: ["#4ade80", "#15803d"],
     icon: ICONS.logement,
   },
   stationnement: {
-    label: "Stationnement",
+    label: "Stationnements",
     color: ["#3b82f6", "#1e3a8a"],
     icon: ICONS.stationnement,
   },
   stations: {
-    label: "Stations de métro et REM accessibles",
+    label: "Stations de métro et REM",
     color: ["#a5b4fc", "#4338ca"],
     icon: ICONS.metro,
   },
@@ -1551,6 +1552,23 @@ document.getElementById("about-suggest-link").addEventListener("click", () => {
   suggestionModal.open();
 });
 
+// Date de la dernière mise à jour des données, dans la fenêtre À propos.
+// data/meta.json est écrit par scripts/date_donnees.py (robot mensuel,
+// intégration des soumissions, stamp_assets.py). Sans ce fichier, la phrase
+// reste masquée plutôt que d'afficher une date inventée.
+fetch("data/meta.json", { cache: "no-cache" })
+  .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+  .then(({ donneesMisesAJour }) => {
+    const [a, m, j] = String(donneesMisesAJour).split("-").map(Number);
+    const jour = new Date(a, m - 1, j);
+    if (!a || Number.isNaN(jour.getTime())) return;
+    const time = document.getElementById("donnees-maj-date");
+    time.dateTime = donneesMisesAJour;
+    time.textContent = jour.toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" });
+    document.getElementById("donnees-maj").hidden = false;
+  })
+  .catch(() => {});
+
 // Formulaire de suggestion : purement client (pas de serveur), ouvre le client
 // courriel du visiteur avec un mailto: pré-rempli plutôt que d'envoyer quoi que ce
 // soit depuis la page. Le visiteur doit encore cliquer « Envoyer » dans son client.
@@ -1590,11 +1608,31 @@ function visibleItems(config, items) {
   return items.filter((item) => itemArrondissement(config, item) === selectedArrondissement);
 }
 
+// Compteur d'une catégorie dans le panneau. Une catégorie dont les fichiers ne
+// contiennent encore aucun item (ex. terrasses avant la première saisie) garde sa
+// place dans le panneau avec un badge « à venir » plutôt qu'un 0, qui laisserait
+// croire à une erreur. On regarde le total avant le filtre d'arrondissement : une
+// couche du Plateau vide dans un autre arrondissement affiche bien 0.
+function updateLayerCount(config, total, visible, erreur) {
+  const countEl = document.getElementById(`layer-count-${config.key}`);
+  const badge = countEl.parentElement;
+  const srEl = badge.querySelector(".sr-only");
+  const aVenir = !erreur && total === 0;
+  badge.classList.toggle("is-upcoming", aVenir);
+  if (aVenir) {
+    countEl.textContent = "à venir";
+    srEl.textContent = " : aucun lieu pour l'instant";
+  } else {
+    countEl.textContent = erreur ? "–" : visible;
+    srEl.textContent = " lieux";
+  }
+}
+
 function renderAllLayers() {
-  const filtered = loadedLayers.map(({ config, items }) => ({ config, items: visibleItems(config, items) }));
+  const filtered = loadedLayers.map(({ config, items, erreur }) => ({ config, items: visibleItems(config, items), total: items.length, erreur }));
   markerOffsets = computeMarkerOffsets(filtered);
-  filtered.forEach(({ config, items }) => {
-    document.getElementById(`layer-count-${config.key}`).textContent = items.length;
+  filtered.forEach(({ config, items, total, erreur }) => {
+    updateLayerCount(config, total, items.length, erreur);
     if (config.key === "commerces") allCommerces = items;
     if (config.type === "line") renderLayerPaths(config, items);
     else renderLayerMarkers(config, items);
@@ -1651,7 +1689,7 @@ Promise.all(
       .then((datasets) => ({ config, items: datasets.flatMap((data) => config.getItems(data)) }))
       .catch((err) => {
         console.error(`Erreur de chargement (${files.join(", ")}):`, err);
-        return { config, items: [] };
+        return { config, items: [], erreur: true };
       });
   })
 ).then((layerResults) => {

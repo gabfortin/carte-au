@@ -582,7 +582,7 @@ h1, h2, h3, .brand-word {
 
 #layer-toggles .swatch svg { width: 14px; height: 14px; }
 
-/* En-tête d'un groupe de sous-catégories (ex: Stationnement), avec sa liste
+/* En-tête d'un groupe de sous-catégories (ex: Stationnements), avec sa liste
    indentée juste dessous plutôt qu'à côté (contrairement aux autres <li>). */
 #layer-toggles li.layer-group {
   flex-direction: column;
@@ -745,6 +745,17 @@ h1, h2, h3, .brand-word {
   border-radius: 999px;
   padding: 2px 7px;
   flex-shrink: 0;
+}
+
+/* Catégorie sans aucun item pour l'instant (voir updateLayerCount dans app.js) :
+   badge « à venir » au trait pointillé, pour ne pas le confondre avec un compteur. */
+#layer-toggles .layer-count.is-upcoming {
+  background: transparent;
+  border: 1px dashed var(--ink-500);
+  color: var(--ink-700);
+  padding: 1px 7px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /* Couleur plutôt qu'opacité pour garder un contraste suffisant (WCAG AA). */

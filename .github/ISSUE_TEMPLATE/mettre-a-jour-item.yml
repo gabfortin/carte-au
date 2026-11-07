@@ -23,8 +23,8 @@ body:
         - "Terrasses inspectées"
         - "Sentiers déneigés"
         - "Débarcadères"
-        - "Stationnement accessible (gratuit)"
-        - "Toilettes accessibles"
+        - "Stationnements gratuits"
+        - "Toilettes"
         - "Gains CCU"
     validations:
       required: true

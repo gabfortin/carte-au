@@ -61,7 +61,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <!-- Leaflet hébergé dans le dépôt (identique à unpkg 1.9.4) : aucun CDN tiers -->
   <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css" />
-  <link rel="stylesheet" href="css/style.css?v=d3b16dc5e8" />
+  <link rel="stylesheet" href="css/style.css?v=7949f6d465" />
 </head>
 <body>
   <a class="skip-link" href="#map">Passer à la carte</a>
@@ -175,6 +175,12 @@
         l'<strong>Agence de mobilité durable</strong> (places tarifées réservées,
         licence CC-BY 4.0), de la <strong>STM</strong> et du <strong>REM</strong>
         (stations accessibles, données GTFS ; REM : licence CC-BY 4.0, via l'ARTM).
+        <span id="donnees-maj" hidden>Données mises à jour le <time id="donnees-maj-date"></time>.</span>
+      </p>
+      <p class="about-modal-desc">
+        <strong>Initiative indépendante</strong> : Montréal Accessible n'est ni produite
+        ni approuvée par la Ville de Montréal ni par l'arrondissement du
+        Plateau-Mont-Royal.
       </p>
 
       <div class="about-people">
@@ -244,6 +250,6 @@
   </div>
 
   <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
-  <script src="js/app.js?v=e058f5e23c"></script>
+  <script src="js/app.js?v=f47c3b5807"></script>
 </body>
 </html>
