@@ -835,11 +835,7 @@ const map = L.map("map", { zoomControl: false, attributionControl: false }).setV
 L.control.zoom({ position: "bottomright", zoomInTitle: "Zoom avant", zoomOutTitle: "Zoom arrière" }).addTo(map);
 L.control.attribution({ position: "bottomright" }).addTo(map);
 
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  className: "map-tiles-muted",
-}).addTo(map);
+// Fond de carte : OpenFreeMap (Positron, ou Dark en mode sombre), posé par vendor/carte/carte.js
 
 const SAFE_MARGIN = 12;
 

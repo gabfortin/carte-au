@@ -59,9 +59,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Leaflet hébergé dans le dépôt (identique à unpkg 1.9.4) : aucun CDN tiers -->
-  <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css" />
-  <link rel="stylesheet" href="css/style.css?v=7949f6d465" />
+  <!-- Composant de carte commun (API de Leaflet dessinée par MapLibre, fond OpenFreeMap), hébergé dans le dépôt -->
+  <link rel="stylesheet" href="vendor/carte/maplibre-gl.css" />
+  <link rel="stylesheet" href="vendor/carte/carte.css?v=9cd4843111" />
+  <link rel="stylesheet" href="css/style.css?v=37123fbe27" />
 </head>
 <body>
   <a class="skip-link" href="#map">Passer à la carte</a>
@@ -249,7 +250,8 @@
     </div>
   </div>
 
-  <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
-  <script src="js/app.js?v=f47c3b5807"></script>
+  <script src="vendor/carte/maplibre-gl.js"></script>
+  <script src="vendor/carte/carte.js?v=9c713a6978"></script>
+  <script src="js/app.js?v=595f533f2e"></script>
 </body>
 </html>

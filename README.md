@@ -91,7 +91,7 @@ Un serveur est nécessaire : `data/*.json` ne se charge pas en `file://`.
 | `scripts/integrate_submission.py` | Intégration d'une issue de soumission |
 | `scripts/date_donnees.py`, `scripts/stamp_assets.py` | Date des données, empreintes `?v=` |
 | `scripts/og-image.html` | Gabarit de l'image de partage `og-image.jpg` (1200 × 630) |
-| `vendor/leaflet-1.9.4/` | Leaflet hébergé dans le dépôt, sans CDN |
+| `vendor/carte/` | Composant de carte commun (modèle `~/Developer/outils/communs/carte/`) : API de Leaflet dessinée par MapLibre, fond OpenFreeMap |
 | `.github/ISSUE_TEMPLATE/` | Gabarits de soumission |
 
 Carte au [système de design des cartes](../MAP-DESIGN-SYSTEM.md) (bleu) ;
@@ -126,7 +126,7 @@ Aucun cookie ni compte.
 |---|---|---|
 | Chaque visite | Page, site d'origine, appareil, pays | GoatCounter (mesure d'audience anonyme) |
 | Chaque visite | Polices Inter et Poppins | Google Fonts |
-| Carte | Requêtes de tuiles de la zone affichée | OpenStreetMap |
+| Carte | Fond de carte de la zone affichée | OpenFreeMap |
 | Clic sur Street View (débarcadère) | Coordonnées du débarcadère | Google Maps |
 | Proposer un ajout | Le contenu de l'issue | GitHub (compte de la personne) |
 
@@ -135,10 +135,10 @@ sa date) si un service externe est ajouté.
 
 ## Crédits
 
-- [Leaflet](https://leafletjs.com) 1.9.4 (BSD-2-Clause), hébergé dans `vendor/`
+- [MapLibre GL JS](https://maplibre.org) (BSD-3-Clause), hébergé dans `vendor/carte/` ; fond [OpenFreeMap](https://openfreemap.org), © [OpenMapTiles](https://www.openmaptiles.org)
 - Polices Inter et Poppins (SIL OFL 1.1), depuis Google Fonts
 - Données © Ville de Montréal, Agence de mobilité durable, STM, ARTM, OMHM, sous leurs licences respectives ; avis de Promo-Accès
-- Fond de carte © les contributeurs d'[OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL)
+- Données du fond de carte © les contributeurs d'[OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL)
 
 ## Auteur
 

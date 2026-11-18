@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Ajoute une empreinte du contenu aux URL de css/style.css et js/app.js dans
+"""Ajoute une empreinte du contenu aux URL de css/style.css, js/app.js et du
+composant vendor/carte/ (carte.css, carte.js) dans
 index.html (style.css?v=…, app.js?v=…).
 
 GitHub Pages laisse les navigateurs garder les fichiers 10 minutes en cache :
@@ -19,7 +20,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSETS = ["css/style.css", "js/app.js"]
+ASSETS = ["css/style.css", "js/app.js", "vendor/carte/carte.css", "vendor/carte/carte.js"]
 
 
 def main():

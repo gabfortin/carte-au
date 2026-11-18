@@ -49,7 +49,6 @@
     radial-gradient(1100px 650px at 85% -10%, rgba(96, 165, 250, 0.18), transparent 60%),
     radial-gradient(900px 600px at -5% 110%, rgba(129, 140, 248, 0.12), transparent 60%),
     var(--surface-alt);
-  --tile-filter: grayscale(55%) brightness(1.06) contrast(0.92) saturate(0.8);
 }
 
 /* Valeurs du « dashboard verre » (requetes-311/docs/glass.css). */
@@ -79,7 +78,6 @@
     --scrollbar: rgba(255, 255, 255, 0.18);
     --attribution-bg: rgba(24, 33, 29, 0.75);
     --page-bg: #0b1310;
-    --tile-filter: invert(1) hue-rotate(180deg) saturate(0.35) brightness(0.88) contrast(0.92);
   }
 }
 
@@ -451,10 +449,6 @@ h1, h2, h3, .brand-word {
   position: absolute;
   inset: 0;
   background: var(--page-bg);
-}
-
-.map-tiles-muted {
-  filter: var(--tile-filter);
 }
 
 /* ---------- Sidebar ---------- */
