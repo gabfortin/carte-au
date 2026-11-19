@@ -89,12 +89,6 @@
       </div>
     </div>
 
-    <button type="button" class="about-btn" id="about-btn" aria-label="À propos de ce projet" aria-haspopup="dialog" aria-controls="about-overlay">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="7.6" r="1.4" fill="currentColor"/>
-        <path d="M12 11v6.2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
-      </svg>
-    </button>
 
     <div class="header-spacer"></div>
 
@@ -124,12 +118,21 @@
       </select>
     </div>
 
-    <div class="header-search" role="search">
+    <!-- Recherche de commerces retirée pour l'instant (Gabriel, 19 novembre 2026).
+         Le code reste en place (js/app.js) : enlever « hidden » pour la remettre. -->
+    <div class="header-search" role="search" hidden>
       <label class="sr-only" for="search">Rechercher un commerce par nom, adresse ou catégorie</label>
       <input type="search" id="search" placeholder="Rechercher un commerce…" autocomplete="off" aria-controls="search-results" aria-describedby="search-status" />
       <ul class="search-results" id="search-results" aria-label="Résultats de la recherche" hidden></ul>
       <p class="sr-only" id="search-status" role="status"></p>
     </div>
+    <!-- Bouton « i » tout à droite, en dernier (MAP-DESIGN-SYSTEM.md, « Structure de la page ») -->
+    <button type="button" class="about-btn" id="about-btn" aria-label="À propos de ce projet" aria-haspopup="dialog" aria-controls="about-overlay">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="7.6" r="1.4" fill="currentColor"/>
+        <path d="M12 11v6.2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
+      </svg>
+    </button>
   </header>
 
   <aside class="sidebar" id="sidebar" aria-label="Catégories">
@@ -183,21 +186,34 @@
         ni approuvée par la Ville de Montréal ni par l'arrondissement du
         Plateau-Mont-Royal.
       </p>
+      <p class="about-modal-desc">
+        <strong>À titre informatif seulement</strong> : les données peuvent
+        être incomplètes, contenir des erreurs ou ne plus être à jour (un
+        commerce peut avoir fait des travaux, une place réservée peut avoir
+        été déplacée, etc.). Avant de vous déplacer, vérifiez l'information
+        auprès de l'établissement ou de la source.
+      </p>
 
       <div class="about-people">
-        <a class="about-person" href="https://gabfortin.com" target="_blank" rel="noopener noreferrer">
-          <img src="img/Gab.jpg" alt="">
-          <div class="about-person-info">
-            <div class="about-person-name">Gabriel Fortin</div>
-            <div class="about-person-role">Conseiller d'arrondissement - Plateau-Mont-Royal. Conception et développement du site.<span class="sr-only"> (site de Gabriel Fortin, s'ouvre dans un nouvel onglet)</span></div>
+        <div class="about-person-ligne">
+          <a class="about-person" href="https://gabfortin.com" target="_blank" rel="noopener noreferrer">
+            <img src="img/Gab.jpg" alt="">
+            <div class="about-person-info">
+              <div class="about-person-name">Gabriel Fortin</div>
+              <div class="about-person-role">Conseiller d'arrondissement - Plateau-Mont-Royal. Conception et développement du site.<span class="sr-only"> (site de Gabriel Fortin, s'ouvre dans un nouvel onglet)</span></div>
+            </div>
+          </a>
+          <a class="about-don" href="https://gabfortin.com/don/" target="_blank" rel="noopener" title="Supporter Gabriel Fortin : faire un don"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35Z"/></svg><span aria-hidden="true">Supporter</span><span class="sr-only">Supporter Gabriel Fortin : faire un don (s’ouvre dans un nouvel onglet)</span></a>
+        </div>
+        <div class="about-person-ligne">
+          <div class="about-person">
+            <img src="img/Laurence.webp" alt="">
+            <div class="about-person-info">
+              <div class="about-person-name">Laurence Parent</div>
+              <div class="about-person-role">Conseillère d'arrondissement - District De Lorimier. Porteuse du dossier de l'accessibilité universelle au Plateau-Mont-Royal.</div>
+            </div>
           </div>
-        </a>
-        <div class="about-person">
-          <img src="img/Laurence.webp" alt="">
-          <div class="about-person-info">
-            <div class="about-person-name">Laurence Parent</div>
-            <div class="about-person-role">Conseillère d'arrondissement - District De Lorimier. Porteuse du dossier de l'accessibilité universelle au Plateau-Mont-Royal.</div>
-          </div>
+          <a class="about-don" href="https://monelection.org/form/donation/ph3NOVdJvWkoW5Jdckfa2uIXecmKGo" target="_blank" rel="noopener" title="Supporter Laurence Parent : faire un don"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35Z"/></svg><span aria-hidden="true">Supporter</span><span class="sr-only">Supporter Laurence Parent : faire un don (s’ouvre dans un nouvel onglet)</span></a>
         </div>
         <div class="about-person">
           <img src="img/Julien.webp" alt="">

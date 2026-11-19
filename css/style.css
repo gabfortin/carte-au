@@ -306,6 +306,11 @@ h1, h2, h3, .brand-word {
 
 .header-spacer { flex: 1; }
 
+/* Bouton « i » tout à droite, après le filtre d'arrondissement, à 8 px de lui
+   (MAP-DESIGN-SYSTEM.md ; même groupe à droite que les autres sites). */
+.site-header .about-btn { margin-left: -12px; }
+@media (max-width: 760px) { .site-header .about-btn { margin-left: 0; } }
+
 .header-arrondissement select {
   appearance: none;
   font-family: inherit;
@@ -1263,6 +1268,27 @@ a.about-person:hover { background: var(--surface-hover); transform: translateX(2
 .about-person-name { font-weight: 700; font-size: 0.9rem; }
 
 .about-person-role { font-size: 0.76rem; color: var(--ink-500); }
+
+/* Bouton « Don » à côté de chaque élu (lien propre à chacun, dans index.html) */
+.about-person-ligne { display: flex; align-items: center; gap: 8px; }
+.about-person-ligne .about-person { flex: 1; min-width: 0; }
+.about-don {
+  display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding: 6px 11px 6px 9px; border-radius: 999px;
+  border: 1.5px solid var(--brand-ink); color: var(--brand-ink);
+  font-size: 0.78rem; font-weight: 700; text-decoration: none; white-space: nowrap;
+  transition: background 0.18s var(--ease), transform 0.18s var(--ease);
+}
+.about-don svg { width: 13px; height: 13px; fill: currentColor; }
+.about-don:hover { background: var(--surface-hover); transform: scale(1.04); }
+.about-don:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 2px; }
+/* « Supporter » ne tient pas à côté du texte de l'élu sur téléphone : cœur seul
+   (le nom complet reste lu par les lecteurs d'écran, span.sr-only). */
+@media (max-width: 480px) {
+  .about-don { padding: 0; width: 32px; height: 32px; justify-content: center; }
+  .about-don > span[aria-hidden="true"] { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .about-don { transition: none; } .about-don:hover { transform: none; } }
 
 .about-suggest-link {
   display: flex;

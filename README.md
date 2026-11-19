@@ -28,7 +28,7 @@ manuelle), l'arrondissement d'où le projet est parti.
 | **Gains CCU** (logements, commerces) | Plateau | Comité consultatif d'urbanisme, saisie et classeur |
 
 Filtre par arrondissement (avec lien direct `?arrondissement=<slug>`, qui
-cadre aussi la carte), recherche de commerces par nom ou adresse, mode sombre
+cadre aussi la carte), recherche de commerces par nom ou adresse (masquée pour l'instant), mode sombre
 selon l'appareil. Description complète de chaque couche :
 [DONNEES.md](DONNEES.md) ; comportements de la carte :
 [ARCHITECTURE.md](ARCHITECTURE.md).

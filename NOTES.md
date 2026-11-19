@@ -103,3 +103,11 @@ Une catégorie sans aucun item reste dans le panneau avec un badge « à venir �
 ### Date des données
 
 La fenêtre « À propos » affiche la date de la dernière mise à jour des données, exigée par `~/Developer/REDACTION.md`. GitHub Pages donne la même date de modification à tous les fichiers à chaque mise en ligne : la date est donc écrite dans `data/meta.json` par `scripts/date_donnees.py`, appelé aux trois endroits qui modifient `data/` (robot mensuel, intégration des soumissions, `stamp_assets.py` pour les changements à la main). Une seule date pour toute la carte : simple, mais une couche peut être plus ancienne que la date affichée (ex. robot sans changement pour une source).
+
+### Recherche de commerces masquée (19 novembre 2026)
+
+Gabriel a demandé de retirer le champ « Rechercher un commerce… » de l'en-tête pour l'instant. Le bloc `.header-search` porte l'attribut `hidden` dans `index.html` ; le code de la recherche reste dans `js/app.js` et fonctionne avec un champ vide (tous les commerces affichés). Pour la remettre : enlever `hidden`.
+
+### Bouton « i » tout à droite (19 novembre 2026)
+
+Pour uniformiser avec les autres sites et suivre `MAP-DESIGN-SYSTEM.md`, le bouton « i » n'est plus collé au titre : il est le dernier élément du bandeau, après le filtre d'arrondissement, à 8 px de lui (`.site-header .about-btn { margin-left: -12px; }`, l'écart du bandeau étant de 20 px). Sur téléphone, rien ne change : il était déjà en haut à droite. Dans la modale, les boutons des élus disent « ♥ Supporter » (cœur seul sous 480 px).

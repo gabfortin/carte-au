@@ -4,7 +4,7 @@ Comportements de la carte et règles du code. Vue d'ensemble : [README.md](READM
 
 ## Filtre d'arrondissement
 
-Le sélecteur en haut à droite (à gauche de la recherche) filtre les items affichés par arrondissement. Par défaut (« Tous les arrondissements »), rien n'est filtré.
+Le sélecteur en haut à droite (juste avant le bouton « i », qui est en dernier) filtre les items affichés par arrondissement. Par défaut (« Tous les arrondissements »), rien n'est filtré.
 
 Chaque couche dit à quel arrondissement appartient un item (`getArrondissement` dans `LAYER_CONFIG`, [js/app.js](js/app.js)) :
 
@@ -26,6 +26,8 @@ python3 scripts/import_arrondissements.py   # à relancer seulement si les limit
 ```
 
 ## Recherche
+
+**Masquée pour l'instant** (19 novembre 2026) : le bloc `.header-search` porte `hidden` dans `index.html`, voir `NOTES.md`. Le fonctionnement ci-dessous reste valable quand on la remet.
 
 La barre de recherche (nom ou adresse) ne porte que sur les commerces : elle affiche les résultats correspondants dans un dropdown sous la barre, et filtre les marqueurs commerces affichés sur la carte. Cliquer un résultat centre la carte sur le commerce et ouvre son popup. Cette barre est masquée quand la couche Commerces est désactivée.
 
