@@ -1,0 +1,37 @@
+/* ── Scène d’attente « accessibilité » (base : css/chargement.css, modèle outils/communs/) ──
+   Sur un plan de rues qui défile, un feu sonore émet des ondes ; les
+   pictogrammes des couches apparaissent un à un, à mesure que chaque couche
+   arrive (vraie progression, --ch-p). */
+.p-rues {
+  inset: -30%;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 17px, rgba(var(--ch-rgb), .26) 17px 19px),
+    repeating-linear-gradient(90deg, transparent 0 23px, rgba(var(--ch-rgb), .26) 23px 25px);
+  transform: rotate(-34deg);
+  animation: p-defile 6s linear infinite;
+}
+.p-feu {                                            /* feu sonore au centre */
+  left: 50%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 12px;
+  background: var(--ch-accent); color: #fff; box-shadow: 0 0 16px rgba(var(--ch-rgb), .9);
+}
+.p-onde { left: 50%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; border: 2px solid var(--ch-accent); opacity: 0; animation: p-onde 1.8s ease-out infinite; }
+.p-onde-2 { animation-delay: .6s; } .p-onde-3 { animation-delay: 1.2s; }
+.p-picto {
+  width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50% 50% 50% 0;
+  display: grid; place-items: center;
+  background: #fff; color: var(--ch-accent); font: 800 11px/1 inherit;
+  box-shadow: 0 0 0 2px var(--ch-accent), 0 4px 10px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+  --p-vu: clamp(0, (var(--ch-p) * 6 - var(--p-i)) * 6, 1);
+  opacity: var(--p-vu);
+  scale: calc(.3 + var(--p-vu) * .7);
+  transition: opacity .3s, scale .45s cubic-bezier(.2, .9, .3, 1.8);
+}
+.p-picto b { transform: rotate(45deg); font-weight: 800; }
+.p-1 { top: 22%; left: 30%; --p-i: 0; } .p-2 { top: 28%; left: 72%; --p-i: 1; } .p-3 { top: 70%; left: 24%; --p-i: 2; }
+.p-4 { top: 78%; left: 64%; --p-i: 3; } .p-5 { top: 50%; left: 16%; --p-i: 4; } .p-6 { top: 52%; left: 86%; --p-i: 5; }
+@keyframes p-defile { to { background-position: 0 72px, 96px 0; } }
+@keyframes p-onde { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(4.2); opacity: 0; } }
+/* Couleur de marque de la carte (bleu) */
+.ch-pictos { --ch-rgb: 37, 99, 235; --ch-clair: #93c5fd; }

@@ -1678,6 +1678,17 @@ arrondissementSelect.addEventListener("change", () => {
 // On attend que toutes les couches soient chargées avant de poser les marqueurs, pour
 // pouvoir détecter les lieux qui partagent exactement les mêmes coordonnées entre
 // couches (ex : bâtiment municipal et sa toilette) et les décaler visuellement.
+// Animation d'attente (base commune js/chargement.js, scène css/chargement-pictos.css) :
+// un pictogramme s'allume à chaque couche reçue.
+const SCENE_PICTOS = '<span class="p-rues"></span><span class="p-onde"></span><span class="p-onde p-onde-2"></span>' +
+  '<span class="p-onde p-onde-3"></span><span class="p-feu">🔊</span><span class="p-picto p-1"><b>♿</b></span>' +
+  '<span class="p-picto p-2"><b>WC</b></span><span class="p-picto p-3"><b>P</b></span><span class="p-picto p-4"><b>M</b></span>' +
+  '<span class="p-picto p-5"><b>♿</b></span><span class="p-picto p-6"><b>🏛</b></span>';
+const attenteCouches = window.Chargement && Chargement.creer({
+  scene: SCENE_PICTOS, classe: "ch-pictos", mode: "flottant", progres: true,
+  titre: "Chargement des couches…", detail: "Commerces, logements, stationnements, toilettes, transport",
+});
+let couchesRecues = 0;
 Promise.all(
   LAYER_CONFIG.map((config) => {
     const files = config.files || [config.file];
@@ -1686,9 +1697,11 @@ Promise.all(
       .catch((err) => {
         console.error(`Erreur de chargement (${files.join(", ")}):`, err);
         return { config, items: [], erreur: true };
-      });
+      })
+      .finally(() => { if (attenteCouches) attenteCouches.progres(++couchesRecues / LAYER_CONFIG.length); });
   })
 ).then((layerResults) => {
   loadedLayers = layerResults;
   renderAllLayers();
+  if (attenteCouches) attenteCouches.fermer();
 });

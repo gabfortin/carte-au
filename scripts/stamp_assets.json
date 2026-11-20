@@ -1,0 +1,13 @@
+{
+  "page": "index.html",
+  "fichiers": [
+    "css/style.css",
+    "js/app.js",
+    "vendor/carte/carte.css",
+    "vendor/carte/carte.js",
+    "css/chargement.css",
+    "css/chargement-pictos.css",
+    "js/chargement.js"
+  ],
+  "dater_donnees": true
+}

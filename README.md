@@ -84,12 +84,13 @@ Un serveur est nécessaire : `data/*.json` ne se charge pas en `file://`.
 | `confidentialite.html` | Politique de confidentialité (avec mode sombre) |
 | `js/app.js` | Carte, couches (`LAYER_CONFIG`), filtre, recherche, popups |
 | `css/style.css` | Jetons du `:root`, redéfinis pour le mode sombre |
+| `js/chargement.js`, `css/chargement.css`, `css/chargement-pictos.css` | Animation d'attente : base commune (copie de `outils/communs/`) et scène (un pictogramme par couche reçue) |
 | `data/*.json` | Une couche par fichier ; `meta.json` : date des données |
 | `img/items/` | Photos des items (soumissions et saisie) |
 | `scripts/import_*.py` | Imports de données ouvertes (robot mensuel ou à la main) |
 | `scripts/valider_donnees.py` | Vérification des imports avant publication |
 | `scripts/integrate_submission.py` | Intégration d'une issue de soumission |
-| `scripts/date_donnees.py`, `scripts/stamp_assets.py` | Date des données, empreintes `?v=` |
+| `scripts/date_donnees.py`, `scripts/stamp_assets.py` | Date des données, empreintes `?v=` (fichiers listés dans `scripts/stamp_assets.json` ; `stamp_assets.py` est une copie du modèle commun `outils/communs/stamp_assets.py`, à ne pas modifier ici) |
 | `scripts/og-image.html` | Gabarit de l'image de partage `og-image.jpg` (1200 × 630) |
 | `vendor/carte/` | Composant de carte commun (modèle `~/Developer/outils/communs/carte/`) : API de Leaflet dessinée par MapLibre, fond OpenFreeMap |
 | `.github/ISSUE_TEMPLATE/` | Gabarits de soumission |
@@ -125,7 +126,6 @@ Aucun cookie ni compte.
 | Quand | Ce qui est envoyé | À qui |
 |---|---|---|
 | Chaque visite | Page, site d'origine, appareil, pays | GoatCounter (mesure d'audience anonyme) |
-| Chaque visite | Polices Inter et Poppins | Google Fonts |
 | Carte | Fond de carte de la zone affichée | OpenFreeMap |
 | Clic sur Street View (débarcadère) | Coordonnées du débarcadère | Google Maps |
 | Proposer un ajout | Le contenu de l'issue | GitHub (compte de la personne) |
@@ -136,7 +136,7 @@ sa date) si un service externe est ajouté.
 ## Crédits
 
 - [MapLibre GL JS](https://maplibre.org) (BSD-3-Clause), hébergé dans `vendor/carte/` ; fond [OpenFreeMap](https://openfreemap.org), © [OpenMapTiles](https://www.openmaptiles.org)
-- Polices Inter et Poppins (SIL OFL 1.1), depuis Google Fonts
+- Polices Inter et Poppins (SIL OFL 1.1), hébergées dans `fonts/` (modèle commun `outils/communs/polices/`)
 - Données © Ville de Montréal, Agence de mobilité durable, STM, ARTM, OMHM, sous leurs licences respectives ; avis de Promo-Accès
 - Données du fond de carte © les contributeurs d'[OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL)
 
